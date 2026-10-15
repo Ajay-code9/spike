@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+scripts/preview_*.png
+scripts/slice_*.png
+scripts/hero_*.png
+scripts/section*.png
+scripts/temp_*.jpg
+scripts/test_*.jpg
+scripts/ref_*.png
+scripts/footer_*.png
+scripts/testimonials_*.png
+scripts/header_*.png
+scripts/scrolled_*.png

@@ -1,0 +1,251 @@
+/* ==========================================================================
+   SPIKE BROKERAGE - MARKETS PAGE STYLES
+   ========================================================================== */
+
+/* Markets 3x2 Grid Cards (Light Sand Section) */
+.markets-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.market-big-card {
+  position: relative;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.market-big-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.market-big-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.market-big-card:hover .market-big-card-img {
+  transform: scale(1.05);
+}
+
+.market-big-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 11, 16, 0.2) 0%, rgba(8, 11, 16, 0.85) 75%, rgba(8, 11, 16, 0.98) 100%);
+  pointer-events: none;
+}
+
+.market-big-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.market-big-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.market-big-card-sub {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+/* Market Specifications Table Section (Dark) */
+.section-market-specs-dark {
+  background: #080B10;
+  padding: 90px 0;
+}
+
+.specs-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 36px 0 24px;
+  flex-wrap: wrap;
+}
+
+.specs-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.specs-filter-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.spec-pill-btn {
+  padding: 7px 16px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #CBD5E1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.spec-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.spec-pill-btn.active {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: #0B0E14;
+}
+
+.specs-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(14, 19, 28, 0.8);
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  padding: 8px 14px;
+  min-width: 260px;
+}
+
+.specs-search-box:focus-within {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px rgba(229, 184, 105, 0.2);
+}
+
+.specs-search-input {
+  width: 100%;
+  font-size: 0.84rem;
+  color: #FFFFFF;
+}
+
+.specs-search-input::placeholder {
+  color: #64748B;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.86rem;
+}
+
+.specs-table th {
+  padding: 16px 20px;
+  background: #111722;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.specs-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #CBD5E1;
+}
+
+.specs-table tr:hover td {
+  background: rgba(229, 184, 105, 0.03);
+}
+
+.spec-symbol-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.spec-flag-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.spec-price-green {
+  color: var(--color-bullish);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.spec-price-red {
+  color: var(--color-bearish);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.spec-spread-mono {
+  font-family: var(--font-mono);
+}
+
+/* Ready to Explore CTA with Glowing Globe Background */
+.cta-banner-globe {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 90px 0;
+  border-top: 1px solid var(--border-dark);
+  text-align: left;
+  overflow: hidden;
+}
+
+.cta-banner-globe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 50%, rgba(8, 11, 16, 0.4) 0%, rgba(8, 11, 16, 0.95) 80%);
+}
+
+.cta-banner-globe-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .markets-grid-3x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .markets-grid-3x2 {
+    grid-template-columns: 1fr;
+  }
+  .specs-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .specs-search-box {
+    width: 100%;
+  }
+}

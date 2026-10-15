@@ -1,0 +1,983 @@
+/* ==========================================================================
+   SPIKE BROKERAGE - HIGH FIDELITY HOME PAGE STYLES
+   Pixel-accurate matching of 1.jpg / media_1791965531328.jpg
+   ========================================================================== */
+
+/* Hero Section */
+.hero-home {
+  position: relative;
+  min-height: 720px;
+  height: 100vh;
+  max-height: 960px;
+  padding: 68px 0 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hero-home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 11, 16, 0.88) 0%, rgba(8, 11, 16, 0.5) 45%, rgba(8, 11, 16, 0.05) 75%, rgba(8, 11, 16, 0.4) 100%);
+  pointer-events: none;
+}
+
+.hero-home > .container-wide {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-home-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.hero-home-content {
+  max-width: 600px;
+}
+
+.hero-home-title {
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.hero-home-desc {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #94A3B8;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.hero-home-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-home-badge-right {
+  text-align: right;
+  border-right: 2px solid var(--gold-primary);
+  padding-right: 22px;
+}
+
+.hero-home-badge-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  line-height: 1.9;
+  color: #E2E8F0;
+  text-transform: uppercase;
+}
+
+/* 5 Value Props Bar (Docked at Bottom inside Hero) */
+.hero-docked-props-bar {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 20px 0 18px;
+}
+
+.hero-docked-props-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.hero-docked-prop-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-docked-prop-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.hero-docked-prop-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.hero-docked-prop-sub {
+  font-size: 0.74rem;
+  color: #CBD5E1;
+  margin-top: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+/* ==========================================================================
+   SECTION 4: 500+ TRADING INSTRUMENTS (TRADE A WIDER WORLD)
+   Light Sand Background with 6 tall sleek vertical cards
+   ========================================================================== */
+
+.section-instruments-light {
+  background: #F7F5F0;
+  color: var(--text-light-heading);
+  padding: 85px 0;
+}
+
+.instruments-split-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.instruments-left-col {
+  padding-right: 10px;
+}
+
+.instruments-title-huge {
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0F172A;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.instruments-tall-cards-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.instrument-full-card-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, filter 0.28s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  line-height: 0;
+  text-decoration: none;
+}
+
+.instrument-full-card-link:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(201, 150, 50, 0.35);
+  filter: brightness(1.05);
+}
+
+.instrument-full-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   SECTION 5: PROFESSIONAL PLATFORMS (TRADE YOUR WAY)
+   Pitch Black Background
+   ========================================================================== */
+
+.section-platforms-dark {
+  position: relative;
+  background-color: #080B10;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid var(--border-dark);
+}
+
+.platforms-aspect-container {
+  position: relative;
+  width: 100%;
+  max-width: 2032px;
+  margin: 0 auto;
+  aspect-ratio: 2032 / 774;
+  background: #080B10 url('/public/homepage-images/div-background.png') no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(18px, 3.2vw, 55px) clamp(22px, 4vw, 75px) clamp(14px, 2.2vw, 36px);
+  box-sizing: border-box;
+}
+
+.platforms-3col-layout {
+  display: grid;
+  grid-template-columns: 24% 53.5% 22.5%;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+/* Left Column */
+.section-platforms-dark .section-tag {
+  display: inline-block;
+  font-size: clamp(0.65rem, 0.8vw, 0.8rem);
+  letter-spacing: 1.5px;
+  color: var(--gold-primary);
+  font-weight: 700;
+  margin-bottom: clamp(4px, 0.6vw, 10px);
+}
+
+.section-platforms-dark .section-title {
+  font-size: clamp(1.35rem, 2.2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #FFFFFF;
+  margin-bottom: clamp(8px, 1vw, 16px);
+  text-transform: uppercase;
+}
+
+.section-platforms-dark .section-desc {
+  font-size: clamp(0.7rem, 0.88vw, 0.9rem);
+  line-height: 1.45;
+  color: #94A3B8;
+  margin-bottom: clamp(10px, 1.2vw, 20px);
+  max-width: 330px;
+}
+
+.section-platforms-dark .link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(0.74rem, 0.88vw, 0.88rem);
+  font-weight: 600;
+  color: var(--gold-primary);
+  transition: var(--transition-smooth);
+}
+
+.section-platforms-dark .link-arrow:hover {
+  color: var(--gold-light);
+  transform: translateX(4px);
+}
+
+/* Center Spacer (revealing laptop, phone, tablet) */
+.platforms-center-mockup {
+  pointer-events: none;
+  min-height: 80px;
+}
+
+/* Right Column (4 Cards over green chart, safely to the right of tablet) */
+.platforms-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.8vw, 14px);
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+}
+
+.platform-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(8px, 1vw, 14px);
+  padding: clamp(6px, 0.8vw, 12px) clamp(10px, 1.1vw, 16px);
+  background: rgba(8, 11, 16, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  transition: var(--transition-smooth);
+}
+
+.platform-feature-card:hover {
+  background: rgba(14, 19, 28, 0.8);
+  border-color: rgba(229, 184, 105, 0.35);
+  transform: translateX(4px);
+}
+
+.platform-feature-icon-gold {
+  width: clamp(16px, 1.4vw, 22px);
+  height: clamp(16px, 1.4vw, 22px);
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.platform-feature-title {
+  font-size: clamp(0.76rem, 0.95vw, 0.92rem);
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.platform-feature-desc {
+  font-size: clamp(0.66rem, 0.8vw, 0.78rem);
+  color: #94A3B8;
+  margin-top: 1px;
+  line-height: 1.35;
+}
+
+/* Badges strip on reflective floor */
+.platforms-bottom-badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(8px, 1.5vw, 20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: clamp(10px, 1.4vw, 22px);
+  margin-top: clamp(8px, 1.2vw, 18px);
+}
+
+.platform-badge-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 0.8vw, 12px);
+}
+
+.platform-badge-icon {
+  width: clamp(15px, 1.3vw, 20px);
+  height: clamp(15px, 1.3vw, 20px);
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.platform-badge-title {
+  font-size: clamp(0.72rem, 0.88vw, 0.86rem);
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.platform-badge-sub {
+  font-size: clamp(0.64rem, 0.75vw, 0.74rem);
+  color: #94A3B8;
+}
+
+
+/* ==========================================================================
+   SECTION 6: BUILT AROUND YOUR GOALS (ACCOUNTS)
+   Light Sand Background with 3 Cards
+   ========================================================================== */
+
+.section-accounts-light {
+  background: #F7F5F0;
+  color: var(--text-light-heading);
+  padding: 85px 0;
+}
+
+.accounts-split-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.accounts-3cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.account-white-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.account-white-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: var(--gold-primary);
+}
+
+.account-white-card.featured {
+  border-color: var(--gold-primary);
+  box-shadow: 0 10px 30px rgba(201, 150, 50, 0.15);
+}
+
+.account-card-top-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--gold-primary);
+  margin-bottom: 14px;
+}
+
+.account-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: 0.04em;
+}
+
+.account-card-rate-row {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin: 8px 0 16px;
+}
+
+.account-card-rate-row strong {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-left: 2px;
+}
+
+.account-card-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.account-card-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.account-card-check svg {
+  width: 15px;
+  height: 15px;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.account-card-btn {
+  width: 100%;
+  text-align: center;
+  padding: 9px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #0F172A;
+  transition: var(--transition-smooth);
+}
+
+.account-card-btn:hover {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: #0B0E14;
+}
+
+/* ==========================================================================
+   SECTION 7: A BROKER THAT TRADERS TRUST (WHY CHOOSE SPIKE)
+   Pitch Black Background
+   ========================================================================== */
+
+.section-trust-dark {
+  background: #080B10;
+  padding: 85px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+.trust-split-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.trust-6grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.trust-item-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.trust-item-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--gold-primary);
+}
+
+.trust-item-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.trust-item-desc {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECTION 8: STAY AHEAD WITH EXPERT ANALYSIS (MARKET INSIGHTS)
+   Light Sand Background
+   ========================================================================== */
+
+.section-insights-light {
+  background: #F7F5F0;
+  color: var(--text-light-heading);
+  padding: 85px 0;
+}
+
+.insights-split-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.insights-3cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.insight-compact-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  padding: 12px;
+}
+
+.insight-compact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--gold-primary);
+}
+
+.insight-compact-img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.insight-compact-body {
+  padding: 14px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.insight-compact-date {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.insight-compact-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.insight-compact-card:hover .insight-compact-title {
+  color: var(--gold-dark);
+}
+
+/* ==========================================================================
+   SECTION 9: SPIKE IN NUMBERS
+   Glowing Network Globe Background
+   ========================================================================== */
+
+.section-numbers-dark {
+  background: #080B10 url('/public/homepage-images/div2-background.png') no-repeat center bottom;
+  background-size: cover;
+  padding: 85px 0 95px;
+  position: relative;
+  border-top: 1px solid var(--border-dark);
+  overflow: hidden;
+}
+
+.numbers-header-wrap {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  margin-bottom: 55px;
+  text-align: left;
+}
+
+.numbers-gold-bar {
+  width: 3px;
+  background: var(--gold-primary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.numbers-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.numbers-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gold-primary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.numbers-title {
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.numbers-stats-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.number-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.number-stat-box:first-child {
+  padding-left: 0;
+}
+
+.number-stat-box:last-child {
+  border-right: none;
+}
+
+.number-stat-huge {
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px #000000, 0 0 20px rgba(0, 0, 0, 0.95);
+}
+
+.number-stat-caption {
+  font-size: 0.85rem;
+  color: #E2E8F0;
+  margin-top: 6px;
+  font-weight: 500;
+  text-shadow: 0 1px 6px #000000, 0 0 12px rgba(0, 0, 0, 0.95);
+}
+
+/* ==========================================================================
+   SECTION 10: TRUSTED BY TRADERS WORLDWIDE (TESTIMONIALS)
+   Dark Charcoal Background
+   ========================================================================== */
+
+.section-testimonials-dark {
+  background: #0A0D14;
+  border-top: 1px solid var(--border-dark);
+  padding: 75px 0;
+}
+
+.testimonials-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.testimonials-heading-clean {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.testimonials-3cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-sleek-card {
+  background: rgba(14, 19, 28, 0.6);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.testimonial-sleek-card:hover {
+  background: rgba(18, 25, 36, 0.9);
+  border-color: rgba(229, 184, 105, 0.3);
+}
+
+.testimonial-sleek-quote {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+  margin-bottom: 20px;
+}
+
+.testimonial-sleek-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonial-sleek-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-sleek-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--gold-primary);
+  display: block;
+  flex-shrink: 0;
+}
+
+.testimonial-sleek-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.testimonial-sleek-geo {
+  font-size: 0.72rem;
+  color: #94A3B8;
+}
+
+.testimonial-stars-gold {
+  color: #FBBF24;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   SECTION 11: YOUR NEXT OPPORTUNITY STARTS HERE (CTA BANNER)
+   Architectural Sunset Staircase with Silhouette
+   ========================================================================== */
+
+.section-cta-opportunity {
+  position: relative;
+  background: #080B10 url('/public/homepage-images/div3-background.png') no-repeat center center;
+  background-size: cover;
+  padding: 85px 0;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+  overflow: hidden;
+  min-height: 440px;
+}
+
+.section-cta-opportunity::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 11, 16, 0.65) 0%, rgba(8, 11, 16, 0.3) 35%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-opportunity-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-opportunity-left {
+  max-width: 520px;
+}
+
+.cta-opportunity-title {
+  font-size: clamp(2.1rem, 3.4vw, 2.85rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.cta-opportunity-desc {
+  font-size: 0.92rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 440px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
+.cta-opportunity-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cta-opportunity-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 2px solid var(--gold-primary);
+  padding-left: 22px;
+  text-align: left;
+}
+
+.cta-opportunity-motto {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  line-height: 2.1;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.cta-motto-accent {
+  width: 28px;
+  height: 2px;
+  background: var(--gold-primary);
+  margin-top: 14px;
+  border-radius: 1px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .instruments-split-layout,
+  .accounts-split-layout,
+  .trust-split-layout,
+  .insights-split-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-6grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-home-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .hero-home-badge-right {
+    border-right: none;
+    border-left: 2px solid var(--gold-primary);
+    padding-right: 0;
+    padding-left: 18px;
+    text-align: left;
+  }
+  .hero-docked-props-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .instruments-tall-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .accounts-3cards-grid,
+  .insights-3cards-grid,
+  .testimonials-3cards {
+    grid-template-columns: 1fr;
+  }
+  .numbers-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 20px;
+  }
+  .number-stat-box {
+    border-right: none;
+    padding: 0;
+  }
+  .platforms-aspect-container {
+    aspect-ratio: auto;
+    background-size: cover;
+    background-position: center top;
+    padding: 35px 20px 20px;
+  }
+  .platforms-3col-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .platforms-feature-list {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .platforms-bottom-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cta-opportunity-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .cta-opportunity-right {
+    border-left: none;
+    border-top: 2px solid var(--gold-primary);
+    padding-left: 0;
+    padding-top: 18px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 580px) {
+  .instruments-tall-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-docked-props-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-6grid {
+    grid-template-columns: 1fr;
+  }
+  .numbers-stats-row {
+    grid-template-columns: 1fr;
+  }
+  .platforms-bottom-badges {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,284 @@
+/* ==========================================================================
+   SPIKE BROKERAGE - EDUCATION PAGE STYLES
+   ========================================================================== */
+
+/* Education Hero */
+.hero-education {
+  background: radial-gradient(circle at 65% 45%, rgba(26, 20, 14, 0.7) 0%, rgba(8, 11, 16, 0.98) 75%);
+  padding: 120px 0 50px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.hero-education-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-course-player-mockup {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), var(--gold-glow);
+  cursor: pointer;
+}
+
+.hero-course-player-mockup img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.hero-course-player-mockup:hover img {
+  transform: scale(1.02);
+}
+
+.play-video-overlay-btn {
+  position: absolute;
+  top: 45%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(229, 184, 105, 0.9);
+  color: #0B0E14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(229, 184, 105, 0.6);
+  transition: var(--transition-smooth);
+}
+
+.hero-course-player-mockup:hover .play-video-overlay-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #FFFFFF;
+}
+
+/* Explore By Topic Cards (Light Sand Section) */
+.topics-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.topic-dark-card {
+  background: #0E131C;
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.topic-dark-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-primary);
+  background: #141B26;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.topic-card-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--gold-primary);
+  margin-bottom: 20px;
+}
+
+.topic-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.topic-card-sub {
+  font-size: 0.8rem;
+  color: #94A3B8;
+}
+
+.topic-card-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  align-self: flex-end;
+  margin-top: 14px;
+  transition: var(--transition-smooth);
+}
+
+.topic-dark-card:hover .topic-card-arrow {
+  background: var(--gold-primary);
+  color: #0B0E14;
+  border-color: var(--gold-primary);
+}
+
+/* Latest Education Insights (Dark Section) */
+.section-education-insights {
+  background: #080B10;
+  padding: 90px 0;
+}
+
+.education-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 40px;
+}
+
+.education-article-card {
+  background: #0E131C;
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.education-article-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 184, 105, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+.education-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.education-article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.education-article-card:hover .education-article-img {
+  transform: scale(1.04);
+}
+
+.education-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #FFFFFF;
+  color: #0F172A;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.education-article-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.education-article-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.education-article-desc {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.education-article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 14px;
+}
+
+.education-article-date {
+  font-size: 0.74rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.education-circle-arrow-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  transition: var(--transition-smooth);
+}
+
+.education-article-card:hover .education-circle-arrow-btn {
+  background: var(--gold-primary);
+  color: #0B0E14;
+  border-color: var(--gold-primary);
+}
+
+/* Practice What You Learn - Demo CTA Banner */
+.cta-banner-demo {
+  position: relative;
+  background-size: cover;
+  background-position: center bottom;
+  padding: 90px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+.cta-banner-demo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(8, 11, 16, 0.95) 0%, rgba(8, 11, 16, 0.7) 60%, rgba(8, 11, 16, 0.3) 100%);
+}
+
+.cta-banner-demo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-education-grid {
+    grid-template-columns: 1fr;
+  }
+  .topics-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .education-articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .topics-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .education-articles-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Accounts | SPIKE Brokerage</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/accounts.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container-wide header-container">
+      <a href="index.html" class="brand-logo" aria-label="Spike Homepage">
+        <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="34">
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Trading
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="markets.html" class="dropdown-link">Forex Trading</a>
+            <a href="markets.html" class="dropdown-link">Metals & Gold</a>
+            <a href="markets.html" class="dropdown-link">Indices</a>
+            <a href="markets.html" class="dropdown-link">Commodities</a>
+            <a href="markets.html" class="dropdown-link">Shares & CFDs</a>
+            <a href="markets.html" class="dropdown-link">Cryptocurrencies</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Markets
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="markets.html" class="dropdown-link">Market Overview</a>
+            <a href="markets.html#market-specs" class="dropdown-link">Live Spreads & Specs</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="platforms.html" class="nav-link">
+            Platforms
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="platforms.html#desktop" class="dropdown-link">Desktop Platform</a>
+            <a href="platforms.html#web" class="dropdown-link">Web Trader</a>
+            <a href="platforms.html#mobile" class="dropdown-link">Mobile App</a>
+            <a href="platforms.html#api" class="dropdown-link">API Trading</a>
+          </div>
+        </div>
+
+        <div class="nav-item active">
+          <a href="accounts.html" class="nav-link">
+            Accounts
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#account-types" class="dropdown-link">Account Types (Standard, Pro, VIP)</a>
+            <a href="#comparison" class="dropdown-link">Compare Accounts</a>
+            <a href="#how-to-open" class="dropdown-link">How to Open Account</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="education.html" class="nav-link">
+            Education
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="education.html#courses" class="dropdown-link">Video Tutorials</a>
+            <a href="education.html#insights" class="dropdown-link">Market Analysis</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="dropdown-menu">
+            <a href="index.html#trust" class="dropdown-link">Why Choose Spike</a>
+            <a href="index.html#numbers" class="dropdown-link">Spike in Numbers</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-selector">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>EN</span>
+        </div>
+        <button class="btn-icon-search" data-open-modal="search" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="#" class="btn-login" data-open-modal="login">Login</a>
+        <a href="#" class="btn btn-gold" data-open-modal="account">Open Account</a>
+        <div class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-home" style="background-image: url('assets/images/hero-accounts.jpg');">
+    <div class="container-wide">
+      <div class="hero-home-inner">
+        <div class="hero-home-content">
+          <span class="section-tag">ACCOUNTS FOR EVERY TRADER.</span>
+          <h1 class="hero-home-title">
+            BUILT AROUND<br>
+            <span class="text-gradient-gold">YOUR GOALS</span>
+          </h1>
+          <p class="hero-home-desc">
+            Choose from flexible account types designed to match your trading style and experience level.
+          </p>
+          <div class="hero-home-actions">
+            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+              Open Live Account
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#comparison" class="btn btn-outline btn-lg">Compare Accounts</a>
+          </div>
+        </div>
+
+        <div class="hero-home-badge-right">
+          <div class="hero-home-badge-text">
+            TRADE<br>
+            LEARN<br>
+            GROW<br>
+            ACHIEVE
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 Value Props Bar Under Hero -->
+      <div class="hero-value-props">
+        <div class="value-prop-item">
+          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <div>
+            <div class="value-prop-title">Tight spreads</div>
+            <div class="value-prop-sub">From 0.0 pips</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <div>
+            <div class="value-prop-title">Fast execution</div>
+            <div class="value-prop-sub">&lt; 30ms</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <div>
+            <div class="value-prop-title">Global market access</div>
+            <div class="value-prop-sub">500+ instruments</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <div>
+            <div class="value-prop-title">Secure &amp; regulated</div>
+            <div class="value-prop-sub">Client funds</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <div>
+            <div class="value-prop-title">24/7 multi-lingual</div>
+            <div class="value-prop-sub">Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FIND THE RIGHT ACCOUNT FOR YOU ==================== -->
+  <section class="section-instruments-light" id="account-types">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+        <div>
+          <span class="section-tag">ACCOUNT TYPES</span>
+          <h2 class="section-title section-title-light">FIND THE RIGHT ACCOUNT FOR <span class="text-gradient-gold">YOU</span></h2>
+        </div>
+        <p class="section-desc section-desc-light" style="text-align: right;">
+          Whether you're just getting started or trading at a professional level, SPIKE offers account types with competitive conditions, advanced tools and global market access.
+        </p>
+      </div>
+
+      <div class="accounts-pricing-grid">
+        <!-- Standard -->
+        <div class="account-dark-card">
+          <svg class="card-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <h3 class="card-account-title">STANDARD</h3>
+          <div class="card-account-sub">A great start for new traders</div>
+          <div class="card-account-price">From <strong>$100</strong></div>
+
+          <div class="card-account-features">
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Tight spreads
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              No commission
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Access to global markets
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Ideal for new traders
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline" style="width: 100%; border-color: rgba(229,184,105,0.4);" data-open-modal="account">Open Standard Account &rarr;</a>
+        </div>
+
+        <!-- Pro (Featured) -->
+        <div class="account-dark-card featured">
+          <div class="popular-badge">MOST POPULAR</div>
+          <svg class="card-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+          </svg>
+          <h3 class="card-account-title">PRO</h3>
+          <div class="card-account-sub">For dedicated traders</div>
+          <div class="card-account-price">From <strong>$1,000</strong></div>
+
+          <div class="card-account-features">
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Lower spreads
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Priority execution
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              More trading opportunities
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Advanced trading conditions
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-gold" style="width: 100%;" data-open-modal="account">Open Pro Account &rarr;</a>
+        </div>
+
+        <!-- VIP -->
+        <div class="account-dark-card">
+          <svg class="card-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="12 2 15 8 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8 12 2"></polygon>
+          </svg>
+          <h3 class="card-account-title">VIP</h3>
+          <div class="card-account-sub">For high-volume traders</div>
+          <div class="card-account-price">From <strong>$10,000</strong></div>
+
+          <div class="card-account-features">
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Raw spreads
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Dedicated account manager
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Exclusive benefits
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Tailored trading conditions
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline" style="width: 100%; border-color: rgba(229,184,105,0.4);" data-open-modal="account">Open VIP Account &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MORE THAN JUST AN ACCOUNT ==================== -->
+  <section class="section-trust-dark">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px;">
+        <div>
+          <span class="section-tag">WHY TRADE WITH SPIKE</span>
+          <h2 class="section-title">MORE THAN JUST AN <span class="text-gradient-gold">ACCOUNT</span></h2>
+        </div>
+        <p class="section-desc" style="text-align: right;">
+          Every account comes with access to global markets, advanced technology and dedicated support, giving you a seamless trading experience from day one.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        <div class="account-card-light" style="background: rgba(14, 19, 28, 0.6); border-color: var(--border-dark);">
+          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <h3 style="font-size: 1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Competitive Trading Conditions</h3>
+          <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.6;">Low spreads and transparent pricing across all markets.</p>
+        </div>
+
+        <div class="account-card-light" style="background: rgba(14, 19, 28, 0.6); border-color: var(--border-dark);">
+          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <h3 style="font-size: 1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Ultra-Fast Execution</h3>
+          <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.6;">Trade with speed and stability, powered by institutional-grade infrastructure.</p>
+        </div>
+
+        <div class="account-card-light" style="background: rgba(14, 19, 28, 0.6); border-color: var(--border-dark);">
+          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <h3 style="font-size: 1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Secure &amp; Reliable</h3>
+          <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.6;">Your funds are protected with top-tier security and strict compliance standards.</p>
+        </div>
+
+        <div class="account-card-light" style="background: rgba(14, 19, 28, 0.6); border-color: var(--border-dark);">
+          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <h3 style="font-size: 1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Dedicated Support</h3>
+          <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.6;">24/7 multi-lingual support to assist you at every stage of your trading journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPARE ACCOUNT TYPES ==================== -->
+  <section class="section-compare-accounts" id="comparison">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span class="section-tag">ACCOUNT COMPARISON</span>
+          <h2 class="section-title section-title-light">COMPARE ACCOUNT <span class="text-gradient-gold">TYPES</span></h2>
+        </div>
+        <p class="section-desc section-desc-light" style="text-align: right;">
+          See the key differences between our account types and choose the one that matches your trading goals.
+        </p>
+      </div>
+
+      <div class="accounts-comparison-table-wrap">
+        <table class="accounts-table">
+          <thead>
+            <tr>
+              <th style="width: 34%;">Feature</th>
+              <th style="width: 22%;">Standard</th>
+              <th class="th-pro" style="width: 22%;">Pro</th>
+              <th style="width: 22%;">VIP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Minimum Deposit</td>
+              <td>$100</td>
+              <td class="td-pro">$1,000</td>
+              <td>$10,000</td>
+            </tr>
+            <tr>
+              <td>Spreads From</td>
+              <td>1.2 pips</td>
+              <td class="td-pro">0.6 pips</td>
+              <td>0.0 pips</td>
+            </tr>
+            <tr>
+              <td>Commission</td>
+              <td>No</td>
+              <td class="td-pro">No</td>
+              <td>Yes (Low)</td>
+            </tr>
+            <tr>
+              <td>Execution Type</td>
+              <td>Market Execution</td>
+              <td class="td-pro">Market Execution</td>
+              <td>Market Execution</td>
+            </tr>
+            <tr>
+              <td>Leverage</td>
+              <td>Up to 1:500</td>
+              <td class="td-pro">Up to 1:500</td>
+              <td>Up to 1:500</td>
+            </tr>
+            <tr>
+              <td>Account Manager</td>
+              <td><span class="table-dash">&mdash;</span></td>
+              <td class="td-pro"><span class="table-check">&#10003;</span></td>
+              <td><span class="table-check">&#10003;</span></td>
+            </tr>
+            <tr>
+              <td>Priority Support</td>
+              <td><span class="table-dash">&mdash;</span></td>
+              <td class="td-pro"><span class="table-check">&#10003;</span></td>
+              <td><span class="table-check">&#10003;</span></td>
+            </tr>
+            <tr>
+              <td>Exclusive Benefits</td>
+              <td><span class="table-dash">&mdash;</span></td>
+              <td class="td-pro"><span class="table-dash">&mdash;</span></td>
+              <td><span class="table-check">&#10003;</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OPEN YOUR ACCOUNT IN 3 SIMPLE STEPS ==================== -->
+  <section class="section-steps-dark" id="how-to-open">
+    <div class="container-wide">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <h2 class="section-title">OPEN YOUR ACCOUNT IN <span class="text-gradient-gold">3 SIMPLE STEPS</span></h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Get started in minutes and gain access to global markets with a SPIKE trading account.
+        </p>
+      </div>
+
+      <div class="steps-layout">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-number-badge">1</div>
+          <div>
+            <div class="step-title">Register</div>
+            <div class="step-desc">Create your account in just a few minutes.</div>
+          </div>
+        </div>
+
+        <svg class="step-arrow-divider" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-number-badge">2</div>
+          <div>
+            <div class="step-title">Verify</div>
+            <div class="step-desc">Complete a quick verification process.</div>
+          </div>
+        </div>
+
+        <svg class="step-arrow-divider" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-number-badge">3</div>
+          <div>
+            <div class="step-title">Start Trading</div>
+            <div class="step-desc">Fund your account and access global markets.</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="#" class="btn btn-gold" data-open-modal="account">
+            Open Live Account
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#" style="font-size: 0.76rem; color: #94A3B8; text-align: center;" data-open-modal="account">Or try a free demo account</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner-opportunity" style="background-image: url('assets/images/cta-accounts-bg.jpg');">
+    <div class="container-wide">
+      <div class="cta-banner-content">
+        <div class="cta-banner-left">
+          <span class="section-tag">YOUR NEXT OPPORTUNITY</span>
+          <h2 class="section-title">START YOUR <span class="text-gradient-gold">TRADING JOURNEY</span></h2>
+          <p class="section-desc" style="color: #CBD5E1; margin-bottom: 28px;">
+            Join a global community of traders and trade with a broker you can trust. Flexible accounts. Global markets. Real opportunities.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+              Open Live Account
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#" class="btn btn-outline btn-lg" data-open-modal="account">Try Demo Account</a>
+          </div>
+        </div>
+
+        <div class="cta-banner-right">
+          <div class="cta-vertical-words">
+            TRADE<br>
+            LEARN<br>
+            GROW<br>
+            ACHIEVE
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="30">
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trading</div>
+          <ul class="footer-link-list">
+            <li><a href="markets.html" class="footer-link">Forex</a></li>
+            <li><a href="markets.html" class="footer-link">Metals</a></li>
+            <li><a href="markets.html" class="footer-link">Indices</a></li>
+            <li><a href="markets.html" class="footer-link">Commodities</a></li>
+            <li><a href="markets.html" class="footer-link">Shares</a></li>
+            <li><a href="markets.html" class="footer-link">Cryptocurrencies</a></li>
+            <li><a href="markets.html#market-specs" class="footer-link">Trading Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Platforms</div>
+          <ul class="footer-link-list">
+            <li><a href="platforms.html#desktop" class="footer-link">Desktop Platform</a></li>
+            <li><a href="platforms.html#web" class="footer-link">Web Trader</a></li>
+            <li><a href="platforms.html#mobile" class="footer-link">Mobile App</a></li>
+            <li><a href="platforms.html#api" class="footer-link">API Trading</a></li>
+            <li><a href="platforms.html#features" class="footer-link">Platform Features</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Accounts</div>
+          <ul class="footer-link-list">
+            <li><a href="accounts.html#account-types" class="footer-link">Account Types</a></li>
+            <li><a href="accounts.html#comparison" class="footer-link">Fees &amp; Conditions</a></li>
+            <li><a href="accounts.html" class="footer-link">Funding</a></li>
+            <li><a href="accounts.html" class="footer-link">Withdrawals</a></li>
+            <li><a href="accounts.html#comparison" class="footer-link">Account Comparison</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Education</div>
+          <ul class="footer-link-list">
+            <li><a href="education.html#insights" class="footer-link">Market Analysis</a></li>
+            <li><a href="education.html#courses" class="footer-link">Video Tutorials</a></li>
+            <li><a href="education.html" class="footer-link">Webinars</a></li>
+            <li><a href="education.html#topics" class="footer-link">Trading Glossary</a></li>
+            <li><a href="education.html" class="footer-link">Help Centre</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-link-list">
+            <li><a href="index.html#trust" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Regulation</a></li>
+            <li><a href="#" class="footer-link">Legal Documents</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="newsletter-box">
+            <div class="newsletter-title">Subscribe to Market Updates</div>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to SPIKE updates!');">
+              <input type="email" placeholder="Your email address" class="newsletter-input" required>
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
+            </form>
+            <div class="newsletter-subtext">Get the latest market news and insights.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SPIKE. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="#">Risk Disclosure</a>
+        </div>
+        <div class="footer-disclaimer">Trading involves risk. Please trade responsibly.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="loginModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <span class="section-tag">SECURE ACCESS</span>
+      <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">LOGIN TO SPIKE</h3>
+      <form onsubmit="event.preventDefault(); alert('Login successful!'); closeModal(document.getElementById('loginModal'));">
+        <div class="modal-form-group"><label class="modal-label">Email or Account ID</label><input type="text" class="modal-input" required></div>
+        <div class="modal-form-group"><label class="modal-label">Password</label><input type="password" class="modal-input" required></div>
+        <button type="submit" class="btn btn-gold" style="width: 100%;">Sign In &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="accountModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <span class="section-tag">START TRADING</span>
+      <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
+      <form onsubmit="event.preventDefault(); alert('Account application received!'); closeModal(document.getElementById('accountModal'));">
+        <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" required></div>
+        <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" required></div>
+        <button type="submit" class="btn btn-gold" style="width: 100%;">Create Account Now &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="searchModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <span class="section-tag">GLOBAL INSTRUMENTS</span>
+      <h3 style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px;">SEARCH MARKETS</h3>
+      <input type="text" class="modal-input" placeholder="Type symbol e.g. EURUSD, XAU, US30..." autofocus>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
