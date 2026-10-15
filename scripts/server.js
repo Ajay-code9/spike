@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
-const ROOT_DIR = path.resolve(__dirname);
+const ROOT_DIR = path.resolve(__dirname, '..');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -57,10 +57,4 @@ server.listen(PORT, '0.0.0.0', () => {
   console.log(`SPIKE Website Server running at:`);
   console.log(`- Local:   http://localhost:${PORT}`);
   console.log(`- Network: http://127.0.0.1:${PORT}`);
-  console.log(`Pages available:`);
-  console.log(`- Home:       http://localhost:${PORT}/index.html`);
-  console.log(`- Platforms:  http://localhost:${PORT}/platforms.html`);
-  console.log(`- Accounts:   http://localhost:${PORT}/accounts.html`);
-  console.log(`- Markets:    http://localhost:${PORT}/markets.html`);
-  console.log(`- Education:  http://localhost:${PORT}/education.html`);
 });

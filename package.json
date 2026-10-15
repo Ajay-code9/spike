@@ -1,16 +1,11 @@
 {
   "name": "spike",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "SPIKE Brokerage Website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node scripts/server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "sharp": "^0.35.5"
-  }
+  "license": "ISC"
 }
