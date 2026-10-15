@@ -1,7 +1,16 @@
 node_modules/
+package.json
+package-lock.json
 .DS_Store
 Thumbs.db
 *.log
+*.pdf
+1.jpg
+2.jpg
+3.jpg
+4.jpg
+5.jpg
+page_*_raw.jpg
 scripts/preview_*.png
 scripts/slice_*.png
 scripts/hero_*.png
