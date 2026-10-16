@@ -275,178 +275,468 @@
               </div>
               <div class="terminal-title-text">
                 <span class="terminal-status-indicator"></span>
-                SPIKE MT5 PRO TERMINAL &bull; EQUINIX NY4 (8.2ms)
+                SPIKE MT5 PRO TERMINAL &bull; BUILD 4260 (64-BIT)
               </div>
-              <div style="font-size: 0.72rem; color: #64748B;">Build 4260 (64-Bit)</div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: #8A99AD;">
+                <span style="color: #34D399; font-weight: 700;">&bull; 8.2ms NY4</span>
+                <span style="color: rgba(255,255,255,0.2);">|</span>
+                <span style="background: rgba(229,184,105,0.12); color: var(--gold-primary); padding: 1px 6px; border-radius: 3px; font-weight: 700;">PRO #849201</span>
+              </div>
+            </div>
+
+            <!-- Terminal Workstation Quick Tool Strip -->
+            <div class="terminal-sub-ribbon">
+              <div class="terminal-ribbon-left">
+                <strong style="color: #FFFFFF; font-size: 0.78rem;">EUR/USD</strong>
+                <span style="color: #34D399; font-weight: 700;">1.08452</span>
+                <div class="terminal-tf-group">
+                  <button class="terminal-tf-btn">M1</button>
+                  <button class="terminal-tf-btn">M5</button>
+                  <button class="terminal-tf-btn active">M15</button>
+                  <button class="terminal-tf-btn">H1</button>
+                  <button class="terminal-tf-btn">H4</button>
+                  <button class="terminal-tf-btn">D1</button>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; color: #64748B;">
+                <span style="display: inline-flex; align-items: center; gap: 3px; color: #94A3B8; font-size: 0.7rem;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  EMA (20, 50)
+                </span>
+                <span style="color: rgba(255,255,255,0.15);">|</span>
+                <span style="color: #34D399; font-weight: 700;">1-Click ON</span>
+              </div>
             </div>
 
             <!-- Terminal Tabs -->
             <div class="terminal-tabs">
-              <button class="terminal-tab-item active" data-view="dom">Depth of Market (DOM)</button>
-              <button class="terminal-tab-item" data-view="chart">Live Candlestick Chart</button>
-              <button class="terminal-tab-item" data-view="tester">MQL5 Strategy Tester</button>
+              <button class="terminal-tab-item active" data-view="dom">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Depth of Market (DOM)
+              </button>
+              <button class="terminal-tab-item" data-view="chart">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Candlestick Chart
+              </button>
+              <button class="terminal-tab-item" data-view="tester">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                MQL5 Backtester
+              </button>
+              <button class="terminal-tab-item" data-view="trade">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                Positions <span class="terminal-tab-badge">2</span>
+              </button>
             </div>
 
-            <!-- Tab 1: DOM Ladder View -->
+            <!-- Tab 1: DOM Ladder View (Institutional Level II) -->
             <div class="terminal-body" id="terminalDomView">
               <div class="dom-ladder-wrapper">
                 <div class="dom-top-bar">
                   <div class="dom-symbol-info">
                     <span class="dom-symbol-name">EUR/USD</span>
-                    <span style="font-size: 0.76rem; color: #94A3B8;">Euro / US Dollar</span>
-                    <span class="dom-spread-badge">Spread: 0.1 Pip</span>
+                    <span style="font-size: 0.74rem; color: #94A3B8;">Euro / US Dollar</span>
+                    <span class="dom-spread-badge">0.1 Pip Spread</span>
                   </div>
-                  <div style="font-size: 0.76rem; color: #34D399; font-weight: 700;">
-                    LIVE INTERBANK FEED
+                  <div style="font-size: 0.72rem; color: #94A3B8; font-family: monospace;">
+                    High: <strong style="color: #FFFFFF;">1.08640</strong> &bull; Low: <strong style="color: #FFFFFF;">1.08210</strong>
                   </div>
                 </div>
 
                 <table class="dom-ladder-table">
                   <thead>
                     <tr>
-                      <th style="width: 33%;">Bid Volume</th>
-                      <th style="width: 34%;">Price (EURUSD)</th>
-                      <th style="width: 33%;">Ask Volume</th>
+                      <th style="width: 32%;">Bid Volume</th>
+                      <th style="width: 36%;">Price (EURUSD)</th>
+                      <th style="width: 32%;">Ask Volume</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <!-- Asks with Horizontal Volume Depth Fill -->
                     <tr class="dom-ask-row">
                       <td>&mdash;</td>
                       <td class="price-val">1.08455</td>
-                      <td style="color: #F87171;">42.5 Lots</td>
+                      <td class="dom-ask-volume-cell">
+                        <span class="dom-depth-bar-ask" style="width: 82%;"></span>
+                        45.0 Lots
+                      </td>
+                    </tr>
+                    <tr class="dom-ask-row">
+                      <td>&mdash;</td>
+                      <td class="price-val">1.08454</td>
+                      <td class="dom-ask-volume-cell">
+                        <span class="dom-depth-bar-ask" style="width: 65%;"></span>
+                        34.0 Lots
+                      </td>
                     </tr>
                     <tr class="dom-ask-row">
                       <td>&mdash;</td>
                       <td class="price-val">1.08453</td>
-                      <td style="color: #F87171;">28.0 Lots</td>
+                      <td class="dom-ask-volume-cell">
+                        <span class="dom-depth-bar-ask" style="width: 48%;"></span>
+                        24.5 Lots
+                      </td>
                     </tr>
-                    <tr class="dom-ask-row" style="background: rgba(239, 68, 68, 0.1);">
+                    <tr class="dom-ask-row" style="background: rgba(239, 68, 68, 0.08);">
                       <td>&mdash;</td>
                       <td class="price-val" id="domLiveAsk">1.08452</td>
-                      <td style="color: #F87171; font-weight: 700;">15.0 Lots (Best Ask)</td>
+                      <td class="dom-ask-volume-cell" style="font-weight: 800;">
+                        <span class="dom-depth-bar-ask" style="width: 30%;"></span>
+                        15.0 Lots <span style="font-size: 0.65rem; color: #FCA5A5;">(Best Ask)</span>
+                      </td>
                     </tr>
-                    <tr class="dom-bid-row" style="background: rgba(16, 185, 129, 0.1);">
-                      <td style="color: #34D399; font-weight: 700;">18.5 Lots (Best Bid)</td>
+
+                    <!-- Center Spread Divider -->
+                    <tr>
+                      <td colspan="3" style="padding: 0;">
+                        <div class="dom-spread-divider">
+                          <span>&blacktriangledown; 0.1 PIP SPREAD &bull; DIRECT EQUINIX NY4 STP MATCH &blacktriangle;</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Bids with Horizontal Volume Depth Fill -->
+                    <tr class="dom-bid-row" style="background: rgba(16, 185, 129, 0.08);">
+                      <td class="dom-bid-volume-cell" style="font-weight: 800;">
+                        <span class="dom-depth-bar-bid" style="width: 35%;"></span>
+                        <span style="font-size: 0.65rem; color: #86EFAC;">(Best Bid)</span> 18.5 Lots
+                      </td>
                       <td class="price-val" id="domLiveBid">1.08451</td>
                       <td>&mdash;</td>
                     </tr>
                     <tr class="dom-bid-row">
-                      <td style="color: #34D399;">35.0 Lots</td>
+                      <td class="dom-bid-volume-cell">
+                        <span class="dom-depth-bar-bid" style="width: 55%;"></span>
+                        32.0 Lots
+                      </td>
                       <td class="price-val">1.08450</td>
                       <td>&mdash;</td>
                     </tr>
                     <tr class="dom-bid-row">
-                      <td style="color: #34D399;">50.0 Lots</td>
+                      <td class="dom-bid-volume-cell">
+                        <span class="dom-depth-bar-bid" style="width: 72%;"></span>
+                        46.0 Lots
+                      </td>
+                      <td class="price-val">1.08449</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="dom-bid-row">
+                      <td class="dom-bid-volume-cell">
+                        <span class="dom-depth-bar-bid" style="width: 90%;"></span>
+                        62.0 Lots
+                      </td>
                       <td class="price-val">1.08448</td>
                       <td>&mdash;</td>
                     </tr>
                   </tbody>
                 </table>
 
-                <div class="dom-order-actions">
-                  <button class="btn-dom-sell" id="btnDomSell">
-                    &darr; 1-CLICK SELL 1.00 Lot @ BID
-                  </button>
-                  <button class="btn-dom-buy" id="btnDomBuy">
-                    &uarr; 1-CLICK BUY 1.00 Lot @ ASK
-                  </button>
+                <!-- Quick Order Entry Dock -->
+                <div class="dom-controls-dock">
+                  <div class="dom-inputs-row">
+                    <div class="dom-input-group">
+                      <span class="dom-input-label">Volume:</span>
+                      <div style="display: flex; align-items: center; gap: 6px;">
+                        <button class="dom-stepper-btn" id="btnLotMinus">&minus;</button>
+                        <span class="dom-input-val" id="domLotVal">1.00 Lot</span>
+                        <button class="dom-stepper-btn" id="btnLotPlus">&plus;</button>
+                      </div>
+                    </div>
+                    <div class="dom-input-group">
+                      <span class="dom-input-label">Stop Loss:</span>
+                      <span class="dom-input-val" style="color: #F87171;">1.08350 (10p)</span>
+                    </div>
+                    <div class="dom-input-group">
+                      <span class="dom-input-label">Take Profit:</span>
+                      <span class="dom-input-val" style="color: #34D399;">1.08650 (20p)</span>
+                    </div>
+                  </div>
+
+                  <div class="dom-order-actions">
+                    <button class="btn-dom-sell" id="btnDomSell">
+                      <span class="dom-btn-main">&darr; SELL 1.00 LOT</span>
+                      <span class="dom-btn-price">@ 1.08<strong style="font-size: 0.95rem; color: #FFFFFF;">45</strong>1 (BID)</span>
+                    </button>
+                    <button class="btn-dom-buy" id="btnDomBuy">
+                      <span class="dom-btn-main">&uarr; BUY 1.00 LOT</span>
+                      <span class="dom-btn-price">@ 1.08<strong style="font-size: 0.95rem; color: #FFFFFF;">45</strong>2 (ASK)</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
               <!-- Live Execution Feedback -->
               <div id="domOrderFeedback"></div>
 
-              <div style="margin-top: 14px; display: flex; justify-content: space-between; font-size: 0.74rem; color: #64748B;">
-                <span>Trading Mode: STP Raw ECN Direct</span>
-                <span>Latency to NY4: &lt; 8.4ms</span>
+              <div style="margin-top: 12px; display: flex; justify-content: space-between; font-size: 0.72rem; color: #64748B;">
+                <span>STP Raw ECN Direct &bull; Zero Requotes</span>
+                <span>Latency to NY4 Gateway: <strong style="color: #34D399;">8.2ms</strong></span>
               </div>
             </div>
 
-            <!-- Tab 2: Chart View -->
+            <!-- Tab 2: Candlestick Chart View (High-Precision Pro Chart) -->
             <div class="terminal-body" id="terminalChartView" style="display: none;">
-              <div style="background: #080B10; border-radius: 6px; padding: 14px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.78rem;">
-                  <span style="color: #FFFFFF; font-weight: 700;">EUR/USD &bull; M15 &bull; EMA (20, 50, 200)</span>
-                  <span style="color: #34D399;">Bullish Trend &bull; RSI 62.4</span>
+              <div class="pro-chart-wrapper">
+                <div class="pro-chart-header">
+                  <div class="pro-chart-ohlc">
+                    <span>O: <strong>1.08412</strong></span>
+                    <span>H: <strong>1.08468</strong></span>
+                    <span>L: <strong>1.08405</strong></span>
+                    <span>C: <strong style="color: #34D399;">1.08452 (+0.04%)</strong></span>
+                    <span>Vol: <strong>24.1K</strong></span>
+                  </div>
+                  <div class="pro-chart-legend">
+                    <span style="color: #E5B869;">&bull; EMA 20: 1.08438</span>
+                    <span style="color: #38BDF8;">&bull; EMA 50: 1.08415</span>
+                    <span style="color: #A78BFA;">&bull; RSI 14: 62.4</span>
+                  </div>
                 </div>
-                <!-- Simulated SVG Chart -->
-                <svg viewBox="0 0 500 200" style="width: 100%; height: 190px;">
-                  <!-- Grid -->
-                  <line x1="0" y1="50" x2="500" y2="50" stroke="rgba(255,255,255,0.04)" />
-                  <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(255,255,255,0.04)" />
-                  <line x1="0" y1="150" x2="500" y2="150" stroke="rgba(255,255,255,0.04)" />
-                  <!-- EMA Lines -->
-                  <path d="M 10 160 Q 150 140 280 90 T 490 50" fill="none" stroke="#E5B869" stroke-width="2" />
-                  <path d="M 10 175 Q 160 155 290 110 T 490 70" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4" />
-                  <!-- Candlesticks -->
-                  <line x1="40" y1="130" x2="40" y2="170" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="36" y="140" width="8" height="20" fill="#34D399" />
 
-                  <line x1="80" y1="135" x2="80" y2="165" stroke="#F87171" stroke-width="1.5" />
-                  <rect x="76" y="142" width="8" height="15" fill="#F87171" />
+                <svg viewBox="0 0 540 230" class="pro-chart-svg">
+                  <defs>
+                    <linearGradient id="proGridGrad" x1="0" y1="0" x2="0" y2="100%">
+                      <stop offset="0%" stop-color="rgba(229,184,105,0.08)" />
+                      <stop offset="100%" stop-color="rgba(229,184,105,0)" />
+                    </linearGradient>
+                  </defs>
 
-                  <line x1="120" y1="120" x2="120" y2="155" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="116" y="125" width="8" height="22" fill="#34D399" />
+                  <!-- Coordinate Grid Lines -->
+                  <line x1="0" y1="40" x2="540" y2="40" stroke="rgba(255,255,255,0.035)" stroke-dasharray="3" />
+                  <line x1="0" y1="80" x2="540" y2="80" stroke="rgba(255,255,255,0.035)" stroke-dasharray="3" />
+                  <line x1="0" y1="120" x2="540" y2="120" stroke="rgba(255,255,255,0.035)" stroke-dasharray="3" />
+                  <line x1="0" y1="160" x2="540" y2="160" stroke="rgba(255,255,255,0.035)" stroke-dasharray="3" />
 
-                  <line x1="160" y1="110" x2="160" y2="145" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="156" y="115" width="8" height="20" fill="#34D399" />
+                  <!-- Price Scale Labels on Right -->
+                  <text x="495" y="44" fill="#64748B" font-size="9" font-family="monospace">1.08500</text>
+                  <text x="495" y="84" fill="#64748B" font-size="9" font-family="monospace">1.08475</text>
+                  <text x="495" y="124" fill="#64748B" font-size="9" font-family="monospace">1.08450</text>
+                  <text x="495" y="164" fill="#64748B" font-size="9" font-family="monospace">1.08425</text>
+                  <text x="495" y="204" fill="#64748B" font-size="9" font-family="monospace">1.08400</text>
 
-                  <line x1="200" y1="105" x2="200" y2="135" stroke="#F87171" stroke-width="1.5" />
-                  <rect x="196" y="110" width="8" height="18" fill="#F87171" />
+                  <!-- EMA 50 (Cyan Line) -->
+                  <path d="M 15 175 Q 120 160 220 145 T 380 125 T 480 115" fill="none" stroke="#38BDF8" stroke-width="1.6" opacity="0.8" />
+                  <!-- EMA 20 (Gold Line) -->
+                  <path d="M 15 160 Q 120 140 220 115 T 380 90 T 480 75" fill="none" stroke="#E5B869" stroke-width="2" />
 
-                  <line x1="240" y1="90" x2="240" y2="125" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="236" y="95" width="8" height="22" fill="#34D399" />
+                  <!-- Bottom Volume Histogram Bars -->
+                  <rect x="25" y="195" width="8" height="20" fill="rgba(16,185,129,0.3)" />
+                  <rect x="47" y="198" width="8" height="17" fill="rgba(239,68,68,0.3)" />
+                  <rect x="69" y="190" width="8" height="25" fill="rgba(16,185,129,0.3)" />
+                  <rect x="91" y="193" width="8" height="22" fill="rgba(16,185,129,0.3)" />
+                  <rect x="113" y="200" width="8" height="15" fill="rgba(239,68,68,0.3)" />
+                  <rect x="135" y="185" width="8" height="30" fill="rgba(16,185,129,0.3)" />
+                  <rect x="157" y="192" width="8" height="23" fill="rgba(16,185,129,0.3)" />
+                  <rect x="179" y="188" width="8" height="27" fill="rgba(16,185,129,0.3)" />
+                  <rect x="201" y="202" width="8" height="13" fill="rgba(239,68,68,0.3)" />
+                  <rect x="223" y="182" width="8" height="33" fill="rgba(16,185,129,0.3)" />
+                  <rect x="245" y="190" width="8" height="25" fill="rgba(239,68,68,0.3)" />
+                  <rect x="267" y="178" width="8" height="37" fill="rgba(16,185,129,0.3)" />
+                  <rect x="289" y="185" width="8" height="30" fill="rgba(16,185,129,0.3)" />
+                  <rect x="311" y="175" width="8" height="40" fill="rgba(16,185,129,0.3)" />
+                  <rect x="333" y="180" width="8" height="35" fill="rgba(239,68,68,0.3)" />
+                  <rect x="355" y="170" width="8" height="45" fill="rgba(16,185,129,0.3)" />
+                  <rect x="377" y="165" width="8" height="50" fill="rgba(16,185,129,0.3)" />
+                  <rect x="399" y="172" width="8" height="43" fill="rgba(239,68,68,0.3)" />
+                  <rect x="421" y="160" width="8" height="55" fill="rgba(16,185,129,0.3)" />
+                  <rect x="443" y="155" width="8" height="60" fill="rgba(16,185,129,0.3)" />
+                  <rect x="465" y="150" width="8" height="65" fill="rgba(16,185,129,0.3)" />
 
-                  <line x1="280" y1="80" x2="280" y2="115" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="276" y="85" width="8" height="20" fill="#34D399" />
+                  <!-- 21 Candlesticks with Wicks -->
+                  <!-- 1 (Green) -->
+                  <line x1="29" y1="145" x2="29" y2="180" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="25" y="152" width="8" height="18" fill="#10B981" rx="1" />
+                  <!-- 2 (Red) -->
+                  <line x1="51" y1="148" x2="51" y2="175" stroke="#EF4444" stroke-width="1.2" />
+                  <rect x="47" y="153" width="8" height="14" fill="#EF4444" rx="1" />
+                  <!-- 3 (Green) -->
+                  <line x1="73" y1="138" x2="73" y2="170" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="69" y="142" width="8" height="20" fill="#10B981" rx="1" />
+                  <!-- 4 (Green) -->
+                  <line x1="95" y1="130" x2="95" y2="162" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="91" y="135" width="8" height="19" fill="#10B981" rx="1" />
+                  <!-- 5 (Red) -->
+                  <line x1="117" y1="132" x2="117" y2="158" stroke="#EF4444" stroke-width="1.2" />
+                  <rect x="113" y="137" width="8" height="13" fill="#EF4444" rx="1" />
+                  <!-- 6 (Green) -->
+                  <line x1="139" y1="115" x2="139" y2="150" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="135" y="122" width="8" height="22" fill="#10B981" rx="1" />
+                  <!-- 7 (Green) -->
+                  <line x1="161" y1="110" x2="161" y2="142" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="157" y="115" width="8" height="20" fill="#10B981" rx="1" />
+                  <!-- 8 (Green) -->
+                  <line x1="183" y1="102" x2="183" y2="135" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="179" y="108" width="8" height="18" fill="#10B981" rx="1" />
+                  <!-- 9 (Red) -->
+                  <line x1="205" y1="105" x2="205" y2="130" stroke="#EF4444" stroke-width="1.2" />
+                  <rect x="201" y="110" width="8" height="12" fill="#EF4444" rx="1" />
+                  <!-- 10 (Green) -->
+                  <line x1="227" y1="90" x2="227" y2="125" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="223" y="96" width="8" height="22" fill="#10B981" rx="1" />
+                  <!-- 11 (Red) -->
+                  <line x1="249" y1="92" x2="249" y2="120" stroke="#EF4444" stroke-width="1.2" />
+                  <rect x="245" y="98" width="8" height="16" fill="#EF4444" rx="1" />
+                  <!-- 12 (Green) -->
+                  <line x1="271" y1="78" x2="271" y2="112" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="267" y="84" width="8" height="22" fill="#10B981" rx="1" />
+                  <!-- 13 (Green) -->
+                  <line x1="293" y1="72" x2="293" y2="105" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="289" y="78" width="8" height="20" fill="#10B981" rx="1" />
+                  <!-- 14 (Green) -->
+                  <line x1="315" y1="65" x2="315" y2="98" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="311" y="70" width="8" height="22" fill="#10B981" rx="1" />
+                  <!-- 15 (Red) -->
+                  <line x1="337" y1="68" x2="337" y2="95" stroke="#EF4444" stroke-width="1.2" />
+                  <rect x="333" y="72" width="8" height="15" fill="#EF4444" rx="1" />
+                  <!-- 16 (Green) -->
+                  <line x1="359" y1="52" x2="359" y2="88" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="355" y="58" width="8" height="24" fill="#10B981" rx="1" />
+                  <!-- 17 (Green) -->
+                  <line x1="381" y1="48" x2="381" y2="80" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="377" y="52" width="8" height="20" fill="#10B981" rx="1" />
+                  <!-- 18 (Red) -->
+                  <line x1="403" y1="50" x2="403" y2="76" stroke="#EF4444" stroke-width="1.2" />
+                  <rect x="399" y="54" width="8" height="14" fill="#EF4444" rx="1" />
+                  <!-- 19 (Green) -->
+                  <line x1="425" y1="38" x2="425" y2="70" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="421" y="42" width="8" height="22" fill="#10B981" rx="1" />
+                  <!-- 20 (Green) -->
+                  <line x1="447" y1="32" x2="447" y2="62" stroke="#10B981" stroke-width="1.2" />
+                  <rect x="443" y="36" width="8" height="20" fill="#10B981" rx="1" />
+                  <!-- 21 (Active Bullish Candle) -->
+                  <line x1="469" y1="28" x2="469" y2="58" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="465" y="30" width="8" height="18" fill="#34D399" rx="1" />
 
-                  <line x1="320" y1="70" x2="320" y2="105" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="316" y="75" width="8" height="22" fill="#34D399" />
-
-                  <line x1="360" y1="65" x2="360" y2="95" stroke="#F87171" stroke-width="1.5" />
-                  <rect x="356" y="70" width="8" height="15" fill="#F87171" />
-
-                  <line x1="400" y1="50" x2="400" y2="85" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="396" y="55" width="8" height="24" fill="#34D399" />
-
-                  <line x1="440" y1="40" x2="440" y2="75" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="436" y="45" width="8" height="22" fill="#34D399" />
-
-                  <line x1="480" y1="35" x2="480" y2="65" stroke="#34D399" stroke-width="1.5" />
-                  <rect x="476" y="38" width="8" height="18" fill="#34D399" />
+                  <!-- Live Market Price Dashed Tracker Line -->
+                  <line x1="0" y1="30" x2="480" y2="30" stroke="#34D399" stroke-width="1.2" stroke-dasharray="4" />
+                  <!-- Price Pill on Right Scale -->
+                  <rect x="480" y="21" width="56" height="18" fill="#10B981" rx="3" />
+                  <text x="485" y="34" fill="#0B0E14" font-size="10" font-weight="800" font-family="monospace">1.08452</text>
                 </svg>
-                <div style="font-size: 0.72rem; color: #94A3B8; text-align: right; margin-top: 4px;">
-                  Current Price: <strong style="color: #FFFFFF;">1.08452</strong> &bull; Volume: 14,820 ticks
+
+                <div style="padding: 6px 14px; background: #0A0E15; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; font-size: 0.7rem; color: #8A99AD;">
+                  <span>Timeframe: M15 &bull; Real Tick Resolution</span>
+                  <span>Spread: <strong style="color: #34D399;">0.1 pip</strong> &bull; Total Depth: 284 Lots</span>
                 </div>
               </div>
             </div>
 
-            <!-- Tab 3: Strategy Tester -->
+            <!-- Tab 3: Strategy Tester View (Institutional Quant Backtest) -->
             <div class="terminal-body" id="terminalTesterView" style="display: none;">
-              <div style="background: #080B10; border-radius: 6px; padding: 14px; font-size: 0.78rem;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                  <span style="color: #94A3B8;">Expert Advisor:</span>
-                  <span style="color: #FFFFFF; font-weight: 700;">Spike_Institutional_Grid_v4.ex5</span>
+              <div class="tester-dashboard">
+                <div class="tester-meta-bar">
+                  <div>
+                    <strong style="color: #FFFFFF;">Spike_Quant_Momentum_v5.ex5</strong>
+                    <div style="font-size: 0.68rem; color: #94A3B8;">EURUSD &bull; M15 &bull; Real Tick History (99.9% Model Quality)</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <span style="background: rgba(16,185,129,0.15); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.7rem;">
+                      PASSED STRESS TEST
+                    </span>
+                  </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                  <span style="color: #94A3B8;">Symbol &amp; Period:</span>
-                  <span style="color: #FFFFFF;">EURUSD &bull; M15 &bull; Every Tick Based on Real Ticks</span>
+
+                <div class="tester-metrics-grid">
+                  <div class="tester-metric-card">
+                    <div class="tester-metric-lbl">Total Net Profit</div>
+                    <div class="tester-metric-val" style="color: #34D399;">+$14,291.80</div>
+                    <div style="font-size: 0.65rem; color: #10B981;">+142.9% on $10,000</div>
+                  </div>
+                  <div class="tester-metric-card">
+                    <div class="tester-metric-lbl">Profit Factor</div>
+                    <div class="tester-metric-val" style="color: var(--gold-primary);">2.52</div>
+                    <div style="font-size: 0.65rem; color: #8A99AD;">Gross Win/Loss: 2.52x</div>
+                  </div>
+                  <div class="tester-metric-card">
+                    <div class="tester-metric-lbl">Sharpe Ratio</div>
+                    <div class="tester-metric-val" style="color: #38BDF8;">2.18</div>
+                    <div style="font-size: 0.65rem; color: #8A99AD;">Institutional Grade</div>
+                  </div>
+                  <div class="tester-metric-card">
+                    <div class="tester-metric-lbl">Max Drawdown</div>
+                    <div class="tester-metric-val" style="color: #E2E8F0;">3.85%</div>
+                    <div style="font-size: 0.65rem; color: #64748B;">Max capital dip: $385</div>
+                  </div>
+                  <div class="tester-metric-card">
+                    <div class="tester-metric-lbl">Win Rate</div>
+                    <div class="tester-metric-val" style="color: #34D399;">69.2%</div>
+                    <div style="font-size: 0.65rem; color: #8A99AD;">354 / 512 Trades</div>
+                  </div>
+                  <div class="tester-metric-card">
+                    <div class="tester-metric-lbl">Recovery Factor</div>
+                    <div class="tester-metric-val" style="color: var(--gold-primary);">8.64</div>
+                    <div style="font-size: 0.65rem; color: #8A99AD;">Fast DD recovery</div>
+                  </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                  <span style="color: #94A3B8;">Initial Deposit:</span>
-                  <span style="color: #FFFFFF;">$10,000.00 USD</span>
+
+                <!-- Realistic Equity Growth Curve SVG -->
+                <svg viewBox="0 0 500 110" class="tester-equity-svg">
+                  <defs>
+                    <linearGradient id="equityGrad" x1="0" y1="0" x2="0" y2="100%">
+                      <stop offset="0%" stop-color="rgba(16,185,129,0.35)" />
+                      <stop offset="100%" stop-color="rgba(16,185,129,0)" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Watermark Grid -->
+                  <line x1="0" y1="25" x2="500" y2="25" stroke="rgba(255,255,255,0.03)" />
+                  <line x1="0" y1="55" x2="500" y2="55" stroke="rgba(255,255,255,0.03)" />
+                  <line x1="0" y1="85" x2="500" y2="85" stroke="rgba(255,255,255,0.03)" />
+                  <!-- Equity Path -->
+                  <path d="M 0 95 L 45 90 L 90 78 L 130 82 L 180 65 L 220 70 L 270 52 L 320 40 L 370 45 L 420 28 L 470 18 L 500 12" fill="none" stroke="#10B981" stroke-width="2.5" />
+                  <path d="M 0 95 L 45 90 L 90 78 L 130 82 L 180 65 L 220 70 L 270 52 L 320 40 L 370 45 L 420 28 L 470 18 L 500 12 L 500 110 L 0 110 Z" fill="url(#equityGrad)" />
+                  <circle cx="500" cy="12" r="3.5" fill="#34D399" />
+                </svg>
+
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; font-size: 0.68rem; color: #64748B;">
+                  <span>Backtest Period: 2025.01.01 &ndash; 2026.10.15</span>
+                  <span>Execution: 100% Co-located MQL5 Farm</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                  <span style="color: #94A3B8;">Total Net Profit:</span>
-                  <span style="color: #34D399; font-weight: 800;">+$4,291.80 (+42.92%)</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                  <span style="color: #94A3B8;">Profit Factor:</span>
-                  <span style="color: #E5B869; font-weight: 700;">2.48</span>
-                </div>
-                <div style="display: flex; justify-content: space-between;">
-                  <span style="color: #94A3B8;">Max Drawdown:</span>
-                  <span style="color: #94A3B8;">4.12% ($412.00)</span>
+              </div>
+            </div>
+
+            <!-- Tab 4: MT5 Active Positions Tab -->
+            <div class="terminal-body" id="terminalTradeView" style="display: none;">
+              <div class="dom-ladder-wrapper">
+                <table class="positions-table">
+                  <thead>
+                    <tr>
+                      <th>Ticket</th>
+                      <th>Symbol</th>
+                      <th>Type</th>
+                      <th>Volume</th>
+                      <th>Open Price</th>
+                      <th>Current</th>
+                      <th>S/L</th>
+                      <th>T/P</th>
+                      <th>Profit (USD)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="color: #94A3B8;">#948201</td>
+                      <td><strong style="color: #FFFFFF;">EURUSD</strong></td>
+                      <td><span style="color: #34D399; font-weight: 700;">BUY</span></td>
+                      <td>1.00 Lot</td>
+                      <td>1.08410</td>
+                      <td style="color: #34D399;">1.08452</td>
+                      <td>1.08300</td>
+                      <td>1.08700</td>
+                      <td style="color: #34D399; font-weight: 700;">+$420.00</td>
+                    </tr>
+                    <tr>
+                      <td style="color: #94A3B8;">#948206</td>
+                      <td><strong style="color: #FFFFFF;">XAUUSD</strong></td>
+                      <td><span style="color: #34D399; font-weight: 700;">BUY</span></td>
+                      <td>0.50 Lot</td>
+                      <td>2,364.20</td>
+                      <td style="color: #34D399;">2,371.80</td>
+                      <td>2,355.00</td>
+                      <td>2,385.00</td>
+                      <td style="color: #34D399; font-weight: 700;">+$380.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div style="padding: 10px 14px; background: #0A0E15; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; font-size: 0.72rem;">
+                  <span>Balance: <strong>$50,000.00</strong> &bull; Equity: <strong style="color: #34D399;">$50,800.00</strong></span>
+                  <span>Floating P&amp;L: <strong style="color: #34D399;">+$800.00 (+1.60%)</strong></span>
                 </div>
               </div>
             </div>
@@ -465,60 +755,218 @@
         <div class="platform-2col-grid reverse">
         <!-- Left: Interactive WebTrader Browser Canvas -->
         <div>
-          <div class="terminal-window">
-            <div class="terminal-header">
+          <div class="webtrader-browser-frame">
+            <div class="webtrader-url-bar">
               <div class="terminal-dots">
                 <span class="terminal-dot red"></span>
                 <span class="terminal-dot yellow"></span>
                 <span class="terminal-dot green"></span>
               </div>
-              <div class="terminal-title-text" style="color: #34D399;">
+              <div class="webtrader-url-box">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                https://webtrader.spikebrokerage.com
+                https://webtrader.spikebrokerage.com/terminal/eurusd
               </div>
-              <div style="font-size: 0.72rem; color: #94A3B8;">TLS 1.3 &bull; 22ms</div>
+              <div style="font-size: 0.7rem; color: #8A99AD; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #34D399; font-weight: 700;">&bull; 14ms NY4</span>
+                <span style="color: rgba(255,255,255,0.2);">|</span>
+                <span style="color: #FFFFFF; font-weight: 700;">DEMO $50K</span>
+              </div>
             </div>
 
-            <div class="webtrader-canvas">
-              <div class="webtrader-toolbar">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <strong style="color: #FFFFFF; font-size: 0.9rem;">EUR/USD</strong>
-                  <span style="font-size: 0.75rem; color: #34D399; font-weight: 700;">1.08452 (+0.24%)</span>
+            <!-- WebTrader Workspace with Left Drawing Palette & Main Chart Stage -->
+            <div class="webtrader-layout">
+              <!-- Left Drawing Tool Palette (TradingView Style) -->
+              <div class="webtrader-left-toolbar">
+                <div class="webtrader-tool-icon active" title="Crosshair">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="3" x2="12" y2="7"></line><line x1="12" y1="17" x2="12" y2="21"></line><line x1="3" y1="12" x2="7" y2="12"></line><line x1="17" y1="12" x2="21" y2="12"></line></svg>
                 </div>
-                <div class="webtrader-tf-pills">
-                  <button class="tf-pill">M1</button>
-                  <button class="tf-pill">M5</button>
-                  <button class="tf-pill active">M15</button>
-                  <button class="tf-pill">H1</button>
-                  <button class="tf-pill">D1</button>
+                <div class="webtrader-tool-icon" title="Trend Line">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="20" x2="20" y2="4"></line><circle cx="4" cy="20" r="2"></circle><circle cx="20" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="webtrader-tool-icon" title="Fibonacci Retracement">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </div>
+                <div class="webtrader-tool-icon" title="Brush / Annotation">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.375-9.375z"></path></svg>
+                </div>
+                <div class="webtrader-tool-icon" title="Long/Short Risk Tool">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+                </div>
+                <div class="webtrader-tool-icon" title="Measurement Ruler">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.3 15.3l-6.6-6.6M12 6L6 12l12 12 6-6-12-12z"></path></svg>
                 </div>
               </div>
 
-              <!-- WebTrader Chart Visual -->
-              <svg viewBox="0 0 460 160" class="webtrader-chart-svg">
-                <defs>
-                  <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="rgba(229, 184, 105, 0.35)" />
-                    <stop offset="100%" stop-color="rgba(229, 184, 105, 0)" />
-                  </linearGradient>
-                </defs>
-                <path d="M 0 130 Q 80 110 160 120 T 300 70 T 460 30" fill="none" stroke="#E5B869" stroke-width="2.5" />
-                <path d="M 0 130 Q 80 110 160 120 T 300 70 T 460 30 L 460 160 L 0 160 Z" fill="url(#chartGrad)" />
-                <circle cx="460" cy="30" r="4" fill="#E5B869" />
-              </svg>
+              <!-- Main Chart Stage -->
+              <div class="webtrader-main-stage">
+                <!-- Top Chart Navigation Bar -->
+                <div class="webtrader-chart-topbar">
+                  <div class="webtrader-instrument-tag">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #34D399; box-shadow: 0 0 6px #34D399;"></span>
+                    <strong>EUR/USD</strong>
+                    <span class="webtrader-price-pill">1.08452 (+0.24%)</span>
+                  </div>
 
-              <!-- Quick Order Strip in WebTrader -->
-              <div style="display: flex; gap: 8px; margin-top: 14px; background: rgba(14, 19, 28, 0.8); padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);">
-                <div style="flex: 1;">
-                  <span style="font-size: 0.7rem; color: #64748B;">TRADE SIZE</span>
-                  <div style="font-size: 0.82rem; font-weight: 700; color: #FFFFFF;">0.50 Lot</div>
+                  <div class="terminal-tf-group">
+                    <button class="terminal-tf-btn">1m</button>
+                    <button class="terminal-tf-btn">5m</button>
+                    <button class="terminal-tf-btn active">15m</button>
+                    <button class="terminal-tf-btn">1h</button>
+                    <button class="terminal-tf-btn">4h</button>
+                    <button class="terminal-tf-btn">1D</button>
+                  </div>
+
+                  <div style="display: flex; align-items: center; gap: 8px; font-size: 0.7rem; color: #8A99AD;">
+                    <span style="color: #E5B869; font-weight: 700;">fx Indicators (3)</span>
+                    <span style="color: rgba(255,255,255,0.2);">|</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                  </div>
                 </div>
-                <button class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #EF4444; color: #F87171; flex: 1.2;">
-                  SELL 1.08450
-                </button>
-                <button class="btn btn-sm" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #34D399; flex: 1.2;">
-                  BUY 1.08452
-                </button>
+
+                <!-- Chart Viewport -->
+                <div class="webtrader-chart-viewport">
+                  <!-- Floating Quick Order Ticket (Docked Top-Right) -->
+                  <div class="webtrader-docked-order">
+                    <div style="font-size: 0.7rem; color: #8A99AD;">
+                      <span>LOT:</span> <strong style="color: #FFFFFF;" id="wtLotDisplay">0.50</strong>
+                    </div>
+                    <button class="btn btn-sm" id="btnWtSell" style="background: rgba(239, 68, 68, 0.25); border: 1px solid #EF4444; color: #F87171; font-weight: 800; padding: 4px 10px; font-size: 0.72rem; cursor: pointer; border-radius: 4px;">
+                      SELL 1.08450
+                    </button>
+                    <button class="btn btn-sm" id="btnWtBuy" style="background: rgba(16, 185, 129, 0.25); border: 1px solid #10B981; color: #34D399; font-weight: 800; padding: 4px 10px; font-size: 0.72rem; cursor: pointer; border-radius: 4px;">
+                      BUY 1.08452
+                    </button>
+                  </div>
+
+                  <!-- High-Fidelity Multi-Candlestick Chart SVG -->
+                  <svg viewBox="0 0 460 220" class="webtrader-chart-svg">
+                    <defs>
+                      <linearGradient id="wtChartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(229, 184, 105, 0.25)" />
+                        <stop offset="100%" stop-color="rgba(229, 184, 105, 0)" />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Coordinate Grid -->
+                    <line x1="0" y1="45" x2="460" y2="45" stroke="rgba(255,255,255,0.03)" stroke-dasharray="3" />
+                    <line x1="0" y1="90" x2="460" y2="90" stroke="rgba(255,255,255,0.03)" stroke-dasharray="3" />
+                    <line x1="0" y1="135" x2="460" y2="135" stroke="rgba(255,255,255,0.03)" stroke-dasharray="3" />
+                    <line x1="0" y1="180" x2="460" y2="180" stroke="rgba(255,255,255,0.03)" stroke-dasharray="3" />
+
+                    <!-- Price Axis Right -->
+                    <text x="420" y="49" fill="#475569" font-size="8" font-family="monospace">1.08550</text>
+                    <text x="420" y="94" fill="#475569" font-size="8" font-family="monospace">1.08500</text>
+                    <text x="420" y="139" fill="#475569" font-size="8" font-family="monospace">1.08450</text>
+                    <text x="420" y="184" fill="#475569" font-size="8" font-family="monospace">1.08400</text>
+
+                    <!-- EMA 9 (Cyan) & EMA 21 (Gold) -->
+                    <path d="M 0 160 Q 80 145 150 120 T 280 80 T 410 45" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.8" />
+                    <path d="M 0 170 Q 90 155 160 135 T 290 100 T 410 65" fill="none" stroke="#E5B869" stroke-width="2" />
+                    <path d="M 0 170 Q 90 155 160 135 T 290 100 T 410 65 L 410 220 L 0 220 Z" fill="url(#wtChartGrad)" />
+
+                    <!-- Bottom Volume Bars -->
+                    <rect x="20" y="195" width="6" height="15" fill="rgba(16,185,129,0.3)" />
+                    <rect x="40" y="198" width="6" height="12" fill="rgba(239,68,68,0.3)" />
+                    <rect x="60" y="190" width="6" height="20" fill="rgba(16,185,129,0.3)" />
+                    <rect x="80" y="192" width="6" height="18" fill="rgba(16,185,129,0.3)" />
+                    <rect x="100" y="200" width="6" height="10" fill="rgba(239,68,68,0.3)" />
+                    <rect x="120" y="185" width="6" height="25" fill="rgba(16,185,129,0.3)" />
+                    <rect x="140" y="192" width="6" height="18" fill="rgba(16,185,129,0.3)" />
+                    <rect x="160" y="188" width="6" height="22" fill="rgba(16,185,129,0.3)" />
+                    <rect x="180" y="195" width="6" height="15" fill="rgba(239,68,68,0.3)" />
+                    <rect x="200" y="182" width="6" height="28" fill="rgba(16,185,129,0.3)" />
+                    <rect x="220" y="189" width="6" height="21" fill="rgba(239,68,68,0.3)" />
+                    <rect x="240" y="178" width="6" height="32" fill="rgba(16,185,129,0.3)" />
+                    <rect x="260" y="185" width="6" height="25" fill="rgba(16,185,129,0.3)" />
+                    <rect x="280" y="175" width="6" height="35" fill="rgba(16,185,129,0.3)" />
+                    <rect x="300" y="180" width="6" height="30" fill="rgba(239,68,68,0.3)" />
+                    <rect x="320" y="170" width="6" height="40" fill="rgba(16,185,129,0.3)" />
+                    <rect x="340" y="165" width="6" height="45" fill="rgba(16,185,129,0.3)" />
+                    <rect x="360" y="172" width="6" height="38" fill="rgba(239,68,68,0.3)" />
+                    <rect x="380" y="158" width="6" height="52" fill="rgba(16,185,129,0.3)" />
+                    <rect x="400" y="152" width="6" height="58" fill="rgba(16,185,129,0.3)" />
+
+                    <!-- Candlesticks Sequence -->
+                    <line x1="23" y1="140" x2="23" y2="175" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="20" y="148" width="6" height="18" fill="#10B981" rx="1" />
+
+                    <line x1="43" y1="145" x2="43" y2="172" stroke="#EF4444" stroke-width="1.2" />
+                    <rect x="40" y="150" width="6" height="14" fill="#EF4444" rx="1" />
+
+                    <line x1="63" y1="135" x2="63" y2="168" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="60" y="140" width="6" height="20" fill="#10B981" rx="1" />
+
+                    <line x1="83" y1="128" x2="83" y2="160" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="80" y="134" width="6" height="18" fill="#10B981" rx="1" />
+
+                    <line x1="103" y1="130" x2="103" y2="155" stroke="#EF4444" stroke-width="1.2" />
+                    <rect x="100" y="135" width="6" height="12" fill="#EF4444" rx="1" />
+
+                    <line x1="123" y1="112" x2="123" y2="148" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="120" y="118" width="6" height="22" fill="#10B981" rx="1" />
+
+                    <line x1="143" y1="105" x2="143" y2="140" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="140" y="112" width="6" height="20" fill="#10B981" rx="1" />
+
+                    <line x1="163" y1="98" x2="163" y2="132" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="160" y="104" width="6" height="18" fill="#10B981" rx="1" />
+
+                    <line x1="183" y1="102" x2="183" y2="128" stroke="#EF4444" stroke-width="1.2" />
+                    <rect x="180" y="106" width="6" height="14" fill="#EF4444" rx="1" />
+
+                    <line x1="203" y1="85" x2="203" y2="122" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="200" y="92" width="6" height="22" fill="#10B981" rx="1" />
+
+                    <line x1="223" y1="88" x2="223" y2="118" stroke="#EF4444" stroke-width="1.2" />
+                    <rect x="220" y="94" width="6" height="16" fill="#EF4444" rx="1" />
+
+                    <line x1="243" y1="75" x2="243" y2="110" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="240" y="80" width="6" height="22" fill="#10B981" rx="1" />
+
+                    <line x1="263" y1="68" x2="263" y2="102" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="260" y="74" width="6" height="20" fill="#10B981" rx="1" />
+
+                    <line x1="283" y1="60" x2="283" y2="94" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="280" y="66" width="6" height="20" fill="#10B981" rx="1" />
+
+                    <line x1="303" y1="64" x2="303" y2="90" stroke="#EF4444" stroke-width="1.2" />
+                    <rect x="300" y="68" width="6" height="14" fill="#EF4444" rx="1" />
+
+                    <line x1="323" y1="48" x2="323" y2="82" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="320" y="54" width="6" height="22" fill="#10B981" rx="1" />
+
+                    <line x1="343" y1="42" x2="343" y2="76" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="340" y="48" width="6" height="20" fill="#10B981" rx="1" />
+
+                    <line x1="363" y1="45" x2="363" y2="72" stroke="#EF4444" stroke-width="1.2" />
+                    <rect x="360" y="50" width="6" height="14" fill="#EF4444" rx="1" />
+
+                    <line x1="383" y1="32" x2="383" y2="65" stroke="#10B981" stroke-width="1.2" />
+                    <rect x="380" y="38" width="6" height="20" fill="#10B981" rx="1" />
+
+                    <line x1="403" y1="26" x2="403" y2="58" stroke="#34D399" stroke-width="1.5" />
+                    <rect x="400" y="30" width="6" height="18" fill="#34D399" rx="1" />
+
+                    <!-- Live Market Price Dashed Tracker Line -->
+                    <line x1="0" y1="30" x2="410" y2="30" stroke="#34D399" stroke-width="1.2" stroke-dasharray="4" />
+                    <rect x="410" y="21" width="50" height="18" fill="#10B981" rx="3" />
+                    <text x="414" y="34" fill="#0B0E14" font-size="9" font-weight="800" font-family="monospace">1.08452</text>
+                  </svg>
+                </div>
+
+                <!-- WebTrader Bottom Account Status Strip -->
+                <div class="webtrader-bottom-status">
+                  <div style="display: flex; gap: 14px;">
+                    <span>Balance: <strong style="color: #FFFFFF;">$24,850.40</strong></span>
+                    <span>Equity: <strong style="color: #34D399;">$25,230.40</strong></span>
+                    <span>Margin: <strong style="color: #CBD5E1;">$480.00</strong></span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="background: rgba(16,185,129,0.15); color: #34D399; padding: 1px 6px; border-radius: 3px; font-weight: 700;">
+                      Active: EURUSD +$380.00 (+1.53%)
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -681,67 +1129,218 @@
           </div>
         </div>
 
-        <!-- Right: Glass Phone Mockup -->
+        <!-- Right: iPhone 16 Pro Flagship Mobile Trading App Mockup -->
         <div>
           <div class="mobile-phone-wrapper">
             <div class="mobile-phone-screen">
+              <!-- iPhone Dynamic Island with Live Ticker -->
+              <div class="phone-dynamic-island">
+                <span class="phone-island-dot"></span>
+                <span>EURUSD 1.08452 &utrif; +0.24%</span>
+                <span style="color: #64748B; font-size: 0.58rem;">NY4 12ms</span>
+              </div>
+
+              <!-- iOS Status Bar -->
               <div class="phone-status-bar">
-                <span>14:32</span>
-                <span style="display: flex; gap: 4px; align-items: center;">
-                  <span>5G</span>
-                  <span>100%</span>
+                <span>09:41</span>
+                <span style="display: flex; gap: 5px; align-items: center;">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                  <span style="font-size: 0.6rem; letter-spacing: -0.5px;">5G</span>
+                  <svg width="16" height="10" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="1" width="18" height="12" rx="3"></rect><path d="M23 5v4" stroke-linecap="round"></path><rect x="3" y="3" width="14" height="8" rx="1.5" fill="#34D399" stroke="none"></rect></svg>
                 </span>
               </div>
 
+              <!-- App Header -->
               <div class="phone-app-header">
-                <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="22">
-                <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
-                  LIVE ECN
-                </span>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="20" style="border-radius: 3px;">
+                  <span style="font-size: 0.68rem; color: #FFFFFF; font-weight: 700;">PRO ECN #49201 &blacktriangledown;</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 2px 6px; border-radius: 4px; font-weight: 700;">
+                    LIVE ECN
+                  </span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path><circle cx="18" cy="5" r="3" fill="#EF4444"></circle></svg>
+                </div>
               </div>
 
               <div class="phone-app-body">
-                <!-- Balance Card -->
+                <!-- Portfolio Card -->
                 <div class="phone-balance-card">
-                  <div style="font-size: 0.68rem; color: #94A3B8;">EQUITY &bull; USD</div>
-                  <div style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin: 2px 0;">$24,850.40</div>
-                  <div style="font-size: 0.7rem; color: #34D399;">+$428.50 Today (+1.75%)</div>
+                  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <span style="font-size: 0.64rem; color: #8A99AD; text-transform: uppercase; letter-spacing: 0.4px;">Total Equity (USD)</span>
+                    <span style="font-size: 0.65rem; background: rgba(16,185,129,0.15); color: #34D399; padding: 1px 6px; border-radius: 4px; font-weight: 700;">
+                      +$428.50 (+1.75%) &nearr;
+                    </span>
+                  </div>
+                  <div style="font-size: 1.35rem; font-weight: 800; color: #FFFFFF; margin: 3px 0 6px; letter-spacing: -0.02em;">
+                    $24,850.40
+                  </div>
+
+                  <!-- 4 Quick Actions -->
+                  <div class="phone-action-buttons">
+                    <button class="phone-action-btn">
+                      <span class="phone-action-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                      </span>
+                      <span>Deposit</span>
+                    </button>
+                    <button class="phone-action-btn">
+                      <span class="phone-action-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                      </span>
+                      <span>Withdraw</span>
+                    </button>
+                    <button class="phone-action-btn">
+                      <span class="phone-action-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                      </span>
+                      <span>Analytics</span>
+                    </button>
+                    <button class="phone-action-btn">
+                      <span class="phone-action-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                      </span>
+                      <span>Transfer</span>
+                    </button>
+                  </div>
                 </div>
 
-                <!-- Instrument & Mini Chart -->
-                <div style="background: rgba(14, 19, 28, 0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 10px;">
-                  <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 700; color: #FFFFFF;">
-                    <span>EUR/USD</span>
-                    <span style="color: #34D399;">1.08452</span>
+                <!-- Instrument & Candlestick Mini-Chart Widget -->
+                <div class="phone-market-widget">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+                    <div>
+                      <strong style="color: #FFFFFF; font-size: 0.82rem;">EUR/USD &bull; Major FX</strong>
+                      <div style="font-size: 0.62rem; color: #8A99AD;">24h H: 1.08640 &bull; L: 1.08210</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="color: #34D399; font-weight: 800; font-size: 0.88rem; font-family: monospace;">1.08452</div>
+                      <div style="font-size: 0.62rem; color: #34D399;">+0.24%</div>
+                    </div>
                   </div>
-                  <!-- Mini Candle Path -->
-                  <svg viewBox="0 0 260 80" style="width: 100%; height: 75px; margin-top: 6px;">
-                    <path d="M 10 65 Q 60 55 110 60 T 190 35 T 250 15" fill="none" stroke="#34D399" stroke-width="2" />
-                    <circle cx="250" cy="15" r="3" fill="#34D399" />
+
+                  <!-- High-Detail Mobile Candlestick Chart SVG -->
+                  <svg viewBox="0 0 270 85" style="width: 100%; height: 80px; display: block;">
+                    <defs>
+                      <linearGradient id="phoneChartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(16, 185, 129, 0.3)" />
+                        <stop offset="100%" stop-color="rgba(16, 185, 129, 0)" />
+                      </linearGradient>
+                    </defs>
+                    <!-- Grid Lines -->
+                    <line x1="0" y1="20" x2="270" y2="20" stroke="rgba(255,255,255,0.03)" />
+                    <line x1="0" y1="45" x2="270" y2="45" stroke="rgba(255,255,255,0.03)" />
+                    <line x1="0" y1="70" x2="270" y2="70" stroke="rgba(255,255,255,0.03)" />
+
+                    <!-- EMA 20 Overlay -->
+                    <path d="M 5 65 Q 60 55 120 42 T 200 28 T 265 15" fill="none" stroke="#E5B869" stroke-width="1.5" />
+                    <!-- Glow Fill Under Trend -->
+                    <path d="M 5 65 Q 60 55 120 42 T 200 28 T 265 15 L 265 85 L 5 85 Z" fill="url(#phoneChartGrad)" />
+
+                    <!-- 14 Realistic Candlesticks -->
+                    <line x1="15" y1="55" x2="15" y2="75" stroke="#10B981" stroke-width="1" />
+                    <rect x="13" y="60" width="4" height="12" fill="#10B981" rx="0.5" />
+
+                    <line x1="33" y1="58" x2="33" y2="72" stroke="#EF4444" stroke-width="1" />
+                    <rect x="31" y="61" width="4" height="8" fill="#EF4444" rx="0.5" />
+
+                    <line x1="51" y1="52" x2="51" y2="70" stroke="#10B981" stroke-width="1" />
+                    <rect x="49" y="55" width="4" height="12" fill="#10B981" rx="0.5" />
+
+                    <line x1="69" y1="48" x2="69" y2="66" stroke="#10B981" stroke-width="1" />
+                    <rect x="67" y="52" width="4" height="11" fill="#10B981" rx="0.5" />
+
+                    <line x1="87" y1="50" x2="87" y2="64" stroke="#EF4444" stroke-width="1" />
+                    <rect x="85" y="53" width="4" height="8" fill="#EF4444" rx="0.5" />
+
+                    <line x1="105" y1="42" x2="105" y2="60" stroke="#10B981" stroke-width="1" />
+                    <rect x="103" y="46" width="4" height="12" fill="#10B981" rx="0.5" />
+
+                    <line x1="123" y1="38" x2="123" y2="55" stroke="#10B981" stroke-width="1" />
+                    <rect x="121" y="42" width="4" height="10" fill="#10B981" rx="0.5" />
+
+                    <line x1="141" y1="40" x2="141" y2="52" stroke="#EF4444" stroke-width="1" />
+                    <rect x="139" y="43" width="4" height="7" fill="#EF4444" rx="0.5" />
+
+                    <line x1="159" y1="32" x2="159" y2="50" stroke="#10B981" stroke-width="1" />
+                    <rect x="157" y="36" width="4" height="12" fill="#10B981" rx="0.5" />
+
+                    <line x1="177" y1="34" x2="177" y2="48" stroke="#EF4444" stroke-width="1" />
+                    <rect x="175" y="37" width="4" height="8" fill="#EF4444" rx="0.5" />
+
+                    <line x1="195" y1="25" x2="195" y2="44" stroke="#10B981" stroke-width="1" />
+                    <rect x="193" y="28" width="4" height="13" fill="#10B981" rx="0.5" />
+
+                    <line x1="213" y1="22" x2="213" y2="40" stroke="#10B981" stroke-width="1" />
+                    <rect x="211" y="25" width="4" height="12" fill="#10B981" rx="0.5" />
+
+                    <line x1="231" y1="24" x2="231" y2="38" stroke="#EF4444" stroke-width="1" />
+                    <rect x="229" y="27" width="4" height="8" fill="#EF4444" rx="0.5" />
+
+                    <line x1="249" y1="12" x2="249" y2="32" stroke="#34D399" stroke-width="1.2" />
+                    <rect x="247" y="15" width="4" height="12" fill="#34D399" rx="0.5" />
+
+                    <!-- Live Pulsing Marker -->
+                    <circle cx="249" cy="15" r="3.5" fill="#34D399" />
                   </svg>
                 </div>
 
-                <!-- Open Position Strip -->
-                <div style="margin-top: 10px; background: rgba(22, 30, 44, 0.6); padding: 8px 10px; border-radius: 6px; font-size: 0.72rem; display: flex; justify-content: space-between; border-left: 3px solid #34D399;">
-                  <div>
-                    <strong style="color: #FFFFFF;">BUY XAUUSD 0.50 Lot</strong>
-                    <div style="color: #94A3B8;">Open: $2,364.20</div>
+                <!-- Active Open Position Card -->
+                <div class="phone-position-card">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <div>
+                      <strong style="color: #FFFFFF;">BUY XAUUSD 0.50 Lot</strong>
+                      <div style="font-size: 0.62rem; color: #8A99AD;">Open: $2,364.20 &bull; Now: $2,371.80</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <span style="color: #34D399; font-weight: 800; font-size: 0.78rem;">+$380.00</span>
+                      <div style="font-size: 0.6rem; color: #10B981;">+1.61% ROI</div>
+                    </div>
                   </div>
-                  <div style="text-align: right; color: #34D399; font-weight: 700;">
-                    +$320.00
+                  <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.62rem; color: #64748B; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 4px; margin-top: 4px;">
+                    <span>SL: $2,355.00 | TP: $2,385.00</span>
+                    <span style="color: var(--gold-primary); font-weight: 700; cursor: pointer;">Close &times;</span>
                   </div>
                 </div>
 
-                <!-- Phone Buy/Sell Buttons -->
+                <!-- Phone Instant Order Buttons -->
                 <div class="phone-order-ticket">
-                  <button class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #EF4444; color: #F87171; font-weight: 700;">
+                  <button class="btn btn-sm" id="btnPhoneSell" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #EF4444; color: #F87171; font-weight: 800; padding: 7px 8px; border-radius: 6px; font-size: 0.74rem;">
                     SELL 1.08450
                   </button>
-                  <button class="btn btn-sm" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #34D399; font-weight: 700;">
+                  <button class="btn btn-sm" id="btnPhoneBuy" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #34D399; font-weight: 800; padding: 7px 8px; border-radius: 6px; font-size: 0.74rem;">
                     BUY 1.08452
                   </button>
                 </div>
               </div>
+
+              <!-- Native iOS Bottom Tab Bar -->
+              <div class="phone-tab-bar">
+                <a href="#mobile" class="phone-tab-item active">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  <span>Markets</span>
+                </a>
+                <a href="#mobile" class="phone-tab-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <span>Charts</span>
+                </a>
+                <a href="#mobile" class="phone-tab-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                  <span>Trade</span>
+                </a>
+                <a href="#mobile" class="phone-tab-item" style="position: relative;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <span>Orders</span>
+                  <span style="position: absolute; top: -2px; right: 8px; width: 5px; height: 5px; background: #34D399; border-radius: 50%;"></span>
+                </a>
+                <a href="#mobile" class="phone-tab-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                  <span>Wallet</span>
+                </a>
+              </div>
+
+              <!-- iOS Home Bar Indicator -->
+              <div class="phone-home-indicator"></div>
             </div>
           </div>
         </div>
@@ -756,53 +1355,96 @@
       <div class="platform-showcase-panel">
         <div class="platform-panel-top-tag"><span class="tag-dot"></span> 04 &bull; INSTITUTIONAL API &bull; FIX 4.4 &amp; PYTHON</div>
         <div class="platform-2col-grid">
-        <!-- Left: Code Terminal -->
+        <!-- Left: Institutional Developer IDE Workstation -->
         <div>
-          <div class="api-tabs-nav">
-            <button class="api-tab-btn active" data-lang="python">Python SDK</button>
-            <button class="api-tab-btn" data-lang="nodejs">Node.js</button>
-            <button class="api-tab-btn" data-lang="csharp">C# (.NET)</button>
-            <button class="api-tab-btn" data-lang="fix">FIX 4.4 Protocol</button>
-            <button class="api-tab-btn" data-lang="curl">cURL REST</button>
-          </div>
+          <div class="api-ide-window">
+            <!-- IDE Title Bar -->
+            <div class="api-ide-titlebar">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div style="font-size: 0.72rem; color: #94A3B8; font-family: monospace;">
+                spike-sdk &gt; src &gt; quant &gt; <strong style="color: #FFFFFF;">hft_execution.py</strong>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 0.7rem;">
+                <span style="color: #34D399; font-weight: 700;">&bull; NY4 Sub-2ms</span>
+                <span style="color: rgba(255,255,255,0.2);">|</span>
+                <span style="color: var(--gold-primary); font-family: monospace;">git: main*</span>
+              </div>
+            </div>
 
-          <div class="code-container">
-            <div class="code-header">
-              <span>ENDPOINT: https://api.spikebrokerage.com/v2/orders</span>
-              <button class="btn-copy-code" id="btnCopyApiCode">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                Copy Code
+            <!-- IDE File Tabs -->
+            <div class="api-file-tabs">
+              <button class="api-file-tab active" data-lang="python">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                quant_hft_engine.py
+              </button>
+              <button class="api-file-tab" data-lang="nodejs">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                stream_quotes.ts
+              </button>
+              <button class="api-file-tab" data-lang="csharp">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                SpikeClient.cs
+              </button>
+              <button class="api-file-tab" data-lang="fix">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                fix44_gateway.cfg
+              </button>
+              <button class="api-file-tab" data-lang="curl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                rest_order.sh
               </button>
             </div>
 
-            <!-- Python Snippet -->
-            <pre class="code-block" id="codePython" style="display: block;"><code><span class="code-keyword">import</span> spike_quant_api <span class="code-keyword">as</span> sqa
+            <!-- Top Code Action Bar -->
+            <div class="api-editor-top-actions">
+              <span style="font-family: monospace; font-size: 0.7rem; color: #8A99AD;">
+                ENDPOINT: <span style="color: #38BDF8;">https://api.spikebrokerage.com/v2/orders</span>
+              </span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <button class="btn-copy-code" id="btnCopyApiCode">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy
+                </button>
+                <button class="btn-sandbox-run" id="btnRunApiSandbox">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Run Sandbox
+                </button>
+              </div>
+            </div>
 
-<span class="code-comment"># Authenticate with institutional Equinix NY4 gateway</span>
+            <!-- Editor Layout with Line Numbers -->
+            <div class="api-code-editor-layout">
+              <div class="api-line-numbers">
+                01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19
+              </div>
+
+              <!-- Python Snippet -->
+              <pre class="code-block" id="codePython" style="display: block;"><code><span class="code-keyword">import</span> spike_quant_api <span class="code-keyword">as</span> sqa
+
+<span class="code-comment"># Direct Equinix NY4 low-latency cluster connection</span>
 client = sqa.<span class="code-fn">Client</span>(
     api_key=<span class="code-str">"spk_live_948201bfa82e"</span>,
     secret_key=<span class="code-str">"sec_ny4_982180491823"</span>,
-    gateway=<span class="code-str">"ny4.spikebrokerage.com:9800"</span>
+    cluster=<span class="code-str">"EQUINIX_NY4_CROSS_CONNECT"</span>
 )
 
-<span class="code-comment"># Stream real-time Level 2 Market Depth</span>
+<span class="code-comment"># Stream real-time 10-level Level II Orderbook</span>
 orderbook = client.market.<span class="code-fn">get_depth</span>(symbol=<span class="code-str">"EURUSD"</span>, levels=<span class="code-num">10</span>)
 print(<span class="code-str">f"Top of Book: Bid={orderbook.bids[0].price} | Ask={orderbook.asks[0].price}"</span>)
 
-<span class="code-comment"># Submit algorithmic limit order with sub-2ms latency</span>
+<span class="code-comment"># Route institutional limit order with sub-2ms fill</span>
 response = client.orders.<span class="code-fn">create</span>(
-    symbol=<span class="code-str">"EURUSD"</span>,
-    side=<span class="code-str">"BUY"</span>,
-    order_type=<span class="code-str">"LIMIT"</span>,
-    lots=<span class="code-num">2.50</span>,
-    price=<span class="code-num">1.08450</span>,
-    slippage_tolerance_pips=<span class="code-num">0.1</span>,
-    time_in_force=<span class="code-str">"IOC"</span>
+    symbol=<span class="code-str">"EURUSD"</span>, side=<span class="code-str">"BUY"</span>, order_type=<span class="code-str">"LIMIT"</span>,
+    lots=<span class="code-num">2.50</span>, price=<span class="code-num">1.08450</span>, time_in_force=<span class="code-str">"IOC"</span>
 )
-print(<span class="code-str">f"Execution: #{response.order_id} filled at {response.fill_price} in {response.latency_ms}ms"</span>)</code></pre>
+print(<span class="code-str">f"Execution: #{response.order_id} filled @ {response.fill_price} in {response.latency_ms}ms"</span>)</code></pre>
 
-            <!-- Node.js Snippet -->
-            <pre class="code-block" id="codeNodejs" style="display: none;"><code><span class="code-keyword">const</span> { SpikeClient } = <span class="code-fn">require</span>(<span class="code-str">'@spike/quant-sdk'</span>);
+              <!-- Node.js / TypeScript Snippet -->
+              <pre class="code-block" id="codeNodejs" style="display: none;"><code><span class="code-keyword">import</span> { SpikeClient } <span class="code-keyword">from</span> <span class="code-str">'@spike/quant-sdk'</span>;
 
 <span class="code-keyword">const</span> client = <span class="code-keyword">new</span> <span class="code-fn">SpikeClient</span>({
   apiKey: <span class="code-str">'spk_live_948201bfa82e'</span>,
@@ -810,22 +1452,19 @@ print(<span class="code-str">f"Execution: #{response.order_id} filled at {respon
   cluster: <span class="code-str">'EQUINIX_NY4'</span>
 });
 
-<span class="code-comment">// Subscribe to tick-by-tick quotes via WebSockets</span>
-client.<span class="code-fn">subscribeQuotes</span>([<span class="code-str">'EURUSD'</span>, <span class="code-str">'XAUUSD'</span>], (tick) => {
+<span class="code-comment">// Stream tick-by-tick quotes via WebSockets</span>
+client.<span class="code-fn">subscribeQuotes</span>([<span class="code-str">'EURUSD'</span>, <span class="code-str">'XAUUSD'</span>], (tick) =&gt; {
   console.<span class="code-fn">log</span>(<span class="code-str">`[${tick.timestamp}] ${tick.symbol}: ${tick.bid} / ${tick.ask}`</span>);
 });
 
-<span class="code-comment">// Submit rapid execution order</span>
+<span class="code-comment">// Rapid Execution limit order</span>
 <span class="code-keyword">const</span> order = <span class="code-keyword">await</span> client.orders.<span class="code-fn">submit</span>({
-  symbol: <span class="code-str">'EURUSD'</span>,
-  side: <span class="code-str">'BUY'</span>,
-  volume: <span class="code-num">1.0</span>,
-  type: <span class="code-str">'MARKET'</span>
+  symbol: <span class="code-str">'EURUSD'</span>, side: <span class="code-str">'BUY'</span>, volume: <span class="code-num">2.5</span>, type: <span class="code-str">'LIMIT'</span>, price: <span class="code-num">1.08450</span>
 });
-console.<span class="code-fn">log</span>(<span class="code-str">`Order ${order.id} matched: ${order.status}`</span>);</code></pre>
+console.<span class="code-fn">log</span>(<span class="code-str">`Order ${order.id} matched: ${order.status} (${order.latencyMs}ms)`</span>);</code></pre>
 
-            <!-- C# Snippet -->
-            <pre class="code-block" id="codeCsharp" style="display: none;"><code><span class="code-keyword">using</span> Spike.Quant.Api;
+              <!-- C# Snippet -->
+              <pre class="code-block" id="codeCsharp" style="display: none;"><code><span class="code-keyword">using</span> Spike.Quant.Api;
 
 <span class="code-keyword">var</span> client = <span class="code-keyword">new</span> <span class="code-fn">SpikeGatewayClient</span>(
     apiKey: <span class="code-str">"spk_live_948201bfa82e"</span>,
@@ -836,30 +1475,70 @@ console.<span class="code-fn">log</span>(<span class="code-str">`Order ${order.i
 <span class="code-keyword">var</span> response = <span class="code-keyword">await</span> client.Orders.<span class="code-fn">SendLimitOrderAsync</span>(
     symbol: <span class="code-str">"EURUSD"</span>,
     orderSide: OrderSide.Buy,
-    lots: <span class="code-num">5.00m</span>,
+    lots: <span class="code-num">2.50m</span>,
     limitPrice: <span class="code-num">1.08450m</span>
-);</code></pre>
+);
+Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed #{response.OrderId} in {response.LatencyMs}ms"</span>);</code></pre>
 
-            <!-- FIX 4.4 Snippet -->
-            <pre class="code-block" id="codeFix" style="display: none;"><code><span class="code-comment">// Standard FIX Protocol 4.4 - Direct Equinix NY4 Cross-Connect</span>
+              <!-- FIX 4.4 Snippet -->
+              <pre class="code-block" id="codeFix" style="display: none;"><code><span class="code-comment">// Standard FIX Protocol 4.4 - Direct Equinix NY4 Cross-Connect</span>
 8=FIX.4.4|9=152|35=D|49=SPIKE_CLIENT_01|56=SPIKE_MATCH_NY4|34=104|52=20261016-14:32:00.124|
-11=ORD_849201|21=1|55=EUR/USD|54=1|38=100000|40=2|44=1.08450|59=3|10=218|
+11=ORD_849201|21=1|55=EUR/USD|54=1|38=250000|40=2|44=1.08450|59=3|10=218|
 
-<span class="code-comment">// Response (35=8 Execution Report - FILLED)</span>
+<span class="code-comment">// Inbound Execution Report (35=8 - FILLED)</span>
 8=FIX.4.4|9=168|35=8|49=SPIKE_MATCH_NY4|56=SPIKE_CLIENT_01|34=201|52=20261016-14:32:00.126|
-37=EXEC_9420|11=ORD_849201|17=EXEC_NY4_01|39=2|150=2|55=EUR/USD|54=1|38=100000|32=100000|31=1.08450|10=042|</code></pre>
+37=EXEC_9420|11=ORD_849201|17=EXEC_NY4_01|39=2|150=2|55=EUR/USD|54=1|38=250000|32=250000|31=1.08450|10=042|</code></pre>
 
-            <!-- cURL Snippet -->
-            <pre class="code-block" id="codeCurl" style="display: none;"><code>curl -X POST https://api.spikebrokerage.com/v2/orders \
+              <!-- cURL Snippet -->
+              <pre class="code-block" id="codeCurl" style="display: none;"><code>curl -X POST https://api.spikebrokerage.com/v2/orders \
   -H <span class="code-str">"Authorization: Bearer spk_live_948201bfa82e"</span> \
   -H <span class="code-str">"Content-Type: application/json"</span> \
   -d <span class="code-str">'{
     "symbol": "EURUSD",
     "side": "BUY",
     "type": "LIMIT",
-    "lots": 1.00,
-    "price": 1.08450
+    "lots": 2.50,
+    "price": 1.08450,
+    "time_in_force": "IOC"
   }'</span></code></pre>
+            </div>
+
+            <!-- Embedded Interactive Sandbox Console Output Drawer -->
+            <div class="api-console-drawer">
+              <div class="api-console-header">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10B981; box-shadow: 0 0 6px #10B981;"></span>
+                  <strong style="color: #CBD5E1;">TERMINAL &bull; LIVE EXECUTION FEED (EQUINIX NY4 GATEWAY)</strong>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #34D399; font-weight: 700;">STREAM ACTIVE</span>
+                  <span style="color: rgba(255,255,255,0.2);">|</span>
+                  <span style="cursor: pointer; color: #8A99AD;" id="btnClearApiLogs">Clear</span>
+                </div>
+              </div>
+              <div class="api-console-logs" id="apiConsoleLogs">
+                <div class="api-log-entry">
+                  <span class="api-log-time">[14:32:00.102]</span>
+                  <span class="api-log-tag-net">[NET]</span>
+                  <span>Connected to Equinix NY4 Gateway Engine (TCP 9800, TLS 1.3)</span>
+                </div>
+                <div class="api-log-entry">
+                  <span class="api-log-time">[14:32:00.105]</span>
+                  <span class="api-log-tag-auth">[AUTH]</span>
+                  <span>Session authenticated as SPIKE_HFT_FUND_09 (Tier-1 VIP)</span>
+                </div>
+                <div class="api-log-entry">
+                  <span class="api-log-time">[14:32:00.108]</span>
+                  <span class="api-log-tag-order">[BOOK]</span>
+                  <span>Top of Book: Bid 1.08451 (18.5L) | Ask 1.08452 (15.0L) | Spread 0.1 pip</span>
+                </div>
+                <div class="api-log-entry">
+                  <span class="api-log-time">[14:32:00.115]</span>
+                  <span class="api-log-tag-match">[MATCH]</span>
+                  <span style="color: #34D399;">Order #948201 LIMIT BUY 2.50 Lots EURUSD FILLED @ 1.08450 (Latency: 1.42ms)</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

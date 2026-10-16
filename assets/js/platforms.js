@@ -137,11 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el) observer.observe(el);
   });
 
-  // ==================== 3. DESKTOP TERMINAL TABS & DOM SIMULATOR ====================
+  // ==================== 3. DESKTOP TERMINAL TABS & WORKSTATION CONTROLS ====================
   const terminalTabs = document.querySelectorAll('.terminal-tab-item');
   const domView = document.getElementById('terminalDomView');
   const chartView = document.getElementById('terminalChartView');
   const testerView = document.getElementById('terminalTesterView');
+  const tradeView = document.getElementById('terminalTradeView');
 
   if (terminalTabs.length) {
     terminalTabs.forEach(tab => {
@@ -153,7 +154,42 @@ document.addEventListener('DOMContentLoaded', () => {
         if (domView) domView.style.display = (view === 'dom') ? 'block' : 'none';
         if (chartView) chartView.style.display = (view === 'chart') ? 'block' : 'none';
         if (testerView) testerView.style.display = (view === 'tester') ? 'block' : 'none';
+        if (tradeView) tradeView.style.display = (view === 'trade') ? 'block' : 'none';
       });
+    });
+  }
+
+  // Timeframe buttons switching in Desktop & WebTrader
+  document.querySelectorAll('.terminal-tf-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const parent = e.target.closest('.terminal-tf-group');
+      if (parent) {
+        parent.querySelectorAll('.terminal-tf-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    });
+  });
+
+  // Lot Stepper in DOM
+  let currentLot = 1.00;
+  const domLotVal = document.getElementById('domLotVal');
+  const btnLotPlus = document.getElementById('btnLotPlus');
+  const btnLotMinus = document.getElementById('btnLotMinus');
+
+  if (btnLotPlus && domLotVal) {
+    btnLotPlus.addEventListener('click', () => {
+      currentLot = Number((currentLot + 0.50).toFixed(2));
+      domLotVal.textContent = `${currentLot.toFixed(2)} Lot`;
+    });
+  }
+
+  if (btnLotMinus && domLotVal) {
+    btnLotMinus.addEventListener('click', () => {
+      if (currentLot > 0.10) {
+        currentLot = Number((currentLot - 0.50).toFixed(2));
+        if (currentLot < 0.10) currentLot = 0.10;
+        domLotVal.textContent = `${currentLot.toFixed(2)} Lot`;
+      }
     });
   }
 
@@ -162,16 +198,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSell = document.getElementById('btnDomSell');
   const domFeedback = document.getElementById('domOrderFeedback');
 
-  function triggerTradeSimulation(side) {
+  function triggerTradeSimulation(side, symbol = 'EURUSD', lots = currentLot) {
     if (!domFeedback) return;
-    const price = (side === 'BUY') ? '1.08453' : '1.08451';
+    const price = (side === 'BUY') ? '1.08452' : '1.08451';
     const orderId = Math.floor(100000 + Math.random() * 900000);
-    const latency = (6 + Math.random() * 5).toFixed(1);
+    const latency = (6 + Math.random() * 4).toFixed(1);
 
     domFeedback.innerHTML = `
-      <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 6px; padding: 8px 12px; margin-top: 10px; font-size: 0.76rem; color: #34D399; display: flex; align-items: center; justify-content: space-between;">
-        <span><strong>Order #${orderId}</strong>: ${side} 1.00 Lot EURUSD @ ${price}</span>
-        <span style="color: #94A3B8;">NY4 Fill: ${latency}ms</span>
+      <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 6px; padding: 8px 12px; margin-top: 10px; font-size: 0.76rem; color: #34D399; display: flex; align-items: center; justify-content: space-between; animation: fadeIn 0.2s ease;">
+        <span><strong>Order #${orderId}</strong>: ${side} ${lots.toFixed(2)} Lot ${symbol} @ ${price}</span>
+        <span style="color: #94A3B8;">NY4 Co-location Fill: <strong style="color: #34D399;">${latency}ms</strong></span>
       </div>
     `;
 
@@ -183,7 +219,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnBuy) btnBuy.addEventListener('click', () => triggerTradeSimulation('BUY'));
   if (btnSell) btnSell.addEventListener('click', () => triggerTradeSimulation('SELL'));
 
-  // Micro-tick price fluctuation in DOM
+  // WebTrader Buy/Sell triggers
+  const btnWtBuy = document.getElementById('btnWtBuy');
+  const btnWtSell = document.getElementById('btnWtSell');
+  if (btnWtBuy) btnWtBuy.addEventListener('click', () => triggerTradeSimulation('BUY', 'EURUSD', 0.50));
+  if (btnWtSell) btnWtSell.addEventListener('click', () => triggerTradeSimulation('SELL', 'EURUSD', 0.50));
+
+  // Phone Buy/Sell triggers
+  const btnPhoneBuy = document.getElementById('btnPhoneBuy');
+  const btnPhoneSell = document.getElementById('btnPhoneSell');
+  if (btnPhoneBuy) btnPhoneBuy.addEventListener('click', () => triggerTradeSimulation('BUY', 'EURUSD', 1.00));
+  if (btnPhoneSell) btnPhoneSell.addEventListener('click', () => triggerTradeSimulation('SELL', 'EURUSD', 1.00));
+
+  // Micro-tick price fluctuation in DOM & WebTrader
   let baseBid = 1.08451;
   setInterval(() => {
     const delta = (Math.random() - 0.5) * 0.00006;
@@ -196,8 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (askDisplay) askDisplay.textContent = baseAsk.toFixed(5);
   }, 2200);
 
-  // ==================== 4. API CODE SNIPPET SWITCHER ====================
-  const apiTabBtns = document.querySelectorAll('.api-tab-btn');
+  // ==================== 4. API WORKSTATION & INTERACTIVE SANDBOX ====================
+  const apiFileTabs = document.querySelectorAll('.api-file-tab');
   const codeBlocks = {
     python: document.getElementById('codePython'),
     nodejs: document.getElementById('codeNodejs'),
@@ -206,19 +254,21 @@ document.addEventListener('DOMContentLoaded', () => {
     curl: document.getElementById('codeCurl')
   };
 
-  apiTabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      apiTabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  if (apiFileTabs.length) {
+    apiFileTabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        apiFileTabs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      const lang = btn.dataset.lang;
-      Object.keys(codeBlocks).forEach(key => {
-        if (codeBlocks[key]) {
-          codeBlocks[key].style.display = (key === lang) ? 'block' : 'none';
-        }
+        const lang = btn.dataset.lang;
+        Object.keys(codeBlocks).forEach(key => {
+          if (codeBlocks[key]) {
+            codeBlocks[key].style.display = (key === lang) ? 'block' : 'none';
+          }
+        });
       });
     });
-  });
+  }
 
   // Copy code button
   const copyBtn = document.getElementById('btnCopyApiCode');
@@ -229,10 +279,51 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.clipboard.writeText(activeCode.innerText).then(() => {
           copyBtn.innerHTML = `✓ Copied!`;
           setTimeout(() => {
-            copyBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy Code`;
+            copyBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy`;
           }, 2000);
         });
       }
+    });
+  }
+
+  // Interactive Sandbox Execution
+  const btnRunSandbox = document.getElementById('btnRunApiSandbox');
+  const apiConsoleLogs = document.getElementById('apiConsoleLogs');
+  const btnClearApiLogs = document.getElementById('btnClearApiLogs');
+
+  if (btnRunSandbox && apiConsoleLogs) {
+    btnRunSandbox.addEventListener('click', () => {
+      const now = new Date();
+      const timeStr = now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0');
+      const orderNum = Math.floor(900000 + Math.random() * 100000);
+      const lat = (1.2 + Math.random() * 0.6).toFixed(2);
+
+      const newLog = document.createElement('div');
+      newLog.className = 'api-log-entry';
+      newLog.innerHTML = `
+        <span class="api-log-time">[${timeStr}]</span>
+        <span class="api-log-tag-match">[SANDBOX]</span>
+        <span style="color: #34D399;">LIMIT BUY 2.50 Lots EURUSD matched @ 1.08450 (Order #${orderNum}) &bull; Latency: <strong>${lat}ms NY4</strong></span>
+      `;
+      apiConsoleLogs.appendChild(newLog);
+      apiConsoleLogs.scrollTop = apiConsoleLogs.scrollHeight;
+
+      btnRunSandbox.innerHTML = `✓ Executed!`;
+      setTimeout(() => {
+        btnRunSandbox.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> Run Sandbox`;
+      }, 1500);
+    });
+  }
+
+  if (btnClearApiLogs && apiConsoleLogs) {
+    btnClearApiLogs.addEventListener('click', () => {
+      apiConsoleLogs.innerHTML = `
+        <div class="api-log-entry">
+          <span class="api-log-time">[${new Date().toTimeString().split(' ')[0]}]</span>
+          <span class="api-log-tag-net">[SYSTEM]</span>
+          <span>Logs cleared. Stream listening on wss://stream.spikebrokerage.com:9800...</span>
+        </div>
+      `;
     });
   }
 
