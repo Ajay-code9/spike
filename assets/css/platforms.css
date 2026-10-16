@@ -172,10 +172,10 @@
 /* ==================== PLATFORMS HERO SECTION ==================== */
 .platforms-hero {
   position: relative;
-  min-height: 580px;
-  padding: 130px 0 60px;
+  min-height: 600px;
+  padding: 135px 0 70px;
   background-size: cover;
-  background-position: center center;
+  background-position: center right;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -187,7 +187,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 35%, rgba(8, 11, 16, 0.45) 0%, rgba(8, 11, 16, 0.94) 80%);
+  background: linear-gradient(90deg, rgba(8, 11, 16, 0.94) 0%, rgba(8, 11, 16, 0.82) 48%, rgba(8, 11, 16, 0.35) 85%, rgba(8, 11, 16, 0.2) 100%),
+              linear-gradient(180deg, rgba(8, 11, 16, 0.5) 0%, transparent 40%, rgba(8, 11, 16, 0.95) 100%);
   pointer-events: none;
 }
 
