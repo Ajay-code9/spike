@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Global Markets | SPIKE Brokerage</title>
+  <title>Market Overview | 500+ Multi-Asset Instruments | SPIKE Brokerage</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/markets.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
@@ -39,8 +39,8 @@
             <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
           <div class="dropdown-menu">
-            <a href="#explore" class="dropdown-link">Market Overview</a>
-            <a href="#market-specs" class="dropdown-link">Live Spreads & Specs</a>
+            <a href="markets.html" class="dropdown-link active" style="color: var(--gold-primary);">Market Overview</a>
+            <a href="spreads.html" class="dropdown-link">Live Spreads &amp; Specs</a>
           </div>
         </div>
 
@@ -109,198 +109,475 @@
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero-home" style="background-image: url('assets/images/hero-markets.jpg');">
+  <section class="market-subpage-hero" style="background-image: url('public/homepage-images/hero-section-background.png');">
     <div class="container-wide">
-      <div class="hero-home-inner">
-        <div class="hero-home-content">
-          <span class="section-tag">GLOBAL MARKETS. REAL OPPORTUNITIES.</span>
-          <h1 class="hero-home-title">
-            EXPLORE<br>
-            <span class="text-gradient-gold">GLOBAL MARKETS</span><br>
-            <span style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; color: #FFFFFF;">500+ TRADING INSTRUMENTS</span>
-          </h1>
-          <p class="hero-home-desc">
-            Access global markets from a single account. Trade Forex, Metals, Indices, Commodities, Shares and Cryptocurrencies with tight spreads and fast execution.
-          </p>
-          <div class="hero-home-actions">
-            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
-              Open Live Account
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#market-specs" class="btn btn-outline btn-lg">Explore Markets</a>
+      <div class="market-subpage-hero-inner">
+        <span class="section-tag">GLOBAL MULTI-ASSET VENUE</span>
+        <h1 class="market-subpage-hero-title">
+          MARKET OVERVIEW<br>
+          <span class="text-gradient-gold">500+ INSTRUMENTS. DEEP LIQUIDITY.</span>
+        </h1>
+        <p class="market-subpage-hero-desc">
+          Access institutional-grade liquidity and sub-15ms execution across 6 global asset classes. Trade Forex, Precious Metals, World Indices, Energies, Equities and Cryptocurrencies from a single multi-currency account.
+        </p>
+        <div class="hero-home-actions" style="margin-bottom: 24px;">
+          <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+            Open Live Account
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="spreads.html" class="btn btn-outline btn-lg">
+            View Live Spreads &amp; Specs &rarr;
+          </a>
+        </div>
+
+        <!-- Hero 4 Stats Grid -->
+        <div class="market-hero-stats">
+          <div class="market-stat-card">
+            <div class="market-stat-val">6</div>
+            <div class="market-stat-lbl">Asset Classes</div>
+          </div>
+          <div class="market-stat-card">
+            <div class="market-stat-val">0.0</div>
+            <div class="market-stat-lbl">Raw Spread (pips)</div>
+          </div>
+          <div class="market-stat-card">
+            <div class="market-stat-val">&lt;15ms</div>
+            <div class="market-stat-lbl">Order Latency</div>
+          </div>
+          <div class="market-stat-card">
+            <div class="market-stat-val">$15B+</div>
+            <div class="market-stat-lbl">Monthly Volume</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== LIVE TICKER BAR ==================== -->
-  <section class="ticker-bar-section">
+  <!-- ==================== 1. GLOBAL MARKET TRADING CLOCKS / SESSIONS RADAR ==================== -->
+  <section class="market-clocks-section">
     <div class="container-wide">
-      <div class="ticker-grid">
-        <!-- EUR/USD -->
-        <div class="ticker-card" data-ticker-id="eurusd">
-          <div>
-            <div class="ticker-symbol">EUR/USD</div>
-            <div class="ticker-price">1.0794</div>
-            <div class="ticker-change bullish">+0.0017 (+0.16%)</div>
-          </div>
-          <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,18 12,16 24,19 36,12 48,14 60,6"/>
-          </svg>
-        </div>
-
-        <!-- GBP/USD -->
-        <div class="ticker-card" data-ticker-id="gbpusd">
-          <div>
-            <div class="ticker-symbol">GBP/USD</div>
-            <div class="ticker-price">1.2541</div>
-            <div class="ticker-change bearish">-0.0025 (-0.20%)</div>
-          </div>
-          <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#F43F5E" stroke-width="1.8" points="0,8 14,11 28,9 42,16 52,14 60,20"/>
-          </svg>
-        </div>
-
-        <!-- XAU/USD -->
-        <div class="ticker-card" data-ticker-id="xauusd">
-          <div>
-            <div class="ticker-symbol">XAU/USD</div>
-            <div class="ticker-price">2,366.82</div>
-            <div class="ticker-change bullish">+12.15 (+0.52%)</div>
-          </div>
-          <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,20 15,17 30,12 42,14 52,8 60,4"/>
-          </svg>
-        </div>
-
-        <!-- US30 -->
-        <div class="ticker-card" data-ticker-id="us30">
-          <div>
-            <div class="ticker-symbol">US30</div>
-            <div class="ticker-price">38,452.6</div>
-            <div class="ticker-change bullish">+101.4 (+0.26%)</div>
-          </div>
-          <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,16 12,18 26,14 38,10 50,12 60,5"/>
-          </svg>
-        </div>
-
-        <!-- BTC/USD -->
-        <div class="ticker-card" data-ticker-id="btcusd">
-          <div>
-            <div class="ticker-symbol">BTC/USD</div>
-            <div class="ticker-price">67,421.5</div>
-            <div class="ticker-change bullish">+1121.3 (+1.69%)</div>
-          </div>
-          <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,21 14,18 28,15 40,8 50,11 60,3"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FIND YOUR NEXT OPPORTUNITY (3X2 GRID) ==================== -->
-  <section class="section-instruments-light" id="explore">
-    <div class="container-wide">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
         <div>
-          <span class="section-tag">DIVERSE MARKETS. ONE ACCOUNT.</span>
-          <h2 class="section-title section-title-light">FIND YOUR NEXT <span class="text-gradient-gold">OPPORTUNITY</span></h2>
+          <span class="section-tag">REAL-TIME GLOBAL FINANCIAL RADAR</span>
+          <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0;">MAJOR TRADING HUBS &amp; ACTIVE SESSIONS</h2>
         </div>
-        <p class="section-desc section-desc-light" style="text-align: right;">
-          Trade 500+ instruments across global markets with competitive pricing, fast execution and institutional-grade liquidity. Whatever your trading style, SPIKE gives you access to the world's most popular financial markets from a single account.
+        <p style="font-size: 0.82rem; color: #94A3B8; max-width: 460px; line-height: 1.5;">
+          Monitor real-time session open/close status and high-liquidity overlap windows across London, New York, Tokyo and Sydney.
         </p>
       </div>
 
-      <div class="markets-grid-3x2">
+      <div class="market-clocks-grid">
+        <!-- London Clock -->
+        <div class="session-clock-card" id="card-london">
+          <div class="clock-header">
+            <div class="clock-city">
+              <span class="clock-flag">🇬🇧</span>
+              <span>London</span>
+            </div>
+            <span class="clock-status-pill open" id="clockPill-london">Session Open</span>
+          </div>
+          <div class="clock-time-display" id="clockTime-london">--:--:--</div>
+          <div class="clock-sub">GMT/BST • Primary FX &amp; European Stocks</div>
+        </div>
+
+        <!-- New York Clock -->
+        <div class="session-clock-card" id="card-newyork">
+          <div class="clock-header">
+            <div class="clock-city">
+              <span class="clock-flag">🇺🇸</span>
+              <span>New York</span>
+            </div>
+            <span class="clock-status-pill open" id="clockPill-newyork">Session Open</span>
+          </div>
+          <div class="clock-time-display" id="clockTime-newyork">--:--:--</div>
+          <div class="clock-sub">EST/EDT • Wall St &amp; Peak Global Liquidity</div>
+        </div>
+
+        <!-- Tokyo Clock -->
+        <div class="session-clock-card" id="card-tokyo">
+          <div class="clock-header">
+            <div class="clock-city">
+              <span class="clock-flag">🇯🇵</span>
+              <span>Tokyo</span>
+            </div>
+            <span class="clock-status-pill closed" id="clockPill-tokyo">Closed</span>
+          </div>
+          <div class="clock-time-display" id="clockTime-tokyo">--:--:--</div>
+          <div class="clock-sub">JST • Asian Pacific Crosses &amp; JGBs</div>
+        </div>
+
+        <!-- Sydney Clock -->
+        <div class="session-clock-card" id="card-sydney">
+          <div class="clock-header">
+            <div class="clock-city">
+              <span class="clock-flag">🇦🇺</span>
+              <span>Sydney</span>
+            </div>
+            <span class="clock-status-pill closed" id="clockPill-sydney">Closed</span>
+          </div>
+          <div class="clock-time-display" id="clockTime-sydney">--:--:--</div>
+          <div class="clock-sub">AEST • Opening Global FX &amp; Metals</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. MULTI-ASSET INTERACTIVE SHOWCASE HUB ==================== -->
+  <section class="section-market-specs-dark" id="explore">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="section-tag">THE SPIKE UNIVERSE</span>
+          <h2 class="section-title">EXPLORE 6 GLOBAL <span class="text-gradient-gold">ASSET CLASSES</span></h2>
+        </div>
+        <p class="section-desc" style="text-align: right; max-width: 500px;">
+          Seamless access to 500+ instruments with institutional pricing, tight spreads and deep market depth. Click any asset class to view dedicated deep-dive specifications.
+        </p>
+      </div>
+
+      <div class="asset-hub-grid">
         <!-- 1. Forex -->
-        <a href="forex.html" class="market-big-card">
-          <img src="assets/images/markets/card_forex_hi.jpg" alt="Forex Trading" class="market-big-card-img">
-          <div class="market-big-card-content">
-            <div class="market-big-card-title">Forex</div>
-            <div class="market-big-card-sub">
-              <span>60+ Currency Pairs</span>
-              <span>&rarr;</span>
+        <div class="asset-hub-card">
+          <div class="asset-hub-img-wrap">
+            <img src="public/homepage-images/forex-card.png" alt="Forex Trading" class="asset-hub-img">
+            <span class="asset-hub-live-badge">EUR/USD 1.0794 +0.16%</span>
+          </div>
+          <div class="asset-hub-body">
+            <h3 class="asset-hub-title">Forex Trading</h3>
+            <p class="asset-hub-desc">
+              Trade 60+ major, minor, and emerging market currency pairs with institutional ECN spreads and rapid order execution.
+            </p>
+            <div class="asset-hub-specs-row">
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Spreads</div>
+                <div class="spec-val">From 0.0</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Leverage</div>
+                <div class="spec-val">1:500</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Pairs</div>
+                <div class="spec-val">60+ Pairs</div>
+              </div>
+            </div>
+            <div class="asset-hub-footer">
+              <a href="forex.html" class="btn btn-gold btn-sm">Explore Forex &rarr;</a>
+              <span style="font-size: 0.76rem; color: #94A3B8;">24/5 Direct ECN</span>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- 2. Metals -->
-        <a href="metals.html" class="market-big-card">
-          <img src="assets/images/markets/card_metals_hi.jpg" alt="Metals Trading" class="market-big-card-img">
-          <div class="market-big-card-content">
-            <div class="market-big-card-title">Metals</div>
-            <div class="market-big-card-sub">
-              <span>5+ Gold, Silver &amp; more</span>
-              <span>&rarr;</span>
+        <div class="asset-hub-card">
+          <div class="asset-hub-img-wrap">
+            <img src="public/homepage-images/metals-card.png" alt="Precious Metals" class="asset-hub-img">
+            <span class="asset-hub-live-badge">XAU/USD $2,366.82 +0.52%</span>
+          </div>
+          <div class="asset-hub-body">
+            <h3 class="asset-hub-title">Precious Metals</h3>
+            <p class="asset-hub-desc">
+              Hedge against inflation and macroeconomic volatility with spot Gold, Silver, Platinum and Palladium without physical storage fees.
+            </p>
+            <div class="asset-hub-specs-row">
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Gold Spread</div>
+                <div class="spec-val">0.12 pts</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Leverage</div>
+                <div class="spec-val">1:200</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Custody</div>
+                <div class="spec-val">$0 Fee</div>
+              </div>
+            </div>
+            <div class="asset-hub-footer">
+              <a href="metals.html" class="btn btn-gold btn-sm">Trade Metals &rarr;</a>
+              <span style="font-size: 0.76rem; color: #94A3B8;">Spot LBMA Depth</span>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- 3. Indices -->
-        <a href="indices.html" class="market-big-card">
-          <img src="assets/images/markets/card_indices_hi.jpg" alt="Indices Trading" class="market-big-card-img">
-          <div class="market-big-card-content">
-            <div class="market-big-card-title">Indices</div>
-            <div class="market-big-card-sub">
-              <span>20+ Global Indices</span>
-              <span>&rarr;</span>
+        <div class="asset-hub-card">
+          <div class="asset-hub-img-wrap">
+            <img src="public/homepage-images/indices-card.png" alt="Global Indices" class="asset-hub-img">
+            <span class="asset-hub-live-badge">US30 38,452.6 +0.26%</span>
+          </div>
+          <div class="asset-hub-body">
+            <h3 class="asset-hub-title">Global Indices</h3>
+            <p class="asset-hub-desc">
+              Participate in Wall Street, European, and Asian economic growth via cash &amp; futures CFDs on US30, NAS100, SPX500, and GER40.
+            </p>
+            <div class="asset-hub-specs-row">
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Commission</div>
+                <div class="spec-val">$0 Cash</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Leverage</div>
+                <div class="spec-val">1:200</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Markets</div>
+                <div class="spec-val">20+ Indices</div>
+              </div>
+            </div>
+            <div class="asset-hub-footer">
+              <a href="indices.html" class="btn btn-gold btn-sm">Trade Indices &rarr;</a>
+              <span style="font-size: 0.76rem; color: #94A3B8;">Global Coverage</span>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- 4. Commodities -->
-        <a href="commodities.html" class="market-big-card">
-          <img src="assets/images/markets/card_commodities_hi.jpg" alt="Commodities Trading" class="market-big-card-img">
-          <div class="market-big-card-content">
-            <div class="market-big-card-title">Commodities</div>
-            <div class="market-big-card-sub">
-              <span>10+ Energy &amp; Softs</span>
-              <span>&rarr;</span>
+        <div class="asset-hub-card">
+          <div class="asset-hub-img-wrap">
+            <img src="public/homepage-images/commodities.png" alt="Commodities & Energy" class="asset-hub-img">
+            <span class="asset-hub-live-badge">UKOIL $73.21 -0.34%</span>
+          </div>
+          <div class="asset-hub-body">
+            <h3 class="asset-hub-title">Commodities &amp; Energies</h3>
+            <p class="asset-hub-desc">
+              Speculate on energy supply dynamics and industrial shifts with WTI Crude, Brent, Natural Gas, High-grade Copper, and softs.
+            </p>
+            <div class="asset-hub-specs-row">
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Oil Spread</div>
+                <div class="spec-val">0.03 pts</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Leverage</div>
+                <div class="spec-val">1:100</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Delivery</div>
+                <div class="spec-val">Cash CFD</div>
+              </div>
+            </div>
+            <div class="asset-hub-footer">
+              <a href="commodities.html" class="btn btn-gold btn-sm">Trade Commodities &rarr;</a>
+              <span style="font-size: 0.76rem; color: #94A3B8;">Global Supply Chains</span>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- 5. Shares -->
-        <a href="shares.html" class="market-big-card">
-          <img src="assets/images/markets/card_shares_hi.jpg" alt="Shares Trading" class="market-big-card-img">
-          <div class="market-big-card-content">
-            <div class="market-big-card-title">Shares</div>
-            <div class="market-big-card-sub">
-              <span>400+ Global Stocks</span>
-              <span>&rarr;</span>
+        <div class="asset-hub-card">
+          <div class="asset-hub-img-wrap">
+            <img src="public/homepage-images/shares-card.png" alt="Shares & CFDs" class="asset-hub-img">
+            <span class="asset-hub-live-badge">NVDA $124.50 +2.10%</span>
+          </div>
+          <div class="asset-hub-body">
+            <h3 class="asset-hub-title">Shares &amp; Global Equities</h3>
+            <p class="asset-hub-desc">
+              Go long or short on 300+ US, UK, and European mega-caps including NVIDIA, Apple, Microsoft, Tesla, with dividend adjustments.
+            </p>
+            <div class="asset-hub-specs-row">
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Coverage</div>
+                <div class="spec-val">300+ Stocks</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Leverage</div>
+                <div class="spec-val">1:20</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Dividends</div>
+                <div class="spec-val">100% Paid</div>
+              </div>
+            </div>
+            <div class="asset-hub-footer">
+              <a href="shares.html" class="btn btn-gold btn-sm">Trade Shares &rarr;</a>
+              <span style="font-size: 0.76rem; color: #94A3B8;">NYSE &amp; Nasdaq</span>
             </div>
           </div>
-        </a>
+        </div>
 
-        <!-- 6. Cryptocurrencies -->
-        <a href="crypto.html" class="market-big-card">
-          <img src="assets/images/markets/card_crypto_hi.jpg" alt="Cryptocurrencies Trading" class="market-big-card-img">
-          <div class="market-big-card-content">
-            <div class="market-big-card-title">Cryptocurrencies</div>
-            <div class="market-big-card-sub">
-              <span>50+ Digital Assets</span>
-              <span>&rarr;</span>
+        <!-- 6. Crypto -->
+        <div class="asset-hub-card">
+          <div class="asset-hub-img-wrap">
+            <img src="public/homepage-images/cryptoccurrencies-card.png" alt="Cryptocurrencies" class="asset-hub-img">
+            <span class="asset-hub-live-badge">BTC/USD $67,421 +1.69%</span>
+          </div>
+          <div class="asset-hub-body">
+            <h3 class="asset-hub-title">Cryptocurrencies</h3>
+            <p class="asset-hub-desc">
+              24/7/365 continuous trading across 50+ leading cryptocurrencies without wallet security vulnerabilities or gas fee overheads.
+            </p>
+            <div class="asset-hub-specs-row">
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Trading Hours</div>
+                <div class="spec-val">24/7/365</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Leverage</div>
+                <div class="spec-val">1:50</div>
+              </div>
+              <div class="asset-hub-spec-item">
+                <div class="spec-label">Custody Risk</div>
+                <div class="spec-val">$0 Friction</div>
+              </div>
+            </div>
+            <div class="asset-hub-footer">
+              <a href="crypto.html" class="btn btn-gold btn-sm">Trade Crypto &rarr;</a>
+              <span style="font-size: 0.76rem; color: #94A3B8;">Always Open</span>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== MARKET SPECIFICATIONS TABLE ==================== -->
+  <!-- ==================== 3. MACRO CROSS-ASSET CORRELATION TERMINAL ==================== -->
+  <section class="macro-terminal-section">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="section-tag">INTER-MARKET INTELLIGENCE</span>
+          <h2 class="section-title">MACRO CROSS-ASSET <span class="text-gradient-gold">CORRELATIONS</span></h2>
+        </div>
+        <p class="section-desc" style="text-align: right; max-width: 500px;">
+          Institutional traders don't trade assets in a vacuum. Understand how global interest rates, energy prices, and equity sentiment drive cross-market flows.
+        </p>
+      </div>
+
+      <div class="macro-terminal-card">
+        <div class="macro-terminal-nav">
+          <button class="macro-tab-btn active" data-macro-target="macro-gold-yields">Gold vs US 10Y Yields</button>
+          <button class="macro-tab-btn" data-macro-target="macro-oil-cad">Crude Oil vs CAD/USD</button>
+          <button class="macro-tab-btn" data-macro-target="macro-spx-vix">S&amp;P 500 vs VIX Index</button>
+          <button class="macro-tab-btn" data-macro-target="macro-btc-m2">Bitcoin vs Global M2 Liquidity</button>
+        </div>
+
+        <!-- Panel 1: Gold vs Yields -->
+        <div class="macro-tab-panel active" id="macro-gold-yields">
+          <div class="macro-panel-content">
+            <h4>Gold (XAU/USD) &amp; Real Interest Rates</h4>
+            <p>
+              Precious gold is an unyielding monetary asset. When US 10-Year Real Yields rise, the opportunity cost of holding non-interest-bearing gold increases, applying downward pressure. Conversely, during Fed easing cycles or inflation surges, real yields plummet, sparking historic gold bullion bull runs.
+            </p>
+            <div class="macro-key-drivers">
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Inverse Correlation:</strong> Gold historically displays a -0.72 correlation with US Real 10Y Yields.</span>
+              </div>
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Central Bank Accumulation:</strong> Sovereign reserve diversifications provide non-linear upside decoupling.</span>
+              </div>
+            </div>
+          </div>
+          <div class="macro-metric-card">
+            <div class="macro-metric-pair">XAU/USD vs US10Y</div>
+            <div class="macro-metric-val">-0.74</div>
+            <div class="macro-metric-sub">Rolling 90-Day Correlation Coefficient</div>
+            <div style="margin-top: 16px;">
+              <a href="metals.html" class="btn btn-gold btn-sm">Trade Gold Spec &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Oil vs CAD -->
+        <div class="macro-tab-panel" id="macro-oil-cad">
+          <div class="macro-panel-content">
+            <h4>Crude Oil (WTI) &amp; Petrocurrency CAD</h4>
+            <p>
+              Canada is the largest foreign supplier of crude oil to the United States. Higher crude oil prices translate directly into increased Canadian trade surpluses and demand for CAD. Traders exploit this relationship by shorting USD/CAD during sustained energy breakouts.
+            </p>
+            <div class="macro-key-drivers">
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Direct Transmission:</strong> High oil prices boost Canadian terms of trade and BoC rate expectations.</span>
+              </div>
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Hedging Mechanism:</strong> Energy consumers hedge fuel input risk by buying crude CFDs or selling USD/CAD.</span>
+              </div>
+            </div>
+          </div>
+          <div class="macro-metric-card">
+            <div class="macro-metric-pair">WTI vs USD/CAD</div>
+            <div class="macro-metric-val">-0.68</div>
+            <div class="macro-metric-sub">Rolling 90-Day Correlation Coefficient</div>
+            <div style="margin-top: 16px;">
+              <a href="commodities.html" class="btn btn-gold btn-sm">Trade Energies &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: SPX vs VIX -->
+        <div class="macro-tab-panel" id="macro-spx-vix">
+          <div class="macro-panel-content">
+            <h4>S&amp;P 500 Index &amp; CBOE Volatility (VIX)</h4>
+            <p>
+              The VIX index measures 30-day implied volatility calculated from S&amp;P 500 option strips. Often dubbed the "fear gauge", VIX spikes sharply during equity selloffs and contracts during systematic equity appreciation.
+            </p>
+            <div class="macro-key-drivers">
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Asymmetric Spikes:</strong> Volatility rallies 3x to 5x faster than it subsides during market regime shifts.</span>
+              </div>
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Index Arbitrage:</strong> SPX500 cash contracts allow surgical entry when VIX reverts towards baseline (14-16).</span>
+              </div>
+            </div>
+          </div>
+          <div class="macro-metric-card">
+            <div class="macro-metric-pair">SPX500 vs VIX Index</div>
+            <div class="macro-metric-val">-0.81</div>
+            <div class="macro-metric-sub">Rolling 90-Day Correlation Coefficient</div>
+            <div style="margin-top: 16px;">
+              <a href="indices.html" class="btn btn-gold btn-sm">Trade Indices &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: BTC vs M2 -->
+        <div class="macro-tab-panel" id="macro-btc-m2">
+          <div class="macro-panel-content">
+            <h4>Bitcoin (BTC) &amp; Global Fiat M2 Expansion</h4>
+            <p>
+              With a hard-coded supply limit of 21 million units, Bitcoin functions as a high-beta sensitivity instrument to global monetary liquidity (M2 money supply). As major central banks ease monetary policy or expand balance sheets, excess liquidity finds its way into scarce digital commodities.
+            </p>
+            <div class="macro-key-drivers">
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Monetary Debasement Proxy:</strong> Strong directional synchronization with global credit expansion.</span>
+              </div>
+              <div class="macro-driver-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>24/7 Liquidity Gauge:</strong> Crypto markets price weekend global macro events before traditional bourses open.</span>
+              </div>
+            </div>
+          </div>
+          <div class="macro-metric-card">
+            <div class="macro-metric-pair">BTC/USD vs Global M2</div>
+            <div class="macro-metric-val">+0.79</div>
+            <div class="macro-metric-sub">Macro 12-Month Alignment Index</div>
+            <div style="margin-top: 16px;">
+              <a href="crypto.html" class="btn btn-gold btn-sm">Trade Crypto &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. INDICATIVE LIVE SPECIFICATIONS TABLE ==================== -->
   <section class="section-market-specs-dark" id="market-specs">
     <div class="container-wide">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
         <div>
-          <span class="section-tag">MARKET SPECIFICATIONS</span>
-          <h2 class="section-title">TRADE 500+ INSTRUMENTS</h2>
+          <span class="section-tag">INDICATIVE BENCHMARK PRICING</span>
+          <h2 class="section-title">TOP INSTRUMENTS <span class="text-gradient-gold">AT A GLANCE</span></h2>
         </div>
-        <p class="section-desc" style="text-align: right;">
-          Get transparent pricing, tight spreads and deep liquidity across all major markets. All data shown is indicative and for demonstration purposes only.
-        </p>
+        <a href="spreads.html" class="btn btn-outline" style="border-color: var(--gold-primary); color: var(--gold-primary);">
+          Open Full Live Spreads Terminal &rarr;
+        </a>
       </div>
 
       <!-- Controls: Filter Pills & Search Input -->
@@ -343,71 +620,74 @@
     </div>
   </section>
 
-  <!-- ==================== GLOBAL MARKETS BUILT FOR YOU ==================== -->
-  <section class="section-instruments-light">
+  <!-- ==================== 5. INSTITUTIONAL TRADING CONDITIONS ==================== -->
+  <section style="padding: 90px 0; background: #06090E; border-bottom: 1px solid var(--border-dark);">
     <div class="container-wide">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
         <div>
-          <span class="section-tag">WHY TRADE WITH SPIKE</span>
-          <h2 class="section-title section-title-light">GLOBAL MARKETS BUILT FOR <span class="text-gradient-gold">YOU</span></h2>
+          <span class="section-tag">ENGINEERED FOR SERIOUS TRADERS</span>
+          <h2 class="section-title">INSTITUTIONAL <span class="text-gradient-gold">EXECUTION ENGINE</span></h2>
         </div>
-        <p class="section-desc section-desc-light" style="text-align: right;">
-          We combine institutional-grade liquidity, advanced technology and dedicated support to give you the best trading experience across global markets.
+        <p class="section-desc" style="text-align: right; max-width: 500px;">
+          Direct optical fiber cross-connects with top global banks provide market depth without broker desk manipulation.
         </p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-        <div class="account-card-light">
+        <div class="step-card">
+          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <h3 class="step-title">Equinix NY4 / LD4 Cross-Connects</h3>
+          <p class="step-desc">Servers located physically in the world's primary financial data centers with sub-15 millisecond execution latency.</p>
+        </div>
+
+        <div class="step-card">
           <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <circle cx="12" cy="12" r="10"></circle>
             <path d="M12 6v12M16 10H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H8"></path>
           </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Competitive Pricing</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Tight spreads and low trading costs across all markets.</p>
+          <h3 class="step-title">Tier-1 Bank Liquidity Pools</h3>
+          <p class="step-desc">Aggregated pricing feeds streamed simultaneously from 15+ global investment banks ensuring tight spreads even during high volatility.</p>
         </div>
 
-        <div class="account-card-light">
+        <div class="step-card">
           <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Flexible Market Access</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Trade 500+ instruments from a single account on multiple platforms.</p>
+          <h3 class="step-title">Negative Balance Protection</h3>
+          <p class="step-desc">Automated risk monitoring safeguards your capital so your account balance can never drop below zero during extreme market gaps.</p>
         </div>
 
-        <div class="account-card-light">
-          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Advanced Technology</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Ultra-fast execution and reliable infrastructure built for traders.</p>
-        </div>
-
-        <div class="account-card-light">
+        <div class="step-card">
           <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
           </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Dedicated Support</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">24/7 multilingual support to assist you at every step of your trading journey.</p>
+          <h3 class="step-title">24/7 Dedicated Client Desk</h3>
+          <p class="step-desc">Institutional account managers and multi-lingual technical engineers ready to assist around the clock.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== READY TO EXPLORE CTA BANNER ==================== -->
-  <section class="cta-banner-globe" style="background-image: url('assets/images/cta-markets-globe.jpg');">
+  <!-- ==================== 6. READY TO EXPLORE CTA BANNER ==================== -->
+  <section class="cta-banner-globe" style="background-image: url('public/homepage-images/div3-background.png');">
     <div class="container-wide">
       <div class="cta-banner-globe-content">
         <span class="section-tag">GLOBAL MARKETS. GREATER OPPORTUNITIES.</span>
-        <h2 class="section-title">READY TO EXPLORE THE MARKETS?</h2>
+        <h2 class="section-title">START TRADING GLOBAL MARKETS TODAY</h2>
         <p class="section-desc" style="color: #CBD5E1; margin-bottom: 28px;">
-          Open an account today and get access to 500+ trading instruments with institutional-grade liquidity, tight spreads and powerful platforms.
+          Join 120,000+ active traders accessing 500+ instruments with raw interbank pricing and ultra-fast STP execution.
         </p>
-        <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
-          Open Account
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+            Open Live Account
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="spreads.html" class="btn btn-outline btn-lg" style="background: rgba(8, 11, 16, 0.6);">
+            Inspect Live Spreads &amp; Specs &rarr;
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -427,15 +707,16 @@
         </div>
 
         <div>
-          <div class="footer-col-title">Trading</div>
+          <div class="footer-col-title">Markets</div>
           <ul class="footer-link-list">
-            <li><a href="forex.html" class="footer-link">Forex</a></li>
-            <li><a href="metals.html" class="footer-link">Metals</a></li>
-            <li><a href="indices.html" class="footer-link">Indices</a></li>
+            <li><a href="markets.html" class="footer-link">Market Overview</a></li>
+            <li><a href="spreads.html" class="footer-link">Live Spreads &amp; Specs</a></li>
+            <li><a href="forex.html" class="footer-link">Forex Trading</a></li>
+            <li><a href="metals.html" class="footer-link">Precious Metals</a></li>
+            <li><a href="indices.html" class="footer-link">Global Indices</a></li>
             <li><a href="commodities.html" class="footer-link">Commodities</a></li>
-            <li><a href="shares.html" class="footer-link">Shares</a></li>
+            <li><a href="shares.html" class="footer-link">Shares &amp; CFDs</a></li>
             <li><a href="crypto.html" class="footer-link">Cryptocurrencies</a></li>
-            <li><a href="markets.html#market-specs" class="footer-link">Trading Conditions</a></li>
           </ul>
         </div>
 
@@ -453,98 +734,103 @@
         <div>
           <div class="footer-col-title">Accounts</div>
           <ul class="footer-link-list">
-            <li><a href="accounts.html#account-types" class="footer-link">Account Types</a></li>
-            <li><a href="accounts.html#comparison" class="footer-link">Fees &amp; Conditions</a></li>
-            <li><a href="accounts.html" class="footer-link">Funding</a></li>
-            <li><a href="accounts.html" class="footer-link">Withdrawals</a></li>
-            <li><a href="accounts.html#comparison" class="footer-link">Account Comparison</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-col-title">Education</div>
-          <ul class="footer-link-list">
-            <li><a href="education.html#insights" class="footer-link">Market Analysis</a></li>
-            <li><a href="education.html#courses" class="footer-link">Video Tutorials</a></li>
-            <li><a href="education.html" class="footer-link">Webinars</a></li>
-            <li><a href="education.html#topics" class="footer-link">Trading Glossary</a></li>
-            <li><a href="education.html" class="footer-link">Help Centre</a></li>
+            <li><a href="accounts.html#standard" class="footer-link">Standard Account</a></li>
+            <li><a href="accounts.html#pro" class="footer-link">Raw ECN Account</a></li>
+            <li><a href="accounts.html#vip" class="footer-link">VIP Institutional</a></li>
+            <li><a href="spreads.html" class="footer-link">Trading Conditions</a></li>
+            <li><a href="accounts.html#faq" class="footer-link">Account FAQ</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">Company</div>
           <ul class="footer-link-list">
-            <li><a href="index.html#trust" class="footer-link">About Us</a></li>
-            <li><a href="#" class="footer-link">Regulation</a></li>
-            <li><a href="#" class="footer-link">Legal Documents</a></li>
-            <li><a href="#" class="footer-link">Careers</a></li>
-            <li><a href="#" class="footer-link">Contact Us</a></li>
+            <li><a href="index.html#trust" class="footer-link">Why Choose SPIKE</a></li>
+            <li><a href="index.html#numbers" class="footer-link">SPIKE in Numbers</a></li>
+            <li><a href="index.html#testimonials" class="footer-link">Client Reviews</a></li>
+            <li><a href="education.html" class="footer-link">Trading Academy</a></li>
+            <li><a href="#" class="footer-link">Contact Support</a></li>
           </ul>
-        </div>
-
-        <div>
-          <div class="newsletter-box">
-            <div class="newsletter-title">Subscribe to Market Updates</div>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to SPIKE updates!');">
-              <input type="email" placeholder="Your email address" class="newsletter-input" required>
-              <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
-            </form>
-            <div class="newsletter-subtext">Get the latest market news and insights.</div>
-          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 SPIKE. All rights reserved.</div>
-        <div class="footer-legal-links">
-          <a href="#">Privacy Policy</a>
-          <span>|</span>
-          <a href="#">Terms &amp; Conditions</a>
-          <span>|</span>
-          <a href="#">Risk Disclosure</a>
-        </div>
-        <div class="footer-disclaimer">Trading involves risk. Please trade responsibly.</div>
+        <p class="footer-copyright">&copy; 2026 SPIKE Financial Markets Ltd. All rights reserved.</p>
+        <p class="footer-disclaimer">
+          <strong>Risk Warning:</strong> Trading Contracts for Difference (CFDs) carries a high level of risk to your capital and you should only trade with money you can afford to lose.
+        </p>
       </div>
     </div>
   </footer>
 
-  <!-- Modals -->
-  <div class="modal-backdrop" id="loginModal">
-    <div class="modal-card">
-      <button class="modal-close-btn">&times;</button>
-      <span class="section-tag">SECURE ACCESS</span>
-      <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">LOGIN TO SPIKE</h3>
-      <form onsubmit="event.preventDefault(); alert('Login successful!'); closeModal(document.getElementById('loginModal'));">
-        <div class="modal-form-group"><label class="modal-label">Email or Account ID</label><input type="text" class="modal-input" required></div>
-        <div class="modal-form-group"><label class="modal-label">Password</label><input type="password" class="modal-input" required></div>
-        <button type="submit" class="btn btn-gold" style="width: 100%;">Sign In &rarr;</button>
+  <!-- ==================== MODALS ==================== -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-title">Client Portal Login</div>
+        <div class="modal-sub">Secure access to your SPIKE trading account</div>
+      </div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" class="form-input" placeholder="trader@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Sign In</button>
       </form>
     </div>
   </div>
 
-  <div class="modal-backdrop" id="accountModal">
-    <div class="modal-card">
-      <button class="modal-close-btn">&times;</button>
-      <span class="section-tag">START TRADING</span>
-      <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
-      <form onsubmit="event.preventDefault(); alert('Account application received!'); closeModal(document.getElementById('accountModal'));">
-        <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" required></div>
-        <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" required></div>
-        <button type="submit" class="btn btn-gold" style="width: 100%;">Create Account Now &rarr;</button>
+  <div class="modal-overlay" id="accountModal">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-title">Open Trading Account</div>
+        <div class="modal-sub">Access 500+ global markets in under 3 minutes</div>
+      </div>
+      <form id="accountForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="regFirstName">First Name</label>
+            <input type="text" id="regFirstName" class="form-input" placeholder="Alexander" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regLastName">Last Name</label>
+            <input type="text" id="regLastName" class="form-input" placeholder="Vance" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regEmail">Email Address</label>
+          <input type="email" id="regEmail" class="form-input" placeholder="trader@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regAccountType">Account Type</label>
+          <select id="regAccountType" class="form-select">
+            <option value="raw">Raw ECN Account (0.0 pips spread)</option>
+            <option value="standard">Standard Account (Zero commission)</option>
+            <option value="vip">VIP Institutional (Volume rebate)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Complete Registration</button>
       </form>
     </div>
   </div>
 
-  <div class="modal-backdrop" id="searchModal">
-    <div class="modal-card">
-      <button class="modal-close-btn">&times;</button>
-      <span class="section-tag">GLOBAL INSTRUMENTS</span>
-      <h3 style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px;">SEARCH MARKETS</h3>
-      <input type="text" class="modal-input" placeholder="Type symbol e.g. EURUSD, XAU, US30..." autofocus>
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-title">Search SPIKE</div>
+      </div>
+      <input type="text" id="globalSearchInput" class="form-input" placeholder="Search markets, instruments, platforms..." style="margin-bottom: 12px;">
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/markets.js"></script>
 </body>
