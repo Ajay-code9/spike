@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trading Platforms | SPIKE Brokerage</title>
+  <title>Trading Platforms | SPIKE Institutional Brokerage</title>
+  <meta name="description" content="Access institutional-grade trading platforms with SPIKE: MetaTrader 5 Desktop, Cloud WebTrader, iOS & Android Mobile Apps, and direct FIX 4.4 / Python API connectivity.">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/platforms.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
@@ -50,10 +51,11 @@
             <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
           <div class="dropdown-menu">
-            <a href="#desktop" class="dropdown-link">Desktop Platform</a>
-            <a href="#web" class="dropdown-link">Web Trader</a>
-            <a href="#mobile" class="dropdown-link">Mobile App</a>
-            <a href="#api" class="dropdown-link">API Trading</a>
+            <a href="#desktop" class="dropdown-link">Desktop Platform (MT5)</a>
+            <a href="#web" class="dropdown-link">Cloud WebTrader</a>
+            <a href="#mobile" class="dropdown-link">Mobile App (iOS &amp; Android)</a>
+            <a href="#api" class="dropdown-link">FIX API &amp; Quant</a>
+            <a href="#comparison" class="dropdown-link">Compare Platforms</a>
             <a href="#downloads" class="dropdown-link">Download Center</a>
           </div>
         </div>
@@ -110,372 +112,936 @@
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero-platforms">
+  <section class="platforms-hero" style="background-image: url('public/homepage-images/hero-section-background.png');">
     <div class="container-wide">
-      <div class="hero-platforms-grid">
-        <div>
-          <span class="section-tag">PROFESSIONAL PLATFORMS. GLOBAL OPPORTUNITIES.</span>
-          <h1 class="hero-home-title">
-            TRADE<br>
-            <span class="text-gradient-gold">YOUR WAY</span>
-          </h1>
-          <p class="hero-home-desc">
-            Powerful and intuitive trading platforms designed for every trader. Access global markets anytime, anywhere with advanced tools and seamless execution.
-          </p>
-          <div class="hero-home-actions">
-            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
-              Open Live Account
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#" class="btn btn-outline btn-lg" data-open-modal="account">Try Demo Account</a>
+      <div class="platforms-hero-inner">
+        <span class="section-tag">INSTITUTIONAL EXECUTION ECOSYSTEM</span>
+        <h1 class="platforms-hero-title">
+          TRADING PLATFORMS<br>
+          <span class="text-gradient-gold">ENGINEERED FOR SPEED &amp; PRECISION</span>
+        </h1>
+        <p class="platforms-hero-desc">
+          Access institutional liquidity and sub-15ms execution across Desktop, Cloud WebTrader, Native Mobile, and direct FIX API. Engineered for discretionary scalpers, quant funds, and multi-asset portfolio managers.
+        </p>
+
+        <div class="hero-home-actions" style="margin-bottom: 24px;">
+          <a href="#downloads" class="btn btn-gold btn-lg">
+            Download Desktop Suite &darr;
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#web" class="btn btn-outline btn-lg">
+            Launch Cloud WebTrader &nearr;
+          </a>
+          <a href="#api" class="btn btn-outline btn-lg" style="border-color: rgba(255,255,255,0.15);">
+            Explore FIX 4.4 API &rarr;
+          </a>
+        </div>
+
+        <!-- 4 Hero Metrics -->
+        <div class="platforms-hero-stats">
+          <div class="platform-stat-card">
+            <div class="platform-stat-value">&lt; 15<span class="gold">ms</span></div>
+            <div class="platform-stat-label">Order Latency (NY4/LD4)</div>
           </div>
-        </div>
-
-        <div class="hero-platforms-visual">
-          <img src="assets/images/platforms/hero-devices.png" alt="Spike Multi-Device Trading Suite">
-        </div>
-      </div>
-
-      <!-- 4 Badges Under Hero -->
-      <div class="hero-value-props" style="margin-top: 40px;">
-        <div class="value-prop-item">
-          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-          </svg>
-          <div>
-            <div class="value-prop-title">Advanced Charting</div>
-            <div class="value-prop-sub">50+ indicators</div>
+          <div class="platform-stat-card">
+            <div class="platform-stat-value">99.99<span class="gold">%</span></div>
+            <div class="platform-stat-label">Server Infrastructure Uptime</div>
           </div>
-        </div>
-
-        <div class="value-prop-item">
-          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-          <div>
-            <div class="value-prop-title">One-Click Trading</div>
-            <div class="value-prop-sub">Fast execution</div>
+          <div class="platform-stat-card">
+            <div class="platform-stat-value">50<span class="gold">+</span></div>
+            <div class="platform-stat-label">Built-in Indicators &amp; Tools</div>
           </div>
-        </div>
-
-        <div class="value-prop-item">
-          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="9" y1="3" x2="9" y2="21"></line>
-          </svg>
-          <div>
-            <div class="value-prop-title">Customisable Layout</div>
-            <div class="value-prop-sub">Trade your way</div>
-          </div>
-        </div>
-
-        <div class="value-prop-item">
-          <svg class="value-prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <div>
-            <div class="value-prop-title">Secure &amp; Reliable</div>
-            <div class="value-prop-sub">99.99% uptime</div>
+          <div class="platform-stat-card">
+            <div class="platform-stat-value">100<span class="gold">%</span></div>
+            <div class="platform-stat-label">STP / ECN Direct Market Access</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CHOOSE YOUR TRADING PLATFORM ==================== -->
-  <section class="section-choose-platform">
+  <!-- ==================== STICKY PLATFORM SUB-NAVIGATION ==================== -->
+  <div class="platforms-sticky-bar">
     <div class="container-wide">
-      <div class="choose-platform-header">
+      <div class="platforms-nav-container">
+        <a href="#desktop" class="platform-nav-pill active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          Desktop (MT5)
+        </a>
+
+        <a href="#web" class="platform-nav-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          Cloud WebTrader
+        </a>
+
+        <a href="#mobile" class="platform-nav-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          Mobile (iOS / Android)
+        </a>
+
+        <a href="#api" class="platform-nav-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          FIX API &amp; Quant
+        </a>
+
+        <a href="#comparison" class="platform-nav-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Comparison Matrix
+        </a>
+
+        <a href="#downloads" class="platform-nav-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download Center
+        </a>
+
+        <a href="#" class="platform-nav-quick-cta" data-open-modal="account">
+          Open Live Account &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 1. DESKTOP PLATFORM SECTION ==================== -->
+  <section class="section-platform-dark" id="desktop">
+    <div class="container-wide">
+      <div class="platform-2col-grid">
+        <!-- Left Column: Specs & Features -->
         <div>
-          <span class="section-tag">OUR PLATFORMS</span>
-          <h2 class="section-title">CHOOSE YOUR <span class="text-gradient-gold">TRADING PLATFORM</span></h2>
+          <span class="section-tag">FLAGSHIP INSTITUTIONAL POWER</span>
+          <h2 class="section-title">
+            SPIKE DESKTOP &amp;<br>
+            <span class="text-gradient-gold">METATRADER 5 SUITE</span>
+          </h2>
+          <p class="section-desc" style="max-width: 620px;">
+            Engineered for high-volume traders, scalpers, and quantitative asset managers. Experience raw execution speed with direct fiber cross-connects to Equinix NY4 and LD4 financial data hubs, complete Level II market depth, and full algorithmic EA backtesting capabilities.
+          </p>
+
+          <!-- 6 Feature Badges -->
+          <div class="platform-feature-badge-list">
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Level II Depth of Market (DOM)</div>
+                <div class="platform-feature-badge-desc">Full visibility of bid/ask volume ladders with 1-click execution.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">38 Indicators &amp; 44 Objects</div>
+                <div class="platform-feature-badge-desc">Trend indicators, oscillators, Fibonacci, and Gann analysis tools.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">21 Multi-Timeframes</div>
+                <div class="platform-feature-badge-desc">From ultra-fast 1-minute (M1) scalping charts to Monthly macro trend bars.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">6 Advanced Order Types</div>
+                <div class="platform-feature-badge-desc">Buy/Sell Limit, Stop, Stop Limit, Trailing Stops with 0 requotes.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">MQL5 Algorithmic Engine</div>
+                <div class="platform-feature-badge-desc">Multi-threaded strategy tester with cloud optimization farm support.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Sub-12ms NY4 Execution</div>
+                <div class="platform-feature-badge-desc">Direct Tier-1 bank aggregation engine for minimal slippage.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specs Summary Strip -->
+          <div class="platform-specs-strip">
+            <div class="platform-spec-item">
+              <span class="platform-spec-label">Compatibility</span>
+              <span class="platform-spec-val">Windows 11/10 &bull; macOS &bull; Linux</span>
+            </div>
+            <div class="platform-spec-item">
+              <span class="platform-spec-label">Engine</span>
+              <span class="platform-spec-val">64-Bit Multi-Threaded</span>
+            </div>
+            <div class="platform-spec-item">
+              <span class="platform-spec-label">Avg Fill Speed</span>
+              <span class="platform-spec-val" style="color: #34D399;">8.4 milliseconds</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#downloads" class="btn btn-gold btn-lg">
+              Download Desktop Suite &darr;
+            </a>
+            <a href="#comparison" class="btn btn-outline btn-lg">
+              Compare Platform Specs &rarr;
+            </a>
+          </div>
         </div>
-        <p class="section-desc" style="text-align: right; margin-bottom: 16px;">
-          From desktop to mobile, our platforms are built to deliver speed, stability and a feature-rich trading experience. Select the platform that suits your trading style.
+
+        <!-- Right Column: Interactive Terminal & DOM Simulation -->
+        <div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div class="terminal-title-text">
+                <span class="terminal-status-indicator"></span>
+                SPIKE MT5 PRO TERMINAL &bull; EQUINIX NY4 (8.2ms)
+              </div>
+              <div style="font-size: 0.72rem; color: #64748B;">Build 4260 (64-Bit)</div>
+            </div>
+
+            <!-- Terminal Tabs -->
+            <div class="terminal-tabs">
+              <button class="terminal-tab-item active" data-view="dom">Depth of Market (DOM)</button>
+              <button class="terminal-tab-item" data-view="chart">Live Candlestick Chart</button>
+              <button class="terminal-tab-item" data-view="tester">MQL5 Strategy Tester</button>
+            </div>
+
+            <!-- Tab 1: DOM Ladder View -->
+            <div class="terminal-body" id="terminalDomView">
+              <div class="dom-ladder-wrapper">
+                <div class="dom-top-bar">
+                  <div class="dom-symbol-info">
+                    <span class="dom-symbol-name">EUR/USD</span>
+                    <span style="font-size: 0.76rem; color: #94A3B8;">Euro / US Dollar</span>
+                    <span class="dom-spread-badge">Spread: 0.1 Pip</span>
+                  </div>
+                  <div style="font-size: 0.76rem; color: #34D399; font-weight: 700;">
+                    LIVE INTERBANK FEED
+                  </div>
+                </div>
+
+                <table class="dom-ladder-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 33%;">Bid Volume</th>
+                      <th style="width: 34%;">Price (EURUSD)</th>
+                      <th style="width: 33%;">Ask Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="dom-ask-row">
+                      <td>&mdash;</td>
+                      <td class="price-val">1.08455</td>
+                      <td style="color: #F87171;">42.5 Lots</td>
+                    </tr>
+                    <tr class="dom-ask-row">
+                      <td>&mdash;</td>
+                      <td class="price-val">1.08453</td>
+                      <td style="color: #F87171;">28.0 Lots</td>
+                    </tr>
+                    <tr class="dom-ask-row" style="background: rgba(239, 68, 68, 0.1);">
+                      <td>&mdash;</td>
+                      <td class="price-val" id="domLiveAsk">1.08452</td>
+                      <td style="color: #F87171; font-weight: 700;">15.0 Lots (Best Ask)</td>
+                    </tr>
+                    <tr class="dom-bid-row" style="background: rgba(16, 185, 129, 0.1);">
+                      <td style="color: #34D399; font-weight: 700;">18.5 Lots (Best Bid)</td>
+                      <td class="price-val" id="domLiveBid">1.08451</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="dom-bid-row">
+                      <td style="color: #34D399;">35.0 Lots</td>
+                      <td class="price-val">1.08450</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="dom-bid-row">
+                      <td style="color: #34D399;">50.0 Lots</td>
+                      <td class="price-val">1.08448</td>
+                      <td>&mdash;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="dom-order-actions">
+                  <button class="btn-dom-sell" id="btnDomSell">
+                    &darr; 1-CLICK SELL 1.00 Lot @ BID
+                  </button>
+                  <button class="btn-dom-buy" id="btnDomBuy">
+                    &uarr; 1-CLICK BUY 1.00 Lot @ ASK
+                  </button>
+                </div>
+              </div>
+
+              <!-- Live Execution Feedback -->
+              <div id="domOrderFeedback"></div>
+
+              <div style="margin-top: 14px; display: flex; justify-content: space-between; font-size: 0.74rem; color: #64748B;">
+                <span>Trading Mode: STP Raw ECN Direct</span>
+                <span>Latency to NY4: &lt; 8.4ms</span>
+              </div>
+            </div>
+
+            <!-- Tab 2: Chart View -->
+            <div class="terminal-body" id="terminalChartView" style="display: none;">
+              <div style="background: #080B10; border-radius: 6px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.78rem;">
+                  <span style="color: #FFFFFF; font-weight: 700;">EUR/USD &bull; M15 &bull; EMA (20, 50, 200)</span>
+                  <span style="color: #34D399;">Bullish Trend &bull; RSI 62.4</span>
+                </div>
+                <!-- Simulated SVG Chart -->
+                <svg viewBox="0 0 500 200" style="width: 100%; height: 190px;">
+                  <!-- Grid -->
+                  <line x1="0" y1="50" x2="500" y2="50" stroke="rgba(255,255,255,0.04)" />
+                  <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(255,255,255,0.04)" />
+                  <line x1="0" y1="150" x2="500" y2="150" stroke="rgba(255,255,255,0.04)" />
+                  <!-- EMA Lines -->
+                  <path d="M 10 160 Q 150 140 280 90 T 490 50" fill="none" stroke="#E5B869" stroke-width="2" />
+                  <path d="M 10 175 Q 160 155 290 110 T 490 70" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4" />
+                  <!-- Candlesticks -->
+                  <line x1="40" y1="130" x2="40" y2="170" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="36" y="140" width="8" height="20" fill="#34D399" />
+
+                  <line x1="80" y1="135" x2="80" y2="165" stroke="#F87171" stroke-width="1.5" />
+                  <rect x="76" y="142" width="8" height="15" fill="#F87171" />
+
+                  <line x1="120" y1="120" x2="120" y2="155" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="116" y="125" width="8" height="22" fill="#34D399" />
+
+                  <line x1="160" y1="110" x2="160" y2="145" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="156" y="115" width="8" height="20" fill="#34D399" />
+
+                  <line x1="200" y1="105" x2="200" y2="135" stroke="#F87171" stroke-width="1.5" />
+                  <rect x="196" y="110" width="8" height="18" fill="#F87171" />
+
+                  <line x1="240" y1="90" x2="240" y2="125" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="236" y="95" width="8" height="22" fill="#34D399" />
+
+                  <line x1="280" y1="80" x2="280" y2="115" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="276" y="85" width="8" height="20" fill="#34D399" />
+
+                  <line x1="320" y1="70" x2="320" y2="105" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="316" y="75" width="8" height="22" fill="#34D399" />
+
+                  <line x1="360" y1="65" x2="360" y2="95" stroke="#F87171" stroke-width="1.5" />
+                  <rect x="356" y="70" width="8" height="15" fill="#F87171" />
+
+                  <line x1="400" y1="50" x2="400" y2="85" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="396" y="55" width="8" height="24" fill="#34D399" />
+
+                  <line x1="440" y1="40" x2="440" y2="75" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="436" y="45" width="8" height="22" fill="#34D399" />
+
+                  <line x1="480" y1="35" x2="480" y2="65" stroke="#34D399" stroke-width="1.5" />
+                  <rect x="476" y="38" width="8" height="18" fill="#34D399" />
+                </svg>
+                <div style="font-size: 0.72rem; color: #94A3B8; text-align: right; margin-top: 4px;">
+                  Current Price: <strong style="color: #FFFFFF;">1.08452</strong> &bull; Volume: 14,820 ticks
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Strategy Tester -->
+            <div class="terminal-body" id="terminalTesterView" style="display: none;">
+              <div style="background: #080B10; border-radius: 6px; padding: 14px; font-size: 0.78rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="color: #94A3B8;">Expert Advisor:</span>
+                  <span style="color: #FFFFFF; font-weight: 700;">Spike_Institutional_Grid_v4.ex5</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="color: #94A3B8;">Symbol &amp; Period:</span>
+                  <span style="color: #FFFFFF;">EURUSD &bull; M15 &bull; Every Tick Based on Real Ticks</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="color: #94A3B8;">Initial Deposit:</span>
+                  <span style="color: #FFFFFF;">$10,000.00 USD</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="color: #94A3B8;">Total Net Profit:</span>
+                  <span style="color: #34D399; font-weight: 800;">+$4,291.80 (+42.92%)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="color: #94A3B8;">Profit Factor:</span>
+                  <span style="color: #E5B869; font-weight: 700;">2.48</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: #94A3B8;">Max Drawdown:</span>
+                  <span style="color: #94A3B8;">4.12% ($412.00)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. WEB TRADER SECTION ==================== -->
+  <section class="section-platform-alt" id="web">
+    <div class="container-wide">
+      <div class="platform-2col-grid reverse">
+        <!-- Left: Interactive WebTrader Browser Canvas -->
+        <div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div class="terminal-title-text" style="color: #34D399;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                https://webtrader.spikebrokerage.com
+              </div>
+              <div style="font-size: 0.72rem; color: #94A3B8;">TLS 1.3 &bull; 22ms</div>
+            </div>
+
+            <div class="webtrader-canvas">
+              <div class="webtrader-toolbar">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <strong style="color: #FFFFFF; font-size: 0.9rem;">EUR/USD</strong>
+                  <span style="font-size: 0.75rem; color: #34D399; font-weight: 700;">1.08452 (+0.24%)</span>
+                </div>
+                <div class="webtrader-tf-pills">
+                  <button class="tf-pill">M1</button>
+                  <button class="tf-pill">M5</button>
+                  <button class="tf-pill active">M15</button>
+                  <button class="tf-pill">H1</button>
+                  <button class="tf-pill">D1</button>
+                </div>
+              </div>
+
+              <!-- WebTrader Chart Visual -->
+              <svg viewBox="0 0 460 160" class="webtrader-chart-svg">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(229, 184, 105, 0.35)" />
+                    <stop offset="100%" stop-color="rgba(229, 184, 105, 0)" />
+                  </linearGradient>
+                </defs>
+                <path d="M 0 130 Q 80 110 160 120 T 300 70 T 460 30" fill="none" stroke="#E5B869" stroke-width="2.5" />
+                <path d="M 0 130 Q 80 110 160 120 T 300 70 T 460 30 L 460 160 L 0 160 Z" fill="url(#chartGrad)" />
+                <circle cx="460" cy="30" r="4" fill="#E5B869" />
+              </svg>
+
+              <!-- Quick Order Strip in WebTrader -->
+              <div style="display: flex; gap: 8px; margin-top: 14px; background: rgba(14, 19, 28, 0.8); padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);">
+                <div style="flex: 1;">
+                  <span style="font-size: 0.7rem; color: #64748B;">TRADE SIZE</span>
+                  <div style="font-size: 0.82rem; font-weight: 700; color: #FFFFFF;">0.50 Lot</div>
+                </div>
+                <button class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #EF4444; color: #F87171; flex: 1.2;">
+                  SELL 1.08450
+                </button>
+                <button class="btn btn-sm" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #34D399; flex: 1.2;">
+                  BUY 1.08452
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Features -->
+        <div>
+          <span class="section-tag">ZERO INSTALLATION REQUIRED</span>
+          <h2 class="section-title">
+            SPIKE CLOUD<br>
+            <span class="text-gradient-gold">WEBTRADER TERMINAL</span>
+          </h2>
+          <p class="section-desc" style="max-width: 620px;">
+            Trade directly from Chrome, Safari, Edge, Firefox, or Brave without downloading any software. Featuring institutional HTML5 WebGL charting powered by TradingView, instant cloud workspace synchronization, and ultra-secure 256-bit bank-grade encryption.
+          </p>
+
+          <div class="platform-feature-badge-list">
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Runs on Any Browser</div>
+                <div class="platform-feature-badge-desc">Full compatibility with Mac, Windows, Linux, Chromebook, and iPad.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Cloud Layout Sync</div>
+                <div class="platform-feature-badge-desc">All indicators, trendlines, and customized templates sync automatically.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">100+ Advanced Indicators</div>
+                <div class="platform-feature-badge-desc">Equipped with TradingView technical analysis and smart pattern alerts.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Bank-Grade TLS Security</div>
+                <div class="platform-feature-badge-desc">Protected by 2FA biometric passkeys and enterprise DDoS defenses.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+              Launch WebTrader in Browser &nearr;
+            </a>
+            <a href="#" class="btn btn-outline btn-lg" data-open-modal="account">
+              Open Free Cloud Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. MOBILE APP SECTION ==================== -->
+  <section class="section-platform-dark" id="mobile">
+    <div class="container-wide">
+      <div class="platform-2col-grid">
+        <!-- Left: Narrative & Badges -->
+        <div>
+          <span class="section-tag">INSTITUTIONAL SPEED ANYWHERE</span>
+          <h2 class="section-title">
+            SPIKE MOBILE<br>
+            <span class="text-gradient-gold">TRADING APP</span>
+          </h2>
+          <p class="section-desc" style="max-width: 620px;">
+            Monitor global financial markets, execute complex multi-leg orders, and manage account risk on the go. Designed natively for iOS and Android with intuitive gesture charting, biometric authentication, and millisecond push notifications.
+          </p>
+
+          <div class="platform-feature-badge-list">
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Fluid Touch Charting</div>
+                <div class="platform-feature-badge-desc">Pinch-to-zoom, 9 mobile timeframes, and 30+ interactive indicators.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Instant Push Notifications</div>
+                <div class="platform-feature-badge-desc">Get price alerts, economic data releases, and margin notices instantly.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">Face ID &amp; Biometric Login</div>
+                <div class="platform-feature-badge-desc">Secure biometric authentication backed by device security enclaves.</div>
+              </div>
+            </div>
+
+            <div class="platform-feature-badge">
+              <svg class="platform-feature-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="platform-feature-badge-title">One-Swipe Panic Close</div>
+                <div class="platform-feature-badge-desc">Rapidly close all active market positions during volatile news spikes.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store Badges & Download -->
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px;">
+            <a href="#downloads" class="btn btn-gold btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.98.6-2.62 1.34-.56.64-1.05 1.69-.92 2.71 1 .08 2.02-.45 2.61-1.2z"/></svg>
+              Apple App Store (iOS)
+            </a>
+            <a href="#downloads" class="btn btn-outline btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.997-3.4582c.1054-.1824.043-.4154-.1394-.5208-.182-.1054-.4153-.0431-.5208.1394L17.2007 8.97c-1.5363-.7016-3.2676-1.0967-5.2007-1.0967s-3.6644.3951-5.2007 1.0967L4.7816 5.4818c-.1054-.1825-.3388-.2448-.5208-.1394-.1824.1054-.2448.3384-.1394.5208l1.997 3.4582C2.6889 11.233.375 14.897.375 19.125h23.25c0-4.228-2.3139-7.892-5.7445-9.8036"/></svg>
+              Google Play (Android)
+            </a>
+          </div>
+
+          <!-- QR Code Scanner Box -->
+          <div class="qr-download-box">
+            <!-- Simulated QR code SVG -->
+            <svg class="qr-code-img" viewBox="0 0 100 100">
+              <rect x="0" y="0" width="100" height="100" fill="#FFFFFF" />
+              <!-- Corners -->
+              <rect x="10" y="10" width="24" height="24" fill="#0B0E14" />
+              <rect x="14" y="14" width="16" height="16" fill="#FFFFFF" />
+              <rect x="18" y="18" width="8" height="8" fill="#0B0E14" />
+
+              <rect x="66" y="10" width="24" height="24" fill="#0B0E14" />
+              <rect x="70" y="14" width="16" height="16" fill="#FFFFFF" />
+              <rect x="74" y="18" width="8" height="8" fill="#0B0E14" />
+
+              <rect x="10" y="66" width="24" height="24" fill="#0B0E14" />
+              <rect x="14" y="70" width="16" height="16" fill="#FFFFFF" />
+              <rect x="18" y="74" width="8" height="8" fill="#0B0E14" />
+
+              <!-- Data bits -->
+              <rect x="42" y="15" width="6" height="6" fill="#0B0E14" />
+              <rect x="52" y="25" width="6" height="6" fill="#0B0E14" />
+              <rect x="42" y="38" width="8" height="8" fill="#0B0E14" />
+              <rect x="25" y="45" width="6" height="6" fill="#0B0E14" />
+              <rect x="60" y="45" width="6" height="6" fill="#0B0E14" />
+              <rect x="75" y="55" width="8" height="8" fill="#0B0E14" />
+              <rect x="45" y="65" width="6" height="6" fill="#0B0E14" />
+              <rect x="65" y="75" width="6" height="6" fill="#0B0E14" />
+            </svg>
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700; color: #FFFFFF;">Scan to Download Instantly</div>
+              <div style="font-size: 0.78rem; color: #94A3B8; margin-top: 4px;">Point your camera to download SPIKE Mobile directly to your iOS or Android smartphone.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Glass Phone Mockup -->
+        <div>
+          <div class="mobile-phone-wrapper">
+            <div class="mobile-phone-screen">
+              <div class="phone-status-bar">
+                <span>14:32</span>
+                <span style="display: flex; gap: 4px; align-items: center;">
+                  <span>5G</span>
+                  <span>100%</span>
+                </span>
+              </div>
+
+              <div class="phone-app-header">
+                <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="22">
+                <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
+                  LIVE ECN
+                </span>
+              </div>
+
+              <div class="phone-app-body">
+                <!-- Balance Card -->
+                <div class="phone-balance-card">
+                  <div style="font-size: 0.68rem; color: #94A3B8;">EQUITY &bull; USD</div>
+                  <div style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin: 2px 0;">$24,850.40</div>
+                  <div style="font-size: 0.7rem; color: #34D399;">+$428.50 Today (+1.75%)</div>
+                </div>
+
+                <!-- Instrument & Mini Chart -->
+                <div style="background: rgba(14, 19, 28, 0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 10px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 700; color: #FFFFFF;">
+                    <span>EUR/USD</span>
+                    <span style="color: #34D399;">1.08452</span>
+                  </div>
+                  <!-- Mini Candle Path -->
+                  <svg viewBox="0 0 260 80" style="width: 100%; height: 75px; margin-top: 6px;">
+                    <path d="M 10 65 Q 60 55 110 60 T 190 35 T 250 15" fill="none" stroke="#34D399" stroke-width="2" />
+                    <circle cx="250" cy="15" r="3" fill="#34D399" />
+                  </svg>
+                </div>
+
+                <!-- Open Position Strip -->
+                <div style="margin-top: 10px; background: rgba(22, 30, 44, 0.6); padding: 8px 10px; border-radius: 6px; font-size: 0.72rem; display: flex; justify-content: space-between; border-left: 3px solid #34D399;">
+                  <div>
+                    <strong style="color: #FFFFFF;">BUY XAUUSD 0.50 Lot</strong>
+                    <div style="color: #94A3B8;">Open: $2,364.20</div>
+                  </div>
+                  <div style="text-align: right; color: #34D399; font-weight: 700;">
+                    +$320.00
+                  </div>
+                </div>
+
+                <!-- Phone Buy/Sell Buttons -->
+                <div class="phone-order-ticket">
+                  <button class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #EF4444; color: #F87171; font-weight: 700;">
+                    SELL 1.08450
+                  </button>
+                  <button class="btn btn-sm" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #34D399; font-weight: 700;">
+                    BUY 1.08452
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. API & QUANT SECTION ==================== -->
+  <section class="section-platform-alt" id="api">
+    <div class="container-wide">
+      <div class="platform-2col-grid">
+        <!-- Left: Code Terminal -->
+        <div>
+          <div class="api-tabs-nav">
+            <button class="api-tab-btn active" data-lang="python">Python SDK</button>
+            <button class="api-tab-btn" data-lang="nodejs">Node.js</button>
+            <button class="api-tab-btn" data-lang="csharp">C# (.NET)</button>
+            <button class="api-tab-btn" data-lang="fix">FIX 4.4 Protocol</button>
+            <button class="api-tab-btn" data-lang="curl">cURL REST</button>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <span>ENDPOINT: https://api.spikebrokerage.com/v2/orders</span>
+              <button class="btn-copy-code" id="btnCopyApiCode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Code
+              </button>
+            </div>
+
+            <!-- Python Snippet -->
+            <pre class="code-block" id="codePython" style="display: block;"><code><span class="code-keyword">import</span> spike_quant_api <span class="code-keyword">as</span> sqa
+
+<span class="code-comment"># Authenticate with institutional Equinix NY4 gateway</span>
+client = sqa.<span class="code-fn">Client</span>(
+    api_key=<span class="code-str">"spk_live_948201bfa82e"</span>,
+    secret_key=<span class="code-str">"sec_ny4_982180491823"</span>,
+    gateway=<span class="code-str">"ny4.spikebrokerage.com:9800"</span>
+)
+
+<span class="code-comment"># Stream real-time Level 2 Market Depth</span>
+orderbook = client.market.<span class="code-fn">get_depth</span>(symbol=<span class="code-str">"EURUSD"</span>, levels=<span class="code-num">10</span>)
+print(<span class="code-str">f"Top of Book: Bid={orderbook.bids[0].price} | Ask={orderbook.asks[0].price}"</span>)
+
+<span class="code-comment"># Submit algorithmic limit order with sub-2ms latency</span>
+response = client.orders.<span class="code-fn">create</span>(
+    symbol=<span class="code-str">"EURUSD"</span>,
+    side=<span class="code-str">"BUY"</span>,
+    order_type=<span class="code-str">"LIMIT"</span>,
+    lots=<span class="code-num">2.50</span>,
+    price=<span class="code-num">1.08450</span>,
+    slippage_tolerance_pips=<span class="code-num">0.1</span>,
+    time_in_force=<span class="code-str">"IOC"</span>
+)
+print(<span class="code-str">f"Execution: #{response.order_id} filled at {response.fill_price} in {response.latency_ms}ms"</span>)</code></pre>
+
+            <!-- Node.js Snippet -->
+            <pre class="code-block" id="codeNodejs" style="display: none;"><code><span class="code-keyword">const</span> { SpikeClient } = <span class="code-fn">require</span>(<span class="code-str">'@spike/quant-sdk'</span>);
+
+<span class="code-keyword">const</span> client = <span class="code-keyword">new</span> <span class="code-fn">SpikeClient</span>({
+  apiKey: <span class="code-str">'spk_live_948201bfa82e'</span>,
+  apiSecret: <span class="code-str">'sec_ny4_982180491823'</span>,
+  cluster: <span class="code-str">'EQUINIX_NY4'</span>
+});
+
+<span class="code-comment">// Subscribe to tick-by-tick quotes via WebSockets</span>
+client.<span class="code-fn">subscribeQuotes</span>([<span class="code-str">'EURUSD'</span>, <span class="code-str">'XAUUSD'</span>], (tick) => {
+  console.<span class="code-fn">log</span>(<span class="code-str">`[${tick.timestamp}] ${tick.symbol}: ${tick.bid} / ${tick.ask}`</span>);
+});
+
+<span class="code-comment">// Submit rapid execution order</span>
+<span class="code-keyword">const</span> order = <span class="code-keyword">await</span> client.orders.<span class="code-fn">submit</span>({
+  symbol: <span class="code-str">'EURUSD'</span>,
+  side: <span class="code-str">'BUY'</span>,
+  volume: <span class="code-num">1.0</span>,
+  type: <span class="code-str">'MARKET'</span>
+});
+console.<span class="code-fn">log</span>(<span class="code-str">`Order ${order.id} matched: ${order.status}`</span>);</code></pre>
+
+            <!-- C# Snippet -->
+            <pre class="code-block" id="codeCsharp" style="display: none;"><code><span class="code-keyword">using</span> Spike.Quant.Api;
+
+<span class="code-keyword">var</span> client = <span class="code-keyword">new</span> <span class="code-fn">SpikeGatewayClient</span>(
+    apiKey: <span class="code-str">"spk_live_948201bfa82e"</span>,
+    environment: GatewayEnvironment.EquinixNY4
+);
+
+<span class="code-comment">// High-performance asynchronous execution</span>
+<span class="code-keyword">var</span> response = <span class="code-keyword">await</span> client.Orders.<span class="code-fn">SendLimitOrderAsync</span>(
+    symbol: <span class="code-str">"EURUSD"</span>,
+    orderSide: OrderSide.Buy,
+    lots: <span class="code-num">5.00m</span>,
+    limitPrice: <span class="code-num">1.08450m</span>
+);</code></pre>
+
+            <!-- FIX 4.4 Snippet -->
+            <pre class="code-block" id="codeFix" style="display: none;"><code><span class="code-comment">// Standard FIX Protocol 4.4 - Direct Equinix NY4 Cross-Connect</span>
+8=FIX.4.4|9=152|35=D|49=SPIKE_CLIENT_01|56=SPIKE_MATCH_NY4|34=104|52=20261016-14:32:00.124|
+11=ORD_849201|21=1|55=EUR/USD|54=1|38=100000|40=2|44=1.08450|59=3|10=218|
+
+<span class="code-comment">// Response (35=8 Execution Report - FILLED)</span>
+8=FIX.4.4|9=168|35=8|49=SPIKE_MATCH_NY4|56=SPIKE_CLIENT_01|34=201|52=20261016-14:32:00.126|
+37=EXEC_9420|11=ORD_849201|17=EXEC_NY4_01|39=2|150=2|55=EUR/USD|54=1|38=100000|32=100000|31=1.08450|10=042|</code></pre>
+
+            <!-- cURL Snippet -->
+            <pre class="code-block" id="codeCurl" style="display: none;"><code>curl -X POST https://api.spikebrokerage.com/v2/orders \
+  -H <span class="code-str">"Authorization: Bearer spk_live_948201bfa82e"</span> \
+  -H <span class="code-str">"Content-Type: application/json"</span> \
+  -d <span class="code-str">'{
+    "symbol": "EURUSD",
+    "side": "BUY",
+    "type": "LIMIT",
+    "lots": 1.00,
+    "price": 1.08450
+  }'</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Right: Narrative & Protocols -->
+        <div>
+          <span class="section-tag">HIGH-FREQUENCY &amp; QUANT INFRASTRUCTURE</span>
+          <h2 class="section-title">
+            INSTITUTIONAL API &amp;<br>
+            <span class="text-gradient-gold">DIRECT QUANT SUITE</span>
+          </h2>
+          <p class="section-desc" style="max-width: 620px;">
+            Connect your custom algorithms, proprietary trading engines, and machine learning models directly into SPIKE's Equinix NY4 and LD4 matching engines. Sub-2ms co-located latency with zero intermediary bottlenecks.
+          </p>
+
+          <!-- 4 Protocol Breakdown Cards -->
+          <div class="protocols-grid">
+            <div class="protocol-card">
+              <svg class="protocol-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <div class="protocol-card-title">FIX Protocol 4.4</div>
+              <div class="protocol-card-desc">Industry-standard protocol for direct order routing and streaming interbank quotes.</div>
+            </div>
+
+            <div class="protocol-card">
+              <svg class="protocol-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+              <div class="protocol-card-title">Streaming WebSockets</div>
+              <div class="protocol-card-desc">Sub-5ms Level II market depth and instantaneous trade execution callbacks.</div>
+            </div>
+
+            <div class="protocol-card">
+              <svg class="protocol-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <div class="protocol-card-title">RESTful Trading API</div>
+              <div class="protocol-card-desc">Standard HTTP JSON endpoints for account state, ledger, and 10+ years historical tick data.</div>
+            </div>
+
+            <div class="protocol-card">
+              <svg class="protocol-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              <div class="protocol-card-title">Python &amp; C# SDKs</div>
+              <div class="protocol-card-desc">Production-ready wrappers for Pandas, NumPy, Backtrader, and automated ML pipelines.</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px;">
+            <a href="#" class="btn btn-gold btn-lg" onclick="alert('API Credentials Application: Please fill out the form in your client portal or contact institutional@spikebrokerage.com');">
+              Request FIX Session Access &rarr;
+            </a>
+            <a href="#downloads" class="btn btn-outline btn-lg">
+              Download Python SDK
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. PLATFORM COMPARISON MATRIX ==================== -->
+  <section class="section-comparison-matrix" id="comparison">
+    <div class="container-wide">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 30px;">
+        <span class="section-tag">TECHNICAL COMPARISON</span>
+        <h2 class="section-title">
+          COMPREHENSIVE <span class="text-gradient-gold">PLATFORM MATRIX</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Evaluate every technical capability, execution latency metric, charting depth, and automated scripting protocol side-by-side to choose the perfect trading environment for your strategy.
         </p>
       </div>
 
-      <!-- 4 Platform Tabs -->
-      <div class="platform-tabs-nav">
-        <button class="platform-tab-btn active" data-platform-target="desktop">
-          <svg class="platform-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-          <div>
-            <div class="platform-tab-name">Desktop Platform</div>
-            <div class="platform-tab-sub">Powerful &amp; advanced</div>
-          </div>
-        </button>
-
-        <button class="platform-tab-btn" data-platform-target="web">
-          <svg class="platform-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
-          <div>
-            <div class="platform-tab-name">Web Trader</div>
-            <div class="platform-tab-sub">No download required</div>
-          </div>
-        </button>
-
-        <button class="platform-tab-btn" data-platform-target="mobile">
-          <svg class="platform-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-          </svg>
-          <div>
-            <div class="platform-tab-name">Mobile App</div>
-            <div class="platform-tab-sub">Trade on the go</div>
-          </div>
-        </button>
-
-        <button class="platform-tab-btn" data-platform-target="api">
-          <svg class="platform-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-          <div>
-            <div class="platform-tab-name">API Trading</div>
-            <div class="platform-tab-sub">For advanced traders</div>
-          </div>
-        </button>
-      </div>
-
-      <!-- Spike Desktop Showcase -->
-      <div class="desktop-showcase" id="desktop">
-        <div>
-          <span class="section-tag">SPIKE DESKTOP</span>
-          <h3 class="section-title" style="font-size: 2.2rem;">PROFESSIONAL<br><span class="text-gradient-gold">TRADING PLATFORM</span></h3>
-          <p class="section-desc">
-            A powerful desktop trading platform with advanced charting, technical indicators and custom tools. Designed for traders who demand speed, precision and full control of their trading environment.
-          </p>
-
-          <div class="platform-checklist">
-            <div class="platform-check-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Advanced charting with 50+ indicators
-            </div>
-            <div class="platform-check-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Customisable workspace
-            </div>
-            <div class="platform-check-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Real-time market data
-            </div>
-            <div class="platform-check-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              One-click trading
-            </div>
-            <div class="platform-check-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Multiple order types
-            </div>
-            <div class="platform-check-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Hedging and netting options
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <a href="#downloads" class="btn btn-gold btn-lg">
-              Download for Windows
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#downloads" class="link-arrow" style="margin-top: 0;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              View System Requirements
-            </a>
-          </div>
-        </div>
-
-        <div class="desktop-showcase-visual">
-          <img src="assets/images/platforms/desktop-monitor.png" alt="Spike Desktop Professional Interface">
-        </div>
-      </div>
-
-      <!-- 3 Platform Cards: Web Trader, Mobile App, API Trading -->
-      <div class="platform-cards-trio">
-        <!-- Web Trader -->
-        <div class="platform-trio-card" id="web">
-          <div class="platform-trio-card-header">
-            <svg class="platform-trio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span class="section-tag" style="margin-bottom: 4px;">WEB TRADER</span>
-            <h3 class="platform-trio-title">Trade directly in your browser</h3>
-            <p class="platform-trio-desc">
-              Access all features without any download. Fast, secure and available on any device with a browser.
-            </p>
-            <a href="#" class="btn btn-gold btn-sm" data-open-modal="account">Launch Web Trader &rarr;</a>
-          </div>
-          <img src="assets/images/platforms/card-webtrader.png" alt="Web Trader Interface" class="platform-trio-img">
-        </div>
-
-        <!-- Mobile App -->
-        <div class="platform-trio-card" id="mobile">
-          <div class="platform-trio-card-header">
-            <svg class="platform-trio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-              <line x1="12" y1="18" x2="12.01" y2="18"></line>
-            </svg>
-            <span class="section-tag" style="margin-bottom: 4px;">MOBILE APP</span>
-            <h3 class="platform-trio-title">Trade anytime, anywhere</h3>
-            <p class="platform-trio-desc">
-              Stay connected to global markets with our mobile app. Available for iOS and Android with full trading functionality.
-            </p>
-            <div style="display: flex; gap: 8px;">
-              <a href="#downloads" class="btn btn-outline btn-sm">App Store</a>
-              <a href="#downloads" class="btn btn-outline btn-sm">Google Play</a>
-            </div>
-          </div>
-          <img src="assets/images/platforms/card-mobileapp.png" alt="Mobile Trading App" class="platform-trio-img">
-        </div>
-
-        <!-- API Trading -->
-        <div class="platform-trio-card" id="api">
-          <div class="platform-trio-card-header">
-            <svg class="platform-trio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            <span class="section-tag" style="margin-bottom: 4px;">API TRADING</span>
-            <h3 class="platform-trio-title">For advanced traders</h3>
-            <p class="platform-trio-desc">
-              Connect via API for ultra-fast execution and seamless integration with your trading environment.
-            </p>
-            <a href="#downloads" class="btn btn-gold btn-sm">View API Documentation &rarr;</a>
-          </div>
-          <img src="assets/images/platforms/card-apitrading.png" alt="API Trading Terminal" class="platform-trio-img">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== BUILT FOR A BETTER TRADING EXPERIENCE ==================== -->
-  <section class="section-instruments-light" id="features">
-    <div class="container-wide">
-      <div style="max-width: 680px; margin-bottom: 40px;">
-        <span class="section-tag">WHY OUR PLATFORMS</span>
-        <h2 class="section-title section-title-light">BUILT FOR A BETTER <span class="text-gradient-gold">TRADING EXPERIENCE</span></h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-        <div class="account-card-light">
-          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Ultra-Fast Execution</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Low latency and reliable infrastructure for quick order execution.</p>
-        </div>
-
-        <div class="account-card-light">
-          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Secure &amp; Stable</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Enterprise-grade security with 99.99% uptime.</p>
-        </div>
-
-        <div class="account-card-light">
-          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Multi-Device Access</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Trade seamlessly across desktop, web and mobile.</p>
-        </div>
-
-        <div class="account-card-light">
-          <svg class="value-prop-icon" style="width: 32px; height: 32px; margin-bottom: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-          </svg>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">Advanced Tools</h3>
-          <p style="font-size: 0.84rem; color: #475569; line-height: 1.6;">Professional charts, indicators and analysis tools.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PLATFORM COMPARISON TABLE ==================== -->
-  <section class="section-platform-table">
-    <div class="container-wide">
-      <span class="section-tag">PLATFORM COMPARISON</span>
-      <h2 class="section-title">FIND THE RIGHT <span class="text-gradient-gold">PLATFORM</span> FOR YOU</h2>
-
-      <div class="table-responsive-wrapper">
-        <table class="platform-table">
+      <div class="matrix-table-container">
+        <table class="matrix-table">
           <thead>
             <tr>
-              <th style="width: 32%;">Feature</th>
-              <th style="width: 17%;">Desktop</th>
-              <th style="width: 17%;">Web Trader</th>
-              <th style="width: 17%;">Mobile App</th>
-              <th style="width: 17%;">API Trading</th>
+              <th style="width: 28%;">Feature / Capability</th>
+              <th style="width: 18%;" class="highlight-col">Spike Desktop (MT5)</th>
+              <th style="width: 18%;">Cloud WebTrader</th>
+              <th style="width: 18%;">Mobile App (iOS/Android)</th>
+              <th style="width: 18%;">Institutional FIX / API</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Real-time market data</td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
+              <td class="matrix-feature-name">Execution Latency</td>
+              <td style="color: #34D399; font-weight: 700;">&lt; 12 ms (NY4 Co-Located)</td>
+              <td>&lt; 25 ms (WebSockets)</td>
+              <td>&lt; 35 ms (Mobile 5G)</td>
+              <td style="color: #34D399; font-weight: 800;">&lt; 2 ms (Direct Cross-Connect)</td>
             </tr>
             <tr>
-              <td>Advanced charting (50+ indicators)</td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
+              <td class="matrix-feature-name">Technical Indicators</td>
+              <td><span class="matrix-gold-badge">38 Built-in + 2000 Custom</span></td>
+              <td>100+ TradingView Tools</td>
+              <td>30 Mobile Indicators</td>
+              <td>Raw Feed (Calculate Any)</td>
             </tr>
             <tr>
-              <td>One-click trading</td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
+              <td class="matrix-feature-name">Supported Timeframes</td>
+              <td>21 Timeframes (M1 to Monthly)</td>
+              <td>12 Timeframes + Custom</td>
+              <td>9 Standard Timeframes</td>
+              <td>Tick-by-Tick Millisecond</td>
             </tr>
             <tr>
-              <td>Customisable layout</td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
+              <td class="matrix-feature-name">Level II Depth of Market (DOM)</td>
+              <td><span class="matrix-check">&#10003;</span> Full Ladder</td>
+              <td><span class="matrix-check">&#10003;</span> Interactive DOM</td>
+              <td><span class="matrix-check">&#10003;</span> Compact DOM</td>
+              <td><span class="matrix-check">&#10003;</span> Full L2/L3 Order Book</td>
             </tr>
             <tr>
-              <td>No download required</td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
+              <td class="matrix-feature-name">Automated / Algorithmic Trading</td>
+              <td><span class="matrix-gold-badge">MQL5 EAs &amp; Python</span></td>
+              <td>Webhooks &amp; TradingView Alerts</td>
+              <td><span class="matrix-dash">&mdash;</span> (Alerts Only)</td>
+              <td><span class="matrix-gold-badge">FIX 4.4, Python, C#, REST</span></td>
             </tr>
             <tr>
-              <td>Mobile trading</td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
+              <td class="matrix-feature-name">Pending Order Types</td>
+              <td>6 Types + Trailing Stops</td>
+              <td>Market, Limit, Stop, SL/TP</td>
+              <td>Market, Limit, Stop, SL/TP</td>
+              <td>All Standard FIX Order Flags</td>
             </tr>
             <tr>
-              <td>API access</td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-dash">&mdash;</span></td>
-              <td><span class="table-check">&#10003;</span></td>
+              <td class="matrix-feature-name">Strategy Backtesting Engine</td>
+              <td>Multi-Threaded Cloud Farm</td>
+              <td>Cloud Bar Simulator</td>
+              <td><span class="matrix-dash">&mdash;</span></td>
+              <td>Unlimited Custom Quant Models</td>
             </tr>
-            <tr style="background: rgba(229, 184, 105, 0.05); font-weight: 600;">
-              <td>Available on</td>
-              <td style="color: #FFFFFF;">Windows / Mac</td>
-              <td style="color: #FFFFFF;">Any Browser</td>
-              <td style="color: #FFFFFF;">iOS / Android</td>
-              <td style="color: #FFFFFF;">REST / FIX API</td>
+            <tr>
+              <td class="matrix-feature-name">Simultaneous Chart Windows</td>
+              <td>Up to 100 Multi-Monitor</td>
+              <td>Up to 8 Split Charts</td>
+              <td>Single with Fast Flip</td>
+              <td>Multi-Feed Headless Engine</td>
+            </tr>
+            <tr>
+              <td class="matrix-feature-name">Cloud Workspace Sync</td>
+              <td>Export / Cloud Template</td>
+              <td><span class="matrix-check">&#10003;</span> 100% Cloud Synced</td>
+              <td>Synced Watchlists</td>
+              <td>Server-Side Config</td>
+            </tr>
+            <tr>
+              <td class="matrix-feature-name">Software Installation</td>
+              <td>Required (.exe / .dmg / .sh)</td>
+              <td style="color: #34D399; font-weight: 700;">Zero (Any Browser)</td>
+              <td>App Store / Google Play</td>
+              <td>Zero (Code Integration)</td>
+            </tr>
+            <tr>
+              <td class="matrix-feature-name">Operating Systems</td>
+              <td>Windows 11/10, macOS, Linux</td>
+              <td>Chrome, Safari, Edge, Firefox</td>
+              <td>iOS 15+, Android 8+</td>
+              <td>Any OS (Platform Agnostic)</td>
+            </tr>
+            <tr>
+              <td class="matrix-feature-name">Minimum Deposit</td>
+              <td>$50 USD</td>
+              <td>$50 USD</td>
+              <td>$50 USD</td>
+              <td>$500 USD (Sandbox: $0)</td>
             </tr>
           </tbody>
         </table>
@@ -483,55 +1049,272 @@
     </div>
   </section>
 
-  <!-- ==================== DOWNLOAD OUR PLATFORMS ==================== -->
-  <section class="section-download-light" id="downloads">
+  <!-- ==================== 6. DOWNLOAD CENTER ==================== -->
+  <section class="section-downloads-hub" id="downloads">
     <div class="container-wide">
-      <span class="section-tag">GET STARTED TODAY</span>
-      <h2 class="section-title section-title-light">DOWNLOAD OUR PLATFORMS</h2>
-      <p class="section-desc section-desc-light">
-        Access global markets with powerful and reliable platforms designed for every trader.
-      </p>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 30px;">
+        <span class="section-tag">CROSS-PLATFORM INSTALLERS</span>
+        <h2 class="section-title">
+          DOWNLOAD SPIKE <span class="text-gradient-gold">TRADING SUITE</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Choose your operating system below to download the latest verified build of SPIKE's high-performance trading suite. All installers feature automatic background update capability.
+        </p>
+      </div>
 
-      <div class="download-cards-grid">
-        <!-- Windows -->
-        <div class="download-card">
-          <svg class="download-os-icon" viewBox="0 0 24 24" fill="currentColor">
+      <!-- 6 Download Cards -->
+      <div class="download-hub-grid">
+        <!-- Windows (Recommended) -->
+        <div class="download-hub-card recommended">
+          <span class="recommended-pill">Recommended</span>
+          <svg class="download-hub-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
           </svg>
-          <div class="download-os-title">Windows</div>
-          <div class="download-os-desc">For Windows 10/11</div>
-          <a href="#" class="btn btn-gold btn-sm" onclick="alert('Downloading SPIKE Trading Suite for Windows...');">Download &rarr;</a>
+          <div class="download-hub-title">Spike Desktop for Windows</div>
+          <div class="download-hub-meta">
+            <span>v5.42 Build 4260</span>
+            <span>&bull;</span>
+            <span>48.6 MB</span>
+            <span>&bull;</span>
+            <span style="color: #34D399;">64-Bit</span>
+          </div>
+          <div class="download-hub-specs">
+            Optimized for Windows 11 and Windows 10 (64-bit). Includes full MQL5 strategy compiler, Level II DOM, and sub-12ms low latency networking stack.
+          </div>
+          <a href="#" class="btn btn-gold" onclick="alert('Downloading Spike Desktop for Windows (Spike_MT5_Setup.exe)...');">
+            Download for Windows (.exe) &darr;
+          </a>
         </div>
 
         <!-- macOS -->
-        <div class="download-card">
-          <svg class="download-os-icon" viewBox="0 0 24 24" fill="currentColor">
+        <div class="download-hub-card">
+          <svg class="download-hub-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.98.6-2.62 1.34-.56.64-1.05 1.69-.92 2.71 1 .08 2.02-.45 2.61-1.2z"/>
           </svg>
-          <div class="download-os-title">macOS</div>
-          <div class="download-os-desc">For macOS 10.15+</div>
-          <a href="#" class="btn btn-gold btn-sm" onclick="alert('Downloading SPIKE Trading Suite for macOS (Universal DMG)...');">Download &rarr;</a>
+          <div class="download-hub-title">Spike Desktop for macOS</div>
+          <div class="download-hub-meta">
+            <span>v5.42 Universal</span>
+            <span>&bull;</span>
+            <span>56.2 MB</span>
+            <span>&bull;</span>
+            <span>macOS 12+</span>
+          </div>
+          <div class="download-hub-specs">
+            Native universal binary for Apple Silicon (M1/M2/M3/M4) and Intel Macs. High-DPI Retina display rendering with ultra-smooth 120Hz ProMotion support.
+          </div>
+          <a href="#" class="btn btn-outline" onclick="alert('Downloading Spike Desktop for macOS (Spike_MT5_Universal.dmg)...');">
+            Download for macOS (.dmg) &darr;
+          </a>
         </div>
 
-        <!-- iOS App -->
-        <div class="download-card">
-          <svg class="download-os-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Linux -->
+        <div class="download-hub-card">
+          <svg class="download-hub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <div class="download-hub-title">Spike Desktop for Linux</div>
+          <div class="download-hub-meta">
+            <span>v5.42 Stable</span>
+            <span>&bull;</span>
+            <span>42.1 MB</span>
+            <span>&bull;</span>
+            <span>Ubuntu / Debian</span>
+          </div>
+          <div class="download-hub-specs">
+            Automated bash installer for Ubuntu 20.04+, Debian, Fedora, and Arch. Ideal for headless algorithmic trading on cloud VPS instances.
+          </div>
+          <a href="#" class="btn btn-outline" onclick="alert('Downloading Spike Linux Script (install_spike_mt5.sh)...');">
+            Download Linux Script (.sh) &darr;
+          </a>
+        </div>
+
+        <!-- Apple iOS -->
+        <div class="download-hub-card">
+          <svg class="download-hub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
             <line x1="12" y1="18" x2="12.01" y2="18"></line>
           </svg>
-          <div class="download-os-title">iOS App</div>
-          <div class="download-os-desc">For iPhone &amp; iPad</div>
-          <a href="#" class="btn btn-gold btn-sm" onclick="alert('Redirecting to Apple App Store...');">Download &rarr;</a>
+          <div class="download-hub-title">Spike Mobile for iOS</div>
+          <div class="download-hub-meta">
+            <span>iOS 15.0+</span>
+            <span>&bull;</span>
+            <span>iPhone &amp; iPad</span>
+            <span>&bull;</span>
+            <span>App Store</span>
+          </div>
+          <div class="download-hub-specs">
+            Available on the Apple App Store. Features Face ID login, fluid gesture charting, Apple Watch market complications, and instant push execution alerts.
+          </div>
+          <a href="#" class="btn btn-outline" onclick="alert('Redirecting to Apple App Store...');">
+            Get on App Store &nearr;
+          </a>
         </div>
 
-        <!-- Android App -->
-        <div class="download-card">
-          <svg class="download-os-icon" viewBox="0 0 24 24" fill="currentColor">
+        <!-- Android Google Play -->
+        <div class="download-hub-card">
+          <svg class="download-hub-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.997-3.4582c.1054-.1824.043-.4154-.1394-.5208-.182-.1054-.4153-.0431-.5208.1394L17.2007 8.97c-1.5363-.7016-3.2676-1.0967-5.2007-1.0967s-3.6644.3951-5.2007 1.0967L4.7816 5.4818c-.1054-.1825-.3388-.2448-.5208-.1394-.1824.1054-.2448.3384-.1394.5208l1.997 3.4582C2.6889 11.233.375 14.897.375 19.125h23.25c0-4.228-2.3139-7.892-5.7445-9.8036"/>
           </svg>
-          <div class="download-os-title">Android App</div>
-          <div class="download-os-desc">For Android 8.0+</div>
-          <a href="#" class="btn btn-gold btn-sm" onclick="alert('Redirecting to Google Play Store (APK/Store)...');">Download &rarr;</a>
+          <div class="download-hub-title">Spike Mobile for Android</div>
+          <div class="download-hub-meta">
+            <span>Android 8.0+</span>
+            <span>&bull;</span>
+            <span>Phones &amp; Tablets</span>
+            <span>&bull;</span>
+            <span>Google Play</span>
+          </div>
+          <div class="download-hub-specs">
+            Available on Google Play Store. Highly responsive touch interface, AMOLED black theme, live price widgets, and biometric fingerprint authentication.
+          </div>
+          <a href="#" class="btn btn-outline" onclick="alert('Redirecting to Google Play Store...');">
+            Get on Google Play &nearr;
+          </a>
+        </div>
+
+        <!-- Standalone Android APK -->
+        <div class="download-hub-card">
+          <svg class="download-hub-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <div class="download-hub-title">Direct Android APK</div>
+          <div class="download-hub-meta">
+            <span>v5.42 Build</span>
+            <span>&bull;</span>
+            <span>38.4 MB</span>
+            <span>&bull;</span>
+            <span>Direct Sideload</span>
+          </div>
+          <div class="download-hub-specs">
+            Official standalone package for devices without Google Play Services (Huawei AppGallery, custom ROMs, enterprise managed devices).
+          </div>
+          <a href="#" class="btn btn-outline" onclick="alert('Downloading Spike Mobile Direct APK (Spike_Mobile_v5.42.apk)...');">
+            Download APK Package &darr;
+          </a>
+        </div>
+      </div>
+
+      <!-- 3-Step Setup Process -->
+      <div class="setup-steps-grid">
+        <div class="setup-step-card">
+          <div class="setup-step-num">01</div>
+          <div class="setup-step-title">Download &amp; Install</div>
+          <div class="setup-step-desc">
+            Download the appropriate installer for your desktop or mobile operating system and launch the wizard. Installation completes in under 60 seconds.
+          </div>
+        </div>
+
+        <div class="setup-step-card">
+          <div class="setup-step-num">02</div>
+          <div class="setup-step-title">Log In to Your Account</div>
+          <div class="setup-step-desc">
+            Select <strong>SpikeBrokerage-Live</strong> or <strong>SpikeBrokerage-Demo</strong> from the server dropdown and enter your Spike account ID and password.
+          </div>
+        </div>
+
+        <div class="setup-step-card">
+          <div class="setup-step-num">03</div>
+          <div class="setup-step-title">Start Trading Instantly</div>
+          <div class="setup-step-desc">
+            Access 500+ instruments with institutional spreads from 0.0 pips, customize your chart layouts, or deploy automated EAs right away.
+          </div>
+        </div>
+      </div>
+
+      <!-- Free VPS Promo Banner -->
+      <div class="vps-promo-banner">
+        <div class="vps-promo-text">
+          <h4>Need 24/7 Zero-Downtime Automated Execution?</h4>
+          <p>Active Spike clients trading 5+ standard lots monthly receive a complimentary, low-latency Equinix NY4 Virtual Private Server (VPS).</p>
+        </div>
+        <a href="#" class="btn btn-gold" data-open-modal="account" style="white-space: nowrap;">
+          Claim Free NY4 VPS &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. PLATFORMS FAQ ACCORDION ==================== -->
+  <section class="section-platform-faq" id="faq">
+    <div class="container-wide">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="section-title">
+          PLATFORM &amp; TECHNICAL <span class="text-gradient-gold">QUESTIONS</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Find answers to common questions regarding multi-platform synchronization, Expert Advisor compatibility, API connection details, and system requirements.
+        </p>
+      </div>
+
+      <div class="faq-accordion-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question-btn">
+            Can I trade on multiple platforms simultaneously with the same Spike account?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer-content">
+            Yes, absolutely. Your SPIKE trading account seamlessly synchronizes across all platforms in real time. You can analyze charts and open an algorithmic position on your Desktop Suite, monitor its unrealized P&amp;L on the Spike Mobile App while on the train, and modify stop-loss levels from Cloud WebTrader at your office. All order states, margin metrics, and balance changes update instantly via sub-second WebSockets.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            What is the difference between Spike Desktop (MT5) and Cloud WebTrader?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer-content">
+            Spike Desktop is our native 64-bit multi-threaded software engineered for maximum computational performance, automated MQL5 strategy backtesting, multi-monitor multi-chart setups, and the lowest possible latency (&lt;12ms to NY4). Cloud WebTrader requires zero installation and runs directly in any modern browser using TradingView HTML5 charts, making it ideal for quick access, on-the-go charting, and devices where local software installation is restricted.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            Are Expert Advisors (EAs), algorithmic bots, and scalping allowed on Spike?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer-content">
+            Yes, 100%. SPIKE operates a pure STP / ECN execution model with zero dealing desk intervention. We actively welcome all trading strategies including high-frequency automated Expert Advisors (EAs), news scalpers, grid bots, triangular arbitrage systems, and custom Python/FIX algorithms. There are no minimum holding times (FIFO restrictions do not apply) and no arbitrary stop-loss distance limitations.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            How do I qualify for complimentary low-latency Equinix NY4 VPS hosting?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer-content">
+            Clients who maintain a minimum account equity of $1,000 USD and execute at least 5 standard round-turn FX or metals lots each calendar month qualify for a 100% sponsored Equinix NY4 Virtual Private Server (VPS). The VPS features 1ms internal cross-connect to SPIKE's matching engine, guaranteed 99.99% power and network uptime, and 24/7 operation so your automated strategies run uninterrupted even when your local computer is powered off.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            How do I obtain API keys and connect to the FIX 4.4 sandbox environment?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer-content">
+            You can generate REST and WebSocket API keys instantly from your SPIKE Client Portal under the "Developer &amp; API" tab. For institutional FIX 4.4 protocol sessions, please submit an API request through our Institutional Desk. You will be provisioned dedicated FIX CompIDs, IP whitelist authorization, and access to our Equinix NY4 test sandbox preloaded with $100,000 USD in paper capital for integration testing before live capital deployment.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            Are there any software licensing fees or subscription costs to use Spike platforms?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer-content">
+            No. All SPIKE trading platforms—including the Desktop Suite, Cloud WebTrader, iOS Mobile App, Android Mobile App, and standard REST/WebSocket APIs—are provided completely free of charge to all live and demo account holders. There are no monthly platform subscription fees, software license charges, or hidden platform maintenance costs.
+          </div>
         </div>
       </div>
     </div>
@@ -545,7 +1328,7 @@
           <span class="section-tag">YOUR NEXT OPPORTUNITY</span>
           <h2 class="section-title">STARTS <span class="text-gradient-gold">HERE</span></h2>
           <p class="section-desc" style="color: #CBD5E1; margin-bottom: 28px;">
-            Join a global community of traders and access the tools, markets and support you need.
+            Join over 150,000 global traders who rely on SPIKE for institutional pricing, sub-15ms execution, and industry-leading multi-device platforms.
           </p>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
             <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
@@ -585,11 +1368,11 @@
         <div>
           <div class="footer-col-title">Trading</div>
           <ul class="footer-link-list">
-            <li><a href="forex.html" class="footer-link">Forex</a></li>
-            <li><a href="metals.html" class="footer-link">Metals</a></li>
-            <li><a href="indices.html" class="footer-link">Indices</a></li>
-            <li><a href="commodities.html" class="footer-link">Commodities</a></li>
-            <li><a href="shares.html" class="footer-link">Shares</a></li>
+            <li><a href="forex.html" class="footer-link">Forex Trading</a></li>
+            <li><a href="metals.html" class="footer-link">Precious Metals</a></li>
+            <li><a href="indices.html" class="footer-link">Global Indices</a></li>
+            <li><a href="commodities.html" class="footer-link">Commodities &amp; Energies</a></li>
+            <li><a href="shares.html" class="footer-link">Shares &amp; CFDs</a></li>
             <li><a href="crypto.html" class="footer-link">Cryptocurrencies</a></li>
             <li><a href="spreads.html" class="footer-link">Trading Conditions &amp; Spreads</a></li>
           </ul>
@@ -598,11 +1381,12 @@
         <div>
           <div class="footer-col-title">Platforms</div>
           <ul class="footer-link-list">
-            <li><a href="platforms.html#desktop" class="footer-link">Desktop Platform</a></li>
-            <li><a href="platforms.html#web" class="footer-link">Web Trader</a></li>
-            <li><a href="platforms.html#mobile" class="footer-link">Mobile App</a></li>
-            <li><a href="platforms.html#api" class="footer-link">API Trading</a></li>
-            <li><a href="platforms.html#features" class="footer-link">Platform Features</a></li>
+            <li><a href="platforms.html#desktop" class="footer-link">Desktop Platform (MT5)</a></li>
+            <li><a href="platforms.html#web" class="footer-link">Cloud WebTrader</a></li>
+            <li><a href="platforms.html#mobile" class="footer-link">Mobile App (iOS/Android)</a></li>
+            <li><a href="platforms.html#api" class="footer-link">Institutional FIX API</a></li>
+            <li><a href="platforms.html#comparison" class="footer-link">Platform Comparison</a></li>
+            <li><a href="platforms.html#downloads" class="footer-link">Download Center</a></li>
           </ul>
         </div>
 
@@ -611,8 +1395,8 @@
           <ul class="footer-link-list">
             <li><a href="accounts.html#account-types" class="footer-link">Account Types</a></li>
             <li><a href="accounts.html#comparison" class="footer-link">Fees &amp; Conditions</a></li>
-            <li><a href="accounts.html" class="footer-link">Funding</a></li>
-            <li><a href="accounts.html" class="footer-link">Withdrawals</a></li>
+            <li><a href="accounts.html" class="footer-link">Funding Methods</a></li>
+            <li><a href="accounts.html" class="footer-link">Withdrawal Policies</a></li>
             <li><a href="accounts.html#comparison" class="footer-link">Account Comparison</a></li>
           </ul>
         </div>
@@ -622,7 +1406,7 @@
           <ul class="footer-link-list">
             <li><a href="education.html#insights" class="footer-link">Market Analysis</a></li>
             <li><a href="education.html#courses" class="footer-link">Video Tutorials</a></li>
-            <li><a href="education.html" class="footer-link">Webinars</a></li>
+            <li><a href="education.html" class="footer-link">Webinars &amp; Seminars</a></li>
             <li><a href="education.html#topics" class="footer-link">Trading Glossary</a></li>
             <li><a href="education.html" class="footer-link">Help Centre</a></li>
           </ul>
@@ -632,10 +1416,10 @@
           <div class="footer-col-title">Company</div>
           <ul class="footer-link-list">
             <li><a href="index.html#trust" class="footer-link">About Us</a></li>
-            <li><a href="#" class="footer-link">Regulation</a></li>
+            <li><a href="#" class="footer-link">Regulatory Licenses</a></li>
             <li><a href="#" class="footer-link">Legal Documents</a></li>
             <li><a href="#" class="footer-link">Careers</a></li>
-            <li><a href="#" class="footer-link">Contact Us</a></li>
+            <li><a href="#" class="footer-link">Contact Desk</a></li>
           </ul>
         </div>
 
@@ -646,26 +1430,26 @@
               <input type="email" placeholder="Your email address" class="newsletter-input" required>
               <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
             </form>
-            <div class="newsletter-subtext">Get the latest market news and insights.</div>
+            <div class="newsletter-subtext">Institutional market insights delivered weekly.</div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 SPIKE. All rights reserved.</div>
+        <div>&copy; 2026 SPIKE. All rights reserved. Registered Investment Dealer.</div>
         <div class="footer-legal-links">
           <a href="#">Privacy Policy</a>
           <span>|</span>
           <a href="#">Terms &amp; Conditions</a>
           <span>|</span>
-          <a href="#">Risk Disclosure</a>
+          <a href="#">Risk Disclosure Notice</a>
         </div>
-        <div class="footer-disclaimer">Trading involves risk. Please trade responsibly.</div>
+        <div class="footer-disclaimer">Trading leveraged financial products carries substantial risk of capital loss. Past performance does not indicate future results.</div>
       </div>
     </div>
   </footer>
 
-  <!-- Modal containers -->
+  <!-- ==================== MODAL CONTAINERS ==================== -->
   <div class="modal-backdrop" id="loginModal">
     <div class="modal-card">
       <button class="modal-close-btn">&times;</button>
@@ -684,9 +1468,9 @@
       <button class="modal-close-btn">&times;</button>
       <span class="section-tag">START TRADING</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
-      <form onsubmit="event.preventDefault(); alert('Account application received!'); closeModal(document.getElementById('accountModal'));">
-        <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" required></div>
-        <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" required></div>
+      <form onsubmit="event.preventDefault(); alert('Account application received! A welcome email has been sent.'); closeModal(document.getElementById('accountModal'));">
+        <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" placeholder="e.g. Alexander Vance" required></div>
+        <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" placeholder="trader@example.com" required></div>
         <button type="submit" class="btn btn-gold" style="width: 100%;">Create Account Now &rarr;</button>
       </form>
     </div>
@@ -695,24 +1479,14 @@
   <div class="modal-backdrop" id="searchModal">
     <div class="modal-card">
       <button class="modal-close-btn">&times;</button>
-      <span class="section-tag">GLOBAL INSTRUMENTS</span>
-      <h3 style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px;">SEARCH MARKETS</h3>
-      <input type="text" class="modal-input" placeholder="Type symbol e.g. EURUSD, XAU, US30..." autofocus>
+      <span class="section-tag">GLOBAL INSTRUMENTS &amp; PLATFORMS</span>
+      <h3 style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px;">SEARCH PLATFORMS &amp; MARKETS</h3>
+      <input type="text" class="modal-input" placeholder="Type symbol, platform (MT5, WebTrader, API)..." autofocus>
     </div>
   </div>
 
+  <!-- JavaScript Modules -->
   <script src="assets/js/main.js"></script>
-  <script>
-    // Tab switcher handler
-    document.querySelectorAll('.platform-tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.platform-tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const target = btn.dataset.platformTarget;
-        const el = document.getElementById(target);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
+  <script src="assets/js/platforms.js"></script>
 </body>
 </html>
