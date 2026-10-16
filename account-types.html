@@ -104,23 +104,133 @@
   <section class="accounts-hero" style="background-image: url('public/homepage-images/div3-background.png');">
     <div class="container-wide">
       <div class="accounts-hero-inner">
+        <!-- Left Column: Content & Trust Badges -->
         <div class="accounts-hero-content">
           <div class="accounts-hero-tag">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15 8 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8 12 2"></polygon></svg>
-            INSTITUTIONAL ACCOUNT INFRASTRUCTURE
+            <span class="live-dot-pulse"></span>
+            INSTITUTIONAL PRECISION INFRASTRUCTURE
           </div>
           <h1 class="accounts-hero-title">
-            ACCOUNT TYPES ENGINEERED FOR YOUR <span class="text-gradient-gold">TRADING EDGE</span>
+            TRADE WITH <span class="text-gradient-gold">ZERO CONFLICT</span> &amp; TRUE RAW ECN EDGE
           </h1>
           <p class="accounts-hero-desc">
-            Choose from zero-commission Standard accounts, institutional Raw ECN tiers, and bespoke VIP solutions. Backed by direct Equinix NY4 cross-connects, sub-15ms execution, and deep multi-asset liquidity.
+            Engineered tier architecture for discretionary swing traders, high-frequency scalpers, and algorithmic quants. Direct fiber cross-connects to Equinix NY4 liquidity pools.
           </p>
+          
+          <!-- Quick Trust Highlights Row -->
+          <div class="hero-trust-badges">
+            <div class="trust-badge-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tier-1 Bank Custody</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>No Dealing Desk (NDD)</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>100% Shariah Compliant</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Negative Balance Protected</span>
+            </div>
+          </div>
+
           <div class="accounts-hero-actions">
-            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+            <a href="#" class="btn btn-gold btn-md" data-open-modal="account">
               Open Live Account
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a href="compare-accounts.html" class="btn btn-outline btn-lg">Compare All Accounts &rarr;</a>
+            <a href="#account-types" class="btn btn-outline btn-md">Explore Tiers Below &darr;</a>
+            <a href="compare-accounts.html" class="hero-compare-link">Full Matrix &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Live Tier Terminal Widget -->
+        <div class="hero-terminal-wrap">
+          <!-- Top Floating Speed Pill -->
+          <div class="hero-floating-pill pill-top">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>&lt; 12ms Equinix NY4 Direct Fills</span>
+          </div>
+
+          <div class="hero-interactive-card">
+            <div class="terminal-card-header">
+              <div class="terminal-header-left">
+                <span class="terminal-badge-pulse"></span>
+                <span class="terminal-header-title">LIVE TIER TERMINAL</span>
+              </div>
+              <span class="terminal-status-tag">STP ROUTING ACTIVE</span>
+            </div>
+
+            <!-- Tier Selector Pills -->
+            <div class="hero-tier-nav">
+              <button class="hero-tier-btn" data-tier="standard">Standard</button>
+              <button class="hero-tier-btn active" data-tier="pro">Pro ECN <span class="badge-star">&starf;</span></button>
+              <button class="hero-tier-btn" data-tier="vip">VIP Quant</button>
+            </div>
+
+            <!-- Tier Dynamic Body -->
+            <div class="hero-tier-body" id="hero-tier-body">
+              <div class="hero-tier-headline-wrap">
+                <div>
+                  <h3 class="hero-tier-title" id="hero-tier-title">PRO ECN (RAW)</h3>
+                  <div class="hero-tier-sub" id="hero-tier-sub">Engineered for fast scalping, day trading &amp; EA algorithms</div>
+                </div>
+                <div class="hero-tier-dep-box">
+                  <span class="dep-label">MIN DEPOSIT</span>
+                  <span class="dep-val" id="hero-tier-dep">$1,000</span>
+                </div>
+              </div>
+
+              <!-- 4 Micro Specs Grid -->
+              <div class="hero-tier-specs">
+                <div class="tier-spec-item">
+                  <span class="spec-k">SPREADS FROM</span>
+                  <span class="spec-v gold" id="hero-tier-spread">0.0 Pips</span>
+                </div>
+                <div class="tier-spec-item">
+                  <span class="spec-k">COMMISSION</span>
+                  <span class="spec-v" id="hero-tier-comm">$3.50 / Lot</span>
+                </div>
+                <div class="tier-spec-item">
+                  <span class="spec-k">EXECUTION</span>
+                  <span class="spec-v" id="hero-tier-speed">&lt; 12ms NY4</span>
+                </div>
+                <div class="tier-spec-item">
+                  <span class="spec-k">MAX LEVERAGE</span>
+                  <span class="spec-v" id="hero-tier-lev">1:500</span>
+                </div>
+              </div>
+
+              <!-- 3 Bullet Highlights -->
+              <div class="hero-tier-features" id="hero-tier-features">
+                <div class="tier-feat-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Raw interbank spreads from 0.0 pips</span>
+                </div>
+                <div class="tier-feat-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Level II Depth of Market (DOM) volume ladder</span>
+                </div>
+                <div class="tier-feat-item">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Priority server queue with zero requotes</span>
+                </div>
+              </div>
+
+              <!-- Card Action Button -->
+              <a href="#" class="btn btn-gold btn-sm hero-tier-cta-btn" id="hero-tier-cta" data-open-modal="account">
+                Open Pro ECN Account &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom Floating Trust Pill -->
+          <div class="hero-floating-pill pill-bottom">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Segregated Tier-1 Bank Accounts</span>
           </div>
         </div>
       </div>

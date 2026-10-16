@@ -3,6 +3,93 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Hero Interactive Tier Switcher Widget
+  const heroTierBtns = document.querySelectorAll('.hero-tier-btn');
+  const heroTierTitle = document.getElementById('hero-tier-title');
+  const heroTierSub = document.getElementById('hero-tier-sub');
+  const heroTierDep = document.getElementById('hero-tier-dep');
+  const heroTierSpread = document.getElementById('hero-tier-spread');
+  const heroTierComm = document.getElementById('hero-tier-comm');
+  const heroTierSpeed = document.getElementById('hero-tier-speed');
+  const heroTierLev = document.getElementById('hero-tier-lev');
+  const heroTierFeatures = document.getElementById('hero-tier-features');
+  const heroTierCta = document.getElementById('hero-tier-cta');
+
+  const heroTierData = {
+    standard: {
+      title: 'STANDARD ACCOUNT',
+      sub: 'For discretionary & swing traders seeking simple all-in spreads',
+      dep: '$100',
+      spread: '1.0 Pip',
+      comm: '$0.00 / Lot',
+      speed: '< 25ms STP',
+      lev: '1:500',
+      features: [
+        'Zero commission across 500+ instruments',
+        'Micro-lot trading starting at 0.01 lots',
+        'Negative Balance Protection guaranteed'
+      ],
+      cta: 'Open Standard Account →'
+    },
+    pro: {
+      title: 'PRO ECN (RAW)',
+      sub: 'Engineered for fast scalping, day trading & EA algorithms',
+      dep: '$1,000',
+      spread: '0.0 Pips',
+      comm: '$3.50 / Lot',
+      speed: '< 12ms NY4',
+      lev: '1:500',
+      features: [
+        'Raw interbank spreads from 0.0 pips',
+        'Level II Depth of Market (DOM) volume ladder',
+        'Priority server queue with zero requotes'
+      ],
+      cta: 'Open Pro ECN Account →'
+    },
+    vip: {
+      title: 'VIP INSTITUTIONAL',
+      sub: 'Bespoke liquidity for quant funds, prop desks & family offices',
+      dep: '$10,000',
+      spread: '0.0 Pips',
+      comm: 'From $1.50',
+      speed: '< 2ms NY4',
+      lev: '1:500',
+      features: [
+        'Tiered volume rebates up to 40% cashback',
+        'Direct FIX 4.4 protocol & Quant Python APIs',
+        'Free dedicated Equinix NY4 Cross-Connect VPS'
+      ],
+      cta: 'Open VIP Account →'
+    }
+  };
+
+  heroTierBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      heroTierBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tier = btn.getAttribute('data-tier') || 'pro';
+      const d = heroTierData[tier] || heroTierData.pro;
+
+      if (heroTierTitle) heroTierTitle.textContent = d.title;
+      if (heroTierSub) heroTierSub.textContent = d.sub;
+      if (heroTierDep) heroTierDep.textContent = d.dep;
+      if (heroTierSpread) heroTierSpread.textContent = d.spread;
+      if (heroTierComm) heroTierComm.textContent = d.comm;
+      if (heroTierSpeed) heroTierSpeed.textContent = d.speed;
+      if (heroTierLev) heroTierLev.textContent = d.lev;
+      if (heroTierCta) heroTierCta.textContent = d.cta;
+
+      if (heroTierFeatures) {
+        heroTierFeatures.innerHTML = d.features.map(f => `
+          <div class="tier-feat-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>${f}</span>
+          </div>
+        `).join('');
+      }
+    });
+  });
+
   // 1. Currency Switcher
   const currencyBtns = document.querySelectorAll('.currency-btn');
   const depositStandard = document.getElementById('deposit-val-standard');
