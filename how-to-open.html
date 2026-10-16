@@ -104,9 +104,10 @@
   <section class="accounts-hero" style="background-image: url('public/homepage-images/div3-background.png');">
     <div class="container-wide">
       <div class="accounts-hero-inner">
+        <!-- Left Column: Content -->
         <div class="accounts-hero-content">
           <div class="accounts-hero-tag">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span class="live-dot-pulse"></span>
             RAPID CLIENT ONBOARDING
           </div>
           <h1 class="accounts-hero-title">
@@ -116,11 +117,77 @@
             Go from registration to live market execution in under 15 minutes. Simple digital application, automated AI biometric verification, zero-fee instant funding, and immediate terminal credentials.
           </p>
           <div class="accounts-hero-actions">
-            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+            <a href="#" class="btn btn-gold btn-md" data-open-modal="account">
               Start Registration Now
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a href="#documents" class="btn btn-outline btn-lg">View Document Checklist &rarr;</a>
+            <a href="#documents" class="btn btn-outline btn-md">View Document Checklist &rarr;</a>
+            <a href="compare-accounts.html" class="hero-compare-link">Compare Accounts &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Fast-Track Onboarding Radar Widget -->
+        <div class="hero-terminal-wrap">
+          <div class="hero-floating-pill pill-top">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Automated AI Biometrics</span>
+          </div>
+
+          <div class="hero-interactive-card">
+            <div class="terminal-card-header">
+              <div class="terminal-header-left">
+                <span class="terminal-badge-pulse"></span>
+                <span class="terminal-header-title">FAST-TRACK ONBOARDING RADAR</span>
+              </div>
+              <span class="terminal-status-tag">ACTIVE 24/7</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 7px; margin: 8px 0 10px;">
+              <!-- Step 1 -->
+              <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(8, 11, 16, 0.75); border: 1px solid rgba(255,255,255,0.06); padding: 7px 10px; border-radius: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 20px; height: 20px; border-radius: 4px; background: rgba(229,184,105,0.15); color: var(--gold-primary); font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center;">1</span>
+                  <div>
+                    <div style="font-size: 0.76rem; font-weight: 700; color: #FFFFFF;">Digital Registration</div>
+                    <div style="font-size: 0.64rem; color: #94A3B8;">Name, email &amp; currency selection</div>
+                  </div>
+                </div>
+                <div style="font-size: 0.7rem; font-weight: 700; color: #10B981; background: rgba(16,185,129,0.12); padding: 2px 6px; border-radius: 4px;">~2 Mins</div>
+              </div>
+
+              <!-- Step 2 (Highlighted) -->
+              <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(229, 184, 105, 0.08); border: 1px solid rgba(229, 184, 105, 0.35); padding: 7px 10px; border-radius: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 20px; height: 20px; border-radius: 4px; background: var(--gold-primary); color: #0B0E14; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center;">2</span>
+                  <div>
+                    <div style="font-size: 0.76rem; font-weight: 800; color: var(--gold-primary);">AI KYC Verification</div>
+                    <div style="font-size: 0.64rem; color: #CBD5E1;">Government ID &amp; 3D selfie check</div>
+                  </div>
+                </div>
+                <div style="font-size: 0.7rem; font-weight: 800; color: var(--gold-primary); background: rgba(229,184,105,0.15); padding: 2px 6px; border-radius: 4px;">&lt; 15 Mins</div>
+              </div>
+
+              <!-- Step 3 -->
+              <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(8, 11, 16, 0.75); border: 1px solid rgba(255,255,255,0.06); padding: 7px 10px; border-radius: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 20px; height: 20px; border-radius: 4px; background: rgba(56,189,248,0.15); color: #38BDF8; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center;">3</span>
+                  <div>
+                    <div style="font-size: 0.76rem; font-weight: 700; color: #FFFFFF;">Zero-Fee Funding</div>
+                    <div style="font-size: 0.64rem; color: #94A3B8;">Cards, USDT Crypto, Bank Wire</div>
+                  </div>
+                </div>
+                <div style="font-size: 0.7rem; font-weight: 700; color: #38BDF8; background: rgba(56,189,248,0.12); padding: 2px 6px; border-radius: 4px;">Instant</div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-gold btn-sm hero-tier-cta-btn" data-open-modal="account">
+              Open Live Account in 15 Mins &rarr;
+            </a>
+          </div>
+
+          <div class="hero-floating-pill pill-bottom">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Tier-1 Segregated Custody</span>
           </div>
         </div>
       </div>
@@ -153,23 +220,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ==================== STICKY NAV ==================== -->
-  <div class="accounts-sticky-bar">
-    <div class="container-wide accounts-nav-container">
-      <div class="accounts-nav-pills">
-        <a href="#steps" class="accounts-nav-pill active">4-Step Process</a>
-        <a href="#documents" class="accounts-nav-pill">Document Checklist</a>
-        <a href="#funding" class="accounts-nav-pill">Payment Gateways</a>
-        <a href="#faq" class="accounts-nav-pill">Onboarding FAQ</a>
-        <a href="account-types.html" class="accounts-nav-pill">Account Types Showcase &rarr;</a>
-        <a href="compare-accounts.html" class="accounts-nav-pill">Compare Accounts &rarr;</a>
-      </div>
-      <div class="accounts-nav-actions">
-        <a href="#" class="btn btn-gold btn-sm" data-open-modal="account">Open Live Account</a>
-      </div>
-    </div>
-  </div>
 
   <!-- ==================== SECTION 1: 4-STEP ONBOARDING JOURNEY ==================== -->
   <section class="section-how-to-open" id="steps">
@@ -278,10 +328,10 @@
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 45px;">
-        <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+      <div style="text-align: center; margin-top: 18px;">
+        <a href="#" class="btn btn-gold btn-md" data-open-modal="account">
           Open Live Account Now
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
@@ -450,7 +500,7 @@
   <!-- ==================== ONBOARDING FAQ ==================== -->
   <section class="section-accounts-faq" id="faq">
     <div class="container-wide">
-      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 16px;">
         <span class="section-tag">CLEAR ANSWERS</span>
         <h2 class="section-title">ONBOARDING &amp; VERIFICATION <span class="text-gradient-gold">FAQ</span></h2>
         <p class="section-desc">Key details to help you get your account verified and funded quickly.</p>
