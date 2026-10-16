@@ -221,12 +221,12 @@
     <div class="container-wide">
       <div class="ticker-header">
         <div class="ticker-categories">
-          <button class="ticker-cat-btn active">Popular</button>
-          <button class="ticker-cat-btn">Forex</button>
-          <button class="ticker-cat-btn">Metals</button>
-          <button class="ticker-cat-btn">Commodities</button>
-          <button class="ticker-cat-btn">Shares</button>
-          <button class="ticker-cat-btn">Cryptocurrencies</button>
+          <button class="ticker-cat-btn active" data-category="popular">Popular</button>
+          <button class="ticker-cat-btn" data-category="forex">Forex</button>
+          <button class="ticker-cat-btn" data-category="metals">Metals</button>
+          <button class="ticker-cat-btn" data-category="commodities">Commodities</button>
+          <button class="ticker-cat-btn" data-category="shares">Shares</button>
+          <button class="ticker-cat-btn" data-category="cryptocurrencies">Cryptocurrencies</button>
         </div>
         <a href="markets.html" class="ticker-view-all">
           View All Markets
@@ -236,64 +236,79 @@
 
       <div class="ticker-grid">
         <!-- EUR/USD -->
-        <div class="ticker-card" data-ticker-id="eurusd">
+        <a href="forex.html" class="ticker-card" data-ticker-id="eurusd" title="Trade EUR/USD">
           <div>
-            <div class="ticker-symbol">EUR/USD</div>
+            <div class="ticker-symbol">
+              <span>EUR/USD</span>
+              <span class="ticker-spread-tag">0.0 pips</span>
+            </div>
             <div class="ticker-price">1.0794</div>
             <div class="ticker-change bullish">+0.0017 (+0.16%)</div>
           </div>
           <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,18 12,16 24,19 36,12 48,14 60,6"/>
+            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,18 12,16 24,19 36,12 48,14 60,6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </a>
 
         <!-- GBP/USD -->
-        <div class="ticker-card" data-ticker-id="gbpusd">
+        <a href="forex.html" class="ticker-card" data-ticker-id="gbpusd" title="Trade GBP/USD">
           <div>
-            <div class="ticker-symbol">GBP/USD</div>
-            <div class="ticker-price">1.2541</div>
+            <div class="ticker-symbol">
+              <span>GBP/USD</span>
+              <span class="ticker-spread-tag">0.2 pips</span>
+            </div>
+            <div class="ticker-price">1.2540</div>
             <div class="ticker-change bearish">-0.0025 (-0.20%)</div>
           </div>
           <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#F43F5E" stroke-width="1.8" points="0,8 14,11 28,9 42,16 52,14 60,20"/>
+            <polyline fill="none" stroke="#F43F5E" stroke-width="1.8" points="0,8 14,11 28,9 42,16 52,14 60,20" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </a>
 
         <!-- XAU/USD -->
-        <div class="ticker-card" data-ticker-id="xauusd">
+        <a href="metals.html" class="ticker-card" data-ticker-id="xauusd" title="Trade XAU/USD">
           <div>
-            <div class="ticker-symbol">XAU/USD</div>
-            <div class="ticker-price">2,366.82</div>
+            <div class="ticker-symbol">
+              <span>XAU/USD</span>
+              <span class="ticker-spread-tag">0.12 pts</span>
+            </div>
+            <div class="ticker-price">2,366.58</div>
             <div class="ticker-change bullish">+12.15 (+0.52%)</div>
           </div>
           <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,20 15,17 30,12 42,14 52,8 60,4"/>
+            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,20 15,17 30,12 42,14 52,8 60,4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </a>
 
         <!-- US30 -->
-        <div class="ticker-card" data-ticker-id="us30">
+        <a href="indices.html" class="ticker-card" data-ticker-id="us30" title="Trade US30">
           <div>
-            <div class="ticker-symbol">US30</div>
-            <div class="ticker-price">38,452.6</div>
+            <div class="ticker-symbol">
+              <span>US30</span>
+              <span class="ticker-spread-tag">1.0 pt</span>
+            </div>
+            <div class="ticker-price">38,453.5</div>
             <div class="ticker-change bullish">+101.4 (+0.26%)</div>
           </div>
           <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,16 12,18 26,14 38,10 50,12 60,5"/>
+            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,16 12,18 26,14 38,10 50,12 60,5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </a>
 
         <!-- BTC/USD -->
-        <div class="ticker-card" data-ticker-id="btcusd">
+        <a href="crypto.html" class="ticker-card" data-ticker-id="btcusd" title="Trade BTC/USD">
           <div>
-            <div class="ticker-symbol">BTC/USD</div>
+            <div class="ticker-symbol">
+              <span>BTC/USD</span>
+              <span class="ticker-spread-tag">$12.0</span>
+            </div>
             <div class="ticker-price">67,421.5</div>
             <div class="ticker-change bullish">+1121.3 (+1.69%)</div>
           </div>
           <svg class="sparkline-svg" viewBox="0 0 60 24">
-            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,21 14,18 28,15 40,8 50,11 60,3"/>
+            <polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,21 14,18 28,15 40,8 50,11 60,3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   </section>
