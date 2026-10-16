@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precious Metals Trading | Gold & Silver CFDs | SPIKE Brokerage</title>
+  <meta name="description" content="Trade spot Gold (XAU/USD), Silver (XAG/USD), Platinum and Palladium with SPIKE. Tight spreads, 1:200 leverage, zero storage costs, and deep liquidity.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/markets.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container-wide header-container">
+      <a href="index.html" class="brand-logo" aria-label="Spike Homepage">
+        <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="34">
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item active">
+          <a href="markets.html" class="nav-link">
+            Trading
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="forex.html" class="dropdown-link">Forex Trading</a>
+            <a href="metals.html" class="dropdown-link active" style="color: var(--gold-primary);">Metals &amp; Gold</a>
+            <a href="indices.html" class="dropdown-link">Indices</a>
+            <a href="commodities.html" class="dropdown-link">Commodities</a>
+            <a href="shares.html" class="dropdown-link">Shares &amp; CFDs</a>
+            <a href="crypto.html" class="dropdown-link">Cryptocurrencies</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Markets
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="markets.html#explore" class="dropdown-link">Market Overview</a>
+            <a href="markets.html#market-specs" class="dropdown-link">Live Spreads &amp; Specs</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="platforms.html" class="nav-link">
+            Platforms
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="platforms.html#desktop" class="dropdown-link">Desktop Platform</a>
+            <a href="platforms.html#web" class="dropdown-link">Web Trader</a>
+            <a href="platforms.html#mobile" class="dropdown-link">Mobile App</a>
+            <a href="platforms.html#api" class="dropdown-link">API Trading</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="accounts.html" class="nav-link">
+            Accounts
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="accounts.html#account-types" class="dropdown-link">Account Types</a>
+            <a href="accounts.html#comparison" class="dropdown-link">Compare Accounts</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="education.html" class="nav-link">
+            Education
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="education.html#courses" class="dropdown-link">Video Tutorials</a>
+            <a href="education.html#insights" class="dropdown-link">Market Analysis</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="dropdown-menu">
+            <a href="index.html#trust" class="dropdown-link">Why Choose Spike</a>
+            <a href="index.html#numbers" class="dropdown-link">Spike in Numbers</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-selector">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>EN</span>
+        </div>
+        <button class="btn-icon-search" data-open-modal="search" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="#" class="btn-login" data-open-modal="login">Login</a>
+        <a href="#" class="btn btn-gold" data-open-modal="account">Open Account</a>
+        <div class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="market-subpage-hero" style="background-image: url('public/homepage-images/hero-section-background.png');">
+    <div class="container-wide">
+      <div class="market-subpage-hero-inner">
+        <span class="section-tag">PRECIOUS METALS. SAFE-HAVEN ASSETS.</span>
+        <h1 class="market-subpage-hero-title">
+          TRADE PRECIOUS METALS<br>
+          <span class="text-gradient-gold">GOLD, SILVER &amp; PLATINUM</span>
+        </h1>
+        <p class="market-subpage-hero-desc">
+          Hedge against inflation and diversify your trading portfolio with spot Gold (XAU/USD), Silver (XAG/USD), Platinum and Palladium. Enjoy competitive pricing, zero physical storage fees, low margins, and deep market depth.
+        </p>
+        <div class="hero-home-actions" style="margin-bottom: 24px;">
+          <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+            Open Live Account
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#specs" class="btn btn-outline btn-lg">View Metals Specs</a>
+        </div>
+
+        <!-- Hero Market Stats -->
+        <div class="market-hero-stats">
+          <div class="market-stat-card">
+            <div class="market-stat-val">XAU/USD</div>
+            <div class="market-stat-lbl">Spot Gold CFDs</div>
+          </div>
+          <div class="market-stat-card">
+            <div class="market-stat-val">0.10</div>
+            <div class="market-stat-lbl">Tight Typical Spread</div>
+          </div>
+          <div class="market-stat-card">
+            <div class="market-stat-val">1:200</div>
+            <div class="market-stat-lbl">Metals Leverage</div>
+          </div>
+          <div class="market-stat-card">
+            <div class="market-stat-val">$0</div>
+            <div class="market-stat-lbl">Storage / Custody Fee</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIVE METALS TICKER BAR ==================== -->
+  <section class="ticker-bar-section">
+    <div class="container-wide">
+      <div class="ticker-grid">
+        <div class="ticker-card">
+          <div>
+            <div class="ticker-symbol">XAU/USD (Gold)</div>
+            <div class="ticker-price">2,366.82</div>
+            <div class="ticker-change bullish">+12.15 (+0.52%)</div>
+          </div>
+          <svg class="sparkline-svg" viewBox="0 0 60 24"><polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,20 15,17 30,12 42,14 52,8 60,4"/></svg>
+        </div>
+
+        <div class="ticker-card">
+          <div>
+            <div class="ticker-symbol">XAG/USD (Silver)</div>
+            <div class="ticker-price">31.42</div>
+            <div class="ticker-change bullish">+0.48 (+1.55%)</div>
+          </div>
+          <svg class="sparkline-svg" viewBox="0 0 60 24"><polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,18 12,16 26,19 38,11 48,9 60,3"/></svg>
+        </div>
+
+        <div class="ticker-card">
+          <div>
+            <div class="ticker-symbol">XPT/USD (Platinum)</div>
+            <div class="ticker-price">984.50</div>
+            <div class="ticker-change bearish">-4.20 (-0.42%)</div>
+          </div>
+          <svg class="sparkline-svg" viewBox="0 0 60 24"><polyline fill="none" stroke="#F43F5E" stroke-width="1.8" points="0,6 14,10 28,8 42,15 52,13 60,19"/></svg>
+        </div>
+
+        <div class="ticker-card">
+          <div>
+            <div class="ticker-symbol">XPD/USD (Palladium)</div>
+            <div class="ticker-price">1,024.10</div>
+            <div class="ticker-change bullish">+8.60 (+0.85%)</div>
+          </div>
+          <svg class="sparkline-svg" viewBox="0 0 60 24"><polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,17 14,15 28,12 40,8 50,10 60,4"/></svg>
+        </div>
+
+        <div class="ticker-card">
+          <div>
+            <div class="ticker-symbol">XAU/EUR</div>
+            <div class="ticker-price">2,192.40</div>
+            <div class="ticker-change bullish">+9.80 (+0.45%)</div>
+          </div>
+          <svg class="sparkline-svg" viewBox="0 0 60 24"><polyline fill="none" stroke="#00C087" stroke-width="1.8" points="0,19 15,16 28,14 40,9 50,11 60,4"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MARKET SPOTLIGHT SECTION ==================== -->
+  <section class="market-spotlight-section">
+    <div class="container-wide">
+      <div class="market-spotlight-grid">
+        <div>
+          <span class="section-tag">GLOBAL WEALTH PRESERVATION</span>
+          <h2 class="section-title">THE ULTIMATE HEDGE AGAINST <span class="text-gradient-gold">VOLATILITY</span></h2>
+          <p class="section-desc">
+            Gold and precious metals have served as reliable stores of wealth for millennia. With SPIKE's high-performance CFD trading platform, you can speculate on intra-day gold price swings or establish macro hedge positions without physical delivery friction.
+          </p>
+
+          <div class="market-feature-list">
+            <div class="market-feature-item">
+              <div class="market-feature-check">✓</div>
+              <div>
+                <div class="market-feature-title">Two-Way Trading Opportunities</div>
+                <div class="market-feature-desc">Go long (buy) when anticipating gold price growth, or go short (sell) to capitalize on downward corrections.</div>
+              </div>
+            </div>
+
+            <div class="market-feature-item">
+              <div class="market-feature-check">✓</div>
+              <div>
+                <div class="market-feature-title">No Physical Storage or Insurance Fees</div>
+                <div class="market-feature-desc">Trade gold contracts without paying vault storage fees, bullion assay charges, or physical delivery insurance.</div>
+              </div>
+            </div>
+
+            <div class="market-feature-item">
+              <div class="market-feature-check">✓</div>
+              <div>
+                <div class="market-feature-title">High Leverage &amp; Fractional Lots</div>
+                <div class="market-feature-desc">Trade up to 1:200 leverage with position sizes starting from 0.01 micro-lots (1 oz of gold).</div>
+              </div>
+            </div>
+
+            <div class="market-feature-item">
+              <div class="market-feature-check">✓</div>
+              <div>
+                <div class="market-feature-title">Real-Time Macro Correlation</div>
+                <div class="market-feature-desc">Hedge easily against US Federal Reserve interest rate announcements, inflation prints, and currency devaluations.</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-gold" data-open-modal="account">Start Trading Metals &rarr;</a>
+        </div>
+
+        <div>
+          <div class="market-showcase-frame">
+            <span class="market-showcase-badge">PRECIOUS BULLION</span>
+            <img src="public/homepage-images/metals-card.png" alt="Precious Metals Showcase" class="market-showcase-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INSTRUMENT SPECIFICATIONS TABLE ==================== -->
+  <section class="section-market-specs-dark" id="specs">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span class="section-tag">METALS SPECIFICATIONS</span>
+          <h2 class="section-title">GOLD, SILVER &amp; <span class="text-gradient-gold">PLATINUM CONTRACTS</span></h2>
+        </div>
+        <p class="section-desc" style="text-align: right;">
+          Real-time indicative pricing with raw spreads streamed from London Bullion Market Association (LBMA) participants.
+        </p>
+      </div>
+
+      <!-- Search Input -->
+      <div class="specs-controls-bar">
+        <div style="display: flex; gap: 8px;">
+          <span style="font-size: 0.88rem; color: #94A3B8; display: flex; align-items: center; font-weight: 600;">Metals Available:</span>
+        </div>
+        <div class="specs-search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #64748B;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="metalsSearchInput" class="specs-search-input" placeholder="Search metals e.g. Gold, Silver, XAU...">
+        </div>
+      </div>
+
+      <!-- Specs Table -->
+      <div class="table-responsive-wrapper">
+        <table class="specs-table" id="metalsTable">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Symbol</th>
+              <th style="width: 16%;">Contract Size</th>
+              <th style="width: 14%;">Bid Price</th>
+              <th style="width: 14%;">Ask Price</th>
+              <th style="width: 12%;">Typical Spread</th>
+              <th style="width: 12%;">Max Leverage</th>
+              <th style="width: 10%;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🪙</span><strong>XAU/USD (Gold)</strong></div></td>
+              <td>100 oz</td>
+              <td class="spec-price-green">2,366.82</td>
+              <td class="spec-price-green">2,367.14</td>
+              <td class="spec-spread-mono">$0.32</td>
+              <td>1:200</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🪙</span><strong>XAU/EUR (Gold / EUR)</strong></div></td>
+              <td>100 oz</td>
+              <td class="spec-price-green">2,192.40</td>
+              <td class="spec-price-green">2,192.85</td>
+              <td class="spec-spread-mono">€0.45</td>
+              <td>1:200</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🪙</span><strong>XAU/GBP (Gold / GBP)</strong></div></td>
+              <td>100 oz</td>
+              <td class="spec-price-green">1,887.10</td>
+              <td class="spec-price-green">1,887.62</td>
+              <td class="spec-spread-mono">£0.52</td>
+              <td>1:200</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🪙</span><strong>XAU/AUD (Gold / AUD)</strong></div></td>
+              <td>100 oz</td>
+              <td class="spec-price-green">3,595.60</td>
+              <td class="spec-price-green">3,596.35</td>
+              <td class="spec-spread-mono">A$0.75</td>
+              <td>1:200</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🥈</span><strong>XAG/USD (Silver)</strong></div></td>
+              <td>5,000 oz</td>
+              <td class="spec-price-green">31.420</td>
+              <td class="spec-price-green">31.438</td>
+              <td class="spec-spread-mono">$0.018</td>
+              <td>1:100</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🥈</span><strong>XAG/EUR (Silver / EUR)</strong></div></td>
+              <td>5,000 oz</td>
+              <td class="spec-price-green">29.105</td>
+              <td class="spec-price-green">29.128</td>
+              <td class="spec-spread-mono">€0.023</td>
+              <td>1:100</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">⚪</span><strong>XPT/USD (Platinum)</strong></div></td>
+              <td>50 oz</td>
+              <td class="spec-price-red">984.50</td>
+              <td class="spec-price-red">985.80</td>
+              <td class="spec-spread-mono">$1.30</td>
+              <td>1:50</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+            <tr>
+              <td><div class="spec-symbol-col"><span class="spec-flag-icon">🔘</span><strong>XPD/USD (Palladium)</strong></div></td>
+              <td>50 oz</td>
+              <td class="spec-price-green">1,024.10</td>
+              <td class="spec-price-green">1,026.40</td>
+              <td class="spec-spread-mono">$2.30</td>
+              <td>1:50</td>
+              <td><button class="btn btn-gold btn-sm" data-open-modal="account">Trade &rarr;</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3 STEPS TO START TRADING ==================== -->
+  <section class="steps-section">
+    <div class="container-wide">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="section-tag">INVEST WITH CONFIDENCE</span>
+        <h2 class="section-title">TRADE METALS IN <span class="text-gradient-gold">3 EASY STEPS</span></h2>
+        <p class="section-desc" style="margin: 0 auto;">Open your account today and gain direct access to global spot bullion markets.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num-badge">01</div>
+          <h3 class="step-title">Register Live Account</h3>
+          <p class="step-desc">Quick digital signup in under 2 minutes. Instant identity check and immediate account activation.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge">02</div>
+          <h3 class="step-title">Fund Your Account</h3>
+          <p class="step-desc">Deposit easily using credit card, bank transfer, USDT, or Bitcoin with 0% funding fees.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge">03</div>
+          <h3 class="step-title">Trade Gold &amp; Silver</h3>
+          <p class="step-desc">Take positions on spot gold and silver with institutional depth and rapid execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STRATEGY & EDUCATIONAL INSIGHTS ==================== -->
+  <section class="market-insights-section">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span class="section-tag">METALS TRADING ACADEMY</span>
+          <h2 class="section-title">INSIGHTS ON <span class="text-gradient-gold">BULLION MARKETS</span></h2>
+        </div>
+        <a href="education.html" class="btn btn-outline">Explore Academy &rarr;</a>
+      </div>
+
+      <div class="market-insights-grid">
+        <div class="market-insight-card">
+          <div class="market-insight-img-wrap">
+            <img src="assets/images/insight_gold.jpg" alt="Gold vs US Dollar" class="market-insight-img">
+          </div>
+          <div class="market-insight-body">
+            <span class="market-insight-tag">MACRO DYNAMICS</span>
+            <h3 class="market-insight-title">The Gold &amp; US Dollar Inverse Correlation</h3>
+            <p class="market-insight-desc">Understand why a weakening US dollar and falling real treasury yields historically trigger massive upside rallies in spot gold.</p>
+          </div>
+        </div>
+
+        <div class="market-insight-card">
+          <div class="market-insight-img-wrap">
+            <img src="public/homepage-images/homepage-card2.png" alt="Gold Technical Outlook" class="market-insight-img">
+          </div>
+          <div class="market-insight-body">
+            <span class="market-insight-tag">TECHNICAL ANALYSIS</span>
+            <h3 class="market-insight-title">Gold Holds Strong Above $2,350 — Key Levels</h3>
+            <p class="market-insight-desc">In-depth technical analysis charting historical breakout channels, central bank accumulation zones, and key pivot levels.</p>
+          </div>
+        </div>
+
+        <div class="market-insight-card">
+          <div class="market-insight-img-wrap">
+            <img src="assets/images/education/article-candlestick.jpg" alt="Silver Volatility" class="market-insight-img">
+          </div>
+          <div class="market-insight-body">
+            <span class="market-insight-tag">INDUSTRIAL METALS</span>
+            <h3 class="market-insight-title">Silver: The Dual Asset of Bullion &amp; Green Energy</h3>
+            <p class="market-insight-desc">Explore how silver's massive demand in photovoltaic solar panels and electric vehicles creates distinct explosive trading trends.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner-globe" style="background-image: url('assets/images/cta-markets-globe.jpg');">
+    <div class="container-wide">
+      <div class="cta-banner-globe-content">
+        <span class="section-tag">PRESERVE &amp; GROW YOUR CAPITAL</span>
+        <h2 class="section-title">READY TO TRADE PRECIOUS METALS?</h2>
+        <p class="section-desc" style="color: #CBD5E1; margin-bottom: 28px;">
+          Access Gold, Silver, Platinum and Palladium today with institutional spreads, 1:200 leverage, and 0% storage fees.
+        </p>
+        <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+          Open Live Account
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="30">
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trading</div>
+          <ul class="footer-link-list">
+            <li><a href="forex.html" class="footer-link">Forex Trading</a></li>
+            <li><a href="metals.html" class="footer-link" style="color: var(--gold-primary);">Metals &amp; Gold</a></li>
+            <li><a href="indices.html" class="footer-link">Indices</a></li>
+            <li><a href="commodities.html" class="footer-link">Commodities</a></li>
+            <li><a href="shares.html" class="footer-link">Shares &amp; CFDs</a></li>
+            <li><a href="crypto.html" class="footer-link">Cryptocurrencies</a></li>
+            <li><a href="markets.html#market-specs" class="footer-link">Trading Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Platforms</div>
+          <ul class="footer-link-list">
+            <li><a href="platforms.html#desktop" class="footer-link">Desktop Platform</a></li>
+            <li><a href="platforms.html#web" class="footer-link">Web Trader</a></li>
+            <li><a href="platforms.html#mobile" class="footer-link">Mobile App</a></li>
+            <li><a href="platforms.html#api" class="footer-link">API Trading</a></li>
+            <li><a href="platforms.html" class="footer-link">Platform Features</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-link-list">
+            <li><a href="index.html#trust" class="footer-link">Why Choose SPIKE</a></li>
+            <li><a href="index.html#numbers" class="footer-link">SPIKE in Numbers</a></li>
+            <li><a href="education.html" class="footer-link">Academy</a></li>
+            <li><a href="accounts.html" class="footer-link">Account Types</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-newsletter">
+          <div class="footer-col-title">Newsletter</div>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Metals Daily!');">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
+          </form>
+          <div class="newsletter-subtext">Get daily Gold &amp; Silver market analysis.</div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SPIKE. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="#">Risk Disclosure</a>
+        </div>
+        <div class="footer-disclaimer">Trading CFDs on precious metals involves financial risk. Please trade responsibly.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="loginModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <span class="section-tag">SECURE ACCESS</span>
+      <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">LOGIN TO SPIKE</h3>
+      <form onsubmit="event.preventDefault(); alert('Login successful!'); closeModal(document.getElementById('loginModal'));">
+        <div class="modal-form-group"><label class="modal-label">Email or Account ID</label><input type="text" class="modal-input" required></div>
+        <div class="modal-form-group"><label class="modal-label">Password</label><input type="password" class="modal-input" required></div>
+        <button type="submit" class="btn btn-gold" style="width: 100%;">Sign In &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="accountModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <span class="section-tag">START TRADING</span>
+      <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
+      <form onsubmit="event.preventDefault(); alert('Account application received!'); closeModal(document.getElementById('accountModal'));">
+        <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" required></div>
+        <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" required></div>
+        <button type="submit" class="btn btn-gold" style="width: 100%;">Create Account Now &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="searchModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <span class="section-tag">GLOBAL INSTRUMENTS</span>
+      <h3 style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px;">SEARCH MARKETS</h3>
+      <input type="text" class="modal-input" placeholder="Type symbol e.g. EURUSD, XAU, US30..." autofocus>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Live table search for Metals
+    const searchInput = document.getElementById('metalsSearchInput');
+    const table = document.getElementById('metalsTable');
+    if (searchInput && table) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
