@@ -115,11 +115,19 @@
 
 .accounts-comparison-table-wrap {
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   background: #FFFFFF;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   margin-top: 40px;
+}
+
+.accounts-comparison-table-wrap::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .accounts-table {

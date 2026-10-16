@@ -90,11 +90,14 @@
   align-items: center;
   gap: 8px;
   overflow-x: auto;
-  scrollbar-width: none;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
 .specs-filter-pills::-webkit-scrollbar {
-  display: none;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .spec-pill-btn {
@@ -830,6 +833,14 @@
   background: rgba(8, 11, 16, 0.8);
   border-bottom: 1px solid var(--border-dark);
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.macro-terminal-nav::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .macro-tab-btn {

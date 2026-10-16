@@ -2,6 +2,40 @@
    SPIKE BROKERAGE - INSTITUTIONAL PLATFORMS PAGE STYLES (DARK GOLD LUXURY)
    ========================================================================== */
 
+/* Zero Browser Scrollbars Everywhere (Clean Luxury Aesthetic) */
+html, body, *, *::before, *::after {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+section::-webkit-scrollbar,
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar,
+table::-webkit-scrollbar,
+nav::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+  display: none !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  display: none !important;
+  background: transparent !important;
+}
+
 /* Target Scroll Margin & Focus Glow */
 #desktop, #web, #mobile, #api, #comparison, #downloads, #faq, #features {
   scroll-margin-top: 124px;
@@ -381,7 +415,15 @@
   justify-content: space-between;
   gap: 12px;
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   font-size: 0.72rem;
+}
+
+.terminal-sub-ribbon::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .terminal-ribbon-left {
@@ -423,6 +465,14 @@
   background: #07090E;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.terminal-tabs::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .terminal-tab-item {
@@ -1247,6 +1297,14 @@
   background: #080B10;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.api-file-tabs::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .api-file-tab {
@@ -1291,8 +1349,15 @@
   display: flex;
   position: relative;
   background: #06080D;
-  max-height: 290px;
-  overflow-y: auto;
+  overflow: visible;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.api-code-editor-layout::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .api-line-numbers {
@@ -1315,8 +1380,16 @@
   line-height: 1.6;
   color: #E2E8F0;
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   margin: 0;
   flex: 1;
+}
+
+.code-block::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .code-keyword { color: #F472B6; font-weight: 600; }
@@ -1371,6 +1444,14 @@
   color: #94A3B8;
   max-height: 130px;
   overflow-y: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.api-console-logs::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .api-log-entry {
@@ -1440,11 +1521,19 @@
 
 .matrix-table-container {
   overflow-x: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   border: 1px solid rgba(229, 184, 105, 0.2);
   border-radius: 10px;
   background: #0E131C;
   margin-top: 36px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.matrix-table-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .matrix-table {
