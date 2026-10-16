@@ -90,7 +90,25 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollToSection(hashId, false);
       }, 250);
     }
+  } else {
+    // If no hash in URL, ensure page starts at the top (Hero Section)
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
   }
+
+  // Header Platforms link on platforms page smoothly scrolls to top
+  document.querySelectorAll('.nav-link[href="platforms.html"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState(null, null, 'platforms.html');
+      navPills.forEach(pill => pill.classList.remove('active'));
+      const firstPill = document.querySelector('.platform-nav-pill[href="#desktop"]');
+      if (firstPill) firstPill.classList.add('active');
+    });
+  });
 
   // ==================== 2. SCROLLSPY (INTERSECTION OBSERVER) ====================
   const observerOptions = {
