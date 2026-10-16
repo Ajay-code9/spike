@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Types (Standard, Pro, VIP) | SPIKE Brokerage</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/accounts.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container-wide header-container">
+      <a href="index.html" class="brand-logo" aria-label="Spike Homepage">
+        <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="34">
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Trading
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="forex.html" class="dropdown-link">Forex Trading</a>
+            <a href="metals.html" class="dropdown-link">Metals &amp; Gold</a>
+            <a href="indices.html" class="dropdown-link">Indices</a>
+            <a href="commodities.html" class="dropdown-link">Commodities</a>
+            <a href="shares.html" class="dropdown-link">Shares &amp; CFDs</a>
+            <a href="crypto.html" class="dropdown-link">Cryptocurrencies</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Markets
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="markets.html" class="dropdown-link">Market Overview</a>
+            <a href="spreads.html" class="dropdown-link">Live Spreads &amp; Specs</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="platforms.html" class="nav-link">Platforms</a>
+        </div>
+
+        <div class="nav-item active">
+          <a href="accounts.html" class="nav-link">
+            Accounts
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="account-types.html" class="dropdown-link active" style="color: var(--gold-primary);">Account Types (Standard, Pro, VIP)</a>
+            <a href="compare-accounts.html" class="dropdown-link">Compare Accounts</a>
+            <a href="how-to-open.html" class="dropdown-link">How to Open Account</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="education.html" class="nav-link">
+            Education
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="education.html#courses" class="dropdown-link">Video Tutorials</a>
+            <a href="education.html#insights" class="dropdown-link">Market Analysis</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="dropdown-menu">
+            <a href="index.html#trust" class="dropdown-link">Why Choose Spike</a>
+            <a href="index.html#numbers" class="dropdown-link">Spike in Numbers</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-selector">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>EN</span>
+        </div>
+        <button class="btn-icon-search" data-open-modal="search" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="#" class="btn-login" data-open-modal="login">Login</a>
+        <a href="#" class="btn btn-gold" data-open-modal="account">Open Account</a>
+        <div class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="accounts-hero" style="background-image: url('public/homepage-images/div3-background.png');">
+    <div class="container-wide">
+      <div class="accounts-hero-inner">
+        <div class="accounts-hero-content">
+          <div class="accounts-hero-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15 8 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8 12 2"></polygon></svg>
+            INSTITUTIONAL ACCOUNT INFRASTRUCTURE
+          </div>
+          <h1 class="accounts-hero-title">
+            ACCOUNT TYPES ENGINEERED FOR YOUR <span class="text-gradient-gold">TRADING EDGE</span>
+          </h1>
+          <p class="accounts-hero-desc">
+            Choose from zero-commission Standard accounts, institutional Raw ECN tiers, and bespoke VIP solutions. Backed by direct Equinix NY4 cross-connects, sub-15ms execution, and deep multi-asset liquidity.
+          </p>
+          <div class="accounts-hero-actions">
+            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+              Open Live Account
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="compare-accounts.html" class="btn btn-outline btn-lg">Compare All Accounts &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Hero Stats Bar -->
+      <div class="accounts-hero-stats">
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">0.0 Pips</div>
+          <div class="hero-stat-label">Raw ECN Spreads</div>
+          <div class="hero-stat-desc">Direct interbank liquidity streams</div>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">$0.00 Fee</div>
+          <div class="hero-stat-label">Commission Standard</div>
+          <div class="hero-stat-desc">All-in institutional pricing</div>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">1:500</div>
+          <div class="hero-stat-label">Maximum Leverage</div>
+          <div class="hero-stat-desc">Dynamic margin allocation</div>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">&lt; 12ms</div>
+          <div class="hero-stat-label">Equinix NY4 Latency</div>
+          <div class="hero-stat-desc">Direct fiber cross-connect fills</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STICKY ACCOUNTS SUB-NAV ==================== -->
+  <div class="accounts-sticky-bar">
+    <div class="container-wide accounts-nav-container">
+      <div class="accounts-nav-pills">
+        <a href="#standard" class="accounts-nav-pill active">Standard Account</a>
+        <a href="#pro" class="accounts-nav-pill">Pro ECN (Raw)</a>
+        <a href="#vip" class="accounts-nav-pill">VIP Institutional</a>
+        <a href="#specialty" class="accounts-nav-pill">Islamic &amp; Specialty</a>
+        <a href="#finder" class="accounts-nav-pill">Account Finder Quiz</a>
+        <a href="compare-accounts.html" class="accounts-nav-pill">Full Comparison Matrix &rarr;</a>
+      </div>
+      <div class="accounts-nav-actions">
+        <a href="#" class="btn btn-gold btn-sm" data-open-modal="account">Open Live Account</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN SECTION: ACCOUNT TYPES ==================== -->
+  <section class="section-account-types" id="account-types">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="section-tag">THREE PRECISION TIERS</span>
+          <h2 class="section-title">FIND THE RIGHT ACCOUNT FOR <span class="text-gradient-gold">YOUR STRATEGY</span></h2>
+        </div>
+        <p class="section-desc" style="max-width: 520px;">
+          Whether you're starting out with discretionary trades or running low-latency automated algorithms, our accounts provide precision execution with zero conflicts of interest.
+        </p>
+      </div>
+
+      <!-- Currency & Mode Interactive Controls -->
+      <div class="account-controls-bar">
+        <div class="account-currency-toggle">
+          <span class="toggle-label">Base Currency:</span>
+          <div class="currency-pills">
+            <button class="currency-btn active" data-currency="USD">USD ($)</button>
+            <button class="currency-btn" data-currency="EUR">EUR (€)</button>
+            <button class="currency-btn" data-currency="GBP">GBP (£)</button>
+            <button class="currency-btn" data-currency="USDT">USDT (₮)</button>
+          </div>
+        </div>
+
+        <div class="account-islamic-toggle">
+          <span class="toggle-label">Swap-Free (Islamic Account):</span>
+          <label class="switch-control">
+            <input type="checkbox" id="islamic-toggle-checkbox">
+            <span class="slider-round"></span>
+          </label>
+          <span class="swap-free-indicator" style="display: none; font-size: 0.72rem; color: #10B981; font-weight: 700; background: rgba(16, 185, 129, 0.12); padding: 3px 8px; border-radius: 4px;">100% Shariah Compliant Active</span>
+        </div>
+      </div>
+
+      <!-- 3 Tier Cards Grid -->
+      <div class="accounts-pricing-grid">
+        <!-- 1. Standard Account -->
+        <div class="account-dark-card" id="standard">
+          <div class="card-top-header">
+            <div class="card-header-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span class="card-account-pill">ZERO COMMISSION</span>
+          </div>
+
+          <h3 class="card-account-title">STANDARD</h3>
+          <div class="card-account-sub">Engineered for discretionary, swing, and new traders seeking simple all-in spreads.</div>
+
+          <div class="card-account-price-block">
+            <div class="card-deposit-label">Minimum Initial Deposit</div>
+            <div class="card-deposit-amount" id="deposit-val-standard">$100</div>
+          </div>
+
+          <div class="card-specs-row">
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Spreads From</div>
+              <div class="spec-mini-val">1.0 Pip</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Commission</div>
+              <div class="spec-mini-val">$0 / Lot</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Max Leverage</div>
+              <div class="spec-mini-val">1:500</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Execution</div>
+              <div class="spec-mini-val">&lt; 25ms STP</div>
+            </div>
+          </div>
+
+          <div class="card-account-features">
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero commissions across 500+ instruments</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Micro-lot trading starting at 0.01 lots</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Negative Balance Protection guaranteed</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>MetaTrader 5, WebTrader &amp; Mobile App access</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>24/7 client support in 14 languages</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline" style="width: 100%; border-color: rgba(229,184,105,0.4);" data-open-modal="account">Open Standard Account &rarr;</a>
+        </div>
+
+        <!-- 2. Pro ECN Account (Featured) -->
+        <div class="account-dark-card featured" id="pro">
+          <div class="popular-badge">MOST POPULAR</div>
+          <div class="card-top-header">
+            <div class="card-header-icon-wrap" style="background: rgba(229,184,105,0.2); border-color: var(--gold-primary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+              </svg>
+            </div>
+            <span class="card-account-pill" style="background: rgba(229,184,105,0.15); color: var(--gold-primary); border-color: rgba(229,184,105,0.3);">RAW SPREADS &bull; NY4</span>
+          </div>
+
+          <h3 class="card-account-title">PRO ECN (RAW)</h3>
+          <div class="card-account-sub">Built for active scalpers, day traders, and EA algorithms demanding raw 0.0 spreads.</div>
+
+          <div class="card-account-price-block">
+            <div class="card-deposit-label">Minimum Initial Deposit</div>
+            <div class="card-deposit-amount" id="deposit-val-pro" style="color: var(--gold-primary);">$1,000</div>
+          </div>
+
+          <div class="card-specs-row">
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Spreads From</div>
+              <div class="spec-mini-val">0.0 Pips</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Commission</div>
+              <div class="spec-mini-val">$3.50 / Lot</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Max Leverage</div>
+              <div class="spec-mini-val">1:500</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Execution</div>
+              <div class="spec-mini-val">&lt; 12ms NY4</div>
+            </div>
+          </div>
+
+          <div class="card-account-features">
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>True institutional interbank spreads from 0.0 pips</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Full Level II Depth of Market (DOM) volume ladder</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero requotes with priority server queue execution</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>All automated trading, HFT, scalping &amp; EAs unrestricted</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Complimentary MT5 VPS hosting discount voucher</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-gold" style="width: 100%;" data-open-modal="account">Open Pro ECN Account &rarr;</a>
+        </div>
+
+        <!-- 3. VIP Institutional Account -->
+        <div class="account-dark-card" id="vip">
+          <div class="card-top-header">
+            <div class="card-header-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15 8 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8 12 2"></polygon>
+              </svg>
+            </div>
+            <span class="card-account-pill">FIX 4.4 &bull; PRIVATE CLIENT</span>
+          </div>
+
+          <h3 class="card-account-title">VIP INSTITUTIONAL</h3>
+          <div class="card-account-sub">Bespoke liquidity for quant funds, family offices, and high-volume proprietary traders.</div>
+
+          <div class="card-account-price-block">
+            <div class="card-deposit-label">Minimum Initial Deposit</div>
+            <div class="card-deposit-amount" id="deposit-val-vip">$10,000</div>
+          </div>
+
+          <div class="card-specs-row">
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Spreads From</div>
+              <div class="spec-mini-val">0.0 Pips</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Commission</div>
+              <div class="spec-mini-val">From $1.50</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Max Leverage</div>
+              <div class="spec-mini-val">1:500</div>
+            </div>
+            <div class="spec-mini-box">
+              <div class="spec-mini-title">Cross-Connect</div>
+              <div class="spec-mini-val">&lt; 2ms NY4</div>
+            </div>
+          </div>
+
+          <div class="card-account-features">
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Custom tiered volume rebates up to 40% cashback</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Direct FIX 4.4 protocol &amp; Python/C# SDK API access</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Free dedicated Equinix NY4 Cross-Connect VPS</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dedicated 1-on-1 Senior Account Executive &amp; Quant Engineer</span>
+            </div>
+            <div class="card-feature-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Priority instant wire &amp; crypto withdrawals with zero limits</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline" style="width: 100%; border-color: rgba(229,184,105,0.4);" data-open-modal="account">Open VIP Account &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Interactive Account Finder Quiz -->
+      <div class="account-selector-widget" id="finder">
+        <div class="selector-header">
+          <div class="selector-title-wrap">
+            <h3>Find Your Ideal Account in 30 Seconds</h3>
+            <p>Select your preferences below to receive a personalized account recommendation.</p>
+          </div>
+        </div>
+
+        <div class="quiz-steps-grid">
+          <div class="quiz-step-item">
+            <label class="quiz-step-label">1. Primary Trading Style</label>
+            <select class="quiz-select" id="quiz-style">
+              <option value="discretionary">Discretionary / Swing Trading</option>
+              <option value="scalp" selected>Fast Scalping &amp; Day Trading</option>
+              <option value="algo_quant">Automated EAs &amp; Quant Algorithms</option>
+            </select>
+          </div>
+
+          <div class="quiz-step-item">
+            <label class="quiz-step-label">2. Target Initial Deposit</label>
+            <select class="quiz-select" id="quiz-deposit">
+              <option value="standard">$100 - $999</option>
+              <option value="pro" selected>$1,000 - $9,999</option>
+              <option value="vip">$10,000+</option>
+            </select>
+          </div>
+
+          <div class="quiz-step-item">
+            <label class="quiz-step-label">3. Core Trading Focus</label>
+            <select class="quiz-select" id="quiz-focus">
+              <option value="fx">Major &amp; Minor Forex Pairs</option>
+              <option value="gold">Gold &amp; Commodities</option>
+              <option value="indices">Global Equity Indices</option>
+              <option value="multi">Multi-Asset Portfolio</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="quiz-result-banner">
+          <div class="result-text-block">
+            <span class="result-badge" id="quiz-result-badge">RECOMMENDED: PRO ECN (RAW)</span>
+            <span class="result-explanation" id="quiz-result-desc">Ideal match! Pro ECN delivers true raw interbank spreads from 0.0 pips with sub-12ms NY4 execution and full Level II DOM orderbook depth.</span>
+          </div>
+          <a href="#" class="btn btn-gold btn-sm" id="quiz-result-cta" data-open-modal="account">Open Pro ECN Account &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIALTY ACCOUNTS SECTION ==================== -->
+  <section class="section-trust-dark" id="specialty" style="background: #0B0F17; padding: 80px 0; border-bottom: 1px solid var(--border-dark);">
+    <div class="container-wide">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 50px;">
+        <span class="section-tag">SPECIALIZED SOLUTIONS</span>
+        <h2 class="section-title">BESPOKE TRADING <span class="text-gradient-gold">FRAMEWORKS</span></h2>
+        <p class="section-desc">Tailored structures for faith-compliant trading, registered corporations, and strategy backtesting.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div class="account-card-light" style="background: #0E131C; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 30px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); display: flex; align-items: center; justify-content: center; color: #10B981; margin-bottom: 18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Islamic Swap-Free Accounts</h3>
+          <p style="font-size: 0.84rem; color: #94A3B8; line-height: 1.6; margin-bottom: 16px;">
+            100% Shariah-compliant. No overnight interest charges or rollover penalties on major FX, Gold, and Indices for up to 10 days. Fully certified by Islamic financial authorities.
+          </p>
+          <a href="#" style="font-size: 0.8rem; font-weight: 700; color: var(--gold-primary); text-decoration: none;" data-open-modal="account">Learn About Islamic Accounts &rarr;</a>
+        </div>
+
+        <div class="account-card-light" style="background: #0E131C; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 30px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.25); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: 18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Corporate &amp; Entity Accounts</h3>
+          <p style="font-size: 0.84rem; color: #94A3B8; line-height: 1.6; margin-bottom: 16px;">
+            Designed for hedge funds, prop firms, and corporate entities. Multi-authorized user management, segregated institutional bank custody, and customized reporting suites.
+          </p>
+          <a href="#" style="font-size: 0.8rem; font-weight: 700; color: var(--gold-primary); text-decoration: none;" data-open-modal="account">Apply for Corporate Account &rarr;</a>
+        </div>
+
+        <div class="account-card-light" style="background: #0E131C; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 30px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(229, 184, 105, 0.12); border: 1px solid rgba(229, 184, 105, 0.25); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); margin-bottom: 18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Risk-Free Demo Workstation</h3>
+          <p style="font-size: 0.84rem; color: #94A3B8; line-height: 1.6; margin-bottom: 16px;">
+            Trade with up to $50,000 in virtual capital mirroring live market spreads, execution speed, and Depth of Market across MT5 Desktop, WebTrader, and Mobile.
+          </p>
+          <a href="#" style="font-size: 0.8rem; font-weight: 700; color: var(--gold-primary); text-decoration: none;" data-open-modal="account">Open Free Demo Account &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION ==================== -->
+  <section class="section-accounts-faq" id="faq">
+    <div class="container-wide">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="section-title">QUESTIONS ABOUT <span class="text-gradient-gold">ACCOUNTS</span></h2>
+        <p class="section-desc">Everything you need to know about opening, funding, and managing your SPIKE accounts.</p>
+      </div>
+
+      <div class="faq-accordion-wrap">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <h4>Can I open multiple trading accounts under one profile?</h4>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Every verified SPIKE client can open up to 10 sub-accounts in different base currencies (USD, EUR, GBP, USDT) and across different account tiers (e.g. one Standard for swing trading and one Pro ECN for automated scalping).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What is the difference between Standard and Pro ECN?</h4>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Standard features simple, all-inclusive spreads from 1.0 pip with zero commission fees, making it ideal for swing and retail traders. Pro ECN delivers true raw interbank pricing starting at 0.0 pips paired with an institutional commission of $3.50 per lot, significantly reducing total transaction costs for high-volume traders.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How does Negative Balance Protection work?</h4>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Negative Balance Protection ensures you can never lose more than your total account balance. In extreme black swan market gaps where stop-outs cannot execute, our automated risk bridge immediately resets any negative balance back to zero at our expense.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How do I qualify for VIP volume rebates?</h4>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            <p>VIP Institutional accounts trading more than 100 round-turn lots per calendar month are automatically enrolled in our volume rebate tiers, unlocking cash rebates of up to 40% on standard commission rates, credited directly to your margin balance weekly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner-opportunity" style="background-image: url('public/above-footer-section-bg-img-in-every-page.png');">
+    <div class="container-wide">
+      <div class="cta-banner-content">
+        <div class="cta-banner-left">
+          <span class="section-tag">YOUR NEXT OPPORTUNITY</span>
+          <h2 class="section-title">START YOUR <span class="text-gradient-gold">TRADING JOURNEY</span></h2>
+          <p class="section-desc" style="color: #CBD5E1; margin-bottom: 28px;">
+            Join a global community of traders and trade with a broker you can trust. Flexible accounts. Global markets. Real opportunities.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+              Open Live Account
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="compare-accounts.html" class="btn btn-outline btn-lg">Compare All Accounts &rarr;</a>
+          </div>
+        </div>
+
+        <div class="cta-banner-right">
+          <div class="cta-vertical-words">
+            TRADE<br>
+            LEARN<br>
+            GROW<br>
+            ACHIEVE
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="30">
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trading</div>
+          <ul class="footer-link-list">
+            <li><a href="forex.html" class="footer-link">Forex</a></li>
+            <li><a href="metals.html" class="footer-link">Metals</a></li>
+            <li><a href="indices.html" class="footer-link">Indices</a></li>
+            <li><a href="commodities.html" class="footer-link">Commodities</a></li>
+            <li><a href="shares.html" class="footer-link">Shares</a></li>
+            <li><a href="crypto.html" class="footer-link">Cryptocurrencies</a></li>
+            <li><a href="spreads.html" class="footer-link">Trading Conditions &amp; Spreads</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Platforms</div>
+          <ul class="footer-link-list">
+            <li><a href="platforms.html#desktop" class="footer-link">Desktop Platform</a></li>
+            <li><a href="platforms.html#web" class="footer-link">Web Trader</a></li>
+            <li><a href="platforms.html#mobile" class="footer-link">Mobile App</a></li>
+            <li><a href="platforms.html#api" class="footer-link">API Trading</a></li>
+            <li><a href="platforms.html#comparison" class="footer-link">Platform Comparison</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Accounts</div>
+          <ul class="footer-link-list">
+            <li><a href="account-types.html" class="footer-link">Account Types</a></li>
+            <li><a href="compare-accounts.html" class="footer-link">Compare Accounts</a></li>
+            <li><a href="how-to-open.html" class="footer-link">How to Open Account</a></li>
+            <li><a href="account-types.html#specialty" class="footer-link">Islamic Accounts</a></li>
+            <li><a href="account-types.html#faq" class="footer-link">Account FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Education</div>
+          <ul class="footer-link-list">
+            <li><a href="education.html#courses" class="footer-link">Tutorials</a></li>
+            <li><a href="education.html#insights" class="footer-link">Market Analysis</a></li>
+            <li><a href="education.html" class="footer-link">Webinars</a></li>
+            <li><a href="education.html" class="footer-link">Trading Guides</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SPIKE Financial Services Limited. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Risk Disclosure</a>
+          <a href="#">Regulatory Licenses</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="modal-account">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Open Trading Account</h3>
+        <p class="modal-sub">Get started with institutional execution in less than 2 minutes.</p>
+      </div>
+      <form class="modal-form" onsubmit="event.preventDefault(); alert('Account registration submitted!');">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Alexander" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Vance" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="name@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Account Type</label>
+          <select class="form-input">
+            <option>Standard Account (From $100)</option>
+            <option selected>Pro ECN Account (From $1,000)</option>
+            <option>VIP Institutional (From $10,000)</option>
+            <option>Islamic Swap-Free Account</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Base Currency</label>
+          <select class="form-input">
+            <option>USD - US Dollar</option>
+            <option>EUR - Euro</option>
+            <option>GBP - British Pound</option>
+            <option>USDT - Tether ERC20/TRC20</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Create Live Account</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal-login">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Client Portal Login</h3>
+        <p class="modal-sub">Secure access to your SPIKE trading accounts and funds.</p>
+      </div>
+      <form class="modal-form" onsubmit="event.preventDefault(); alert('Login submitted!');">
+        <div class="form-group">
+          <label class="form-label">Email / Trading ID</label>
+          <input type="text" class="form-input" placeholder="Account ID or email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/accounts.js"></script>
+</body>
+</html>
