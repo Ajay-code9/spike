@@ -944,7 +944,7 @@ nav::-webkit-scrollbar {
 /* ==================== SECTION 2: COMPARISON MATRIX ==================== */
 .section-compare-accounts {
   background: #0B0F17;
-  padding: 80px 0;
+  padding: 35px 0 35px;
   border-bottom: 1px solid var(--border-dark);
 }
 
@@ -952,9 +952,9 @@ nav::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 24px;
-  gap: 16px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -963,11 +963,18 @@ nav::-webkit-scrollbar {
   gap: 8px;
   overflow-x: auto;
   scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.matrix-filter-tabs::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .matrix-tab-btn {
-  padding: 8px 16px;
-  font-size: 0.78rem;
+  padding: 6px 14px;
+  font-size: 0.74rem;
   font-weight: 700;
   color: #94A3B8;
   background: rgba(255, 255, 255, 0.04);
@@ -990,9 +997,9 @@ nav::-webkit-scrollbar {
   gap: 8px;
   background: #080B10;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 7px 14px;
+  padding: 5px 12px;
   border-radius: 6px;
-  width: 260px;
+  width: 250px;
 }
 
 .matrix-search-box input {
@@ -1006,12 +1013,15 @@ nav::-webkit-scrollbar {
 
 .accounts-comparison-table-wrap {
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 420px;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
   border: 1px solid rgba(229, 184, 105, 0.2);
   border-radius: 12px;
   background: #0E131C;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .accounts-comparison-table-wrap::-webkit-scrollbar {
@@ -1024,15 +1034,18 @@ nav::-webkit-scrollbar {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 0.84rem;
+  font-size: 0.78rem;
 }
 
-.accounts-table th {
-  padding: 18px 22px;
+.accounts-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 8px 14px;
   background: #141A24;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   white-space: nowrap;
 }
@@ -1046,9 +1059,10 @@ nav::-webkit-scrollbar {
 }
 
 .accounts-table td {
-  padding: 14px 22px;
+  padding: 7px 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   color: #CBD5E1;
+  font-size: 0.75rem;
 }
 
 .accounts-table td.td-pro {
@@ -1061,12 +1075,12 @@ nav::-webkit-scrollbar {
 
 .accounts-table tr.category-row td {
   background: #080B10;
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--gold-primary);
   letter-spacing: 0.08em;
-  padding: 12px 22px;
+  padding: 7px 14px;
   border-top: 1px solid rgba(229, 184, 105, 0.2);
 }
 
