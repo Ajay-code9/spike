@@ -4,40 +4,25 @@
 
 /* Target Scroll Margin & Focus Glow */
 #desktop, #web, #mobile, #api, #comparison, #downloads, #faq, #features {
-  scroll-margin-top: 135px;
+  scroll-margin-top: 124px;
   position: relative;
 }
 
-@keyframes sectionTargetGlow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(229, 184, 105, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 35px 8px rgba(229, 184, 105, 0.25);
-    border-color: rgba(229, 184, 105, 0.6);
-  }
-  100% {
-    box-shadow: none;
-  }
-}
-
-.section-target-highlight {
-  animation: sectionTargetGlow 1.4s ease-out;
-  border-radius: 12px;
-}
-
-/* ==================== STICKY PLATFORM SUB-NAVIGATION ==================== */
+/* ==================== STICKY PLATFORM SUB-NAVIGATION (SLIM & SLEEK) ==================== */
 .platforms-sticky-bar {
   position: sticky;
   top: 68px;
   z-index: 900;
   width: 100%;
-  background: rgba(8, 11, 16, 0.94);
+  height: 42px;
+  background: rgba(7, 10, 15, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(229, 184, 105, 0.18);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(229, 184, 105, 0.16);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease;
 }
 
 .platforms-nav-container {
@@ -46,8 +31,9 @@
   justify-content: space-between;
   overflow-x: auto;
   scrollbar-width: none;
-  padding: 10px 0;
-  gap: 8px;
+  padding: 0;
+  gap: 6px;
+  width: 100%;
 }
 
 .platforms-nav-container::-webkit-scrollbar {
@@ -57,25 +43,27 @@
 .platform-nav-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 0.82rem;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.73rem;
   font-weight: 600;
-  color: #94A3B8;
-  background: rgba(255, 255, 255, 0.02);
+  color: #8A99AD;
+  background: rgba(255, 255, 255, 0.025);
   border: 1px solid rgba(255, 255, 255, 0.06);
   text-decoration: none;
   white-space: nowrap;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
+  line-height: 1.4;
 }
 
 .platform-nav-pill svg {
-  width: 16px;
-  height: 16px;
-  color: #94A3B8;
-  transition: color 0.25s ease;
+  width: 13px;
+  height: 13px;
+  color: #8A99AD;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
 }
 
 .platform-nav-pill:hover {
@@ -92,7 +80,7 @@
   color: #0B0E14;
   background: linear-gradient(135deg, #F3D287 0%, #E5B869 100%);
   border-color: #E5B869;
-  box-shadow: 0 4px 15px rgba(229, 184, 105, 0.35);
+  box-shadow: 0 2px 10px rgba(229, 184, 105, 0.35);
   font-weight: 700;
 }
 
@@ -103,24 +91,82 @@
 .platform-nav-quick-cta {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 0.8rem;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.73rem;
   font-weight: 700;
   background: rgba(229, 184, 105, 0.12);
   color: var(--gold-primary);
   border: 1px solid rgba(229, 184, 105, 0.3);
   text-decoration: none;
   white-space: nowrap;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   margin-left: auto;
+  line-height: 1.4;
 }
 
 .platform-nav-quick-cta:hover {
   background: var(--gold-primary);
   color: #0B0E14;
   border-color: var(--gold-primary);
+}
+
+/* ==================== PLATFORM SHOWCASE PANELS ==================== */
+.platform-showcase-panel {
+  background: linear-gradient(180deg, rgba(14, 19, 28, 0.85) 0%, rgba(9, 13, 19, 0.95) 100%);
+  border: 1px solid rgba(229, 184, 105, 0.16);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.platform-panel-top-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(229, 184, 105, 0.1);
+  border: 1px solid rgba(229, 184, 105, 0.28);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.platform-panel-top-tag .tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 6px #34D399;
+}
+
+/* Eye-catching Glow when Navigated To */
+@keyframes panelActiveGlow {
+  0% {
+    border-color: #E5B869;
+    box-shadow: 0 0 50px rgba(229, 184, 105, 0.5), 0 20px 50px rgba(0, 0, 0, 0.7);
+    transform: scale(1.004);
+  }
+  50% {
+    border-color: rgba(229, 184, 105, 0.85);
+    box-shadow: 0 0 30px rgba(229, 184, 105, 0.3);
+  }
+  100% {
+    border-color: rgba(229, 184, 105, 0.16);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    transform: scale(1);
+  }
+}
+
+.panel-highlight-glow {
+  animation: panelActiveGlow 1.8s ease-out;
 }
 
 /* ==================== PLATFORMS HERO SECTION ==================== */
@@ -213,14 +259,14 @@
 /* ==================== COMMON PLATFORM SECTION STYLES ==================== */
 .section-platform-dark {
   background: #080B10;
-  padding: 85px 0;
+  padding: 55px 0;
   border-bottom: 1px solid var(--border-dark);
   position: relative;
 }
 
 .section-platform-alt {
   background: #0B0F17;
-  padding: 85px 0;
+  padding: 55px 0;
   border-bottom: 1px solid var(--border-dark);
   position: relative;
 }
@@ -771,7 +817,7 @@
 /* ==================== PLATFORM COMPARISON MATRIX ==================== */
 .section-comparison-matrix {
   background: #080B10;
-  padding: 85px 0;
+  padding: 55px 0;
   border-bottom: 1px solid var(--border-dark);
 }
 
@@ -856,7 +902,7 @@
 /* ==================== DOWNLOAD CENTER (DARK OBSIDIAN) ==================== */
 .section-downloads-hub {
   background: #0B0F17;
-  padding: 85px 0;
+  padding: 55px 0;
   border-bottom: 1px solid var(--border-dark);
 }
 

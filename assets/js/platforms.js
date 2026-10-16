@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!el) return;
 
     const headerHeight = 68;
-    const stickyHeight = stickyBar ? stickyBar.offsetHeight : 50;
-    const totalOffset = headerHeight + stickyHeight + 15;
+    const stickyHeight = stickyBar ? stickyBar.offsetHeight : 42;
+    const totalOffset = headerHeight + stickyHeight + 14;
 
     const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - totalOffset;
@@ -30,13 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
       history.pushState(null, null, `#${targetId}`);
     }
 
-    // Trigger visual target highlight
-    el.classList.remove('section-target-highlight');
-    void el.offsetWidth; // trigger reflow
-    el.classList.add('section-target-highlight');
+    // Trigger visual target highlight on the showcase panel
+    const showcasePanel = el.querySelector('.platform-showcase-panel') || el;
+    showcasePanel.classList.remove('panel-highlight-glow');
+    void showcasePanel.offsetWidth; // trigger reflow
+    showcasePanel.classList.add('panel-highlight-glow');
     setTimeout(() => {
-      el.classList.remove('section-target-highlight');
-    }, 1500);
+      showcasePanel.classList.remove('panel-highlight-glow');
+    }, 2000);
 
     // Update active pill
     navPills.forEach(pill => {
