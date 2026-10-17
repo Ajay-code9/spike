@@ -171,26 +171,72 @@
 }
 
 .instrument-full-card-link {
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, filter 0.28s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  line-height: 0;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0E141E;
   text-decoration: none;
 }
 
 .instrument-full-card-link:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(201, 150, 50, 0.35);
-  filter: brightness(1.05);
+  border-color: rgba(201, 150, 50, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(201, 150, 50, 0.2);
+}
+
+.instrument-full-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .instrument-full-card-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.instrument-full-card-link:hover .instrument-full-card-img {
+  transform: scale(1.08);
+}
+
+.instrument-full-card-info {
+  padding: 16px;
+  background: linear-gradient(180deg, #0F1622 0%, #0A0E15 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.instrument-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #C99632;
+  text-transform: uppercase;
+}
+
+.instrument-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.instrument-sub {
+  font-size: 0.74rem;
+  color: #94A3B8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
 }
 
 /* ==========================================================================
