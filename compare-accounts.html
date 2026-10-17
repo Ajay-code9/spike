@@ -6,6 +6,7 @@
   <title>Compare Accounts | SPIKE Brokerage</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/accounts.css">
+  <link rel="stylesheet" href="assets/css/commodities-hero.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
 </head>
 <body>
@@ -100,116 +101,63 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="accounts-hero" style="background-image: url('public/hero-sections-bg/compare-accounts-hero-bg.jpg');">
+  <!-- ==================== BESPOKE CENTERED HERO SECTION ==================== -->
+  <section class="market-hero-centered has-bg-img" style="background-image: url('public/hero-sections-bg/compare-accounts-hero-bg.jpg');">
     <div class="container-wide">
-      <div class="accounts-hero-inner">
-        <!-- Left Column: Content -->
-        <div class="accounts-hero-content">
-          <div class="accounts-hero-tag">
-            <span class="live-dot-pulse"></span>
-            TRANSPARENT SPECIFICATIONS MATRIX
-          </div>
-          <h1 class="accounts-hero-title">
-            COMPARE TRADING ACCOUNTS <span class="text-gradient-gold">SIDE-BY-SIDE</span>
-          </h1>
-          <p class="accounts-hero-desc">
-            Benchmark 30+ institutional parameters across Standard, Pro ECN, and VIP Institutional. Uncompromising transparency in raw spreads, commissions, execution latency, and algorithmic privileges.
-          </p>
-          <div class="accounts-hero-actions">
-            <a href="#matrix" class="btn btn-gold btn-md">
-              Explore Full Comparison
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-            </a>
-            <a href="#cost-calc" class="btn btn-outline btn-md">Calculate Trading Costs &darr;</a>
-            <a href="account-types.html" class="hero-compare-link">Account Tiers &rarr;</a>
-          </div>
+      <div class="market-hero-center">
+        
+        <!-- Centered Tagline -->
+        <span class="section-tag">ACCOUNT COMPARISON MATRIX</span>
+
+        <!-- Magnetic Headline -->
+        <h1 class="market-hero-headline">
+          Choose the Perfect Account<br>
+          <span class="text-gradient-gold">for Your Trading Style.</span>
+        </h1>
+
+        <!-- Lead Description -->
+        <p class="market-hero-lead">
+          Whether you prefer <strong>zero commission</strong> on everyday trades or <strong>raw 0.0 pip spreads</strong> for active scalping, compare our account tiers side-by-side to find your exact trading edge.
+        </p>
+
+        <!-- Centered Actions -->
+        <div class="market-hero-ctas">
+          <a href="#matrix" class="btn btn-gold btn-lg">
+            Compare Account Tiers &darr;
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          </a>
+          <a href="#cost-calc" class="btn btn-outline btn-lg">
+            Calculate Trading Costs &darr;
+          </a>
         </div>
 
-        <!-- Right Column: Quick Comparison Snapshot Widget -->
-        <div class="hero-terminal-wrap">
-          <div class="hero-interactive-card">
-            <div class="terminal-card-header">
-              <div class="terminal-header-left">
-                <span class="terminal-badge-pulse"></span>
-                <span class="terminal-header-title">SPREAD &amp; FEE RADAR</span>
-              </div>
-              <span class="terminal-status-tag">TIER-1 INTERBANK</span>
+        <!-- 3 Executive Value Proposition Cards -->
+        <div class="market-props-grid">
+          <div class="market-prop-card">
+            <div class="prop-card-header">
+              <span class="prop-icon-check">✓</span>
+              <span class="prop-card-title">100% Transparent Fees</span>
             </div>
+            <p class="prop-card-desc">Zero hidden markups or dealing desk interference. What you see is exactly what you get.</p>
+          </div>
 
-            <div style="display: flex; flex-direction: column; gap: 7px; margin: 8px 0 10px;">
-              <!-- Standard Box -->
-              <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(8, 11, 16, 0.75); border: 1px solid rgba(255,255,255,0.06); padding: 7px 10px; border-radius: 7px;">
-                <div>
-                  <div style="font-size: 0.76rem; font-weight: 700; color: #FFFFFF;">Standard Account</div>
-                  <div style="font-size: 0.66rem; color: #94A3B8;">1.0 Pip Spread &bull; $0 Comm.</div>
-                </div>
-                <div style="text-align: right;">
-                  <div style="font-size: 0.9rem; font-weight: 800; color: #FFFFFF;">$10.00</div>
-                  <div style="font-size: 0.6rem; color: #64748B;">Per Lot</div>
-                </div>
-              </div>
-
-              <!-- Pro ECN Box (Featured) -->
-              <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(229, 184, 105, 0.08); border: 1px solid rgba(229, 184, 105, 0.35); padding: 7px 10px; border-radius: 7px;">
-                <div>
-                  <div style="display: flex; align-items: center; gap: 6px;">
-                    <span style="font-size: 0.76rem; font-weight: 800; color: var(--gold-primary);">Pro ECN (Raw)</span>
-                    <span style="background: var(--gold-primary); color: #0B0E14; font-size: 0.56rem; font-weight: 800; padding: 1px 4px; border-radius: 3px;">POPULAR</span>
-                  </div>
-                  <div style="font-size: 0.66rem; color: #CBD5E1;">0.0 Pip Raw &bull; $3.50 Comm.</div>
-                </div>
-                <div style="text-align: right;">
-                  <div style="font-size: 0.9rem; font-weight: 800; color: var(--gold-primary);">$3.50</div>
-                  <div style="font-size: 0.6rem; color: #10B981; font-weight: 700;">Save $6.50/lot</div>
-                </div>
-              </div>
-
-              <!-- VIP Institutional Box -->
-              <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(8, 11, 16, 0.75); border: 1px solid rgba(255,255,255,0.06); padding: 7px 10px; border-radius: 7px;">
-                <div>
-                  <div style="font-size: 0.76rem; font-weight: 700; color: #38BDF8;">VIP Institutional</div>
-                  <div style="font-size: 0.66rem; color: #94A3B8;">0.0 Pip Raw &bull; Rebates to 40%</div>
-                </div>
-                <div style="text-align: right;">
-                  <div style="font-size: 0.9rem; font-weight: 800; color: #38BDF8;">From $1.50</div>
-                  <div style="font-size: 0.6rem; color: #64748B;">Per Lot</div>
-                </div>
-              </div>
+          <div class="market-prop-card">
+            <div class="prop-card-header">
+              <span class="prop-icon-check">✓</span>
+              <span class="prop-card-title">Raw Spreads from 0.0 Pips</span>
             </div>
+            <p class="prop-card-desc">Direct Tier-1 bank liquidity with low institutional commissions.</p>
+          </div>
 
-            <a href="#cost-calc" class="btn btn-gold btn-sm hero-tier-cta-btn">
-              Calculate Your Trading Costs &rarr;
-            </a>
+          <div class="market-prop-card">
+            <div class="prop-card-header">
+              <span class="prop-icon-check">✓</span>
+              <span class="prop-card-title">Flexible 1:500 Leverage</span>
+            </div>
+            <p class="prop-card-desc">Trade with dynamic margin control and complete negative balance protection.</p>
           </div>
         </div>
-      </div>
 
-      <!-- 4 Hero Stats Bar -->
-      <div class="accounts-hero-stats">
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">30+</div>
-          <div class="hero-stat-label">Comparative Metrics</div>
-          <div class="hero-stat-desc">Granular trading conditions</div>
-        </div>
-
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">0% Fee</div>
-          <div class="hero-stat-label">Hidden Markups</div>
-          <div class="hero-stat-desc">Direct interbank transparency</div>
-        </div>
-
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">100%</div>
-          <div class="hero-stat-label">STP/ECN Routing</div>
-          <div class="hero-stat-desc">Zero dealing desk intervention</div>
-        </div>
-
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">&lt; 15ms</div>
-          <div class="hero-stat-label">Execution Speed</div>
-          <div class="hero-stat-desc">Equinix NY4 fiber connection</div>
-        </div>
       </div>
     </div>
   </section>

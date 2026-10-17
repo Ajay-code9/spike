@@ -6,6 +6,7 @@
   <title>Account Types (Standard, Pro, VIP) | SPIKE Brokerage</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/accounts.css">
+  <link rel="stylesheet" href="assets/css/commodities-hero.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
 </head>
 <body>
@@ -100,154 +101,63 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="accounts-hero" style="background-image: url('public/hero-sections-bg/account-types-hero-bg.jpg');">
+  <!-- ==================== BESPOKE CENTERED HERO SECTION ==================== -->
+  <section class="market-hero-centered has-bg-img" style="background-image: url('public/hero-sections-bg/account-types-hero-bg.jpg');">
     <div class="container-wide">
-      <div class="accounts-hero-inner">
-        <!-- Left Column: Content & Trust Badges -->
-        <div class="accounts-hero-content">
-          <div class="accounts-hero-tag">
-            <span class="live-dot-pulse"></span>
-            INSTITUTIONAL PRECISION INFRASTRUCTURE
-          </div>
-          <h1 class="accounts-hero-title">
-            TRADE WITH <span class="text-gradient-gold">ZERO CONFLICT</span> &amp; TRUE RAW ECN EDGE
-          </h1>
-          <p class="accounts-hero-desc">
-            Engineered tier architecture for discretionary swing traders, high-frequency scalpers, and algorithmic quants. Direct fiber cross-connects to Equinix NY4 liquidity pools.
-          </p>
-          
-          <!-- Quick Trust Highlights Row -->
-          <div class="hero-trust-badges">
-            <div class="trust-badge-item">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Tier-1 Bank Custody</span>
-            </div>
-            <div class="trust-badge-item">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>No Dealing Desk (NDD)</span>
-            </div>
-            <div class="trust-badge-item">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>100% Shariah Compliant</span>
-            </div>
-            <div class="trust-badge-item">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Negative Balance Protected</span>
-            </div>
-          </div>
+      <div class="market-hero-center">
+        
+        <!-- Centered Tagline -->
+        <span class="section-tag">TIERED TRADING ACCOUNTS</span>
 
-          <div class="accounts-hero-actions">
-            <a href="#" class="btn btn-gold btn-md" data-open-modal="account">
-              Open Live Account
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#account-types" class="btn btn-outline btn-md">Explore Tiers Below &darr;</a>
-            <a href="compare-accounts.html" class="hero-compare-link">Full Matrix &rarr;</a>
-          </div>
+        <!-- Magnetic Headline -->
+        <h1 class="market-hero-headline">
+          Built for Every Trader.<br>
+          <span class="text-gradient-gold">Engineered for Your Edge.</span>
+        </h1>
+
+        <!-- Lead Description -->
+        <p class="market-hero-lead">
+          From zero-commission Standard accounts for effortless trading to raw ECN interbank spreads for active scalpers and quants. Choose the account tier engineered for your strategy.
+        </p>
+
+        <!-- Centered Actions -->
+        <div class="market-hero-ctas">
+          <a href="#account-types" class="btn btn-gold btn-lg">
+            Explore Account Tiers &darr;
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          </a>
+          <a href="compare-accounts.html" class="btn btn-outline btn-lg">
+            Compare Side-by-Side &rarr;
+          </a>
         </div>
 
-        <!-- Right Column: Interactive Live Tier Terminal Widget -->
-        <div class="hero-terminal-wrap">
-          <div class="hero-interactive-card">
-            <div class="terminal-card-header">
-              <div class="terminal-header-left">
-                <span class="terminal-badge-pulse"></span>
-                <span class="terminal-header-title">LIVE TIER TERMINAL</span>
-              </div>
-              <span class="terminal-status-tag">STP ROUTING ACTIVE</span>
+        <!-- 3 Executive Value Proposition Cards -->
+        <div class="market-props-grid">
+          <div class="market-prop-card">
+            <div class="prop-card-header">
+              <span class="prop-icon-check">✓</span>
+              <span class="prop-card-title">No Dealing Desk (NDD)</span>
             </div>
+            <p class="prop-card-desc">True STP/ECN market execution with zero conflict of interest and no requotes.</p>
+          </div>
 
-            <!-- Tier Selector Pills -->
-            <div class="hero-tier-nav">
-              <button class="hero-tier-btn" data-tier="standard">Standard</button>
-              <button class="hero-tier-btn active" data-tier="pro">Pro ECN <span class="badge-star">&starf;</span></button>
-              <button class="hero-tier-btn" data-tier="vip">VIP Quant</button>
+          <div class="market-prop-card">
+            <div class="prop-card-header">
+              <span class="prop-icon-check">✓</span>
+              <span class="prop-card-title">Institutional Raw Pricing</span>
             </div>
+            <p class="prop-card-desc">Spreads starting from 0.0 pips on EUR/USD and institutional liquidity access.</p>
+          </div>
 
-            <!-- Tier Dynamic Body -->
-            <div class="hero-tier-body" id="hero-tier-body">
-              <div class="hero-tier-headline-wrap">
-                <div>
-                  <h3 class="hero-tier-title" id="hero-tier-title">PRO ECN (RAW)</h3>
-                  <div class="hero-tier-sub" id="hero-tier-sub">Engineered for fast scalping, day trading &amp; EA algorithms</div>
-                </div>
-                <div class="hero-tier-dep-box">
-                  <span class="dep-label">MIN DEPOSIT</span>
-                  <span class="dep-val" id="hero-tier-dep">$1,000</span>
-                </div>
-              </div>
-
-              <!-- 4 Micro Specs Grid -->
-              <div class="hero-tier-specs">
-                <div class="tier-spec-item">
-                  <span class="spec-k">SPREADS FROM</span>
-                  <span class="spec-v gold" id="hero-tier-spread">0.0 Pips</span>
-                </div>
-                <div class="tier-spec-item">
-                  <span class="spec-k">COMMISSION</span>
-                  <span class="spec-v" id="hero-tier-comm">$3.50 / Lot</span>
-                </div>
-                <div class="tier-spec-item">
-                  <span class="spec-k">EXECUTION</span>
-                  <span class="spec-v" id="hero-tier-speed">&lt; 12ms NY4</span>
-                </div>
-                <div class="tier-spec-item">
-                  <span class="spec-k">MAX LEVERAGE</span>
-                  <span class="spec-v" id="hero-tier-lev">1:500</span>
-                </div>
-              </div>
-
-              <!-- 3 Bullet Highlights -->
-              <div class="hero-tier-features" id="hero-tier-features">
-                <div class="tier-feat-item">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Raw interbank spreads from 0.0 pips</span>
-                </div>
-                <div class="tier-feat-item">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Level II Depth of Market (DOM) volume ladder</span>
-                </div>
-                <div class="tier-feat-item">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Priority server queue with zero requotes</span>
-                </div>
-              </div>
-
-              <!-- Card Action Button -->
-              <a href="#" class="btn btn-gold btn-sm hero-tier-cta-btn" id="hero-tier-cta" data-open-modal="account">
-                Open Pro ECN Account &rarr;
-              </a>
+          <div class="market-prop-card">
+            <div class="prop-card-header">
+              <span class="prop-icon-check">✓</span>
+              <span class="prop-card-title">Negative Balance Protection</span>
             </div>
+            <p class="prop-card-desc">Your balance will never drop below zero, ensuring total capital risk security.</p>
           </div>
         </div>
-      </div>
 
-      <!-- 4 Hero Stats Bar -->
-      <div class="accounts-hero-stats">
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">0.0 Pips</div>
-          <div class="hero-stat-label">Raw ECN Spreads</div>
-          <div class="hero-stat-desc">Direct interbank liquidity streams</div>
-        </div>
-
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">$0.00 Fee</div>
-          <div class="hero-stat-label">Commission Standard</div>
-          <div class="hero-stat-desc">All-in institutional pricing</div>
-        </div>
-
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">1:500</div>
-          <div class="hero-stat-label">Maximum Leverage</div>
-          <div class="hero-stat-desc">Dynamic margin allocation</div>
-        </div>
-
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">&lt; 12ms</div>
-          <div class="hero-stat-label">Equinix NY4 Latency</div>
-          <div class="hero-stat-desc">Direct fiber cross-connect fills</div>
-        </div>
       </div>
     </div>
   </section>
