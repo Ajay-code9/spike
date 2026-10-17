@@ -1,0 +1,156 @@
+/* ==========================================================================
+   SPIKE BROKERAGE - GLOBAL GLASSMORPHISM TOAST ENGINE
+   Replaces all browser alert() calls with sleek, institutional notifications
+   ========================================================================== */
+
+#spike-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  width: calc(100vw - 32px);
+  pointer-events: none;
+}
+
+.spike-toast {
+  pointer-events: auto;
+  position: relative;
+  background: rgba(14, 19, 28, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 184, 105, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(229, 184, 105, 0.12);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+  animation: spikeToastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.spike-toast.spike-toast-hiding {
+  animation: spikeToastOut 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes spikeToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spikeToastOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+}
+
+.spike-toast-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.spike-toast-success .spike-toast-icon {
+  background: rgba(0, 192, 135, 0.15);
+  color: #00C087;
+  border: 1px solid rgba(0, 192, 135, 0.35);
+}
+
+.spike-toast-info .spike-toast-icon {
+  background: rgba(229, 184, 105, 0.15);
+  color: #E5B869;
+  border: 1px solid rgba(229, 184, 105, 0.35);
+}
+
+.spike-toast-error .spike-toast-icon {
+  background: rgba(244, 63, 94, 0.15);
+  color: #F43F5E;
+  border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
+.spike-toast-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.spike-toast-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.spike-toast-message {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+
+.spike-toast-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.spike-toast-close:hover {
+  color: #FFFFFF;
+}
+
+.spike-toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E5B869, #FDE68A);
+  width: 100%;
+  animation: spikeToastProgress linear forwards;
+}
+
+.spike-toast-success .spike-toast-progress {
+  background: linear-gradient(90deg, #00C087, #34D399);
+}
+
+@keyframes spikeToastProgress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+@media (max-width: 480px) {
+  #spike-toast-container {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+}

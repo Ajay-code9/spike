@@ -1582,7 +1582,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           </div>
 
           <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px;">
-            <a href="#" class="btn btn-gold btn-lg" onclick="alert('API Credentials Application: Please fill out the form in your client portal or contact institutional@spikebrokerage.com');">
+            <a href="#" class="btn btn-gold btn-lg" onclick="event.preventDefault(); SpikeToast.info('FIX Protocol Access', 'Institutional API credentials inquiry received. Our Prime Solutions desk will contact you.');">
               Request FIX Session Access &rarr;
             </a>
             <a href="#downloads" class="btn btn-outline btn-lg">
@@ -1747,7 +1747,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           <div class="download-hub-specs">
             Optimized for Windows 11 and Windows 10 (64-bit). Includes full MQL5 strategy compiler, Level II DOM, and sub-12ms low latency networking stack.
           </div>
-          <a href="#" class="btn btn-gold" onclick="alert('Downloading Spike Desktop for Windows (Spike_MT5_Setup.exe)...');">
+          <a href="#" class="btn btn-gold" onclick="event.preventDefault(); SpikeToast.success('Download Initiated', 'Downloading Spike Desktop for Windows (Spike_MT5_Setup.exe)...');">
             Download for Windows (.exe) &darr;
           </a>
         </div>
@@ -1768,7 +1768,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           <div class="download-hub-specs">
             Native universal binary for Apple Silicon (M1/M2/M3/M4) and Intel Macs. High-DPI Retina display rendering with ultra-smooth 120Hz ProMotion support.
           </div>
-          <a href="#" class="btn btn-outline" onclick="alert('Downloading Spike Desktop for macOS (Spike_MT5_Universal.dmg)...');">
+          <a href="#" class="btn btn-outline" onclick="event.preventDefault(); SpikeToast.success('Download Initiated', 'Downloading Spike Desktop for macOS (Spike_MT5_Universal.dmg)...');">
             Download for macOS (.dmg) &darr;
           </a>
         </div>
@@ -1791,7 +1791,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           <div class="download-hub-specs">
             Automated bash installer for Ubuntu 20.04+, Debian, Fedora, and Arch. Ideal for headless algorithmic trading on cloud VPS instances.
           </div>
-          <a href="#" class="btn btn-outline" onclick="alert('Downloading Spike Linux Script (install_spike_mt5.sh)...');">
+          <a href="#" class="btn btn-outline" onclick="event.preventDefault(); SpikeToast.info('Script Download', 'Downloading Spike Linux installer script (install_spike_mt5.sh)...');">
             Download Linux Script (.sh) &darr;
           </a>
         </div>
@@ -1813,7 +1813,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           <div class="download-hub-specs">
             Available on the Apple App Store. Features Face ID login, fluid gesture charting, Apple Watch market complications, and instant push execution alerts.
           </div>
-          <a href="#" class="btn btn-outline" onclick="alert('Redirecting to Apple App Store...');">
+          <a href="#" class="btn btn-outline" onclick="event.preventDefault(); SpikeToast.info('App Store', 'Opening Apple App Store download page...');">
             Get on App Store &nearr;
           </a>
         </div>
@@ -1834,7 +1834,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           <div class="download-hub-specs">
             Available on Google Play Store. Highly responsive touch interface, AMOLED black theme, live price widgets, and biometric fingerprint authentication.
           </div>
-          <a href="#" class="btn btn-outline" onclick="alert('Redirecting to Google Play Store...');">
+          <a href="#" class="btn btn-outline" onclick="event.preventDefault(); SpikeToast.info('Google Play Store', 'Opening Google Play Store download page...');">
             Get on Google Play &nearr;
           </a>
         </div>
@@ -1857,7 +1857,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
           <div class="download-hub-specs">
             Official standalone package for devices without Google Play Services (Huawei AppGallery, custom ROMs, enterprise managed devices).
           </div>
-          <a href="#" class="btn btn-outline" onclick="alert('Downloading Spike Mobile Direct APK (Spike_Mobile_v5.42.apk)...');">
+          <a href="#" class="btn btn-outline" onclick="event.preventDefault(); SpikeToast.success('Download Initiated', 'Downloading Spike Mobile Direct APK (Spike_Mobile_v5.42.apk)...');">
             Download APK Package &darr;
           </a>
         </div>
@@ -2126,7 +2126,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
         <div>
           <div class="newsletter-box">
             <div class="newsletter-title">Subscribe to Market Updates</div>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to SPIKE updates!');">
+            <form class="newsletter-form" onsubmit="event.preventDefault(); SpikeToast.success('Subscribed!', 'You will receive institutional SPIKE market updates.'); this.reset();">
               <input type="email" placeholder="Your email address" class="newsletter-input" required>
               <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
             </form>
@@ -2155,7 +2155,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
       <button class="modal-close-btn">&times;</button>
       <span class="section-tag">SECURE ACCESS</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">LOGIN TO SPIKE</h3>
-      <form onsubmit="event.preventDefault(); alert('Login successful!'); closeModal(document.getElementById('loginModal'));">
+      <form onsubmit="event.preventDefault(); SpikeToast.success('Authentication Verified', 'Welcome back to your Spike Trading Portal.'); closeModal(document.getElementById('loginModal')); this.reset();">
         <div class="modal-form-group"><label class="modal-label">Email or Account ID</label><input type="text" class="modal-input" required></div>
         <div class="modal-form-group"><label class="modal-label">Password</label><input type="password" class="modal-input" required></div>
         <button type="submit" class="btn btn-gold" style="width: 100%;">Sign In &rarr;</button>
@@ -2168,7 +2168,7 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
       <button class="modal-close-btn">&times;</button>
       <span class="section-tag">START TRADING</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
-      <form onsubmit="event.preventDefault(); alert('Account application received! A welcome email has been sent.'); closeModal(document.getElementById('accountModal'));">
+      <form onsubmit="event.preventDefault(); SpikeToast.success('Application Received', 'A confirmation link has been dispatched to your email.'); closeModal(document.getElementById('accountModal')); this.reset();">
         <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" placeholder="e.g. Alexander Vance" required></div>
         <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" placeholder="trader@example.com" required></div>
         <button type="submit" class="btn btn-gold" style="width: 100%;">Create Account Now &rarr;</button>
@@ -2186,6 +2186,8 @@ Console.<span class="code-fn">WriteLine</span>(<span class="code-str">$"Executed
   </div>
 
   <!-- JavaScript Modules -->
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/ticker.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/platforms.js"></script>
 </body>

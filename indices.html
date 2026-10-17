@@ -254,6 +254,49 @@
     </div>
   </section>
 
+  <!-- ==================== LIVE US100 (NASDAQ 100) CANDLESTICK TERMINAL ==================== -->
+  <section class="section-market-specs-dark" style="padding: 60px 0; background: #070A0F; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+        <div>
+          <span class="section-tag">INSTITUTIONAL BENCHMARK</span>
+          <h2 class="section-title">NASDAQ 100 (US100) <span class="text-gradient-gold">EXECUTION TERMINAL</span></h2>
+          <p class="section-desc" style="max-width: 620px;">
+            Real-time multi-timeframe streaming of the tech heavy US100 index. Sub-millisecond execution with deep institutional liquidity.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span class="spike-ticker-pulse"></span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #00C087;">FEED ONLINE // ULTRA-LOW LATENCY</span>
+        </div>
+      </div>
+
+      <div class="tradingview-widget-container" style="height: 500px; width: 100%; border-radius: 14px; overflow: hidden; border: 1px solid rgba(229, 184, 105, 0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 25px rgba(229,184,105,0.1);">
+        <div class="tradingview-widget-container__widget" style="height: calc(100% - 32px); width: 100%;"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "CAPITALCOM:US100",
+          "interval": "15",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en",
+          "enable_publishing": false,
+          "backgroundColor": "#0E131C",
+          "gridColor": "rgba(255, 255, 255, 0.04)",
+          "hide_top_toolbar": false,
+          "hide_legend": false,
+          "save_image": false,
+          "calendar": false,
+          "hide_volume": false,
+          "support_host": "https://www.tradingview.com"
+        }
+        </script>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== INSTRUMENT SPECIFICATIONS TABLE ==================== -->
   <section class="section-market-specs-dark" id="specs">
     <div class="container-wide">
@@ -572,7 +615,7 @@
 
         <div class="footer-col-newsletter">
           <div class="footer-col-title">Newsletter</div>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Indices Outlook!');">
+          <form class="newsletter-form" onsubmit="event.preventDefault(); SpikeToast.success('Subscribed!', 'You will receive the Indices Outlook briefings.'); this.reset();">
             <input type="email" placeholder="Your email address" class="newsletter-input" required>
             <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
           </form>
@@ -600,7 +643,7 @@
       <button class="modal-close-btn">&times;</button>
       <span class="section-tag">SECURE ACCESS</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">LOGIN TO SPIKE</h3>
-      <form onsubmit="event.preventDefault(); alert('Login successful!'); closeModal(document.getElementById('loginModal'));">
+      <form onsubmit="event.preventDefault(); SpikeToast.success('Authentication Verified', 'Welcome back to your Spike Trading Portal.'); closeModal(document.getElementById('loginModal')); this.reset();">
         <div class="modal-form-group"><label class="modal-label">Email or Account ID</label><input type="text" class="modal-input" required></div>
         <div class="modal-form-group"><label class="modal-label">Password</label><input type="password" class="modal-input" required></div>
         <button type="submit" class="btn btn-gold" style="width: 100%;">Sign In &rarr;</button>
@@ -613,7 +656,7 @@
       <button class="modal-close-btn">&times;</button>
       <span class="section-tag">START TRADING</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
-      <form onsubmit="event.preventDefault(); alert('Account application received!'); closeModal(document.getElementById('accountModal'));">
+      <form onsubmit="event.preventDefault(); SpikeToast.success('Application Received', 'A confirmation link has been dispatched to your email.'); closeModal(document.getElementById('accountModal')); this.reset();">
         <div class="modal-form-group"><label class="modal-label">Full Name</label><input type="text" class="modal-input" required></div>
         <div class="modal-form-group"><label class="modal-label">Email Address</label><input type="email" class="modal-input" required></div>
         <button type="submit" class="btn btn-gold" style="width: 100%;">Create Account Now &rarr;</button>
@@ -630,6 +673,8 @@
     </div>
   </div>
 
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/ticker.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     // Live table search for Indices

@@ -751,7 +751,7 @@
         <h3 class="modal-title">Open Trading Account</h3>
         <p class="modal-sub">Get started with institutional execution in less than 2 minutes.</p>
       </div>
-      <form class="modal-form" onsubmit="event.preventDefault(); alert('Account registration submitted!');">
+      <form class="modal-form" onsubmit="event.preventDefault(); SpikeToast.success('Application Received', 'Your trading account request is being provisioned. Credentials will arrive via email.'); closeModal(document.getElementById('modal-account'));">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">First Name</label>
@@ -787,7 +787,7 @@
         <h3 class="modal-title">Client Portal Login</h3>
         <p class="modal-sub">Secure access to your SPIKE trading accounts and funds.</p>
       </div>
-      <form class="modal-form" onsubmit="event.preventDefault(); alert('Login submitted!');">
+      <form class="modal-form" onsubmit="event.preventDefault(); SpikeToast.success('Login Successful', 'Welcome to Spike Client Portal.'); closeModal(document.getElementById('modal-login'));">
         <div class="form-group">
           <label class="form-label">Email / Trading ID</label>
           <input type="text" class="form-input" placeholder="Account ID or email" required>
@@ -801,6 +801,8 @@
     </div>
   </div>
 
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/ticker.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

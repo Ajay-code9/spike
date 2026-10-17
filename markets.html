@@ -559,6 +559,50 @@
     </div>
   </section>
 
+  <!-- ==================== LIVE INSTITUTIONAL CHARTING TERMINAL ==================== -->
+  <section class="section-market-specs-dark" style="padding: 70px 0; background: #070A0F; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 28px;">
+        <div>
+          <span class="section-tag">LIVE INSTITUTIONAL TERMINAL</span>
+          <h2 class="section-title">REAL-TIME <span class="text-gradient-gold">CANDLESTICK CHARTS</span></h2>
+          <p class="section-desc" style="max-width: 650px;">
+            Direct low-latency market depth feeds powered by TradingView. Inspect tick-by-tick price action, fair value gaps, and liquidity pools in real time.
+          </p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <span class="spike-ticker-pulse"></span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #00C087;">FEED ONLINE // ZERO DELAY</span>
+        </div>
+      </div>
+
+      <!-- TradingView Advanced Chart Widget -->
+      <div class="tradingview-widget-container" style="height: 540px; width: 100%; border-radius: 14px; overflow: hidden; border: 1px solid rgba(229, 184, 105, 0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 25px rgba(229,184,105,0.1);">
+        <div class="tradingview-widget-container__widget" style="height: calc(100% - 32px); width: 100%;"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "FX:EURUSD",
+          "interval": "60",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en",
+          "enable_publishing": false,
+          "backgroundColor": "#0E131C",
+          "gridColor": "rgba(255, 255, 255, 0.04)",
+          "hide_top_toolbar": false,
+          "hide_legend": false,
+          "save_image": false,
+          "calendar": false,
+          "hide_volume": false,
+          "support_host": "https://www.tradingview.com"
+        }
+        </script>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== 4. INDICATIVE LIVE SPECIFICATIONS TABLE ==================== -->
   <section class="section-market-specs-dark" id="market-specs">
     <div class="container-wide">
@@ -859,6 +903,8 @@
   </div>
 
   <!-- JavaScript -->
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/ticker.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/markets.js"></script>
 </body>

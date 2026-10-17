@@ -1,0 +1,193 @@
+/* ==========================================================================
+   SPIKE BROKERAGE - CINEMATIC VIDEO THEATER MODAL
+   Replaces all tutorial alerts with full-screen institutional video theater
+   ========================================================================== */
+
+.spike-video-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 12, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spike-video-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.spike-video-modal-dialog {
+  background: #0B0E14;
+  border: 1px solid rgba(229, 184, 105, 0.35);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 960px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(229, 184, 105, 0.15);
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.spike-video-modal-backdrop.active .spike-video-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.spike-video-modal-header {
+  padding: 16px 24px;
+  background: #0E131C;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spike-video-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #00C087;
+  background: rgba(0, 192, 135, 0.12);
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 192, 135, 0.25);
+}
+
+.spike-video-modal-close {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.spike-video-modal-close:hover {
+  background: rgba(244, 63, 94, 0.2);
+  color: #FFFFFF;
+  border-color: #F43F5E;
+}
+
+.spike-video-viewport {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spike-video-viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.spike-video-overlay-ui {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 40%, rgba(0,0,0,0.85) 100%);
+}
+
+.spike-video-big-play {
+  align-self: center;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E5B869 0%, #C99632 100%);
+  color: #080B10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 35px rgba(229, 184, 105, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.spike-video-big-play:hover {
+  transform: scale(1.1);
+}
+
+.spike-video-controls-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spike-video-progress-bar {
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.spike-video-progress-fill {
+  width: 38%;
+  height: 100%;
+  background: #E5B869;
+  border-radius: 3px;
+}
+
+.spike-video-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #CBD5E1;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.spike-video-modal-footer {
+  padding: 20px 24px;
+  background: #0B0E14;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.spike-video-modal-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.spike-video-modal-author {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin-top: 3px;
+}
+
+@media (max-width: 600px) {
+  .spike-video-modal-backdrop {
+    padding: 12px;
+  }
+}

@@ -299,6 +299,115 @@
     </div>
   </section>
 
+  <!-- ==================== INTERACTIVE TRADING CALCULATOR ==================== -->
+  <section class="spike-calc-section" id="margin-calculator">
+    <div class="container-wide">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 32px;">
+        <div>
+          <span class="section-tag">INSTITUTIONAL EXECUTION TOOLS</span>
+          <h2 class="section-title">REAL-TIME <span class="text-gradient-gold">MARGIN &amp; PIP CALCULATOR</span></h2>
+          <p class="section-desc" style="max-width: 620px;">
+            Simulate exact position margins, pip tick values, and expected spread costs across tier-1 currency pairs and precious metals before entering the market.
+          </p>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #64748B;">
+          Direct ECN Model &bull; 0% Commission
+        </div>
+      </div>
+
+      <div class="spike-calc-box">
+        <div class="spike-calc-left">
+          <!-- Field 1: Pair -->
+          <div class="spike-calc-field">
+            <div class="spike-calc-label">
+              <span>Select Instrument</span>
+              <span class="spike-calc-value-badge" id="calc-pair-badge">EUR/USD</span>
+            </div>
+            <select class="spike-calc-select" id="calc-pair-select">
+              <option value="EURUSD">EUR/USD — Euro vs US Dollar (Raw 0.0 Pips)</option>
+              <option value="GBPUSD">GBP/USD — British Pound vs US Dollar</option>
+              <option value="USDJPY">USD/JPY — US Dollar vs Japanese Yen</option>
+              <option value="XAUUSD">XAU/USD — Spot Gold Bullion (0.08 Pts)</option>
+              <option value="US500">US500 — S&amp;P 500 Index Cash CFD</option>
+              <option value="BTCUSD">BTC/USD — Bitcoin Spot Index</option>
+            </select>
+          </div>
+
+          <!-- Field 2: Leverage -->
+          <div class="spike-calc-field">
+            <div class="spike-calc-label">
+              <span>Dynamic Leverage Ratio</span>
+              <span style="font-size: 0.78rem; color: #64748B;">Choose your exposure threshold</span>
+            </div>
+            <div class="spike-calc-pills">
+              <button type="button" class="spike-calc-pill-btn" onclick="SpikeCalc.setLeverage(30, this)">1:30</button>
+              <button type="button" class="spike-calc-pill-btn active" onclick="SpikeCalc.setLeverage(100, this)">1:100</button>
+              <button type="button" class="spike-calc-pill-btn" onclick="SpikeCalc.setLeverage(200, this)">1:200</button>
+              <button type="button" class="spike-calc-pill-btn" onclick="SpikeCalc.setLeverage(500, this)">1:500</button>
+            </div>
+          </div>
+
+          <!-- Field 3: Lot Size Slider -->
+          <div class="spike-calc-field">
+            <div class="spike-calc-label">
+              <span>Position Volume (Trade Size)</span>
+              <span class="spike-calc-value-badge" id="calc-lot-badge">1.00 Lots</span>
+            </div>
+            <div class="spike-calc-slider-wrap">
+              <input type="range" class="spike-calc-slider" id="calc-lot-slider" min="0.01" max="10.0" step="0.01" value="1.0">
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #64748B; font-family: 'JetBrains Mono', monospace;">
+                <span>0.01 Micro Lot</span>
+                <span>1.0 Standard Lot</span>
+                <span>5.0 Lots</span>
+                <span>10.0 Lots</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Results Card -->
+        <div class="spike-calc-right">
+          <div class="spike-calc-result-header">
+            <span class="spike-ticker-pulse"></span>
+            <span>Real-Time Execution Breakdown</span>
+          </div>
+
+          <div class="spike-calc-grid-results">
+            <div class="spike-calc-res-item">
+              <div class="spike-calc-res-title">Required Margin</div>
+              <div class="spike-calc-res-val highlight" id="calc-res-margin">$1,084.20</div>
+            </div>
+
+            <div class="spike-calc-res-item">
+              <div class="spike-calc-res-title">Pip Tick Value</div>
+              <div class="spike-calc-res-val" id="calc-res-pip">$10.00</div>
+            </div>
+
+            <div class="spike-calc-res-item">
+              <div class="spike-calc-res-title">Est. Spread Cost</div>
+              <div class="spike-calc-res-val" id="calc-res-spread">$1.00</div>
+            </div>
+
+            <div class="spike-calc-res-item">
+              <div class="spike-calc-res-title">Projected 15-Pip Profit</div>
+              <div class="spike-calc-res-val green" id="calc-res-profit">+$150.00</div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.75rem; color: #64748B; line-height: 1.5; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px;">
+            Notional Position: <strong id="calc-res-notional" style="color: #CBD5E1; font-family: monospace;">$108,420</strong> &bull; Raw STP Liquidity route via Equinix LD4.
+          </div>
+
+          <div class="spike-calc-cta-row">
+            <a href="#" class="btn btn-gold btn-block" data-open-modal="account">
+              Trade With These Parameters &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== 4. 500+ TRADING INSTRUMENTS ==================== -->
   <section class="section-instruments-light">
     <div class="container-wide">
@@ -949,7 +1058,7 @@
         <div>
           <div class="newsletter-box">
             <div class="newsletter-title">Subscribe to Market Updates</div>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to SPIKE updates!');">
+            <form class="newsletter-form" onsubmit="event.preventDefault(); SpikeToast.success('Subscribed!', 'You will receive the latest SPIKE market updates.'); this.reset();">
               <input type="email" placeholder="Your email address" class="newsletter-input" required>
               <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
             </form>
@@ -978,7 +1087,7 @@
       <button class="modal-close-btn" aria-label="Close">&times;</button>
       <span class="section-tag">SECURE ACCESS</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">LOGIN TO SPIKE</h3>
-      <form onsubmit="event.preventDefault(); alert('Login submitted successfully!'); closeModal(document.getElementById('loginModal'));">
+      <form onsubmit="event.preventDefault(); SpikeToast.success('Login Successful', 'Welcome back to your Spike Trading Portal.'); closeModal(document.getElementById('loginModal'));">
         <div class="modal-form-group">
           <label class="modal-label">Email or Account ID</label>
           <input type="text" class="modal-input" placeholder="trader@spike.com" required>
@@ -997,7 +1106,7 @@
       <button class="modal-close-btn" aria-label="Close">&times;</button>
       <span class="section-tag">START TRADING</span>
       <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 20px;">OPEN TRADING ACCOUNT</h3>
-      <form onsubmit="event.preventDefault(); alert('Application received! Your Spike trading account is being provisioned.'); closeModal(document.getElementById('accountModal'));">
+      <form onsubmit="event.preventDefault(); SpikeToast.success('Account Provisioned', 'Your live account request has been received. Credentials dispatched to your email.'); closeModal(document.getElementById('accountModal'));">
         <div class="modal-form-group">
           <label class="modal-label">Full Name</label>
           <input type="text" class="modal-input" placeholder="John Doe" required>
@@ -1043,6 +1152,9 @@
     </div>
   </div>
 
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/ticker.js"></script>
+  <script src="assets/js/calculator.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

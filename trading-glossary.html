@@ -872,7 +872,7 @@
           </p>
         </div>
         <div style="flex-shrink: 0;">
-          <a href="#" class="btn btn-gold btn-lg" onclick="alert('Downloading Spike Institutional Glossary Handbook (PDF)...'); return false;">
+          <a href="#" class="btn btn-gold btn-lg" onclick="event.preventDefault(); SpikeToast.success('Handbook Dispatched', 'Downloading Spike Institutional Glossary Handbook (PDF)...');">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             Download PDF Guide (Free)
           </a>
@@ -1002,7 +1002,7 @@
         <h3 class="modal-title">Open Trading Account</h3>
         <p class="modal-sub">Get started with institutional execution in less than 2 minutes.</p>
       </div>
-      <form class="modal-form" onsubmit="event.preventDefault(); alert('Account registration submitted!');">
+      <form class="modal-form" onsubmit="event.preventDefault(); SpikeToast.success('Application Received', 'Your trading account registration has been processed.'); closeModal(document.getElementById('modal-account')); this.reset();">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">First Name</label>
@@ -1038,7 +1038,7 @@
         <h3 class="modal-title">Client Portal Login</h3>
         <p class="modal-sub">Secure access to your SPIKE trading accounts and funds.</p>
       </div>
-      <form class="modal-form" onsubmit="event.preventDefault(); alert('Login submitted!');">
+      <form class="modal-form" onsubmit="event.preventDefault(); SpikeToast.success('Authentication Verified', 'Welcome back to your Spike Trading Portal.'); closeModal(document.getElementById('modal-login')); this.reset();">
         <div class="form-group">
           <label class="form-label">Email / Trading ID</label>
           <input type="text" class="form-input" placeholder="Account ID or email" required>
@@ -1052,6 +1052,8 @@
     </div>
   </div>
 
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/ticker.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     // State
