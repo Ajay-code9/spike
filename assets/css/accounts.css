@@ -895,7 +895,7 @@ nav::-webkit-scrollbar {
 /* ==================== SECTION 2: COMPARISON MATRIX ==================== */
 .section-compare-accounts {
   background: #0B0F17;
-  padding: 35px 0 35px;
+  padding: 75px 0 80px;
   border-bottom: 1px solid var(--border-dark);
 }
 
@@ -903,9 +903,9 @@ nav::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -1073,23 +1073,23 @@ nav::-webkit-scrollbar {
 /* ==================== SECTION 3: HOW TO OPEN ACCOUNT ==================== */
 .section-how-to-open {
   background: #080B10;
-  padding: 35px 0 35px;
+  padding: 95px 0;
   border-bottom: 1px solid var(--border-dark);
 }
 
 .onboarding-timeline-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 18px;
+  gap: 24px;
+  margin-top: 40px;
   position: relative;
 }
 
 .onboarding-step-card {
   background: #0E131C;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  padding: 16px 14px;
+  border-radius: 14px;
+  padding: 30px 24px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1174,48 +1174,48 @@ nav::-webkit-scrollbar {
 .kyc-docs-container {
   background: #0E131C;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 20px 22px;
-  margin-top: 0;
+  border-radius: 14px;
+  padding: 34px 32px;
+  margin-top: 36px;
 }
 
 .kyc-docs-header {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .kyc-docs-header h3 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #FFFFFF;
 }
 
 .kyc-docs-header p {
-  font-size: 0.76rem;
+  font-size: 0.86rem;
   color: #94A3B8;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .kyc-docs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 20px;
 }
 
 .kyc-doc-card {
   background: rgba(8, 11, 16, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  padding: 16px 16px;
+  border-radius: 12px;
+  padding: 24px 22px;
 }
 
 .kyc-doc-title {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #FFFFFF;
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .kyc-doc-title svg {
@@ -1228,9 +1228,10 @@ nav::-webkit-scrollbar {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 0.72rem;
+  gap: 8px;
+  font-size: 0.82rem;
   color: #94A3B8;
+  line-height: 1.5;
 }
 
 .kyc-doc-list li {
@@ -1248,22 +1249,22 @@ nav::-webkit-scrollbar {
 /* ==================== SECTION 4: FUNDING METHODS ==================== */
 .section-funding-methods {
   background: #0B0F17;
-  padding: 35px 0 35px;
+  padding: 95px 0 95px;
   border-bottom: 1px solid var(--border-dark);
 }
 
 .funding-methods-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 18px;
+  gap: 24px;
+  margin-top: 36px;
 }
 
 .funding-card {
   background: #0E131C;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  padding: 16px 16px;
+  border-radius: 14px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   transition: all 0.2s ease;
@@ -1278,31 +1279,31 @@ nav::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .funding-card-title {
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #FFFFFF;
 }
 
 .funding-fee-badge {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 800;
   color: #10B981;
   background: rgba(16, 185, 129, 0.12);
-  padding: 2px 6px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .funding-metric-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  font-size: 0.74rem;
+  font-size: 0.82rem;
 }
 
 .funding-metric-label {

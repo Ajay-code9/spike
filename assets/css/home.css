@@ -139,13 +139,13 @@
 .section-instruments-light {
   background: #F7F5F0;
   color: var(--text-light-heading);
-  padding: 85px 0;
+  padding: 105px 0;
 }
 
 .instruments-split-layout {
   display: grid;
   grid-template-columns: 340px 1fr;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -166,7 +166,7 @@
 .instruments-tall-cards-row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 12px;
+  gap: 16px;
   align-items: stretch;
 }
 
@@ -370,27 +370,27 @@
 .section-accounts-light {
   background: #F7F5F0;
   color: var(--text-light-heading);
-  padding: 85px 0;
+  padding: 105px 0;
 }
 
 .accounts-split-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
 }
 
 .accounts-3cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .account-white-card {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 28px 24px;
+  border-radius: 12px;
+  padding: 34px 28px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   transition: var(--transition-smooth);
   display: flex;
@@ -484,46 +484,46 @@
 
 .section-trust-dark {
   background: #080B10;
-  padding: 85px 0;
+  padding: 105px 0;
   border-top: 1px solid var(--border-dark);
 }
 
 .trust-split-layout {
   display: grid;
   grid-template-columns: 340px 1fr;
-  gap: 40px;
+  gap: 52px;
   align-items: center;
 }
 
 .trust-6grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px 28px;
 }
 
 .trust-item-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
 }
 
 .trust-item-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   color: var(--gold-primary);
 }
 
 .trust-item-title {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   font-weight: 700;
   color: #FFFFFF;
 }
 
 .trust-item-desc {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: #94A3B8;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -534,33 +534,33 @@
 .section-insights-light {
   background: #F7F5F0;
   color: var(--text-light-heading);
-  padding: 85px 0;
+  padding: 105px 0;
 }
 
 .insights-split-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
 }
 
 .insights-3cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 24px;
 }
 
 .insight-compact-card {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   transition: var(--transition-smooth);
   text-decoration: none;
-  padding: 12px;
+  padding: 16px 16px 14px;
 }
 
 .insight-compact-card:hover {
@@ -614,7 +614,7 @@
 .section-numbers-dark {
   background: #080B10 url('/public/homepage-images/div2-background.png') no-repeat center bottom;
   background-size: cover;
-  padding: 85px 0 95px;
+  padding: 105px 0 115px;
   position: relative;
   border-top: 1px solid var(--border-dark);
   overflow: hidden;
@@ -623,8 +623,8 @@
 .numbers-header-wrap {
   display: flex;
   align-items: stretch;
-  gap: 16px;
-  margin-bottom: 55px;
+  gap: 18px;
+  margin-bottom: 65px;
   text-align: left;
 }
 
@@ -709,14 +709,14 @@
 .section-testimonials-dark {
   background: #0A0D14;
   border-top: 1px solid var(--border-dark);
-  padding: 75px 0;
+  padding: 100px 0;
 }
 
 .testimonials-header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .testimonials-heading-clean {
@@ -730,14 +730,14 @@
 .testimonials-3cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 26px;
 }
 
 .testimonial-sleek-card {
   background: rgba(14, 19, 28, 0.6);
   border: 1px solid var(--border-dark);
-  border-radius: 8px;
-  padding: 22px;
+  border-radius: 12px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -804,11 +804,11 @@
   position: relative;
   background: #080B10 url('/public/homepage-images/div3-background.png') no-repeat center center;
   background-size: cover;
-  padding: 85px 0;
+  padding: 110px 0;
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
-  min-height: 440px;
+  min-height: 480px;
 }
 
 .section-cta-opportunity::before {
