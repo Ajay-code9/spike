@@ -23,44 +23,28 @@
 .commodities-hero-center {
   position: relative;
   z-index: 2;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
-/* ==================== CENTERED HERO TAG ==================== */
-.commodities-hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.74rem;
+
+/* ==================== CLEAN NORMAL SECTION TAG (NO BLINK, NORMAL STYLING) ==================== */
+.commodities-hero .section-tag {
+  display: inline-block;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8rem;
   font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: #E5B869;
-  background: rgba(229, 184, 105, 0.1);
-  border: 1px solid rgba(229, 184, 105, 0.28);
-  border-radius: 20px;
-  padding: 6px 18px;
-  margin-bottom: 24px;
-  letter-spacing: 0.08em;
-  box-shadow: 0 0 20px rgba(229, 184, 105, 0.14);
-}
-
-.commodities-pulse-gold {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #E5B869;
-  box-shadow: 0 0 10px #E5B869;
-  animation: pulseGold 2s infinite;
-}
-
-@keyframes pulseGold {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
+  margin-bottom: 20px;
 }
 
 /* ==================== MAGNETIC CENTERED HEADLINE ==================== */
@@ -180,16 +164,18 @@
   .commodities-hero {
     padding: 130px 0 45px;
   }
-  .commodities-hero-tag {
-    font-size: 0.68rem;
-    padding: 5px 12px;
-    letter-spacing: 0.05em;
-    margin-bottom: 18px;
+  .commodities-hero .section-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
   }
   .commodities-hero-headline {
-    font-size: 1.85rem;
-    line-height: 1.16;
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
+    line-height: 1.2;
     margin-bottom: 16px;
+  }
+  .commodities-hero-headline br {
+    display: none;
   }
   .commodities-hero-lead {
     font-size: 0.95rem;
@@ -210,10 +196,12 @@
 
 @media (max-width: 380px) {
   .commodities-hero-headline {
-    font-size: 1.62rem;
+    font-size: 1.55rem;
   }
-  .commodities-hero-tag {
-    font-size: 0.62rem;
-    padding: 4px 10px;
+  .commodities-hero .section-tag {
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
   }
 }
+
+
