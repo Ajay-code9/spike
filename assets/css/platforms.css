@@ -1688,37 +1688,131 @@ nav::-webkit-scrollbar {
 .setup-steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
   margin-top: 50px;
 }
 
 .setup-step-card {
-  background: rgba(14, 19, 28, 0.5);
-  border: 1px solid var(--border-dark);
-  border-radius: 8px;
-  padding: 24px;
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.75) 0%, rgba(11, 15, 23, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(229, 184, 105, 0.3);
+  border-radius: 16px;
+  padding: 34px 28px 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.setup-step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(229, 184, 105, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.setup-step-card:hover {
+  border-color: rgba(229, 184, 105, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 25px rgba(229, 184, 105, 0.08);
+}
+
+.setup-step-card:hover::before {
+  opacity: 1;
+}
+
+.setup-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.setup-step-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(229, 184, 105, 0.1);
+  border: 1px solid rgba(229, 184, 105, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E5B869;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.setup-step-card:hover .setup-step-icon-box {
+  background: rgba(229, 184, 105, 0.2);
+  border-color: rgba(229, 184, 105, 0.55);
+  transform: scale(1.06);
+}
+
+.setup-step-icon-box svg {
+  width: 22px;
+  height: 22px;
 }
 
 .setup-step-num {
-  font-size: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  background: rgba(229, 184, 105, 0.12);
+  border: 1px solid rgba(229, 184, 105, 0.3);
+  border-radius: 20px;
+  font-size: 0.78rem;
   font-weight: 800;
-  color: rgba(229, 184, 105, 0.3);
-  line-height: 1;
-  margin-bottom: 12px;
+  color: #E5B869;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
 }
 
 .setup-step-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
 .setup-step-desc {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #94A3B8;
-  line-height: 1.5;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.setup-step-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #CBD5E1;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.setup-step-chip .chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
 }
 
 /* VPS Hosting Banner */
