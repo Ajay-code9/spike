@@ -367,6 +367,47 @@ html, body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(229, 184, 105, 0.08);
 }
 
+/* Luminous Bright Theme Side (Spike True Institutional DMA Card) */
+.model-card.bright-side {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+  border: 1.5px solid var(--comp-gold);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 45px rgba(229, 184, 105, 0.22);
+}
+
+.model-card.bright-side .model-title {
+  color: #0F172A;
+}
+
+.model-card.bright-side .model-desc {
+  color: #334155;
+}
+
+.model-card.bright-side .flow-step-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1E293B;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.model-card.bright-side .flow-step-num {
+  background: var(--comp-gold);
+  color: #080B10;
+  font-weight: 800;
+}
+
+.model-card.bright-side .model-verdict-box {
+  background: rgba(229, 184, 105, 0.16);
+  border-left: 3px solid #C99632;
+  color: #78350F;
+  font-weight: 600;
+}
+
+.model-card.bright-side .model-badge.gold {
+  background: rgba(229, 184, 105, 0.25);
+  border-color: #C99632;
+  color: #78350F;
+}
+
 .model-badge {
   display: inline-flex;
   align-items: center;
@@ -524,6 +565,98 @@ html, body {
   align-items: center;
   justify-content: center;
   color: var(--comp-gold);
+}
+
+/* ==========================================================================
+   BRIGHT / LIGHT SAND SIGNATURE LUXURY SECTION
+   ========================================================================== */
+.company-section-light {
+  padding: 95px 0;
+  background: #F7F5F0;
+  color: #0F172A;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  position: relative;
+}
+
+.company-section-light .company-sec-title {
+  color: #0F172A;
+}
+
+.company-section-light .company-sec-desc {
+  color: #475569;
+}
+
+/* Light Pillar Cards */
+.pillar-card.light {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pillar-card.light:hover {
+  border-color: var(--comp-gold);
+  box-shadow: 0 18px 45px rgba(201, 150, 50, 0.18);
+}
+
+.pillar-card.light .pillar-number {
+  color: #C99632;
+}
+
+.pillar-card.light .pillar-icon-box {
+  background: rgba(229, 184, 105, 0.16);
+  border-color: rgba(201, 150, 50, 0.35);
+  color: #B8860B;
+}
+
+.pillar-card.light .pillar-title {
+  color: #0F172A;
+}
+
+.pillar-card.light .pillar-desc {
+  color: #475569;
+}
+
+.pillar-card.light .pillar-spec-pill {
+  background: #F1EFE9;
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #1E293B;
+}
+
+/* Light Volume Cards */
+.volume-card.light {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.volume-card.light:hover {
+  border-color: var(--comp-gold);
+  box-shadow: 0 18px 45px rgba(201, 150, 50, 0.18);
+}
+
+.volume-card.light .volume-pct-pill {
+  background: rgba(229, 184, 105, 0.18);
+  color: #92400E;
+}
+
+.volume-card.light .volume-title {
+  color: #0F172A;
+}
+
+.volume-card.light .volume-monthly-flow {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 50%, #C99632 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.volume-card.light .volume-spec-list {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  color: #475569;
+}
+
+.volume-card.light .volume-spec-list strong {
+  color: #0F172A;
 }
 
 .pillar-title {
