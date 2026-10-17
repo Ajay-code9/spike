@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Analysis &amp; Research | Spike Brokerage</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/education.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container-wide header-container">
+      <a href="index.html" class="brand-logo" aria-label="Spike Homepage">
+        <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="34">
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Trading
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="forex.html" class="dropdown-link">Forex Trading</a>
+            <a href="metals.html" class="dropdown-link">Metals &amp; Gold</a>
+            <a href="indices.html" class="dropdown-link">Indices</a>
+            <a href="commodities.html" class="dropdown-link">Commodities</a>
+            <a href="shares.html" class="dropdown-link">Shares &amp; CFDs</a>
+            <a href="crypto.html" class="dropdown-link">Cryptocurrencies</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="markets.html" class="nav-link">
+            Markets
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="markets.html" class="dropdown-link">Market Overview</a>
+            <a href="spreads.html" class="dropdown-link">Live Spreads &amp; Specs</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="platforms.html" class="nav-link">Platforms</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="accounts.html" class="nav-link">
+            Accounts
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="account-types.html" class="dropdown-link">Account Types (Standard, Pro, VIP)</a>
+            <a href="compare-accounts.html" class="dropdown-link">Compare Accounts</a>
+            <a href="how-to-open.html" class="dropdown-link">How to Open Account</a>
+          </div>
+        </div>
+
+        <div class="nav-item active">
+          <a href="market-analysis.html" class="nav-link">
+            Education
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="video-tutorials.html" class="dropdown-link">Video Tutorials</a>
+            <a href="market-analysis.html" class="dropdown-link" style="color: var(--gold-primary);">Market Analysis &amp; News</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="dropdown-menu">
+            <a href="index.html#trust" class="dropdown-link">Why Choose Spike</a>
+            <a href="index.html#numbers" class="dropdown-link">Spike in Numbers</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-selector">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>EN</span>
+        </div>
+        <button class="btn-icon-search" data-open-modal="search" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="#" class="btn-login" data-open-modal="login">Login</a>
+        <a href="#" class="btn btn-gold" data-open-modal="account">Open Account</a>
+        <div class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="edu-hero">
+    <div class="container-wide">
+      <div class="edu-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="education.html">Education</a>
+        <span class="separator">/</span>
+        <span class="current">Market Analysis &amp; News</span>
+      </div>
+
+      <div class="edu-hero-grid">
+        <div>
+          <span class="section-tag">SPIKE RESEARCH DESK // LIVE INTELLIGENCE</span>
+          <h1 class="hero-home-title" style="margin-bottom: 18px;">
+            INSTITUTIONAL MARKET<br>
+            <span class="text-gradient-gold">ANALYSIS &amp; RESEARCH</span>
+          </h1>
+          <p class="edu-hero-desc">
+            Daily macroeconomic briefings, high-probability technical levels, and institutional order flow intelligence delivered directly from Spike's quantitative research desk.
+          </p>
+
+          <div class="edu-hero-actions">
+            <a href="#featured-analysis" class="btn btn-gold btn-lg">
+              Read Today's Briefing
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#economic-calendar" class="btn btn-outline btn-lg">Economic Radar</a>
+          </div>
+
+          <div class="edu-hero-stats">
+            <div class="edu-stat-item">
+              <span class="edu-stat-value">06:00 GMT</span>
+              <span class="edu-stat-label">Daily London Open Note</span>
+            </div>
+            <div class="edu-stat-item">
+              <span class="edu-stat-value">500+ Assets</span>
+              <span class="edu-stat-label">FX, Metals, Crypto, Indices</span>
+            </div>
+            <div class="edu-stat-item">
+              <span class="edu-stat-value">Tier-1 Feeds</span>
+              <span class="edu-stat-label">Institutional Order Flow</span>
+            </div>
+            <div class="edu-stat-item">
+              <span class="edu-stat-value">24/5 Live</span>
+              <span class="edu-stat-label">Desk Level Coverage</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-hero-matrix-card">
+          <div class="edu-matrix-header">
+            <span class="edu-matrix-title">LIVE DESK BIAS RADAR</span>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: #10B981; font-weight: 700;">
+              <span class="pulse-dot-green"></span>
+              <span>LONDON-NY OVERLAP</span>
+            </div>
+          </div>
+
+          <div class="edu-matrix-list">
+            <!-- Asset 1 -->
+            <div class="edu-matrix-row">
+              <div>
+                <div class="edu-matrix-asset">EUR / USD</div>
+                <div class="edu-matrix-sub">Euro / US Dollar</div>
+              </div>
+              <div class="edu-matrix-sentiment bullish">BULLISH BIAS (68%)</div>
+              <div class="edu-matrix-level">1.0885 &bull; Pivot 1.0860</div>
+            </div>
+
+            <!-- Asset 2 -->
+            <div class="edu-matrix-row">
+              <div>
+                <div class="edu-matrix-asset">XAU / USD</div>
+                <div class="edu-matrix-sub">Gold / US Dollar</div>
+              </div>
+              <div class="edu-matrix-sentiment bullish">BULLISH FLAG (61%)</div>
+              <div class="edu-matrix-level">$2,648.20 &bull; Res $2,665</div>
+            </div>
+
+            <!-- Asset 3 -->
+            <div class="edu-matrix-row">
+              <div>
+                <div class="edu-matrix-asset">US 100</div>
+                <div class="edu-matrix-sub">Nasdaq Futures</div>
+              </div>
+              <div class="edu-matrix-sentiment neutral">CONSOLIDATION</div>
+              <div class="edu-matrix-level">20,412 &bull; Sup 20,250</div>
+            </div>
+
+            <!-- Asset 4 -->
+            <div class="edu-matrix-row">
+              <div>
+                <div class="edu-matrix-asset">BTC / USD</div>
+                <div class="edu-matrix-sub">Bitcoin / Dollar</div>
+              </div>
+              <div class="edu-matrix-sentiment bullish">BREAKOUT BIAS (72%)</div>
+              <div class="edu-matrix-level">$68,450 &bull; Sup $67,200</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; justify-content: space-between; font-size: 0.74rem; color: #64748B;">
+            <span>Calculated from Aggregate L2 Volume</span>
+            <span style="color: var(--gold-primary);">Updated 3m ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REAL-TIME ASSET SENTIMENT HEATMAP ==================== -->
+  <section class="edu-sentiment-section">
+    <div class="container-wide">
+      <div class="edu-section-header">
+        <div class="edu-section-title-wrap">
+          <span class="section-tag">MULTI-ASSET SENTIMENT</span>
+          <h2 class="edu-section-heading">INSTITUTIONAL POSITIONING HEATMAP</h2>
+          <p class="edu-section-sub">
+            Real-time aggregate retail vs. institutional order book positioning across benchmark global assets.
+          </p>
+        </div>
+        <div class="edu-tag-pill">
+          <span>REAL-TIME AGGREGATE METRICS</span>
+        </div>
+      </div>
+
+      <div class="edu-sentiment-grid">
+        <!-- Card 1 -->
+        <div class="edu-sentiment-card">
+          <div class="edu-sentiment-top">
+            <span class="edu-sentiment-symbol">EUR / USD</span>
+            <span class="edu-sentiment-badge bullish">BULLISH</span>
+          </div>
+          <div class="edu-sentiment-price">1.08852</div>
+          <div class="edu-sentiment-bias-bar">
+            <div class="edu-sentiment-bias-fill bullish" style="width: 68%;"></div>
+          </div>
+          <div class="edu-sentiment-meta">
+            <span>68% Long &bull; 32% Short</span>
+            <span style="color: var(--gold-primary);">RSI 58.4</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="edu-sentiment-card">
+          <div class="edu-sentiment-top">
+            <span class="edu-sentiment-symbol">XAU / USD</span>
+            <span class="edu-sentiment-badge bullish">BULLISH</span>
+          </div>
+          <div class="edu-sentiment-price">$2,648.20</div>
+          <div class="edu-sentiment-bias-bar">
+            <div class="edu-sentiment-bias-fill bullish" style="width: 61%;"></div>
+          </div>
+          <div class="edu-sentiment-meta">
+            <span>61% Long &bull; 39% Short</span>
+            <span style="color: var(--gold-primary);">RSI 63.2</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="edu-sentiment-card">
+          <div class="edu-sentiment-top">
+            <span class="edu-sentiment-symbol">US 100</span>
+            <span class="edu-sentiment-badge bearish">SHORT PULLBACK</span>
+          </div>
+          <div class="edu-sentiment-price">20,412.50</div>
+          <div class="edu-sentiment-bias-bar">
+            <div class="edu-sentiment-bias-fill bearish" style="width: 54%;"></div>
+          </div>
+          <div class="edu-sentiment-meta">
+            <span>46% Long &bull; 54% Short</span>
+            <span style="color: var(--gold-primary);">RSI 49.0</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="edu-sentiment-card">
+          <div class="edu-sentiment-top">
+            <span class="edu-sentiment-symbol">BTC / USD</span>
+            <span class="edu-sentiment-badge bullish">STRONG BULLISH</span>
+          </div>
+          <div class="edu-sentiment-price">$68,450.00</div>
+          <div class="edu-sentiment-bias-bar">
+            <div class="edu-sentiment-bias-fill bullish" style="width: 72%;"></div>
+          </div>
+          <div class="edu-sentiment-meta">
+            <span>72% Long &bull; 28% Short</span>
+            <span style="color: var(--gold-primary);">RSI 66.8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED EDITORIAL ANALYSES ==================== -->
+  <section class="edu-analysis-section" id="featured-analysis">
+    <div class="container-wide">
+      <div class="edu-section-header">
+        <div class="edu-section-title-wrap">
+          <span class="section-tag">DAILY MARKET INTELLIGENCE</span>
+          <h2 class="edu-section-heading">FEATURED INSTITUTIONAL RESEARCH</h2>
+          <p class="edu-section-sub">
+            Technical levels, fundamental macro drivers, and volatility setups authored by Spike proprietary trading desks.
+          </p>
+        </div>
+        <div style="font-size: 0.88rem; color: #64748B;">
+          Updated Daily &bull; London &amp; New York Desks
+        </div>
+      </div>
+
+      <div class="edu-articles-grid">
+        <!-- Article 1: Gold -->
+        <article class="edu-article-card">
+          <div class="edu-article-img-wrap">
+            <img src="public/homepage-images/homepage-card2.png" alt="Gold Market Analysis" class="edu-article-img">
+          </div>
+          <div class="edu-article-body">
+            <span class="edu-tag-pill">METALS &amp; COMMODITIES</span>
+            <h3 class="edu-article-title">Gold (XAU/USD) Re-Tests Key Resistance as US Treasury Yields Ease</h3>
+            <p class="edu-article-desc">
+              Spot gold maintains bullish momentum following softer US PPI prints, forming an ascending triangle on the 4-hour timeframe with institutional bids clustered near $2,640.
+            </p>
+
+            <div class="edu-article-levels">
+              <div class="edu-level-item">
+                <span>Immediate Resistance:</span>
+                <strong>$2,665.00</strong>
+              </div>
+              <div class="edu-level-item">
+                <span>Structural Demand:</span>
+                <strong>$2,628.50</strong>
+              </div>
+              <div class="edu-level-item">
+                <span>Dynamic 50-EMA:</span>
+                <strong>$2,615.20</strong>
+              </div>
+            </div>
+
+            <div class="edu-article-footer">
+              <div class="edu-article-author">
+                By <span>Marcus Vance</span> &bull; 25m ago
+              </div>
+              <a href="javascript:void(0)" onclick="alert('Viewing Complete Technical Note: Gold (XAU/USD) Re-Tests Key Resistance');" class="edu-watch-link">
+                Read Note &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: Forex -->
+        <article class="edu-article-card">
+          <div class="edu-article-img-wrap">
+            <img src="public/homepage-images/forex-trading-hero-bg.png" alt="EUR/USD Technical Outlook" class="edu-article-img">
+          </div>
+          <div class="edu-article-body">
+            <span class="edu-tag-pill blue">FOREX STRATEGY</span>
+            <h3 class="edu-article-title">EUR/USD Liquidity Sweep Ahead of ECB Monetary Policy Protocol</h3>
+            <p class="edu-article-desc">
+              Institutional buyers defended the 1.0840 weekly demand zone following neutral ECB comments, triggering an intraday liquidity run towards the 1.0920 buy-side pools.
+            </p>
+
+            <div class="edu-article-levels">
+              <div class="edu-level-item">
+                <span>Daily Pivot Level:</span>
+                <strong>1.0860</strong>
+              </div>
+              <div class="edu-level-item">
+                <span>Upside Target FVG:</span>
+                <strong>1.0920</strong>
+              </div>
+              <div class="edu-level-item">
+                <span>Invalidation Floor:</span>
+                <strong>1.0815</strong>
+              </div>
+            </div>
+
+            <div class="edu-article-footer">
+              <div class="edu-article-author">
+                By <span>Elena Rostova</span> &bull; 1.5h ago
+              </div>
+              <a href="javascript:void(0)" onclick="alert('Viewing Complete Technical Note: EUR/USD Liquidity Sweep');" class="edu-watch-link">
+                Read Note &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: Indices -->
+        <article class="edu-article-card">
+          <div class="edu-article-img-wrap">
+            <img src="public/homepage-images/homepage-card1.png" alt="Nasdaq 100 Volatility Playbook" class="edu-article-img">
+          </div>
+          <div class="edu-article-body">
+            <span class="edu-tag-pill purple">EQUITIES &amp; INDICES</span>
+            <h3 class="edu-article-title">Nasdaq 100 Consolidation: Big Tech Earnings Volatility Playbook</h3>
+            <p class="edu-article-desc">
+              Implied options volatility signals a potential 2.4% range expansion as megacap semiconductors report earnings. Watch for liquidity absorption at the 20,250 support band.
+            </p>
+
+            <div class="edu-article-levels">
+              <div class="edu-level-item">
+                <span>All-Time High Range:</span>
+                <strong>20,600</strong>
+              </div>
+              <div class="edu-level-item">
+                <span>Fair Value Gap Sup:</span>
+                <strong>20,250</strong>
+              </div>
+              <div class="edu-level-item">
+                <span>200-Day EMA Floor:</span>
+                <strong>19,880</strong>
+              </div>
+            </div>
+
+            <div class="edu-article-footer">
+              <div class="edu-article-author">
+                By <span>David Chen</span> &bull; 3h ago
+              </div>
+              <a href="javascript:void(0)" onclick="alert('Viewing Complete Technical Note: Nasdaq 100 Playbook');" class="edu-watch-link">
+                Read Note &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ECONOMIC CALENDAR RADAR ==================== -->
+  <section class="edu-calendar-section" id="economic-calendar">
+    <div class="container-wide">
+      <div class="edu-section-header">
+        <div class="edu-section-title-wrap">
+          <span class="section-tag">HIGH-IMPACT EVENTS</span>
+          <h2 class="edu-section-heading">ECONOMIC CALENDAR RADAR</h2>
+          <p class="edu-section-sub">
+            Track tier-1 central bank speeches, inflation data, and employment releases that drive global intraday volatility.
+          </p>
+        </div>
+        <div class="edu-tag-pill green">
+          <span class="pulse-dot-green"></span>
+          <span>LIVE INSTITUTIONAL DATA FEED</span>
+        </div>
+      </div>
+
+      <div class="edu-calendar-wrapper">
+        <div class="edu-calendar-header-bar">
+          <div class="edu-calendar-headline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Today's High &amp; Medium Impact Docket (All Times GMT)</span>
+          </div>
+          <span style="font-size: 0.78rem; color: #94A3B8;">Auto-Syncs Every 60s</span>
+        </div>
+
+        <table class="edu-calendar-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Currency</th>
+              <th>Economic Event</th>
+              <th>Impact</th>
+              <th>Actual</th>
+              <th>Forecast</th>
+              <th>Previous</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="calendar-time">12:30 GMT</td>
+              <td class="calendar-currency">USD</td>
+              <td style="font-weight: 600; color: #FFFFFF;">Core Personal Consumption Expenditures (PCE) MoM</td>
+              <td><span class="calendar-impact-badge high">HIGH IMPACT</span></td>
+              <td class="calendar-val-bold" style="color: #10B981;">0.3%</td>
+              <td class="calendar-val-muted">0.3%</td>
+              <td class="calendar-val-muted">0.2%</td>
+            </tr>
+            <tr>
+              <td class="calendar-time">13:45 GMT</td>
+              <td class="calendar-currency">EUR</td>
+              <td style="font-weight: 600; color: #FFFFFF;">ECB President Christine Lagarde Keynote Speech</td>
+              <td><span class="calendar-impact-badge high">HIGH IMPACT</span></td>
+              <td class="calendar-val-bold" style="color: var(--gold-primary);">Speaking Live</td>
+              <td class="calendar-val-muted">--</td>
+              <td class="calendar-val-muted">--</td>
+            </tr>
+            <tr>
+              <td class="calendar-time">14:00 GMT</td>
+              <td class="calendar-currency">USD</td>
+              <td style="font-weight: 600; color: #FFFFFF;">ISM Manufacturing Purchasing Managers Index (PMI)</td>
+              <td><span class="calendar-impact-badge high">HIGH IMPACT</span></td>
+              <td class="calendar-val-bold" style="color: #10B981;">49.2</td>
+              <td class="calendar-val-muted">48.5</td>
+              <td class="calendar-val-muted">47.8</td>
+            </tr>
+            <tr>
+              <td class="calendar-time">01:30 GMT</td>
+              <td class="calendar-currency">AUD</td>
+              <td style="font-weight: 600; color: #FFFFFF;">RBA Interest Rate Decision &amp; Statement</td>
+              <td><span class="calendar-impact-badge high">HIGH IMPACT</span></td>
+              <td class="calendar-val-bold">4.35%</td>
+              <td class="calendar-val-muted">4.35%</td>
+              <td class="calendar-val-muted">4.35%</td>
+            </tr>
+            <tr>
+              <td class="calendar-time">09:30 GMT</td>
+              <td class="calendar-currency">GBP</td>
+              <td style="font-weight: 600; color: #FFFFFF;">UK Gross Domestic Product (GDP) Preliminary QoQ</td>
+              <td><span class="calendar-impact-badge medium">MEDIUM IMPACT</span></td>
+              <td class="calendar-val-bold" style="color: #10B981;">0.6%</td>
+              <td class="calendar-val-muted">0.5%</td>
+              <td class="calendar-val-muted">0.4%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="padding: 18px 28px; background: rgba(0, 0, 0, 0.25); border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.78rem; color: #94A3B8; display: flex; align-items: center; gap: 10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold-primary); flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <span><strong>Spike Desk Note:</strong> Raw spread liquidity remains active during tier-1 releases. Algorithmic traders may adjust slippage tolerances around USD PCE releases.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THEMATIC MACRO RESEARCH ==================== -->
+  <section class="edu-macro-section">
+    <div class="container-wide">
+      <div class="edu-section-header">
+        <div class="edu-section-title-wrap">
+          <span class="section-tag">WEEKLY MACRO RADAR</span>
+          <h2 class="edu-section-heading">STRATEGIC MACRO THEMES</h2>
+          <p class="edu-section-sub">
+            The structural narratives driving capital rotation between commodities, government debt, and foreign exchange reserves.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-macro-grid">
+        <!-- Theme 1 -->
+        <div class="edu-macro-card">
+          <div class="edu-macro-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3 class="edu-macro-title">Central Bank Divergence</h3>
+          <p class="edu-macro-desc">
+            Analyzing the monetary policy wedge between the Federal Reserve and the European Central Bank, and its direct impact on carry trade flows.
+          </p>
+          <a href="javascript:void(0)" onclick="alert('Viewing research note on Central Bank Divergence');" class="edu-watch-link">
+            Explore Theme &rarr;
+          </a>
+        </div>
+
+        <!-- Theme 2 -->
+        <div class="edu-macro-card">
+          <div class="edu-macro-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <h3 class="edu-macro-title">Energy Market Corridors</h3>
+          <p class="edu-macro-desc">
+            OPEC+ supply constraints vs. US shale output quotas and seasonal Brent crude inventory draws across European refining hubs.
+          </p>
+          <a href="javascript:void(0)" onclick="alert('Viewing research note on Energy Corridors');" class="edu-watch-link">
+            Explore Theme &rarr;
+          </a>
+        </div>
+
+        <!-- Theme 3 -->
+        <div class="edu-macro-card">
+          <div class="edu-macro-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="18" x2="12" y2="20"></line><line x1="12" y1="4" x2="12" y2="6"></line></svg>
+          </div>
+          <h3 class="edu-macro-title">Crypto Liquidity Cycles</h3>
+          <p class="edu-macro-desc">
+            Institutional Bitcoin and Ethereum ETF net inflows, derivative funding rate sentiment, and on-chain exchange reserve balances.
+          </p>
+          <a href="javascript:void(0)" onclick="alert('Viewing research note on Crypto Liquidity Cycles');" class="edu-watch-link">
+            Explore Theme &rarr;
+          </a>
+        </div>
+
+        <!-- Theme 4 -->
+        <div class="edu-macro-card">
+          <div class="edu-macro-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 class="edu-macro-title">Yield Curve Normalization</h3>
+          <p class="edu-macro-desc">
+            How the disinversion of 2-year and 10-year US Treasury benchmarks historically impacts equity market multiples and credit spreads.
+          </p>
+          <a href="javascript:void(0)" onclick="alert('Viewing research note on Yield Curve Normalization');" class="edu-watch-link">
+            Explore Theme &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MARKET ANALYSIS FAQ ==================== -->
+  <section class="edu-faq-section">
+    <div class="container-wide">
+      <div class="edu-section-header" style="text-align: center; justify-content: center;">
+        <div class="edu-section-title-wrap" style="text-align: center; margin: 0 auto;">
+          <span class="section-tag">COMMON QUESTIONS</span>
+          <h2 class="edu-section-heading">MARKET ANALYSIS FAQ</h2>
+          <p class="edu-section-sub">
+            Learn how Spike's institutional research desk operates and how to interpret daily technical levels.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-faq-grid">
+        <div class="edu-faq-card">
+          <div class="edu-faq-question">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>How frequently is market research updated?</span>
+          </div>
+          <p class="edu-faq-answer">
+            Our London desk publishes the daily pre-market briefing every morning at 06:00 GMT, followed by New York open updates at 13:00 GMT and live event briefs around tier-1 economic releases.
+          </p>
+        </div>
+
+        <div class="edu-faq-card">
+          <div class="edu-faq-question">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Who compiles Spike's technical analysis and levels?</span>
+          </div>
+          <p class="edu-faq-answer">
+            All research is generated by Spike's in-house quantitative analysts and certified proprietary market strategists with extensive institutional tier-1 desk experience.
+          </p>
+        </div>
+
+        <div class="edu-faq-card">
+          <div class="edu-faq-question">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Can I trade directly using these support and resistance levels?</span>
+          </div>
+          <p class="edu-faq-answer">
+            Our levels reflect institutional volume nodes and order flow liquidity zones. Traders use these as high-confluence areas for entry confirmation and risk invalidation points on MT5.
+          </p>
+        </div>
+
+        <div class="edu-faq-card">
+          <div class="edu-faq-question">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Are daily analysis reports free for all account tiers?</span>
+          </div>
+          <p class="edu-faq-answer">
+            Yes. Daily analysis briefs, institutional sentiment metrics, and economic calendar forecasts are accessible free of charge for all registered demo and live Spike traders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OPPORTUNITY CTA BANNER ==================== -->
+  <section class="edu-cta-section" style="background-image: url('public/above-footer-section-bg-img-in-every-page.png');">
+    <div class="container-wide">
+      <div class="edu-cta-content">
+        <span class="section-tag">ACT ON INSTITUTIONAL INSIGHTS</span>
+        <h2 class="section-title">TRADE GLOBAL MARKETS WITH <span class="text-gradient-gold">RAW EXECUTION</span></h2>
+        <p class="section-desc" style="color: #CBD5E1; margin-bottom: 32px; font-size: 1.02rem; line-height: 1.65;">
+          Execute on market insights with sub-12ms latency, institutional liquidity, and zero markups on raw spreads starting from 0.0 pips.
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+            Open Live Trading Account
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="video-tutorials.html" class="btn btn-outline btn-lg">
+            Explore Video Tutorials
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Spike Homepage">
+            <img src="public/homepage-images/logo.jpg" alt="SPIKE" height="34">
+          </a>
+          <p class="footer-tagline">
+            Next-generation prime brokerage execution engineered for professional, institutional, and algorithmic traders worldwide.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trading</div>
+          <ul class="footer-link-list">
+            <li><a href="forex.html" class="footer-link">Forex Trading</a></li>
+            <li><a href="metals.html" class="footer-link">Metals &amp; Gold</a></li>
+            <li><a href="indices.html" class="footer-link">Indices</a></li>
+            <li><a href="commodities.html" class="footer-link">Commodities</a></li>
+            <li><a href="shares.html" class="footer-link">Shares &amp; CFDs</a></li>
+            <li><a href="crypto.html" class="footer-link">Cryptocurrencies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Accounts</div>
+          <ul class="footer-link-list">
+            <li><a href="account-types.html" class="footer-link">Standard Account</a></li>
+            <li><a href="account-types.html" class="footer-link">Raw Spread / Pro</a></li>
+            <li><a href="account-types.html" class="footer-link">VIP Institutional</a></li>
+            <li><a href="compare-accounts.html" class="footer-link">Compare Accounts</a></li>
+            <li><a href="how-to-open.html" class="footer-link">How to Open Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Education</div>
+          <ul class="footer-link-list">
+            <li><a href="video-tutorials.html" class="footer-link">Video Tutorials</a></li>
+            <li><a href="market-analysis.html" class="footer-link">Market Analysis &amp; News</a></li>
+            <li><a href="market-analysis.html#economic-calendar" class="footer-link">Economic Calendar</a></li>
+            <li><a href="video-tutorials.html" class="footer-link">Live Webinars</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-link-list">
+            <li><a href="index.html#trust" class="footer-link">Why Choose Spike</a></li>
+            <li><a href="index.html#numbers" class="footer-link">Spike in Numbers</a></li>
+            <li><a href="platforms.html" class="footer-link">Trading Platforms</a></li>
+            <li><a href="spreads.html" class="footer-link">Live Spreads</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2026 Spike Brokerage Ltd. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms &amp; Conditions</a>
+          <a href="#" class="footer-legal-link">Risk Disclosure</a>
+          <a href="#" class="footer-legal-link">Security Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,284 +1,1305 @@
 /* ==========================================================================
-   SPIKE BROKERAGE - EDUCATION PAGE STYLES
+   SPIKE BROKERAGE - EDUCATION ECOSYSTEM (VIDEO TUTORIALS & MARKET ANALYSIS)
+   Obsidian & Gold Institutional Design | Breathable Spacing | No Scrollbars
    ========================================================================== */
 
-/* Education Hero */
-.hero-education {
-  background: radial-gradient(circle at 65% 45%, rgba(26, 20, 14, 0.7) 0%, rgba(8, 11, 16, 0.98) 75%);
-  padding: 120px 0 50px;
-  border-bottom: 1px solid var(--border-dark);
+/* Universal Scrollbar Elimination */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
-.hero-education-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 1.35fr;
-  gap: 40px;
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   SHARED EDUCATION COMPONENTS & BREADCRUMBS
+   -------------------------------------------------------------------------- */
+.edu-breadcrumb {
+  display: flex;
   align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #64748B;
+  margin-bottom: 24px;
 }
 
-.hero-course-player-mockup {
+.edu-breadcrumb a {
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.edu-breadcrumb a:hover {
+  color: var(--gold-primary, #E5B869);
+}
+
+.edu-breadcrumb .separator {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.edu-breadcrumb .current {
+  color: var(--gold-primary, #E5B869);
+  font-weight: 600;
+}
+
+/* Category Pill (Nested comfortably inside cards - NEVER overlapping borders) */
+.edu-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(229, 184, 105, 0.12);
+  color: var(--gold-primary, #E5B869);
+  border: 1px solid rgba(229, 184, 105, 0.25);
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.edu-tag-pill.blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60A5FA;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.edu-tag-pill.green {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.edu-tag-pill.purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #C084FC;
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTIONS (BREATHABLE, SPACIOUS, EXECUTIVE)
+   -------------------------------------------------------------------------- */
+.edu-hero {
   position: relative;
-  border-radius: 12px;
+  background: radial-gradient(circle at 65% 35%, rgba(26, 20, 14, 0.75) 0%, rgba(8, 11, 16, 0.98) 75%);
+  padding: 130px 0 75px;
+  border-bottom: 1px solid var(--border-dark, rgba(255, 255, 255, 0.08));
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), var(--gold-glow);
-  cursor: pointer;
 }
 
-.hero-course-player-mockup img {
+.edu-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(229, 184, 105, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.edu-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.edu-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #94A3B8;
+  margin: 20px 0 32px;
+  max-width: 580px;
+}
+
+.edu-hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Hero 4-Stat Strip (Spacious, Clean, Inside Flow) */
+.edu-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.edu-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-stat-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.edu-stat-label {
+  font-size: 0.76rem;
+  color: #94A3B8;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Hero Right Mockup: Video Player Preview */
+.edu-hero-mockup-wrapper {
+  position: relative;
+  border-radius: 14px;
+  background: #0E131C;
+  border: 1px solid rgba(229, 184, 105, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 40px rgba(229, 184, 105, 0.1);
+  overflow: hidden;
+  padding: 12px;
+}
+
+.edu-mockup-browser-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 12px;
+}
+
+.edu-browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.edu-browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.edu-browser-dot.active {
+  background: var(--gold-primary, #E5B869);
+}
+
+.edu-mockup-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse-dot-green {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.edu-mockup-screen {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.edu-mockup-screen img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.hero-course-player-mockup:hover img {
+.edu-mockup-screen:hover img {
   transform: scale(1.02);
 }
 
-.play-video-overlay-btn {
+.edu-mockup-play-btn {
   position: absolute;
-  top: 45%;
-  left: 36%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(229, 184, 105, 0.9);
-  color: #0B0E14;
+  background: rgba(229, 184, 105, 0.95);
+  color: #080B10;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 30px rgba(229, 184, 105, 0.6);
-  transition: var(--transition-smooth);
+  box-shadow: 0 0 35px rgba(229, 184, 105, 0.6);
+  transition: all 0.3s ease;
+  z-index: 3;
 }
 
-.hero-course-player-mockup:hover .play-video-overlay-btn {
+.edu-mockup-screen:hover .edu-mockup-play-btn {
   transform: translate(-50%, -50%) scale(1.1);
   background: #FFFFFF;
 }
 
-/* Explore By Topic Cards (Light Sand Section) */
-.topics-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.topic-dark-card {
-  background: #0E131C;
-  border: 1px solid var(--border-dark);
-  border-radius: 10px;
-  padding: 28px 24px;
+.edu-mockup-bottom-bar {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  min-height: 180px;
-  transition: var(--transition-smooth);
-  cursor: pointer;
-}
-
-.topic-dark-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold-primary);
-  background: #141B26;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
-}
-
-.topic-card-icon {
-  width: 32px;
-  height: 32px;
-  color: var(--gold-primary);
-  margin-bottom: 20px;
-}
-
-.topic-card-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 4px;
-}
-
-.topic-card-sub {
-  font-size: 0.8rem;
+  padding: 12px 6px 4px;
+  font-size: 0.78rem;
   color: #94A3B8;
 }
 
-.topic-card-arrow {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+/* Hero Right: Market Analysis Bias Matrix Card */
+.edu-hero-matrix-card {
+  background: #0E131C;
+  border: 1px solid rgba(229, 184, 105, 0.25);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+}
+
+.edu-matrix-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 18px;
+}
+
+.edu-matrix-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.edu-matrix-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edu-matrix-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  align-items: center;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.edu-matrix-row:hover {
+  background: rgba(229, 184, 105, 0.04);
+  border-color: rgba(229, 184, 105, 0.3);
+}
+
+.edu-matrix-asset {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 0.88rem;
+}
+
+.edu-matrix-sub {
+  font-size: 0.72rem;
+  color: #64748B;
+}
+
+.edu-matrix-sentiment {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.edu-matrix-sentiment.bullish {
+  color: #10B981;
+}
+
+.edu-matrix-sentiment.bearish {
+  color: #EF4444;
+}
+
+.edu-matrix-sentiment.neutral {
+  color: var(--gold-primary, #E5B869);
+}
+
+.edu-matrix-level {
+  font-size: 0.78rem;
+  text-align: right;
+  color: #CBD5E1;
+  font-family: monospace;
+}
+
+/* --------------------------------------------------------------------------
+   FILTER TABS (BREATHABLE, SPACIOUS)
+   -------------------------------------------------------------------------- */
+.edu-filter-section {
+  padding: 30px 0 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.edu-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 14px;
+  scrollbar-width: none;
+}
+
+.edu-filter-tab {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.edu-filter-tab:hover {
+  color: #FFFFFF;
+  border-color: rgba(229, 184, 105, 0.4);
+  background: #141B26;
+}
+
+.edu-filter-tab.active {
+  background: var(--gold-primary, #E5B869);
+  color: #080B10;
+  border-color: var(--gold-primary, #E5B869);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION HEADERS (SPACIOUS & UNCLUTTERED)
+   -------------------------------------------------------------------------- */
+.edu-section-header {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.edu-section-title-wrap {
+  max-width: 650px;
+}
+
+.edu-section-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin: 10px 0 14px;
+}
+
+.edu-section-sub {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   THEATER MASTERCLASS SPOTLIGHT SECTION
+   -------------------------------------------------------------------------- */
+.edu-theater-section {
+  padding: 85px 0;
+  background: #080B10;
+}
+
+.edu-theater-card {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.edu-theater-player {
+  position: relative;
+  background: #000000;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold-primary);
-  align-self: flex-end;
-  margin-top: 14px;
-  transition: var(--transition-smooth);
 }
 
-.topic-dark-card:hover .topic-card-arrow {
-  background: var(--gold-primary);
-  color: #0B0E14;
-  border-color: var(--gold-primary);
+.edu-theater-player img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
 }
 
-/* Latest Education Insights (Dark Section) */
-.section-education-insights {
-  background: #080B10;
-  padding: 90px 0;
+.edu-theater-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.85) 100%);
+  cursor: pointer;
 }
 
-.education-articles-grid {
+.edu-theater-play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--gold-primary, #E5B869);
+  color: #080B10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 35px rgba(229, 184, 105, 0.6);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.edu-theater-play-overlay:hover .edu-theater-play-btn {
+  transform: scale(1.12);
+  background: #FFFFFF;
+}
+
+.edu-theater-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.edu-theater-sidebar {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edu-syllabus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+
+.edu-syllabus-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edu-syllabus-item:hover,
+.edu-syllabus-item.active {
+  background: rgba(229, 184, 105, 0.08);
+  border-color: rgba(229, 184, 105, 0.4);
+  color: #FFFFFF;
+}
+
+.edu-syllabus-item.active .syllabus-title {
+  color: var(--gold-primary, #E5B869);
+  font-weight: 600;
+}
+
+.syllabus-time {
+  font-size: 0.74rem;
+  color: #64748B;
+  font-family: monospace;
+}
+
+/* --------------------------------------------------------------------------
+   VIDEO COURSES GRID (SPACIOUS 3-COL, BREATHABLE CARDS)
+   -------------------------------------------------------------------------- */
+.edu-courses-section {
+  padding: 85px 0;
+  background: #0B0E14;
+}
+
+.edu-video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-top: 40px;
+  gap: 32px;
 }
 
-.education-article-card {
+.edu-video-card {
   background: #0E131C;
-  border: 1px solid var(--border-dark);
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: var(--transition-smooth);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.education-article-card:hover {
-  transform: translateY(-4px);
+.edu-video-card:hover {
+  transform: translateY(-5px);
   border-color: rgba(229, 184, 105, 0.4);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 25px rgba(229, 184, 105, 0.08);
 }
 
-.education-img-wrap {
+.edu-video-thumb-wrap {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 200px;
   overflow: hidden;
+  background: #000;
 }
 
-.education-article-img {
+.edu-video-thumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.education-article-card:hover .education-article-img {
-  transform: scale(1.04);
+.edu-video-card:hover .edu-video-thumb {
+  transform: scale(1.05);
 }
 
-.education-category-badge {
+.edu-video-duration-badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  background: #FFFFFF;
-  color: #0F172A;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(8, 11, 16, 0.88);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 600;
   padding: 4px 10px;
   border-radius: 4px;
-  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.education-article-body {
-  padding: 24px;
+.edu-video-mini-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(229, 184, 105, 0.9);
+  color: #080B10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.edu-video-card:hover .edu-video-mini-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.edu-video-body {
+  padding: 28px 26px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.education-article-title {
-  font-size: 1.05rem;
+.edu-video-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.edu-video-lessons {
+  font-size: 0.75rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.edu-video-title {
+  font-size: 1.15rem;
   font-weight: 700;
   color: #FFFFFF;
   line-height: 1.4;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.education-article-desc {
+.edu-video-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #94A3B8;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.edu-video-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edu-video-author {
+  font-size: 0.78rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edu-video-author span {
+  color: #CBD5E1;
+  font-weight: 600;
+}
+
+.edu-watch-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-primary, #E5B869);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.edu-watch-link:hover {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   LIVE WEBINARS SECTION (SPACIOUS, HIGH-TRUST)
+   -------------------------------------------------------------------------- */
+.edu-webinars-section {
+  padding: 85px 0;
+  background: #080B10;
+}
+
+.edu-webinars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.edu-webinar-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.edu-webinar-card:hover {
+  border-color: rgba(229, 184, 105, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.edu-webinar-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-primary, #E5B869);
+  margin-bottom: 16px;
+}
+
+.edu-webinar-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.edu-webinar-desc {
+  font-size: 0.88rem;
   line-height: 1.6;
   color: #94A3B8;
   margin-bottom: 24px;
   flex: 1;
 }
 
-.education-article-footer {
+.edu-webinar-host {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edu-host-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-primary, #E5B869);
+  object-fit: cover;
+}
+
+.edu-host-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.edu-host-role {
+  font-size: 0.72rem;
+  color: #64748B;
+}
+
+/* --------------------------------------------------------------------------
+   MARKET ANALYSIS: SENTIMENT HEATMAP STRIP
+   -------------------------------------------------------------------------- */
+.edu-sentiment-section {
+  padding: 75px 0;
+  background: #080B10;
+}
+
+.edu-sentiment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.edu-sentiment-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 26px 24px;
+  transition: all 0.3s ease;
+}
+
+.edu-sentiment-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 184, 105, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+.edu-sentiment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.edu-sentiment-symbol {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.edu-sentiment-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.edu-sentiment-badge.bullish {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.edu-sentiment-badge.bearish {
+  background: rgba(239, 68, 68, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.edu-sentiment-badge.neutral {
+  background: rgba(229, 184, 105, 0.15);
+  color: var(--gold-primary, #E5B869);
+  border: 1px solid rgba(229, 184, 105, 0.3);
+}
+
+.edu-sentiment-price {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  font-family: monospace;
+}
+
+.edu-sentiment-bias-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 12px 0 10px;
+  position: relative;
+}
+
+.edu-sentiment-bias-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.edu-sentiment-bias-fill.bullish {
+  background: #10B981;
+}
+
+.edu-sentiment-bias-fill.bearish {
+  background: #EF4444;
+}
+
+.edu-sentiment-bias-fill.neutral {
+  background: var(--gold-primary, #E5B869);
+}
+
+.edu-sentiment-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+/* --------------------------------------------------------------------------
+   FEATURED MARKET ARTICLES (SPACIOUS 3-COL EDITORIAL CARDS)
+   -------------------------------------------------------------------------- */
+.edu-analysis-section {
+  padding: 85px 0;
+  background: #0B0E14;
+}
+
+.edu-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.edu-article-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.edu-article-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(229, 184, 105, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.edu-article-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #000;
+}
+
+.edu-article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.edu-article-card:hover .edu-article-img {
+  transform: scale(1.04);
+}
+
+.edu-article-body {
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.edu-article-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.edu-article-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #94A3B8;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.edu-article-levels {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.78rem;
+}
+
+.edu-level-item {
+  display: flex;
+  justify-content: space-between;
+  color: #CBD5E1;
+}
+
+.edu-level-item strong {
+  color: var(--gold-primary, #E5B869);
+  font-family: monospace;
+}
+
+.edu-article-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.education-article-date {
-  font-size: 0.74rem;
+.edu-article-author {
+  font-size: 0.76rem;
   color: #64748B;
+}
+
+.edu-article-author span {
+  color: #CBD5E1;
   font-weight: 600;
 }
 
-.education-circle-arrow-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+/* --------------------------------------------------------------------------
+   ECONOMIC CALENDAR RADAR (SPACIOUS INSTITUTIONAL TABLE)
+   -------------------------------------------------------------------------- */
+.edu-calendar-section {
+  padding: 85px 0;
+  background: #080B10;
+}
+
+.edu-calendar-wrapper {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.edu-calendar-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 28px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.edu-calendar-headline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.edu-calendar-table th {
+  text-align: left;
+  padding: 16px 28px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #64748B;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edu-calendar-table td {
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #CBD5E1;
+}
+
+.edu-calendar-table tr:hover td {
+  background: rgba(229, 184, 105, 0.03);
+}
+
+.calendar-time {
+  font-family: monospace;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+.calendar-currency {
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-impact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.calendar-impact-badge.high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.calendar-impact-badge.medium {
+  background: rgba(229, 184, 105, 0.15);
+  color: var(--gold-primary, #E5B869);
+  border: 1px solid rgba(229, 184, 105, 0.3);
+}
+
+.calendar-val-bold {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-family: monospace;
+}
+
+.calendar-val-muted {
+  color: #64748B;
+  font-family: monospace;
+}
+
+/* --------------------------------------------------------------------------
+   THEMATIC MACRO TOPICS (4-COLUMN SPACIOUS)
+   -------------------------------------------------------------------------- */
+.edu-macro-section {
+  padding: 85px 0;
+  background: #0B0E14;
+}
+
+.edu-macro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.edu-macro-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.edu-macro-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 184, 105, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+.edu-macro-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(229, 184, 105, 0.1);
+  color: var(--gold-primary, #E5B869);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold-primary);
-  transition: var(--transition-smooth);
+  margin-bottom: 20px;
 }
 
-.education-article-card:hover .education-circle-arrow-btn {
-  background: var(--gold-primary);
-  color: #0B0E14;
-  border-color: var(--gold-primary);
+.edu-macro-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  line-height: 1.35;
 }
 
-/* Practice What You Learn - Demo CTA Banner */
-.cta-banner-demo {
+.edu-macro-desc {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   BREATHABLE FAQ SECTION (SPACIOUS ACCORDION)
+   -------------------------------------------------------------------------- */
+.edu-faq-section {
+  padding: 85px 0;
+  background: #080B10;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.edu-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.edu-faq-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 28px;
+  transition: all 0.25s ease;
+}
+
+.edu-faq-card:hover {
+  border-color: rgba(229, 184, 105, 0.35);
+  background: #111724;
+}
+
+.edu-faq-question {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.edu-faq-question svg {
+  color: var(--gold-primary, #E5B869);
+  flex-shrink: 0;
+}
+
+.edu-faq-answer {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #94A3B8;
+}
+
+/* --------------------------------------------------------------------------
+   BOTTOM CTA SECTION (BREATHABLE SIGNATURE SPACING)
+   -------------------------------------------------------------------------- */
+.edu-cta-section {
   position: relative;
   background-size: cover;
   background-position: center bottom;
-  padding: 90px 0;
-  border-top: 1px solid var(--border-dark);
+  padding: 100px 0;
+  border-top: 1px solid var(--border-dark, rgba(255, 255, 255, 0.08));
 }
 
-.cta-banner-demo::before {
+.edu-cta-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(8, 11, 16, 0.95) 0%, rgba(8, 11, 16, 0.7) 60%, rgba(8, 11, 16, 0.3) 100%);
+  background: radial-gradient(circle at 35% 50%, rgba(8, 11, 16, 0.96) 0%, rgba(8, 11, 16, 0.85) 60%, rgba(8, 11, 16, 0.5) 100%);
 }
 
-.cta-banner-demo-content {
+.edu-cta-content {
   position: relative;
   z-index: 2;
-  max-width: 580px;
+  max-width: 620px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero-education-grid {
+/* --------------------------------------------------------------------------
+   RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .edu-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .edu-theater-card {
     grid-template-columns: 1fr;
   }
-  .topics-cards-grid {
+  .edu-theater-sidebar {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .edu-video-grid,
+  .edu-articles-grid,
+  .edu-webinars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .education-articles-grid {
+  .edu-sentiment-grid,
+  .edu-macro-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 650px) {
-  .topics-cards-grid {
+@media (max-width: 768px) {
+  .edu-hero {
+    padding: 100px 0 50px;
+  }
+  .edu-hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .edu-video-grid,
+  .edu-articles-grid,
+  .edu-webinars-grid,
+  .edu-sentiment-grid,
+  .edu-macro-grid,
+  .edu-faq-grid {
     grid-template-columns: 1fr;
   }
-  .education-articles-grid {
-    grid-template-columns: 1fr;
+  .edu-section-heading {
+    font-size: 1.75rem;
+  }
+  .edu-calendar-table th:nth-child(4),
+  .edu-calendar-table td:nth-child(4),
+  .edu-calendar-table th:nth-child(6),
+  .edu-calendar-table td:nth-child(6) {
+    display: none;
   }
 }
