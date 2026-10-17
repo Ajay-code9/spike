@@ -88,7 +88,7 @@
 .edu-hero {
   position: relative;
   background: radial-gradient(circle at 65% 35%, rgba(26, 20, 14, 0.75) 0%, rgba(8, 11, 16, 0.98) 75%);
-  padding: 130px 0 75px;
+  padding: 110px 0 50px;
   border-bottom: 1px solid var(--border-dark, rgba(255, 255, 255, 0.08));
   overflow: hidden;
 }
@@ -108,25 +108,25 @@
 .edu-hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 1.05fr;
-  gap: 56px;
+  gap: 40px;
   align-items: center;
   position: relative;
   z-index: 2;
 }
 
 .edu-hero-desc {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.6;
   color: #94A3B8;
-  margin: 20px 0 32px;
+  margin: 14px 0 22px;
   max-width: 580px;
 }
 
 .edu-hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
 }
 
@@ -134,8 +134,8 @@
 .edu-hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  padding-top: 28px;
+  gap: 14px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1791,11 +1791,11 @@
 
 @media (max-width: 768px) {
   .edu-hero {
-    padding: 100px 0 50px;
+    padding: 85px 0 35px;
   }
   .edu-hero-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 12px;
   }
   .edu-video-grid,
   .edu-articles-grid,

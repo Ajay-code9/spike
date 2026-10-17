@@ -260,8 +260,8 @@
 /* Market Subpage Dedicated Hero */
 .market-subpage-hero {
   position: relative;
-  min-height: 580px;
-  padding: 130px 0 60px;
+  min-height: 520px;
+  padding: 110px 0 45px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -286,37 +286,37 @@
 }
 
 .market-subpage-hero-title {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.01em;
-  margin: 12px 0 16px;
+  margin: 10px 0 14px;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
 .market-subpage-hero-desc {
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-  line-height: 1.65;
+  font-size: 0.98rem;
+  line-height: 1.6;
   color: #CBD5E1;
-  margin-bottom: 24px;
-  max-width: 680px;
+  margin-bottom: 20px;
+  max-width: 640px;
 }
 
 /* Hero Market Stats Grid */
 .market-hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 36px;
-  max-width: 900px;
+  gap: 14px;
+  margin-top: 24px;
+  max-width: 860px;
 }
 
 .market-stat-card {
   background: rgba(17, 24, 39, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  padding: 16px 18px;
+  padding: 14px 16px;
   backdrop-filter: blur(8px);
   transition: var(--transition-smooth);
 }
@@ -1251,7 +1251,27 @@
   }
 }
 
-@media (max-width: 640px) {
+  .market-subpage-hero {
+    padding: 85px 0 35px;
+    min-height: auto;
+  }
+  .market-subpage-hero-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem);
+  }
+  .market-hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .market-stat-card {
+    padding: 10px 12px;
+  }
+  .market-stat-val {
+    font-size: 1.35rem;
+  }
+  .market-stat-lbl {
+    font-size: 0.72rem;
+  }
   .market-clocks-grid {
     grid-template-columns: 1fr;
   }
