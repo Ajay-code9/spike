@@ -35,7 +35,7 @@ html, body {
    HERO SECTIONS (Both Pages)
    ========================================================================== */
 .company-hero {
-  padding: 115px 0 55px;
+  padding: 154px 0 60px;
   background: radial-gradient(circle at 50% 15%, rgba(229, 184, 105, 0.08) 0%, transparent 60%), #080B10;
   border-bottom: 1px solid var(--comp-card-border);
   position: relative;
@@ -1163,7 +1163,7 @@ html, body {
 
 @media (max-width: 768px) {
   .company-hero {
-    padding: 85px 0 35px;
+    padding: 125px 0 35px;
   }
   .company-hero-title {
     font-size: clamp(1.75rem, 6vw, 2.15rem);

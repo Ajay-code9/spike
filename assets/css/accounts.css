@@ -28,7 +28,7 @@ nav::-webkit-scrollbar {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  padding: 110px 0 45px;
+  padding: 154px 0 55px;
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
   box-sizing: border-box;
@@ -1525,7 +1525,7 @@ nav::-webkit-scrollbar {
 
 @media (max-width: 768px) {
   .accounts-hero {
-    padding: 85px 0 35px;
+    padding: 125px 0 35px;
   }
   .accounts-hero-title {
     font-size: clamp(1.75rem, 6vw, 2.1rem);

@@ -207,7 +207,7 @@ nav::-webkit-scrollbar {
 .platforms-hero {
   position: relative;
   min-height: 520px;
-  padding: 140px 0 90px;
+  padding: 165px 0 85px;
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -1942,7 +1942,7 @@ nav::-webkit-scrollbar {
 @media (max-width: 768px) {
   .platforms-hero {
     min-height: auto;
-    padding: 110px 0 60px;
+    padding: 130px 0 50px;
   }
   .platform-showcase-panel {
     padding: 22px 18px;

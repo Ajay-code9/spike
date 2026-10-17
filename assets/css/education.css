@@ -88,7 +88,7 @@
 .edu-hero {
   position: relative;
   background: radial-gradient(circle at 65% 35%, rgba(26, 20, 14, 0.75) 0%, rgba(8, 11, 16, 0.98) 75%);
-  padding: 110px 0 50px;
+  padding: 154px 0 60px;
   border-bottom: 1px solid var(--border-dark, rgba(255, 255, 255, 0.08));
   overflow: hidden;
 }
@@ -1791,7 +1791,7 @@
 
 @media (max-width: 768px) {
   .edu-hero {
-    padding: 85px 0 35px;
+    padding: 125px 0 35px;
   }
   .edu-hero-stats {
     grid-template-columns: repeat(2, 1fr);

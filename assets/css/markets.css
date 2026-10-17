@@ -261,7 +261,7 @@
 .market-subpage-hero {
   position: relative;
   min-height: 520px;
-  padding: 110px 0 45px;
+  padding: 154px 0 55px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1366,7 +1366,7 @@
     padding: 26px 20px 24px;
   }
   .market-subpage-hero {
-    padding: 85px 0 35px;
+    padding: 125px 0 35px;
     min-height: auto;
   }
   .market-subpage-hero-title {

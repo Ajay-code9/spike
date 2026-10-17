@@ -28,6 +28,10 @@
   }
 
   function initTicker() {
+    // Never show ticker tape on homepage
+    const path = window.location.pathname.toLowerCase();
+    if (path.endsWith('index.html') || path === '/' || path === '' || path.endsWith('/')) return;
+
     const existing = document.querySelector('.spike-ticker-bar');
     if (existing) return;
 
