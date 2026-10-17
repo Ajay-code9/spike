@@ -36,11 +36,34 @@ function initMobileNav() {
     toggleBtn.classList.toggle('active');
   });
 
-  // Close when clicking nav link on mobile
-  navMenu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      toggleBtn.classList.remove('active');
+  // Handle dropdown accordions on mobile
+  navMenu.querySelectorAll('.nav-item').forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const dropdown = item.querySelector('.dropdown-menu');
+    if (dropdown && link) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 860) {
+          e.preventDefault();
+          item.classList.toggle('open');
+        }
+      });
+    } else if (link) {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          navMenu.classList.remove('open');
+          toggleBtn.classList.remove('active');
+        }
+      });
+    }
+  });
+
+  // Dropdown item links navigate and close menu
+  navMenu.querySelectorAll('.dropdown-link').forEach(dLink => {
+    dLink.addEventListener('click', () => {
+      if (window.innerWidth <= 860) {
+        navMenu.classList.remove('open');
+        toggleBtn.classList.remove('active');
+      }
     });
   });
 }
