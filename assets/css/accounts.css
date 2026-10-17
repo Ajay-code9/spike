@@ -26,7 +26,7 @@ nav::-webkit-scrollbar {
 .accounts-hero {
   position: relative;
   background-size: cover;
-  background-position: center top;
+  background-position: center right;
   background-repeat: no-repeat;
   padding: 154px 0 55px;
   border-bottom: 1px solid var(--border-dark);
@@ -38,8 +38,13 @@ nav::-webkit-scrollbar {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 11, 16, 0.78) 0%, rgba(8, 11, 16, 0.94) 85%, #080B10 100%),
-              radial-gradient(ellipse at 80% 20%, rgba(229, 184, 105, 0.15) 0%, transparent 65%);
+  background: linear-gradient(90deg, 
+    #080B10 0%, 
+    rgba(8, 11, 16, 0.96) 40%, 
+    rgba(8, 11, 16, 0.82) 62%, 
+    rgba(8, 11, 16, 0.32) 100%
+  ),
+  linear-gradient(180deg, rgba(8, 11, 16, 0.45) 0%, transparent 40%, rgba(8, 11, 16, 0.95) 100%);
   z-index: 1;
 }
 
