@@ -106,6 +106,17 @@
   margin-bottom: 42px;
 }
 
+/* Centered Glossary Search Hub */
+.market-hero-center .glossary-search-container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 38px;
+}
+
+.market-hero-center .glossary-quick-tags {
+  justify-content: center;
+}
+
 /* ==================== 3 EXECUTIVE VALUE PROPOSITION CARDS ==================== */
 .commodities-props-grid,
 .market-props-grid {
