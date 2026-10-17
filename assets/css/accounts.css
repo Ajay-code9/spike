@@ -167,40 +167,6 @@ nav::-webkit-scrollbar {
   justify-content: center;
 }
 
-.hero-floating-pill {
-  position: absolute;
-  background: rgba(14, 19, 28, 0.94);
-  border: 1px solid rgba(229, 184, 105, 0.35);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.66rem;
-  font-weight: 700;
-  color: #E2E8F0;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-  z-index: 10;
-  white-space: nowrap;
-}
-
-.hero-floating-pill svg {
-  color: var(--gold-primary);
-  flex-shrink: 0;
-}
-
-.hero-floating-pill.pill-top {
-  top: -10px;
-  right: 10px;
-}
-
-.hero-floating-pill.pill-bottom {
-  bottom: -10px;
-  left: 10px;
-}
-
 .hero-interactive-card {
   width: 100%;
   max-width: 440px;
@@ -677,22 +643,6 @@ nav::-webkit-scrollbar {
   border-color: var(--gold-primary);
   background: linear-gradient(180deg, #161D2B 0%, #0E131C 100%);
   box-shadow: 0 0 25px rgba(229, 184, 105, 0.18);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gold-gradient);
-  color: #0B0E14;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  padding: 3px 12px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  box-shadow: 0 3px 10px rgba(229, 184, 105, 0.35);
 }
 
 .card-top-header {

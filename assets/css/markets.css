@@ -972,21 +972,6 @@
   box-shadow: 0 12px 35px rgba(229, 184, 105, 0.15);
 }
 
-.pricing-tier-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gold-primary);
-  color: #080B10;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 4px 14px;
-  border-radius: 20px;
-}
-
 .pricing-tier-name {
   font-size: 1.3rem;
   font-weight: 800;
