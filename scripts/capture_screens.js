@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const PORT = 9225;
+const PORT = 9226;
 
 async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
@@ -28,7 +28,7 @@ async function run() {
     `--remote-debugging-port=${PORT}`,
     '--no-first-run',
     '--no-default-browser-check',
-    '--user-data-dir=C:\\Users\\ASUS\\AppData\\Local\\Temp\\chrome-shots-profile',
+    '--user-data-dir=C:\\Users\\ASUS\\AppData\\Local\\Temp\\chrome-shots-p2',
     'about:blank'
   ]);
 
@@ -64,6 +64,8 @@ async function run() {
 
   await sendCommand('Page.enable');
   await sendCommand('Runtime.enable');
+
+  // 1. Desktop Viewport (1440x900)
   await sendCommand('Emulation.setDeviceMetricsOverride', {
     width: 1440,
     height: 900,
@@ -71,43 +73,37 @@ async function run() {
     mobile: false
   });
 
-  const shots = [
-    { page: 'index.html', out: 'screen-index-calc.png', eval: `
-      const el = document.querySelector('.calculator-preview-section');
-      if (el) el.scrollIntoView({ behavior: 'instant', block: 'center' });
-    ` },
-    { page: 'video-tutorials.html', out: 'screen-video-modal.png', eval: `
-      if (window.SpikeVideo) {
-        window.SpikeVideo.play('Advanced Confluence Strategy: London & NY Open', 'Institutional Trading Desk', '42:15', 'Master high-probability London Open breakout mechanics, Asian range equilibrium, and New York reversal confirmations.');
-      }
-    ` },
-    { page: 'metals.html', out: 'screen-metals-gold.png', eval: `
-      const el = document.querySelector('.tradingview-widget-container');
-      if (el) el.scrollIntoView({ behavior: 'instant', block: 'center' });
-    ` },
-    { page: 'market-analysis.html', out: 'screen-analysis-desk.png', eval: `
-      if (window.SpikeToast) {
-        window.SpikeToast.info('Market Desk Bulletin', 'Federal Reserve FOMC statement commentary updated by Zurich Macro Desk.');
-      }
-    ` }
-  ];
+  // Top header desktop check
+  await sendCommand('Page.navigate', { url: 'http://localhost:3000/index.html' });
+  await sleep(1200);
+  let shot = await sendCommand('Page.captureScreenshot', { format: 'png' });
+  fs.writeFileSync(path.join(__dirname, '../public/screen-top-header-desktop.png'), Buffer.from(shot.data, 'base64'));
+  console.log('Saved: screen-top-header-desktop.png');
 
-  for (const s of shots) {
-    await sendCommand('Page.navigate', { url: `http://localhost:3000/${s.page}` });
-    await sleep(1200);
-    if (s.eval) {
-      await sendCommand('Runtime.evaluate', { expression: s.eval });
-      await sleep(600);
-    }
-    const shotRes = await sendCommand('Page.captureScreenshot', { format: 'png' });
-    const buffer = Buffer.from(shotRes.data, 'base64');
-    fs.writeFileSync(path.join(__dirname, '../public', s.out), buffer);
-    console.log(`Saved screenshot: ${s.out}`);
-  }
+  // Metals page top header check
+  await sendCommand('Page.navigate', { url: 'http://localhost:3000/metals.html' });
+  await sleep(1200);
+  shot = await sendCommand('Page.captureScreenshot', { format: 'png' });
+  fs.writeFileSync(path.join(__dirname, '../public/screen-metals-header.png'), Buffer.from(shot.data, 'base64'));
+  console.log('Saved: screen-metals-header.png');
+
+  // 2. Mobile Viewport (375x812)
+  await sendCommand('Emulation.setDeviceMetricsOverride', {
+    width: 375,
+    height: 812,
+    deviceScaleFactor: 2,
+    mobile: true
+  });
+
+  await sendCommand('Page.navigate', { url: 'http://localhost:3000/index.html' });
+  await sleep(1200);
+  shot = await sendCommand('Page.captureScreenshot', { format: 'png' });
+  fs.writeFileSync(path.join(__dirname, '../public/screen-top-header-mobile.png'), Buffer.from(shot.data, 'base64'));
+  console.log('Saved: screen-top-header-mobile.png');
 
   ws.close();
   chromeProc.kill();
-  console.log('All screenshots captured!');
+  console.log('Verification shots finished!');
 }
 
 run().catch(console.error);

@@ -1353,7 +1353,7 @@
   padding: 24px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   position: sticky;
-  top: 68px;
+  top: var(--header-total-height, 104px);
   z-index: 800;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);

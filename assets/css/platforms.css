@@ -45,7 +45,7 @@ nav::-webkit-scrollbar {
 /* ==================== STICKY PLATFORM SUB-NAVIGATION (SLIM & SLEEK) ==================== */
 .platforms-sticky-bar {
   position: sticky;
-  top: 68px;
+  top: var(--header-total-height, 104px);
   z-index: 900;
   width: 100%;
   height: 42px;

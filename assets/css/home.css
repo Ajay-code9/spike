@@ -9,7 +9,7 @@
   min-height: 720px;
   height: 100vh;
   max-height: 960px;
-  padding: 68px 0 0;
+  padding: var(--header-total-height, 104px) 0 0;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;

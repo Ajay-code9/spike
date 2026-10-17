@@ -50,8 +50,13 @@
       </div>
     `;
 
-    // Insert at the very top of body
-    document.body.insertBefore(bar, document.body.firstChild);
+    // Insert as the first child of header, so it stacks naturally above the navbar with ZERO overlap
+    const header = document.querySelector('.header');
+    if (header) {
+      header.insertBefore(bar, header.firstChild);
+    } else {
+      document.body.insertBefore(bar, document.body.firstChild);
+    }
 
     // Micro-tick random updates every 2.5s
     setInterval(() => {
