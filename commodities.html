@@ -101,48 +101,135 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="market-subpage-hero" style="background-image: url('public/hero-sections-bg/commodities-bg.png');">
+  <!-- ==================== BESPOKE COMMODITIES HERO SECTION ==================== -->
+  <section class="commodities-hero">
     <div class="container-wide">
-      <div class="market-subpage-hero-inner">
-        <span class="section-tag">COMMODITY MARKETS. ENERGIES &amp; SOFTS.</span>
-        <h1 class="market-subpage-hero-title">
-          TRADE GLOBAL COMMODITIES<br>
-          <span class="text-gradient-gold">CRUDE OIL, GAS &amp; ENERGIES</span>
-        </h1>
-        <p class="market-subpage-hero-desc">
-          Speculate on the global demand and supply of vital raw materials. Trade US Crude Oil (WTI), UK Brent Oil, Natural Gas, Copper, Coffee, and Sugar with competitive spreads, no physical delivery requirements, and flexible leverage up to 1:100.
-        </p>
-        <div class="hero-home-actions" style="margin-bottom: 24px;">
-          <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
-            Open Live Account
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#specs" class="btn btn-outline btn-lg">View Commodities Specs</a>
+      <div class="commodities-hero-grid">
+        
+        <!-- Left Column: The Magnetic Hook -->
+        <div class="commodities-hero-left">
+          <div class="commodities-hero-tag">
+            <span class="commodities-pulse-gold"></span>
+            INSTITUTIONAL COMMODITY DESK &bull; LIVE FEED
+          </div>
+          
+          <h1 class="commodities-hero-headline">
+            Trade What Powers<br>
+            <span class="text-gradient-gold">the Modern World.</span>
+          </h1>
+
+          <p class="commodities-hero-lead">
+            Take a direct stance on global energy, metals, and agriculture. Profit from real-time supply and demand imbalances with <strong>raw spreads from 0.03</strong>, ultra-low latency execution, and zero physical delivery headaches.
+          </p>
+
+          <div class="commodities-hero-ctas">
+            <a href="#" class="btn btn-gold btn-lg" data-open-modal="account">
+              Open Energy Trading Account
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#chart-station" class="btn btn-outline btn-lg">
+              Analyze Live Charts
+            </a>
+          </div>
+
+          <!-- Clean Value Proposition Chips (No fluffy rectangular boxes) -->
+          <div class="commodities-core-props">
+            <div class="commodity-prop-chip">
+              <span class="prop-icon-check">✓</span>
+              <span><strong>100% Cash-Settled:</strong> Never worry about storage, expiry delivery, or barrel logistics.</span>
+            </div>
+            <div class="commodity-prop-chip">
+              <span class="prop-icon-check">✓</span>
+              <span><strong>Ultra-Tight Spreads:</strong> Raw institutional pricing from <strong>0.03 pts</strong> on WTI &amp; Brent Crude.</span>
+            </div>
+            <div class="commodity-prop-chip">
+              <span class="prop-icon-check">✓</span>
+              <span><strong>Flexible Two-Way Leverage:</strong> Long or short with up to <strong>1:100 leverage</strong> 23 hours a day, 5 days a week.</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Hero Market Stats -->
-        <div class="market-hero-stats">
-          <div class="market-stat-card">
-            <div class="market-stat-val">USOIL / UKOIL</div>
-            <div class="market-stat-lbl">WTI &amp; Brent Crude</div>
-          </div>
-          <div class="market-stat-card">
-            <div class="market-stat-val">0.03</div>
-            <div class="market-stat-lbl">Typical Oil Spread</div>
-          </div>
-          <div class="market-stat-card">
-            <div class="market-stat-val">1:100</div>
-            <div class="market-stat-lbl">Max Commodity Leverage</div>
-          </div>
-          <div class="market-stat-card">
-            <div class="market-stat-val">10+</div>
-            <div class="market-stat-lbl">Energy &amp; Softs Contracts</div>
+        <!-- Right Column: Interactive Energy Order Cockpit -->
+        <div class="commodities-hero-right">
+          <div class="commodities-cockpit-card">
+            <!-- Asset Selector Tabs -->
+            <div class="cockpit-tabs-row" id="cockpitTabs">
+              <button type="button" class="cockpit-tab-btn active" data-asset="usoil">USOIL (WTI)</button>
+              <button type="button" class="cockpit-tab-btn" data-asset="ukoil">UKOIL (Brent)</button>
+              <button type="button" class="cockpit-tab-btn" data-asset="ngas">NATGAS</button>
+              <button type="button" class="cockpit-tab-btn" data-asset="copper">COPPER</button>
+            </div>
+
+            <!-- Asset Header -->
+            <div class="cockpit-asset-header">
+              <div>
+                <div class="cockpit-asset-tag" id="cockpitAssetTag">NYMEX LIGHT SWEET CRUDE</div>
+                <div class="cockpit-asset-title" id="cockpitAssetTitle">US Crude Oil (WTI) Spot</div>
+              </div>
+              <div class="cockpit-price-box">
+                <div class="cockpit-live-price" id="cockpitPrice">$78.42</div>
+                <div class="cockpit-live-change" id="cockpitChange">▲ +$1.08 (+1.48%)</div>
+              </div>
+            </div>
+
+            <!-- Day Range Tracker -->
+            <div class="cockpit-range-wrap">
+              <div class="cockpit-range-meta">
+                <span>Day Low: <strong id="cockpitLow" style="color: #F1F5F9;">$77.10</strong></span>
+                <span style="color: #E5B869;">24H Volatility Range</span>
+                <span>Day High: <strong id="cockpitHigh" style="color: #F1F5F9;">$79.25</strong></span>
+              </div>
+              <div class="cockpit-range-track">
+                <div class="cockpit-range-fill" id="cockpitRangeFill" style="left: 25%; width: 55%;"></div>
+              </div>
+            </div>
+
+            <!-- Execution Simulator -->
+            <div class="cockpit-order-box">
+              <button type="button" class="cockpit-order-btn sell" data-open-modal="account">
+                <div class="cockpit-order-type">SELL (SHORT)</div>
+                <div class="cockpit-order-price" id="cockpitBid">78.41</div>
+              </button>
+
+              <div class="cockpit-spread-badge">
+                <span>SPREAD</span>
+                <strong id="cockpitSpread">0.03 PTS</strong>
+              </div>
+
+              <button type="button" class="cockpit-order-btn buy" data-open-modal="account">
+                <div class="cockpit-order-type">BUY (LONG)</div>
+                <div class="cockpit-order-price" id="cockpitAsk">78.44</div>
+              </button>
+            </div>
+
+            <!-- Institutional Contract Specs -->
+            <div class="cockpit-specs-row">
+              <div class="cockpit-spec-item">
+                <div class="cockpit-spec-label">Contract Size</div>
+                <div class="cockpit-spec-value" id="cockpitSpecContract">1,000 Barrels</div>
+              </div>
+              <div class="cockpit-spec-item">
+                <div class="cockpit-spec-label">Min Tick Value</div>
+                <div class="cockpit-spec-value" id="cockpitSpecTick">$10.00 / pt</div>
+              </div>
+              <div class="cockpit-spec-item">
+                <div class="cockpit-spec-label">Max Leverage</div>
+                <div class="cockpit-spec-value" id="cockpitSpecLeverage">1:100 (1.0%)</div>
+              </div>
+            </div>
+
+            <!-- Safety Footer -->
+            <div class="cockpit-footer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Instant Fill &bull; Direct Liquidity Tier 1 Prime Brokers &bull; 0 Requotes</span>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- ==================== LIVE COMMODITIES TICKER BAR ==================== -->
   <section class="ticker-bar-section">
@@ -691,6 +778,7 @@
   <script src="assets/js/toast.js"></script>
   <script src="assets/js/ticker.js"></script>
   <script src="assets/js/chart-resizer.js"></script>
+  <script src="assets/js/commodities-cockpit.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     // Live table search for Commodities
