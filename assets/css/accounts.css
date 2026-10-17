@@ -25,14 +25,10 @@ nav::-webkit-scrollbar {
 /* ==================== ACCOUNTS HERO SECTION ==================== */
 .accounts-hero {
   position: relative;
-  min-height: calc(100vh - 68px);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 0 40px;
+  padding: 130px 0 80px;
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
   box-sizing: border-box;
@@ -54,18 +50,18 @@ nav::-webkit-scrollbar {
 
 .accounts-hero-inner {
   display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: 36px;
+  gap: 52px;
 }
 
 .accounts-hero-content {
-  max-width: 620px;
+  max-width: 660px;
 }
 
 .live-dot-pulse {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--gold-primary);
   box-shadow: 0 0 10px var(--gold-primary);
@@ -83,51 +79,51 @@ nav::-webkit-scrollbar {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   background: rgba(229, 184, 105, 0.12);
   border: 1px solid rgba(229, 184, 105, 0.3);
   color: var(--gold-primary);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .accounts-hero-title {
-  font-size: 2.2rem;
+  font-size: 2.85rem;
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.2;
   color: #FFFFFF;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   letter-spacing: -0.02em;
 }
 
 .accounts-hero-desc {
-  font-size: 0.88rem;
+  font-size: 1.05rem;
   color: #94A3B8;
-  line-height: 1.48;
-  margin-bottom: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
 }
 
 .hero-trust-badges {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6px 10px;
-  margin-bottom: 18px;
+  gap: 10px 14px;
+  margin-bottom: 28px;
 }
 
 .trust-badge-item {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   background: rgba(14, 19, 28, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 0.69rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #CBD5E1;
 }
@@ -140,16 +136,16 @@ nav::-webkit-scrollbar {
 .accounts-hero-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .hero-compare-link {
-  font-size: 0.76rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--gold-primary);
   text-decoration: none;
-  margin-left: 4px;
+  margin-left: 6px;
   transition: all 0.2s;
 }
 
@@ -169,14 +165,14 @@ nav::-webkit-scrollbar {
 
 .hero-interactive-card {
   width: 100%;
-  max-width: 440px;
-  background: linear-gradient(145deg, rgba(20, 27, 39, 0.92) 0%, rgba(10, 14, 22, 0.98) 100%);
+  max-width: 480px;
+  background: linear-gradient(145deg, rgba(20, 27, 39, 0.95) 0%, rgba(10, 14, 22, 0.98) 100%);
   border: 1px solid rgba(229, 184, 105, 0.32);
-  border-radius: 14px;
-  padding: 16px 18px 14px;
+  border-radius: 16px;
+  padding: 26px 28px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65), 0 0 25px rgba(229, 184, 105, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 25px rgba(229, 184, 105, 0.12);
   position: relative;
 }
 
@@ -184,20 +180,20 @@ nav::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
-  padding-bottom: 7px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .terminal-header-left {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .terminal-badge-pulse {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #10B981;
   box-shadow: 0 0 8px #10B981;
@@ -205,7 +201,7 @@ nav::-webkit-scrollbar {
 }
 
 .terminal-header-title {
-  font-size: 0.64rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #94A3B8;
@@ -213,40 +209,40 @@ nav::-webkit-scrollbar {
 }
 
 .terminal-status-tag {
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: #10B981;
   background: rgba(16, 185, 129, 0.12);
   border: 1px solid rgba(16, 185, 129, 0.25);
-  padding: 2px 6px;
+  padding: 3px 8px;
   border-radius: 4px;
 }
 
 .hero-tier-nav {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   background: rgba(8, 11, 16, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 7px;
-  padding: 3px;
-  margin-bottom: 12px;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 18px;
 }
 
 .hero-tier-btn {
   flex: 1;
-  padding: 5px 8px;
-  font-size: 0.7rem;
+  padding: 7px 12px;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #94A3B8;
   background: transparent;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 5px;
 }
 
 .hero-tier-btn:hover {
@@ -262,7 +258,7 @@ nav::-webkit-scrollbar {
 
 .badge-star {
   color: #B45309;
-  font-size: 0.72rem;
+  font-size: 0.76rem;
 }
 
 .hero-tier-body {
@@ -273,12 +269,12 @@ nav::-webkit-scrollbar {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .hero-tier-title {
-  font-size: 1.08rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #FFFFFF;
   margin: 0;
@@ -286,23 +282,23 @@ nav::-webkit-scrollbar {
 }
 
 .hero-tier-sub {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   color: #94A3B8;
-  line-height: 1.35;
-  margin-top: 2px;
+  line-height: 1.45;
+  margin-top: 4px;
 }
 
 .hero-tier-dep-box {
   text-align: right;
   background: rgba(8, 11, 16, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 
 .dep-label {
-  font-size: 0.54rem;
+  font-size: 0.58rem;
   color: #64748B;
   font-weight: 700;
   text-transform: uppercase;
@@ -310,7 +306,7 @@ nav::-webkit-scrollbar {
 }
 
 .dep-val {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--gold-primary);
 }
@@ -318,30 +314,30 @@ nav::-webkit-scrollbar {
 .hero-tier-specs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  gap: 8px;
   background: rgba(8, 11, 16, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 6px;
-  padding: 6px 8px;
-  margin-bottom: 9px;
+  border-radius: 8px;
+  padding: 9px 10px;
+  margin-bottom: 14px;
 }
 
 .tier-spec-item {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   text-align: center;
 }
 
 .spec-k {
-  font-size: 0.52rem;
+  font-size: 0.56rem;
   font-weight: 700;
   color: #64748B;
   text-transform: uppercase;
 }
 
 .spec-v {
-  font-size: 0.74rem;
+  font-size: 0.82rem;
   font-weight: 800;
   color: #E2E8F0;
 }
@@ -353,15 +349,15 @@ nav::-webkit-scrollbar {
 .hero-tier-features {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-bottom: 11px;
+  gap: 7px;
+  margin-bottom: 16px;
 }
 
 .tier-feat-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
+  gap: 8px;
+  font-size: 0.78rem;
   color: #CBD5E1;
 }
 
@@ -373,10 +369,10 @@ nav::-webkit-scrollbar {
 .hero-tier-cta-btn {
   width: 100%;
   text-align: center;
-  padding: 6px 12px;
-  font-size: 0.74rem;
+  padding: 10px 16px;
+  font-size: 0.84rem;
   font-weight: 700;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   display: block;
   box-sizing: border-box;
@@ -386,9 +382,9 @@ nav::-webkit-scrollbar {
 .accounts-hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 25px;
-  padding-top: 20px;
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -396,8 +392,8 @@ nav::-webkit-scrollbar {
   background: rgba(14, 19, 28, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
-  border-radius: 8px;
-  padding: 12px 16px;
+  border-radius: 12px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
   transition: all 0.25s ease;
@@ -409,23 +405,23 @@ nav::-webkit-scrollbar {
 }
 
 .hero-stat-value {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--gold-primary);
   letter-spacing: -0.02em;
 }
 
 .hero-stat-label {
-  font-size: 0.74rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 .hero-stat-desc {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   color: #64748B;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 /* ==================== STICKY ACCOUNTS SUB-NAV ==================== */
@@ -495,7 +491,7 @@ nav::-webkit-scrollbar {
 /* ==================== SECTION 1: ACCOUNT TYPES ==================== */
 .section-account-types {
   background: #080B10;
-  padding: 35px 0 40px;
+  padding: 90px 0 100px;
   border-bottom: 1px solid var(--border-dark);
 }
 
@@ -503,9 +499,9 @@ nav::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 18px;
+  margin-bottom: 35px;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 20px;
 }
 
 .account-controls-inline {
@@ -515,32 +511,32 @@ nav::-webkit-scrollbar {
   background: rgba(14, 19, 28, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  padding: 6px 14px;
+  padding: 8px 16px;
 }
 
 .account-controls-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
-  margin-top: 14px;
-  margin-bottom: 20px;
-  padding: 10px 18px;
+  margin-top: 20px;
+  margin-bottom: 36px;
+  padding: 14px 24px;
   background: rgba(14, 19, 28, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .account-currency-toggle,
 .account-islamic-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .toggle-label {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: #CBD5E1;
 }
@@ -549,13 +545,13 @@ nav::-webkit-scrollbar {
   display: flex;
   background: rgba(8, 11, 16, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 5px;
-  padding: 2px;
+  border-radius: 6px;
+  padding: 3px;
 }
 
 .currency-btn {
-  padding: 3px 10px;
-  font-size: 0.72rem;
+  padding: 5px 12px;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #94A3B8;
   background: transparent;
@@ -573,8 +569,8 @@ nav::-webkit-scrollbar {
 .switch-control {
   position: relative;
   display: inline-block;
-  width: 36px;
-  height: 18px;
+  width: 40px;
+  height: 22px;
 }
 
 .switch-control input {
@@ -589,16 +585,16 @@ nav::-webkit-scrollbar {
   inset: 0;
   background-color: rgba(255, 255, 255, 0.15);
   transition: .3s;
-  border-radius: 18px;
+  border-radius: 22px;
 }
 
 .slider-round:before {
   position: absolute;
   content: "";
-  height: 14px;
-  width: 14px;
-  left: 2px;
-  bottom: 2px;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
   transition: .3s;
   border-radius: 50%;
@@ -617,45 +613,45 @@ nav::-webkit-scrollbar {
 .accounts-pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 32px;
   align-items: stretch;
 }
 
 .account-dark-card {
   background: #0E131C;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 20px 22px 18px;
+  border-radius: 16px;
+  padding: 38px 32px;
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.25s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .account-dark-card:hover {
   transform: translateY(-4px);
   border-color: rgba(229, 184, 105, 0.4);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
 }
 
 .account-dark-card.featured {
   border-color: var(--gold-primary);
   background: linear-gradient(180deg, #161D2B 0%, #0E131C 100%);
-  box-shadow: 0 0 25px rgba(229, 184, 105, 0.18);
+  box-shadow: 0 0 30px rgba(229, 184, 105, 0.18);
 }
 
 .card-top-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 .card-header-icon-wrap {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   background: rgba(229, 184, 105, 0.1);
   border: 1px solid rgba(229, 184, 105, 0.2);
   display: flex;
@@ -665,45 +661,46 @@ nav::-webkit-scrollbar {
 }
 
 .card-header-icon-wrap svg {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 
 .card-account-pill {
-  font-size: 0.66rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #94A3B8;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
 }
 
 .card-account-title {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #FFFFFF;
   letter-spacing: -0.01em;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
 .card-account-sub {
-  font-size: 0.74rem;
+  font-size: 0.88rem;
   color: #94A3B8;
-  line-height: 1.35;
-  min-height: auto;
-  margin-bottom: 8px;
+  line-height: 1.55;
+  min-height: 48px;
+  margin-bottom: 12px;
 }
 
 .card-account-price-block {
-  margin: 8px 0 10px;
-  padding: 6px 0;
+  margin: 14px 0 20px;
+  padding: 14px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .card-deposit-label {
-  font-size: 0.64rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #64748B;
@@ -711,60 +708,61 @@ nav::-webkit-scrollbar {
 }
 
 .card-deposit-amount {
-  font-size: 1.55rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .card-specs-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 22px;
 }
 
 .spec-mini-box {
   background: rgba(8, 11, 16, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 6px;
-  padding: 5px 8px;
+  border-radius: 8px;
+  padding: 10px 12px;
 }
 
 .spec-mini-title {
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   color: #64748B;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .spec-mini-val {
-  font-size: 0.84rem;
+  font-size: 1.02rem;
   font-weight: 800;
   color: var(--gold-primary);
-  margin-top: 1px;
+  margin-top: 3px;
 }
 
 .card-account-features {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 30px;
   flex: 1;
 }
 
 .card-feature-point {
   display: flex;
   align-items: flex-start;
-  gap: 7px;
-  font-size: 0.75rem;
+  gap: 10px;
+  font-size: 0.88rem;
   color: #CBD5E1;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .card-feature-point svg {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   color: var(--gold-primary);
   flex-shrink: 0;
   margin-top: 2px;
@@ -772,11 +770,11 @@ nav::-webkit-scrollbar {
 
 .btn-compact-card {
   width: 100%;
-  padding: 8px 12px;
-  font-size: 0.78rem;
+  padding: 13px 20px;
+  font-size: 0.92rem;
   font-weight: 700;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   display: inline-block;
   box-sizing: border-box;
@@ -785,69 +783,69 @@ nav::-webkit-scrollbar {
 /* ==================== INTERACTIVE ACCOUNT SELECTOR QUIZ ==================== */
 .section-account-quiz {
   background: #0B0F17;
-  padding: 35px 0 40px;
+  padding: 90px 0 100px;
   border-bottom: 1px solid var(--border-dark);
 }
 
 .account-selector-widget {
-  background: linear-gradient(135deg, rgba(20, 27, 38, 0.8) 0%, rgba(10, 14, 21, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(20, 27, 38, 0.85) 0%, rgba(10, 14, 21, 0.98) 100%);
   border: 1px solid rgba(229, 184, 105, 0.25);
-  border-radius: 12px;
-  padding: 22px 28px;
+  border-radius: 16px;
+  padding: 40px 46px;
   margin-top: 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
 }
 
 .selector-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 20px;
 }
 
 .selector-title-wrap h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #FFFFFF;
 }
 
 .selector-title-wrap p {
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   color: #94A3B8;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .quiz-steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 24px;
+  margin-bottom: 28px;
 }
 
 .quiz-step-item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .quiz-step-label {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #CBD5E1;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }
 
 .quiz-select {
   width: 100%;
-  padding: 7px 10px;
+  padding: 12px 16px;
   background: #080B10;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
+  border-radius: 8px;
   color: #FFFFFF;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   outline: none;
   transition: all 0.2s;
 }
@@ -860,35 +858,38 @@ nav::-webkit-scrollbar {
 .quiz-result-banner {
   background: rgba(8, 11, 16, 0.9);
   border: 1px solid rgba(229, 184, 105, 0.3);
-  border-radius: 8px;
-  padding: 10px 16px;
+  border-radius: 12px;
+  padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .result-text-block {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  flex: 1;
 }
 
 .result-badge {
   background: var(--gold-gradient);
   color: #0B0E14;
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-weight: 800;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .result-explanation {
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   color: #E2E8F0;
+  line-height: 1.6;
 }
 
 /* ==================== SECTION 2: COMPARISON MATRIX ==================== */
@@ -1313,35 +1314,129 @@ nav::-webkit-scrollbar {
   font-weight: 600;
 }
 
+/* ==================== SPECIALTY ACCOUNTS SECTION ==================== */
+.section-specialty-accounts {
+  background: #0B0F17;
+  padding: 90px 0 100px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.specialty-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.specialty-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 38px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 184, 105, 0.35);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+}
+
+.specialty-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.specialty-icon-wrap.green {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #10B981;
+}
+
+.specialty-icon-wrap.blue {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38BDF8;
+}
+
+.specialty-icon-wrap.gold {
+  background: rgba(229, 184, 105, 0.12);
+  border: 1px solid rgba(229, 184, 105, 0.25);
+  color: var(--gold-primary);
+}
+
+.specialty-card-title {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.specialty-card-desc {
+  font-size: 0.92rem;
+  color: #94A3B8;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.specialty-card-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.specialty-card-link:hover {
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
 /* ==================== SECTION 5: ACCOUNT FAQ ACCORDION ==================== */
 .section-accounts-faq {
   background: #080B10;
-  padding: 35px 0 40px;
+  padding: 90px 0 100px;
   border-bottom: 1px solid var(--border-dark);
 }
 
 .faq-accordion-wrap {
-  max-width: 800px;
-  margin: 16px auto 0;
+  max-width: 960px;
+  margin: 36px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 }
 
 .faq-item {
   background: #0E131C;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   transition: all 0.25s ease;
 }
 
 .faq-item.active, .faq-item:hover {
-  border-color: rgba(229, 184, 105, 0.3);
+  border-color: rgba(229, 184, 105, 0.35);
 }
 
 .faq-question {
-  padding: 11px 18px;
+  padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1350,15 +1445,15 @@ nav::-webkit-scrollbar {
 }
 
 .faq-question h4 {
-  font-size: 0.86rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #FFFFFF;
   margin: 0;
 }
 
 .faq-icon-chevron {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   color: var(--gold-primary);
   transition: transform 0.25s ease;
   flex-shrink: 0;
@@ -1371,27 +1466,31 @@ nav::-webkit-scrollbar {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.35s ease, padding 0.35s ease;
   background: #0A0E15;
-  padding: 0 18px;
+  padding: 0 28px;
 }
 
 .faq-item.active .faq-answer {
   max-height: 250px;
-  padding: 6px 18px 12px;
+  padding: 8px 28px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .faq-answer p {
-  font-size: 0.79rem;
+  font-size: 0.92rem;
   color: #94A3B8;
-  line-height: 1.45;
+  line-height: 1.7;
   margin: 0;
 }
 
 /* ==================== RESPONSIVE BREAKPOINTS ==================== */
 @media (max-width: 1100px) {
   .accounts-pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .specialty-cards-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
