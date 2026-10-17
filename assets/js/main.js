@@ -31,9 +31,25 @@ function initMobileNav() {
   const navMenu = document.querySelector('.nav-menu');
   if (!toggleBtn || !navMenu) return;
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    toggleBtn.classList.toggle('active');
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    toggleBtn.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    navMenu.classList.add('open');
+    toggleBtn.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   // Handle dropdown accordions on mobile
@@ -44,14 +60,14 @@ function initMobileNav() {
       link.addEventListener('click', (e) => {
         if (window.innerWidth <= 860) {
           e.preventDefault();
+          e.stopPropagation();
           item.classList.toggle('open');
         }
       });
     } else if (link) {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 860) {
-          navMenu.classList.remove('open');
-          toggleBtn.classList.remove('active');
+          closeMenu();
         }
       });
     }
@@ -61,10 +77,47 @@ function initMobileNav() {
   navMenu.querySelectorAll('.dropdown-link').forEach(dLink => {
     dLink.addEventListener('click', () => {
       if (window.innerWidth <= 860) {
-        navMenu.classList.remove('open');
-        toggleBtn.classList.remove('active');
+        closeMenu();
       }
     });
+  });
+
+  // Inject mobile CTA at the bottom if not present
+  if (!navMenu.querySelector('.nav-menu-mobile-actions')) {
+    const actionsDiv = document.createElement('div');
+    actionsDiv.className = 'nav-menu-mobile-actions';
+    actionsDiv.innerHTML = `
+      <a href="#" class="btn btn-gold btn-block" data-open-modal="account">Open Live Account</a>
+      <div class="mobile-menu-meta">
+        <span>Raw Spreads from 0.0 Pips</span>
+        <span>•</span>
+        <span>24/7 Support</span>
+      </div>
+    `;
+    navMenu.appendChild(actionsDiv);
+  }
+
+  // Close when clicking outside menu
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 860 && navMenu.classList.contains('open')) {
+      if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closeMenu();
+      }
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  // Close on window resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
   });
 }
 
@@ -75,10 +128,21 @@ function initModals() {
   const accountModal = document.getElementById('accountModal');
   const searchModal = document.getElementById('searchModal');
 
+  function closeMobileNavIfOpen() {
+    const navMenu = document.querySelector('.nav-menu');
+    const toggleBtn = document.querySelector('.mobile-toggle');
+    if (navMenu && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      if (toggleBtn) toggleBtn.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
   // Trigger buttons
   document.querySelectorAll('[data-open-modal="login"]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      closeMobileNavIfOpen();
       openModal(loginModal);
     });
   });
@@ -86,6 +150,7 @@ function initModals() {
   document.querySelectorAll('[data-open-modal="account"]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      closeMobileNavIfOpen();
       openModal(accountModal);
     });
   });
