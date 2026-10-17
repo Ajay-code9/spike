@@ -1,50 +1,37 @@
 /* ==========================================================================
    SPIKE BROKERAGE - BESPOKE COMMODITIES & ENERGY HERO SECTION
-   Unique 2-column executive trading cockpit with live interactive order radar
+   Grand Centered Executive Layout - Clean, High Impact, Zero Fluff
    ========================================================================== */
 
 .commodities-hero {
   position: relative;
-  min-height: 560px;
-  padding: 154px 0 65px;
+  min-height: 600px;
+  padding: 165px 0 75px;
   background-color: #080B10;
   background-image: 
-    radial-gradient(circle at 82% 25%, rgba(229, 184, 105, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 18% 75%, rgba(0, 192, 135, 0.06) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(8, 11, 16, 0.75) 0%, rgba(8, 11, 16, 0.96) 85%, #080B10 100%),
-    url('../../public/hero-sections-bg/commodities-bg.png');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
+    radial-gradient(circle at 50% 25%, rgba(229, 184, 105, 0.14) 0%, transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(0, 192, 135, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(229, 184, 105, 0.07) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.85) 0%, #080B10 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-.commodities-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 45% 50%, rgba(8, 11, 16, 0.4) 0%, rgba(8, 11, 16, 0.94) 85%);
-  pointer-events: none;
-}
-
-.commodities-hero-grid {
+.commodities-hero-center {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.15fr 0.95fr;
-  gap: 52px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
-/* ==================== LEFT COLUMN: THE MAGNETIC HOOK ==================== */
-.commodities-hero-left {
-  max-width: 640px;
-}
-
+/* ==================== CENTERED HERO TAG ==================== */
 .commodities-hero-tag {
   display: inline-flex;
   align-items: center;
@@ -56,10 +43,10 @@
   background: rgba(229, 184, 105, 0.1);
   border: 1px solid rgba(229, 184, 105, 0.28);
   border-radius: 20px;
-  padding: 5px 14px;
-  margin-bottom: 20px;
-  letter-spacing: 0.06em;
-  box-shadow: 0 0 15px rgba(229, 184, 105, 0.12);
+  padding: 6px 18px;
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 20px rgba(229, 184, 105, 0.14);
 }
 
 .commodities-pulse-gold {
@@ -76,20 +63,24 @@
   50% { opacity: 0.4; transform: scale(0.85); }
 }
 
+/* ==================== MAGNETIC CENTERED HEADLINE ==================== */
 .commodities-hero-headline {
-  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.12;
   letter-spacing: -0.025em;
   color: #FFFFFF;
-  margin: 0 0 18px;
+  margin: 0 auto 20px;
+  max-width: 880px;
 }
 
+/* ==================== CENTERED LEAD TEXT ==================== */
 .commodities-hero-lead {
-  font-size: 1.05rem;
-  line-height: 1.68;
+  font-size: clamp(1.05rem, 1.8vw, 1.18rem);
+  line-height: 1.72;
   color: #94A3B8;
-  margin-bottom: 28px;
+  max-width: 780px;
+  margin: 0 auto 34px;
 }
 
 .commodities-hero-lead strong {
@@ -97,373 +88,132 @@
   font-weight: 600;
 }
 
+/* ==================== CENTERED CTAS ==================== */
 .commodities-hero-ctas {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 }
 
-.commodities-core-props {
+/* ==================== 3 EXECUTIVE VALUE PROPOSITION CARDS ==================== */
+.commodities-props-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.commodity-prop-card {
+  background: rgba(14, 19, 28, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px 20px;
+  text-align: left;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  gap: 11px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 8px;
 }
 
-.commodity-prop-chip {
-  display: inline-flex;
+.commodity-prop-card:hover {
+  border-color: rgba(229, 184, 105, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(229, 184, 105, 0.12);
+  background: rgba(19, 25, 36, 0.9);
+}
+
+.prop-card-header {
+  display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.86rem;
-  color: #CBD5E1;
-}
-
-.commodity-prop-chip strong {
-  color: #FFFFFF;
 }
 
 .prop-icon-check {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: rgba(0, 192, 135, 0.15);
   color: #00C087;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  border: 1px solid rgba(0, 192, 135, 0.35);
+  border: 1px solid rgba(0, 192, 135, 0.4);
   flex-shrink: 0;
 }
 
-/* ==================== RIGHT COLUMN: INTERACTIVE ENERGY COCKPIT ==================== */
-.commodities-cockpit-card {
-  background: linear-gradient(180deg, #0F141F 0%, #0A0D15 100%);
-  border: 1px solid rgba(229, 184, 105, 0.3);
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(229, 184, 105, 0.12);
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.commodities-cockpit-card:hover {
-  border-color: rgba(229, 184, 105, 0.5);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(229, 184, 105, 0.18);
-}
-
-/* Cockpit Top Bar / Asset Switcher */
-.cockpit-tabs-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 9px;
-  padding: 4px;
-  margin-bottom: 22px;
-}
-
-.cockpit-tab-btn {
-  padding: 8px 6px;
-  border-radius: 7px;
-  border: 1px solid transparent;
-  background: transparent;
-  color: #94A3B8;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.74rem;
+.prop-card-title {
+  font-size: 0.96rem;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  text-align: center;
-}
-
-.cockpit-tab-btn:hover {
   color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.cockpit-tab-btn.active {
-  background: #18202E;
-  color: #E5B869;
-  border-color: rgba(229, 184, 105, 0.35);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* Asset Live Header */
-.cockpit-asset-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 18px;
-}
-
-.cockpit-asset-tag {
-  font-size: 0.72rem;
-  color: #64748B;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.cockpit-asset-title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-top: 3px;
   letter-spacing: -0.01em;
 }
 
-.cockpit-price-box {
-  text-align: right;
-}
-
-.cockpit-live-price {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  line-height: 1.1;
-  transition: color 0.25s ease;
-}
-
-.cockpit-live-price.flash-up {
-  color: #00C087 !important;
-  text-shadow: 0 0 12px rgba(0, 192, 135, 0.5);
-}
-
-.cockpit-live-price.flash-down {
-  color: #F43F5E !important;
-  text-shadow: 0 0 12px rgba(244, 63, 94, 0.5);
-}
-
-.cockpit-live-change {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #00C087;
-  margin-top: 4px;
-}
-
-.cockpit-live-change.down {
-  color: #F43F5E;
-}
-
-/* Day Range Bar */
-.cockpit-range-wrap {
-  margin: 14px 0 20px;
-}
-
-.cockpit-range-meta {
-  display: flex;
-  justify-content: space-between;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  color: #64748B;
-  margin-bottom: 6px;
-}
-
-.cockpit-range-track {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cockpit-range-fill {
-  position: absolute;
-  left: 20%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, #E5B869 0%, #00C087 100%);
-  border-radius: 2px;
-  transition: all 0.4s ease;
-}
-
-/* Live Buy / Sell Order Simulation Box */
-.cockpit-order-box {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.cockpit-order-btn {
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  background: transparent;
-}
-
-.cockpit-order-btn.sell {
-  background: rgba(244, 63, 94, 0.07);
-  border-color: rgba(244, 63, 94, 0.3);
-}
-
-.cockpit-order-btn.sell:hover {
-  background: rgba(244, 63, 94, 0.18);
-  border-color: #F43F5E;
-  box-shadow: 0 0 18px rgba(244, 63, 94, 0.35);
-  transform: translateY(-1px);
-}
-
-.cockpit-order-btn.buy {
-  background: rgba(0, 192, 135, 0.07);
-  border-color: rgba(0, 192, 135, 0.3);
-}
-
-.cockpit-order-btn.buy:hover {
-  background: rgba(0, 192, 135, 0.18);
-  border-color: #00C087;
-  box-shadow: 0 0 18px rgba(0, 192, 135, 0.35);
-  transform: translateY(-1px);
-}
-
-.cockpit-order-type {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 2px;
-}
-
-.cockpit-order-btn.sell .cockpit-order-type { color: #F43F5E; }
-.cockpit-order-btn.buy .cockpit-order-type { color: #00C087; }
-
-.cockpit-order-price {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #FFFFFF;
-}
-
-.cockpit-spread-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #E5B869;
-  background: rgba(229, 184, 105, 0.1);
-  border: 1px solid rgba(229, 184, 105, 0.25);
-  border-radius: 8px;
-  padding: 6px 10px;
-  white-space: nowrap;
-}
-
-.cockpit-spread-badge span:first-child {
-  font-size: 0.6rem;
+.prop-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.58;
   color: #94A3B8;
-  letter-spacing: 0.05em;
+  margin: 0;
 }
 
-/* Quick Specs Row */
-.cockpit-specs-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 10px;
-  padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  margin-bottom: 16px;
-}
-
-.cockpit-spec-item {
-  text-align: center;
-}
-
-.cockpit-spec-label {
-  font-size: 0.66rem;
-  color: #64748B;
-  text-transform: uppercase;
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.05em;
-}
-
-.cockpit-spec-value {
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  font-family: 'JetBrains Mono', monospace;
-  margin-top: 3px;
-}
-
-/* Bottom Card Safety Note */
-.cockpit-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.74rem;
-  color: #64748B;
-}
-
-.cockpit-footer svg {
-  color: #00C087;
-  flex-shrink: 0;
-}
-
-/* ==================== RESPONSIVENESS ==================== */
-@media (max-width: 990px) {
-  .commodities-hero {
-    padding: 135px 0 50px;
-  }
-  .commodities-hero-grid {
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+@media (max-width: 900px) {
+  .commodities-props-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 12px;
+    max-width: 540px;
   }
-  .commodities-hero-left {
-    max-width: 100%;
-  }
-  .commodities-cockpit-card {
-    max-width: 580px;
-    margin: 0 auto;
-    width: 100%;
+  .commodity-prop-card {
+    text-align: left;
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   .commodities-hero {
-    padding: 120px 0 35px;
+    padding: 130px 0 45px;
+  }
+  .commodities-hero-tag {
+    font-size: 0.68rem;
+    padding: 5px 12px;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
   }
   .commodities-hero-headline {
-    font-size: 1.95rem;
+    font-size: 1.85rem;
+    line-height: 1.16;
+    margin-bottom: 16px;
   }
   .commodities-hero-lead {
     font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 26px;
   }
-  .cockpit-tabs-row {
-    grid-template-columns: repeat(2, 1fr);
+  .commodities-hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 30px;
   }
-  .cockpit-order-price {
-    font-size: 0.98rem;
+  .commodities-hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
   }
-  .cockpit-specs-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    text-align: left;
+}
+
+@media (max-width: 380px) {
+  .commodities-hero-headline {
+    font-size: 1.62rem;
   }
-  .cockpit-spec-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-  .cockpit-spec-value {
-    margin-top: 0;
+  .commodities-hero-tag {
+    font-size: 0.62rem;
+    padding: 4px 10px;
   }
 }
