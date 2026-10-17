@@ -1,0 +1,263 @@
+/* ==========================================================================
+   SPIKE BROKERAGE - INSTITUTIONAL TRADINGVIEW WORKSTATION TERMINAL
+   Proper rectangular aspect ratio, interactive drag-to-resize, and quick presets
+   ========================================================================== */
+
+.spike-chart-workstation {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  min-height: 380px;
+  max-height: 1200px;
+  background: #0E131C;
+  border-radius: 14px;
+  border: 1px solid rgba(229, 184, 105, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(229, 184, 105, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 10px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.spike-chart-workstation:hover {
+  border-color: rgba(229, 184, 105, 0.45);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.75), 0 0 30px rgba(229, 184, 105, 0.15);
+}
+
+/* Workstation Top Control Bar */
+.spike-chart-topbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 18px;
+  background: #090D14;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace;
+  font-size: 0.78rem;
+  flex-wrap: wrap;
+}
+
+.spike-chart-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.spike-chart-sym-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+}
+
+.spike-chart-sym-icon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00C087;
+  box-shadow: 0 0 8px #00C087;
+  animation: tickerPulse 1.8s infinite;
+}
+
+.spike-chart-status-pill {
+  font-size: 0.7rem;
+  color: #00C087;
+  background: rgba(0, 192, 135, 0.1);
+  border: 1px solid rgba(0, 192, 135, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.spike-chart-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.spike-chart-preset-label {
+  font-size: 0.7rem;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.spike-chart-size-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.spike-chart-size-btn:hover {
+  background: rgba(229, 184, 105, 0.12);
+  border-color: rgba(229, 184, 105, 0.35);
+  color: #E5B869;
+}
+
+.spike-chart-size-btn.active {
+  background: rgba(229, 184, 105, 0.2);
+  border-color: #E5B869;
+  color: #E5B869;
+  box-shadow: 0 0 10px rgba(229, 184, 105, 0.2);
+}
+
+/* Canvas Area: Hosts TradingView embed */
+.spike-chart-canvas-wrap {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: #0E131C;
+}
+
+.spike-chart-canvas-wrap .tradingview-widget-container {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.spike-chart-canvas-wrap .tradingview-widget-container__widget {
+  width: 100% !important;
+  height: calc(100% - 32px) !important;
+}
+
+.spike-chart-canvas-wrap iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  display: block;
+}
+
+/* Interactive Drag-to-Resize Handle at the Bottom */
+.spike-chart-drag-handle {
+  flex-shrink: 0;
+  height: 32px;
+  background: #090D14;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: ns-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  position: relative;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.spike-chart-drag-handle:hover,
+.spike-chart-drag-handle.active {
+  background: #141A24;
+  border-top-color: rgba(229, 184, 105, 0.4);
+}
+
+.spike-chart-drag-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1) 40%, rgba(229, 184, 105, 0.25) 100%);
+  max-width: 120px;
+}
+
+.spike-chart-drag-line.right {
+  background: linear-gradient(90deg, rgba(229, 184, 105, 0.25) 0%, rgba(255, 255, 255, 0.1) 60%, transparent);
+}
+
+.spike-chart-drag-grip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94A3B8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.spike-chart-drag-handle:hover .spike-chart-drag-grip,
+.spike-chart-drag-handle.active .spike-chart-drag-grip {
+  color: #E5B869;
+}
+
+.spike-chart-drag-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  align-items: center;
+}
+
+.spike-chart-drag-bar {
+  height: 2px;
+  border-radius: 1px;
+  background: #64748B;
+  transition: background 0.2s ease;
+}
+
+.spike-chart-drag-bar.bar-1 { width: 18px; }
+.spike-chart-drag-bar.bar-2 { width: 12px; }
+.spike-chart-drag-bar.bar-3 { width: 6px; }
+
+.spike-chart-drag-handle:hover .spike-chart-drag-bar,
+.spike-chart-drag-handle.active .spike-chart-drag-bar {
+  background: #E5B869;
+  box-shadow: 0 0 6px rgba(229, 184, 105, 0.4);
+}
+
+.spike-chart-height-pill {
+  color: #E5B869;
+  font-weight: 700;
+  background: rgba(229, 184, 105, 0.1);
+  padding: 1px 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(229, 184, 105, 0.25);
+  font-size: 0.68rem;
+}
+
+/* Global body state when user is dragging to resize chart */
+body.is-chart-resizing {
+  cursor: ns-resize !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+body.is-chart-resizing iframe {
+  pointer-events: none !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .spike-chart-workstation {
+    height: 480px;
+    min-height: 340px;
+  }
+  .spike-chart-topbar {
+    padding: 8px 12px;
+  }
+  .spike-chart-preset-label {
+    display: none;
+  }
+  .spike-chart-size-btn {
+    padding: 3px 7px;
+    font-size: 0.68rem;
+  }
+}

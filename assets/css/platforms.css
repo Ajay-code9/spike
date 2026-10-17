@@ -1520,6 +1520,9 @@ nav::-webkit-scrollbar {
 }
 
 .matrix-table-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;

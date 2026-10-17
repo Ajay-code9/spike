@@ -576,29 +576,62 @@
         </div>
       </div>
 
-      <!-- TradingView Advanced Chart Widget -->
-      <div class="tradingview-widget-container" style="height: 540px; width: 100%; border-radius: 14px; overflow: hidden; border: 1px solid rgba(229, 184, 105, 0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 25px rgba(229,184,105,0.1);">
-        <div class="tradingview-widget-container__widget" style="height: calc(100% - 32px); width: 100%;"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-        {
-          "autosize": true,
-          "symbol": "FX:EURUSD",
-          "interval": "60",
-          "timezone": "Etc/UTC",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "enable_publishing": false,
-          "backgroundColor": "#0E131C",
-          "gridColor": "rgba(255, 255, 255, 0.04)",
-          "hide_top_toolbar": false,
-          "hide_legend": false,
-          "save_image": false,
-          "calendar": false,
-          "hide_volume": false,
-          "support_host": "https://www.tradingview.com"
-        }
-        </script>
+      <!-- Interactive Resizable Workstation Terminal (Proper Rectangle + Drag Resize) -->
+      <div class="spike-chart-workstation">
+        <div class="spike-chart-topbar">
+          <div class="spike-chart-topbar-left">
+            <div class="spike-chart-sym-badge">
+              <span class="spike-chart-sym-icon"></span>
+              <span>MULTI-ASSET INTERBANK TICK EXECUTION &bull; FX: EURUSD</span>
+            </div>
+            <span class="spike-chart-status-pill">SUB-15MS ORDER ROUTING // 500+ INSTRUMENTS</span>
+          </div>
+          <div class="spike-chart-topbar-right">
+            <span class="spike-chart-preset-label">Height:</span>
+            <button type="button" class="spike-chart-size-btn" data-height="480">480px</button>
+            <button type="button" class="spike-chart-size-btn active" data-height="620">620px</button>
+            <button type="button" class="spike-chart-size-btn" data-height="780">780px</button>
+            <button type="button" class="spike-chart-size-btn" data-height="950">Max</button>
+          </div>
+        </div>
+        <div class="spike-chart-canvas-wrap">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+              "autosize": true,
+              "symbol": "FX:EURUSD",
+              "interval": "60",
+              "timezone": "Etc/UTC",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "enable_publishing": false,
+              "backgroundColor": "#0E131C",
+              "gridColor": "rgba(255, 255, 255, 0.04)",
+              "hide_top_toolbar": false,
+              "hide_legend": false,
+              "save_image": false,
+              "calendar": false,
+              "hide_volume": false,
+              "support_host": "https://www.tradingview.com"
+            }
+            </script>
+          </div>
+        </div>
+        <div class="spike-chart-drag-handle" title="Click and drag up or down to resize chart height (Double-click to reset)">
+          <div class="spike-chart-drag-line"></div>
+          <div class="spike-chart-drag-grip">
+            <div class="spike-chart-drag-icon">
+              <span class="spike-chart-drag-bar bar-1"></span>
+              <span class="spike-chart-drag-bar bar-2"></span>
+              <span class="spike-chart-drag-bar bar-3"></span>
+            </div>
+            <span>DRAG TO RESIZE</span>
+            <span class="spike-chart-height-pill">620px</span>
+          </div>
+          <div class="spike-chart-drag-line right"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -905,6 +938,7 @@
   <!-- JavaScript -->
   <script src="assets/js/toast.js"></script>
   <script src="assets/js/ticker.js"></script>
+  <script src="assets/js/chart-resizer.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/markets.js"></script>
 </body>
